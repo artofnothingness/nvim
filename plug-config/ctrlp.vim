@@ -1,3 +1,3 @@
 let g:ctrlp_cmd = 'CtrlPTag'
-let g:ctrlp_map = '<space>t'
+let g:ctrlp_map = '<leader>t'
 

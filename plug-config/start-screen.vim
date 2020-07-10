@@ -13,7 +13,7 @@ let g:startify_bookmarks = [
             \ '~/ros',
             \ '~/Documents',
             \ ]
-map <leader>g :Startify<CR>
+" map <leader>g :Startify<CR>
 
 " let g:startify_custom_header = [
 " ]

@@ -11,10 +11,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
    " General
     Plug 'https://github.com/taketwo/vim-ros.git'
     Plug 'https://github.com/tpope/vim-commentary.git'
+    Plug 'https://github.com/easymotion/vim-easymotion.git'
+    Plug 'https://github.com/PotatoesMaster/i3-vim-syntax.git'
     Plug 'majutsushi/tagbar'
     Plug 'jiangmiao/auto-pairs'
     Plug 'mhinz/vim-startify'
-    Plug 'https://github.com/PotatoesMaster/i3-vim-syntax.git'
     Plug 'liuchengxu/vim-which-key'   
 
     " Coc.nvim 
@@ -24,18 +25,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
 
-    " File Explorer
-    Plug 'rbgrouleff/bclose.vim'
+    " File Explorers
     Plug 'francoiscabrol/ranger.vim'
-
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
     " Navigation
     Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
-    Plug 'https://github.com/easymotion/vim-easymotion.git'
-    Plug 'justinmk/vim-sneak'
 
     " Git 
     Plug 'https://github.com/airblade/vim-gitgutter.git'
