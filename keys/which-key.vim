@@ -36,8 +36,8 @@ let g:which_key_map_ll['e'] = [ ':CocCommand explorer'       , 'Explorer' ]
 let g:which_key_map_ll['r'] = [ ':Ranger'                    , 'Ranger' ]
 let g:which_key_map_ll['b'] = [ ':TagbarToggle'              , 'BarTags' ]
 let g:which_key_map_ll['v'] = [ ':Vista!!'                   , 'Vista']
-let g:which_key_map_ll['h'] = [ '<C-W>s'                     , 'split below']
-let g:which_key_map_ll['v'] = [ '<C-W>v'                     , 'split right']
+let g:which_key_map_ll['j'] = [ '<C-W>s'                     , 'split below']
+let g:which_key_map_ll['l'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map_ll['c'] = [ 'cd %:h'                     , 'current dir']
 let g:which_key_map_ll['s'] = [ ':Startify'                  , 'Startify' ]
 
@@ -57,11 +57,10 @@ let g:which_key_map_ll.t = {
 "       \ 'name' : '+GitGutter' ,
 "       \}
 
-let g:which_key_map.C = {
-      \ 'name' : '+Parameters' ,
-      \ 'c' : [':CocConfig'                          , 'coc config'],
-      \ 'v' : [':e $MYVIMRC'                          ,'vim config'],
-      \ 'C' : [':Colors!'       , 'color schemes'],
+let g:which_key_map.c = {
+      \ 'name' : '+configs' ,
+      \ 'c' : [':CocConfig'                          , 'coc'],
+      \ 'v' : [':e $MYVIMRC'                          ,'vim'],
       \}
 
 
@@ -118,15 +117,15 @@ let g:which_key_map.g = {
       \ 'V' : [':GV!'                              , 'view buffer commits'],
       \ }
 
-let g:which_key_map.c = {
-      \ 'name' : '+coc' ,
+let g:which_key_map.l = {
+      \ 'name' : '+lsp' ,
       \ 'a' : ['<Plug>(coc-codeaction-selected)'     , 'selected action'],
       \ 'A' : ['<Plug>(coc-codeaction)'              , 'line action'],
-      \ 'C' : [':CocList commands'                   , 'commands'],
+      \ 'c' : [':CocList commands'                   , 'commands'],
       \ 'e' : [':CocList extensions'                 , 'extensions'],
       \ }
 
-let g:which_key_map.c.d = {
+let g:which_key_map.l.d = {
       \ 'name' : '+diagnostic' ,
       \ 'I' : [':CocList diagnostics'                , 'diagnostics'],
       \ 'n' : ['<Plug>(coc-diagnostic-next)'         , 'next diagnostic'],
@@ -136,7 +135,7 @@ let g:which_key_map.c.d = {
       \ 'q' : ['<Plug>(coc-fix-current)'             , 'quickfix'],
       \ }
 
-let g:which_key_map.c.f = {
+let g:which_key_map.l.f = {
       \ 'name' : '+format' ,
       \ ';' : ['<Plug>(coc-refactor)'                , 'refactor'],
       \ 'r' : ['<Plug>(coc-rename)'                  , 'rename'],
@@ -144,7 +143,7 @@ let g:which_key_map.c.f = {
       \ 'F' : ['<Plug>(coc-format)'                  , 'format line'],
       \ }
 
-let g:which_key_map.c.o = {
+let g:which_key_map.l.o = {
       \ 'name' : '+others' ,
       \ 'S' : [':CocList snippets'    , 'snippets'],
       \ 'n' : [':CocNext'                            , 'next action'],
