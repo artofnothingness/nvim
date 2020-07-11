@@ -1,4 +1,6 @@
 {
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
+  "clangd.semanticHighlighting": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "cpp",
     "c",

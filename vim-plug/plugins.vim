@@ -17,9 +17,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jiangmiao/auto-pairs'
     Plug 'mhinz/vim-startify'
     Plug 'liuchengxu/vim-which-key'   
+    Plug 'voldikss/vim-floaterm'
+    Plug 'junegunn/vim-easy-align'
+    Plug 'honza/vim-snippets'
 
     " Coc.nvim 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'liuchengxu/vista.vim'
+    
+    Plug 'jackguo380/vim-lsp-cxx-highlight'
+
     " Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
     " Better Syntax Support

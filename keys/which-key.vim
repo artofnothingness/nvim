@@ -5,11 +5,13 @@ vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 
 nnoremap <localleader> :<c-u>WhichKey  ','<CR>
 vnoremap <localleader> :<c-u>WhichKeyVisual  ','<CR>
-" Create map to add keys to
+
 let g:which_key_map =  {}
-" Define a separator
 let g:which_key_sep = '→'
 " set timeoutlen=100
+
+let g:which_key_map_ll =  {}
+let g:which_key_sep_ll = '→'
 
 " Not a fan of floating windows for this
 let g:which_key_use_floating_win = 0
@@ -26,36 +28,54 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 " Single mappings
-let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'Explorer' ]
-let g:which_key_map['r'] = [ ':Ranger'                    , 'Ranger' ]
-let g:which_key_map['g'] = [ ':Startify'                  , 'Startify' ]
-let g:which_key_map['b'] = [ ':TagbarToggle'              , 'BarTags' ]
 
-let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
-let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
-let g:which_key_map['t'] = [ ':CtrlPTag'                  , 'Tags' ]
-let g:which_key_map['s'] = [ ':CocList -I symbols'        , 'Symbols' ]
-  
+" Leader
 
+ " Local Leader
+let g:which_key_map_ll['e'] = [ ':CocCommand explorer'       , 'Explorer' ]
+let g:which_key_map_ll['r'] = [ ':Ranger'                    , 'Ranger' ]
+let g:which_key_map_ll['b'] = [ ':TagbarToggle'              , 'BarTags' ]
+let g:which_key_map_ll['v'] = [ ':Vista!!'                   , 'Vista']
+let g:which_key_map_ll['h'] = [ '<C-W>s'                     , 'split below']
+let g:which_key_map_ll['v'] = [ '<C-W>v'                     , 'split right']
+let g:which_key_map_ll['c'] = [ 'cd %:h'                     , 'current dir']
+let g:which_key_map_ll['s'] = [ ':Startify'                  , 'Startify' ]
 
-" \ 'h' : [ 'cd %:h <CR>'   , 'cd current dir' ],
+let g:which_key_map_ll.t = {
+      \ 'name' : '+terminal' ,
+      \ ';' : [':FloatermNew --wintype=popup --height=6'        , 'terminal'],
+      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
+      \ 'g' : [':FloatermNew lazygit'                           , 'git'],
+      \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
+      \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
+      \ 't' : [':FloatermToggle'                                , 'toggle'],
+      \ 'y' : [':FloatermNew htop'                              , 'htop'],
+      \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
+      \ }
 
-let g:which_key_map.c = {
-      \ 'name' : '+Coc' ,
+" let g:which_key_map.h = {
+"       \ 'name' : '+GitGutter' ,
+"       \}
+
+let g:which_key_map.C = {
+      \ 'name' : '+Parameters' ,
+      \ 'c' : [':CocConfig'                          , 'coc config'],
+      \ 'v' : [':e $MYVIMRC'                          ,'vim config'],
+      \ 'C' : [':Colors!'       , 'color schemes'],
       \}
 
+
 " s is for search
-let g:which_key_map.f = {
-      \ 'name' : '+Find' ,
+let g:which_key_map.s = {
+      \ 'name' : '+search' ,
+      \ 's' : [':CocList -I symbols'  , 'symbols'],
       \ '/' : [':History/!'     , 'history'],
       \ ';' : [':Commands!'     , 'commands'],
-      \ 'a' : [':Ag!'           , 'text Ag'],
-      \ 't' : [':Rg!'           , 'text Rg'],
-      \ 'b' : [':BLines!'       , 'current buffer'],
-      \ 'B' : [':Buffers!'      , 'open buffers'],
+      \ 'b' : [':Buffers!'      , 'open buffers'],
       \ 'c' : [':Commits!'      , 'commits'],
       \ 'C' : [':BCommits!'     , 'buffer commits'],
       \ 'f' : [':Files!'        , 'files'],
+      \ 'F' : [':CocList floaterm'    , 'floaterms'],
       \ 'g' : [':GFiles!'       , 'git files'],
       \ 'G' : [':GFiles!?'      , 'modified git files'],
       \ 'h' : [':History!'      , 'file history'],
@@ -64,16 +84,85 @@ let g:which_key_map.f = {
       \ 'm' : [':Marks!'        , 'marks'] ,
       \ 'M' : [':Maps!'         , 'normal maps'] ,
       \ 'p' : [':Helptags!'     , 'help tags'] ,
-      \ 'P' : [':Tags!'         , 'project tags'],
-      \ 's' : [':Snippets!'     , 'snippets'],
-      \ 'S' : [':Colors!'       , 'color schemes'],
+      \ 't' : [':Tags!'         , 'tags'],
       \ 'T' : [':BTags!'        , 'buffer tags'],
       \ 'w' : [':Windows!'      , 'search windows'],
       \ 'y' : [':Filetypes!'    , 'file types'],
-      \ 'z' : [':FZF!'          , 'FZF'],
+      \ }
+
+      " \ 'a' : [':Ag!'           , 'text Ag'],
+
+let g:which_key_map.g = {
+      \ 'name' : '+git' ,
+      \ 'a' : [':Git add .'                        , 'add all'],
+      \ 'A' : [':Git add %'                        , 'add current'],
+      \ 'b' : [':Git blame'                        , 'blame'],
+      \ 'B' : [':GBrowse'                          , 'browse'],
+      \ 'c' : [':Git commit'                       , 'commit'],
+      \ 'd' : [':Git diff'                         , 'diff'],
+      \ 'D' : [':Gdiffsplit'                       , 'diff split'],
+      \ 'g' : [':GGrep'                            , 'git grep'],
+      \ 'G' : [':Gstatus'                          , 'status'],
+      \ 'h' : [':GitGutterLineHighlightsToggle'    , 'highlight hunks'],
+      \ 'H' : ['<Plug>(GitGutterPreviewHunk)'      , 'preview hunk'],
+      \ 'j' : ['<Plug>(GitGutterNextHunk)'         , 'next hunk'],
+      \ 'k' : ['<Plug>(GitGutterPrevHunk)'         , 'prev hunk'],
+      \ 'l' : [':Git log'                          , 'log'],
+      \ 'p' : [':Git push'                         , 'push'],
+      \ 'P' : [':Git pull'                         , 'pull'],
+      \ 'r' : [':GRemove'                          , 'remove'],
+      \ 's' : ['<Plug>(GitGutterStageHunk)'        , 'stage hunk'],
+      \ 't' : [':GitGutterSignsToggle'             , 'toggle signs'],
+      \ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'undo hunk'],
+      \ 'v' : [':GV'                               , 'view commits'],
+      \ 'V' : [':GV!'                              , 'view buffer commits'],
+      \ }
+
+let g:which_key_map.c = {
+      \ 'name' : '+coc' ,
+      \ 'a' : ['<Plug>(coc-codeaction-selected)'     , 'selected action'],
+      \ 'A' : ['<Plug>(coc-codeaction)'              , 'line action'],
+      \ 'C' : [':CocList commands'                   , 'commands'],
+      \ 'e' : [':CocList extensions'                 , 'extensions'],
+      \ }
+
+let g:which_key_map.c.d = {
+      \ 'name' : '+diagnostic' ,
+      \ 'I' : [':CocList diagnostics'                , 'diagnostics'],
+      \ 'n' : ['<Plug>(coc-diagnostic-next)'         , 'next diagnostic'],
+      \ 'N' : ['<Plug>(coc-diagnostic-next-error)'   , 'next error'],
+      \ 'p' : ['<Plug>(coc-diagnostic-prev)'         , 'prev diagnostic'],
+      \ 'P' : ['<Plug>(coc-diagnostic-prev-error)'   , 'prev error'],
+      \ 'q' : ['<Plug>(coc-fix-current)'             , 'quickfix'],
+      \ }
+
+let g:which_key_map.c.f = {
+      \ 'name' : '+format' ,
+      \ ';' : ['<Plug>(coc-refactor)'                , 'refactor'],
+      \ 'r' : ['<Plug>(coc-rename)'                  , 'rename'],
+      \ 'f' : ['<Plug>(coc-format-selected)'         , 'format selected'],
+      \ 'F' : ['<Plug>(coc-format)'                  , 'format line'],
+      \ }
+
+let g:which_key_map.c.o = {
+      \ 'name' : '+others' ,
+      \ 'S' : [':CocList snippets'    , 'snippets'],
+      \ 'n' : [':CocNext'                            , 'next action'],
+      \ 'p' : [':CocPrev'                            , 'prev action'],
+      \ 'j' : ['<Plug>(coc-float-jump)'              , 'float jump'],
+      \ 'a' : ['<Plug>(coc-codelens-action)'         , 'code lens'],
+      \ 'o' : ['<Plug>(coc-openlink)'                , 'open link'],
+      \ 'O' : [':CocList outline'                    , 'outline'],
+      \ 'r' : [':CocListResume'                      , 'resume list'],
+      \ 'u' : [':CocUpdate'                          , 'update CoC'],
+      \ 'd' : [':CocDisable'                         , 'disable CoC'],
+      \ 'e' : [':CocEnable'                          , 'enable CoC'],
+      \ 't' : ['<Plug>(coc-type-definition)'         , 'type definition'],
+      \ 'h' : ['<Plug>(coc-float-hide)'              , 'hide'],
       \ }
 
 " Register which key map
 " nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 
 call which_key#register('<Space>', "g:which_key_map")
+call which_key#register(',',       "g:which_key_map_ll")

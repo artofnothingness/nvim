@@ -42,5 +42,6 @@ set conceallevel=2
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
+let g:lsp_cxx_hl_use_text_props = 1
 " You can't stop me
 cmap w!! w !sudo tee %

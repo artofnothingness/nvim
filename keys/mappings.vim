@@ -35,7 +35,7 @@ nmap < <<
 nmap > >>
 
 
-nmap <Leader>dc :cd %:h <CR>
+nmap <localleader>c :cd %:h <CR>
 
 nnoremap <M-j>    :resize -2<CR>
 nnoremap <M-k>    :resize +2<CR>
