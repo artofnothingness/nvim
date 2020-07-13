@@ -20,6 +20,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'voldikss/vim-floaterm'
     Plug 'junegunn/vim-easy-align'
     Plug 'honza/vim-snippets'
+    Plug 'airblade/vim-rooter'
+    
 
     " Coc.nvim 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}

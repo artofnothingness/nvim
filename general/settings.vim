@@ -39,6 +39,7 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 "Old config settings
 " New config settings
 set conceallevel=2
+set colorcolumn=80
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 

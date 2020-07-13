@@ -11,4 +11,6 @@ let g:instant_markdown_autoscroll = 1
 "let g:instant_markdown_port = 8888
 "let g:instant_markdown_python = 1
 let g:instant_markdown_browser = "chromium-browser --new-window"
+let g:instant_markdown_mathjax = 1
+
 map <C-m> :InstantMarkdownPreview<CR>

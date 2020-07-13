@@ -39,7 +39,8 @@ let g:which_key_map_ll['v'] = [ ':Vista!!'                   , 'Vista']
 let g:which_key_map_ll['j'] = [ '<C-W>s'                     , 'split below']
 let g:which_key_map_ll['l'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map_ll['c'] = [ 'cd %:h'                     , 'current dir']
-let g:which_key_map_ll['s'] = [ ':Startify'                  , 'Startify' ]
+let g:which_key_map_ll['g'] = [ ':Startify'                  , 'Startify' ]
+let g:which_key_map_ll['s'] = [ ':CocCommand snippets.editSnippets'                   , 'Vista']
 
 let g:which_key_map_ll.t = {
       \ 'name' : '+terminal' ,
@@ -51,6 +52,7 @@ let g:which_key_map_ll.t = {
       \ 't' : [':FloatermToggle'                                , 'toggle'],
       \ 'y' : [':FloatermNew htop'                              , 'htop'],
       \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
+      \ 'p' : [':FloatermNew python3'                           , 'python3'],
       \ }
 
 " let g:which_key_map.h = {
