@@ -21,12 +21,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/vim-easy-align'
     Plug 'honza/vim-snippets'
     Plug 'airblade/vim-rooter'
+    Plug 'https://github.com/itchyny/calendar.vim.git'
     
 
     " Coc.nvim 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'liuchengxu/vista.vim'
-    
     Plug 'jackguo380/vim-lsp-cxx-highlight'
 
     " Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}

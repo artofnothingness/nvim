@@ -1,18 +1,5 @@
 {
   "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
-  "clangd.semanticHighlighting": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "cpp",
-    "c",
-    "css",
-    "markdown",
-    "javascript",
-    "graphql",
-    "html",
-    "yaml",
-    "json",
-    "python"
-  ],
   // python config
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
@@ -20,6 +7,7 @@
     "UltiSnips",
     "~/.config/nvim/utils/snips"
   ],
+
   // coc-explorer
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,
@@ -31,5 +19,42 @@
       "open"
     ],
     "v": "open:vsplit"
+  },
+  "clangd.semanticHighlighting": "true",
+  "clangd.path": "/home/aleksei/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin/clangd",
+
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx",
+    "html",
+    "css",
+    "makrdown",
+    "python",
+    "javascript.jsx"
+  ],
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
+    }
+  },
+  "diagnostic.errorSign": " ",
+  "diagnostic.warningSign": " ",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": " ",
+  "diagnostic.virtualText": true, // this won't work with codelens when error on same line
+
+  "list.indicator": ">",
+  "list.selectedSignText": " ",
+   "suggest.completionItemKindLabels": {
+    "text": "t",
+    "method": "m",
+    "function": ""
   }
 }

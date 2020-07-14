@@ -2,7 +2,11 @@
 let g:mapleader = "\<Space>"
 let g:maplocalleader = ','
 
-syntax enable                           " Enables syntax highlighing
+colorscheme shado
+syntax enable "Allows for syntax highlighting
+set termguicolors "Allows for hex coloring
+set t_Co=256
+
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
@@ -24,7 +28,6 @@ set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
 set laststatus=0                        " Always display the status line
 set relativenumber                      " Line numbers
-set cursorline                          " Enable highlighting of the current line
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
@@ -39,7 +42,9 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 "Old config settings
 " New config settings
 set conceallevel=2
+set cursorline                          " Enable highlighting of the current line
 set colorcolumn=80
+
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 

@@ -1,3 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/aleksei/.config/nvim/colors'
+let g:netrw_dirhist_4='/home/aleksei/ros/aruco_ws/src'
+let g:netrw_dirhist_3='/home/aleksei/ros/aruco_ws'
+let g:netrw_dirhist_2='/home/aleksei/ros'
 let g:netrw_dirhist_1='/home/aleksei/.config/ranger'

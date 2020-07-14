@@ -66,6 +66,16 @@ let g:which_key_map.c = {
       \}
 
 
+
+let g:which_key_map.r = {
+      \ 'name' : '+ros' ,
+      \ 'b' : [':!catkin build'                          , 'build'],
+      \ 'm' : [':!python3 ~/.config/nvim/scripts/ros-compile-commands-merge.py' ,'merge commands'],
+      \ 'c' : [":!catkin config --cmake-args '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON'" ,'commands flag'],
+      \}
+map <leader>rc :!catkin config --cmake-args '-DCMAKE_EXPORT_COMPILE_COMMANDS=O:!catkin config --cmake-args '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON'N'<CR>
+
+
 " s is for search
 let g:which_key_map.s = {
       \ 'name' : '+search' ,
