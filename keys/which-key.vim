@@ -163,7 +163,7 @@ let g:which_key_map.l.o = {
       \ 'p' : [':CocPrev'                            , 'prev action'],
       \ 'j' : ['<Plug>(coc-float-jump)'              , 'float jump'],
       \ 'a' : ['<Plug>(coc-codelens-action)'         , 'code lens'],
-      \ 'o' : ['<Plug>(coc-openlink)'                , 'open link'],
+      \ 'O' : ['<Plug>(coc-openlink)'                , 'open link'],
       \ 'r' : [':CocListResume'                      , 'resume list'],
       \ 'u' : [':CocUpdate'                          , 'update CoC'],
       \ 't' : ['<Plug>(coc-type-definition)'         , 'type definition'],
