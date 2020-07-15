@@ -1,4 +1,25 @@
+let g:coc_global_extensions = 
+  \[ 
+    \'coc-python',
+    \'coc-clangd', 
+    \'coc-tag', 
+    \'coc-vimlsp',
+    \'coc-syntax',
+    \'coc-todolist',
+    \'coc-omni',
+    \'coc-marketplace',
+    \'coc-lists',
+    \'coc-floaterm',
+    \'coc-highlight',
+    \'coc-explorer',
+    \'coc-xml',
+    \'coc-vimtex',
+    \'coc-json',
+    \'coc-cmake'
+  \]
+
 " TextEdit might fail if hidden is not set.
+"
 set hidden
 
 " Some servers have issues with backup files, see #649.
@@ -152,3 +173,4 @@ nnoremap <silent><nowait> <leader>lor  :<C-u>CocListResume<CR>
 nmap <localleader>e :CocCommand explorer<CR>
 " nmap <space>f :CocCommand explorer --preset floating<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
