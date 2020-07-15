@@ -21,6 +21,7 @@ source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/keys/scriptsmap.vim
 source $HOME/.config/nvim/general/paths.vim
 source $HOME/.config/nvim/keys/which-key.vim
+source $HOME/.config/nvim/general/functions.vim
 
 " Themes
 source $HOME/.config/nvim/themes/airline.vim
