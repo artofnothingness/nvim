@@ -129,17 +129,16 @@ let g:which_key_map.g = {
 
 let g:which_key_map.l = {
       \ 'name' : '+lsp' ,
-      \ 'a' : ['<Plug>(coc-codeaction-selected)'     , 'selected action'],
-      \ 'A' : ['<Plug>(coc-codeaction)'              , 'line action'],
+      \ 'a' : ['<Plug>(coc-codeaction-selected)'     , 'action selected'],
       \ 'c' : [':CocList commands'                   , 'commands'],
       \ 'e' : [':CocList extensions'                 , 'extensions'],
-      \ 'd' : [':CocList diagnostics'                , 'diagnostics'],
-      \ 's' : [':CocList snippets'    , 'snippets'],
-      \ 'o' : [':CocList outline'                    , 'outline'],
+      \ 'D' : [':CocDisable'                         , 'disable CoC'],
+      \ 'E' : [':CocEnable'                          , 'enable CoC'],
       \ }
 
 let g:which_key_map.l.d = {
       \ 'name' : '+diagnostic' ,
+      \ 'd' : [':CocList diagnostics'                , 'diagnostics'],
       \ 'n' : ['<Plug>(coc-diagnostic-next)'         , 'next diagnostic'],
       \ 'N' : ['<Plug>(coc-diagnostic-next-error)'   , 'next error'],
       \ 'p' : ['<Plug>(coc-diagnostic-prev)'         , 'prev diagnostic'],
@@ -157,6 +156,9 @@ let g:which_key_map.l.f = {
 
 let g:which_key_map.l.o = {
       \ 'name' : '+others' ,
+      \ 'A' : ['<Plug>(coc-codeaction)'              , 'line action'],
+      \ 'o' : [':CocList outline'                    , 'outline'],
+      \ 's' : [':CocList snippets'                   , 'snippets'],
       \ 'n' : [':CocNext'                            , 'next action'],
       \ 'p' : [':CocPrev'                            , 'prev action'],
       \ 'j' : ['<Plug>(coc-float-jump)'              , 'float jump'],
@@ -164,8 +166,6 @@ let g:which_key_map.l.o = {
       \ 'o' : ['<Plug>(coc-openlink)'                , 'open link'],
       \ 'r' : [':CocListResume'                      , 'resume list'],
       \ 'u' : [':CocUpdate'                          , 'update CoC'],
-      \ 'd' : [':CocDisable'                         , 'disable CoC'],
-      \ 'e' : [':CocEnable'                          , 'enable CoC'],
       \ 't' : ['<Plug>(coc-type-definition)'         , 'type definition'],
       \ 'h' : ['<Plug>(coc-float-hide)'              , 'hide'],
       \ }
