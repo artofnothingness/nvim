@@ -2,7 +2,6 @@
 let g:mapleader = "\<Space>"
 let g:maplocalleader = ','
 
-colorscheme shado
 syntax enable "Allows for syntax highlighting
 set termguicolors "Allows for hex coloring
 set t_Co=256

@@ -27,7 +27,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Coc.nvim 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'liuchengxu/vista.vim'
-    Plug 'jackguo380/vim-lsp-cxx-highlight'
+    " Plug 'jackguo380/vim-lsp-cxx-highlight'
 
     " Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 

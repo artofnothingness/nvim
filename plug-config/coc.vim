@@ -77,11 +77,11 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
-nmap <leader>cr <Plug>(coc-rename)
+nmap <leader>lf <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>cf  <Plug>(coc-format-selected)
-nmap <leader>cf  <Plug>(coc-format-selected)
+xmap <leader>lff <Plug>(coc-format-selected)
+nmap <leader>lff <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -133,13 +133,13 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
-nnoremap <silent><nowait> <space>ca  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <leader>ld  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent><nowait> <space>ce  :<C-u>CocList extensions<cr>
+nnoremap <silent><nowait> <leader>le  :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent><nowait> <space>cc  :<C-u>CocList commands<cr>
+nnoremap <silent><nowait> <leader>lc  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent><nowait> <space>co  :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> <leader>lo  :<C-u>CocList outline<cr>
 " Search workspace symbols.
 nnoremap <silent><nowait> <leader>ss :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
@@ -147,7 +147,7 @@ nnoremap <silent><nowait> <leader>ss :<C-u>CocList -I symbols<cr>
 " Do default action for previous item.
 " nnoremap <silent><nowait> <space>ck  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent><nowait> <space>cp  :<C-u>CocListResume<CR>
+nnoremap <silent><nowait> <leader>lor  :<C-u>CocListResume<CR>
 
 nmap <localleader>e :CocCommand explorer<CR>
 " nmap <space>f :CocCommand explorer --preset floating<CR>

@@ -70,11 +70,9 @@ let g:which_key_map.c = {
 let g:which_key_map.r = {
       \ 'name' : '+ros' ,
       \ 'b' : [':!catkin build'                          , 'build'],
-      \ 'm' : [':!python3 ~/.config/nvim/scripts/ros-compile-commands-merge.py' ,'merge commands'],
-      \ 'c' : [":!catkin config --cmake-args '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON'" ,'commands flag'],
+      \ 'm' : [':!python3 ~/.config/nvim/scripts/ros-compile-commands-merge.py' ,'merge compile commands'],
+      \ 'c' : [":!catkin config --cmake-args '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON'" ,'set cmake flags'],
       \}
-map <leader>rc :!catkin config --cmake-args '-DCMAKE_EXPORT_COMPILE_COMMANDS=O:!catkin config --cmake-args '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON'N'<CR>
-
 
 " s is for search
 let g:which_key_map.s = {
@@ -135,11 +133,13 @@ let g:which_key_map.l = {
       \ 'A' : ['<Plug>(coc-codeaction)'              , 'line action'],
       \ 'c' : [':CocList commands'                   , 'commands'],
       \ 'e' : [':CocList extensions'                 , 'extensions'],
+      \ 'd' : [':CocList diagnostics'                , 'diagnostics'],
+      \ 's' : [':CocList snippets'    , 'snippets'],
+      \ 'o' : [':CocList outline'                    , 'outline'],
       \ }
 
 let g:which_key_map.l.d = {
       \ 'name' : '+diagnostic' ,
-      \ 'I' : [':CocList diagnostics'                , 'diagnostics'],
       \ 'n' : ['<Plug>(coc-diagnostic-next)'         , 'next diagnostic'],
       \ 'N' : ['<Plug>(coc-diagnostic-next-error)'   , 'next error'],
       \ 'p' : ['<Plug>(coc-diagnostic-prev)'         , 'prev diagnostic'],
@@ -157,13 +157,11 @@ let g:which_key_map.l.f = {
 
 let g:which_key_map.l.o = {
       \ 'name' : '+others' ,
-      \ 'S' : [':CocList snippets'    , 'snippets'],
       \ 'n' : [':CocNext'                            , 'next action'],
       \ 'p' : [':CocPrev'                            , 'prev action'],
       \ 'j' : ['<Plug>(coc-float-jump)'              , 'float jump'],
       \ 'a' : ['<Plug>(coc-codelens-action)'         , 'code lens'],
       \ 'o' : ['<Plug>(coc-openlink)'                , 'open link'],
-      \ 'O' : [':CocList outline'                    , 'outline'],
       \ 'r' : [':CocListResume'                      , 'resume list'],
       \ 'u' : [':CocUpdate'                          , 'update CoC'],
       \ 'd' : [':CocDisable'                         , 'disable CoC'],
