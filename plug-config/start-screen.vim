@@ -9,9 +9,13 @@ let g:startify_lists = [
 let g:startify_bookmarks = [
             \ { 'i3': '~/.config/i3/config' },
             \ { 'nv': '~/.config/nvim/init.vim' },
-            \ '~/dev',
-            \ '~/ros',
-            \ '~/Documents',
+            \ { 'zs': '~/.zshrc' },
+            \ { 'al': '~/.config/alacritty/alacritty.yml' },
+            \ 
+            \ { 'zc': '~/.config/zsh' },
+            \ { 'dv': '~/dev' },
+            \ { 'ro': '~/ros' },
+            \ { 'do': '~/Documents' },
             \ ]
 " map <leader>g :Startify<CR>
 

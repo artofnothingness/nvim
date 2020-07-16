@@ -22,6 +22,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'honza/vim-snippets'
     Plug 'airblade/vim-rooter'
     Plug 'https://github.com/itchyny/calendar.vim.git'
+
+
     
 
     " Coc.nvim 
@@ -47,6 +49,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'https://github.com/airblade/vim-gitgutter.git'
     Plug 'tpope/vim-fugitive'
     Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+    Plug 'rbong/vim-flog'
 
     " Themes
     Plug 'whatyouhide/vim-gotham'

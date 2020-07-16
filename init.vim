@@ -10,6 +10,7 @@ source $HOME/.config/nvim/plug-config/snips.vim
 source $HOME/.config/nvim/plug-config/vista.vim
 source $HOME/.config/nvim/plug-config/gitgutter.vim
 source $HOME/.config/nvim/plug-config/netrw.vim
+source $HOME/.config/nvim/plug-config/easyalign.vim
 
 source $HOME/.config/nvim/plug-config/easymotion.vim
 source $HOME/.config/nvim/plug-config/ctrlp.vim
@@ -26,3 +27,4 @@ source $HOME/.config/nvim/general/functions.vim
 " Themes
 source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/themes/onedark.vim
+

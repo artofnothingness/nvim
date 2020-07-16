@@ -38,9 +38,20 @@ let g:which_key_map_ll['b'] = [ ':TagbarToggle'              , 'BarTags' ]
 let g:which_key_map_ll['v'] = [ ':Vista!!'                   , 'Vista']
 let g:which_key_map_ll['j'] = [ '<C-W>s'                     , 'split below']
 let g:which_key_map_ll['l'] = [ '<C-W>v'                     , 'split right']
-let g:which_key_map_ll['c'] = [ 'cd %:h'                     , 'current dir']
+let g:which_key_map_ll['d'] = [ 'cd %:h'                     , 'current dir']
 let g:which_key_map_ll['g'] = [ ':Startify'                  , 'Startify' ]
-let g:which_key_map_ll['s'] = [ ':CocCommand snippets.editSnippets'                   , 'Vista']
+let g:which_key_map_ll['s'] = [ ':CocCommand snippets.editSnippets' , 'Snippets']
+
+let g:which_key_map_ll.c = {
+      \ 'name' : '+configs' ,
+      \ 'c' : [':CocConfig'                           ,'coc'],
+      \ 'v' : [':e $MYVIMRC'                          ,'vim'],
+      \ 'i' : [':e ~/.config/i3/config'               ,'i3'],
+      \ 'a' : [':e ~/.config/alacritty/alacritty.yml' ,'alacritty'],
+      \ 'z' : [':e ~/.zshrc'                          ,'zsh'],
+      \}
+
+
 
 let g:which_key_map_ll.t = {
       \ 'name' : '+terminal' ,
@@ -58,12 +69,6 @@ let g:which_key_map_ll.t = {
 " let g:which_key_map.h = {
 "       \ 'name' : '+GitGutter' ,
 "       \}
-
-let g:which_key_map.c = {
-      \ 'name' : '+configs' ,
-      \ 'c' : [':CocConfig'                          , 'coc'],
-      \ 'v' : [':e $MYVIMRC'                          ,'vim'],
-      \}
 
 
 
@@ -103,6 +108,7 @@ let g:which_key_map.s = {
 
 let g:which_key_map.g = {
       \ 'name' : '+git' ,
+      \ 'f' : [':Flog'                             , 'Flog'],
       \ 'a' : [':Git add .'                        , 'add all'],
       \ 'A' : [':Git add %'                        , 'add current'],
       \ 'b' : [':Git blame'                        , 'blame'],
