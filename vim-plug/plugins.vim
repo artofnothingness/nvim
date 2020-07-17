@@ -23,13 +23,18 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'airblade/vim-rooter'
     Plug 'https://github.com/itchyny/calendar.vim.git'
 
-
-    
+    " New
+    Plug 'https://github.com/skywind3000/asynctasks.vim.git'
+    Plug 'pechorin/any-jump.vim'
+    Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh \| UpdateRemotePlugins' }
+    " Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'szymonmaszke/vimpyter' "vim-plug"
+    Plug 'https://github.com/tpope/vim-surround.git'
 
     " Coc.nvim 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'liuchengxu/vista.vim'
-    " Plug 'jackguo380/vim-lsp-cxx-highlight'
+    Plug 'jackguo380/vim-lsp-cxx-highlight'
 
     " Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
