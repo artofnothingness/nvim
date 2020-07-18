@@ -42,7 +42,7 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 " New config settings
 set conceallevel=2
 set cursorline                          " Enable highlighting of the current line
-set colorcolumn=80
+" set colorcolumn=80
 
 
 " au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC

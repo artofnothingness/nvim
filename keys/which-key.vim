@@ -5,7 +5,6 @@ vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 
 nnoremap <localleader> :<c-u>WhichKey  ','<CR>
 vnoremap <localleader> :<c-u>WhichKeyVisual  ','<CR>
-
 let g:which_key_map =  {}
 let g:which_key_sep = '→'
 " set timeoutlen=100
@@ -29,6 +28,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 " Single mappings
 
+let g:which_key_map['h'] = [ ':CocCommand clangd.switchSourceHeader'                     , 'cpp switch h/s']
 " Leader
 
  " Local Leader
@@ -150,6 +150,7 @@ let g:which_key_map.l.d = {
       \ 'p' : ['<Plug>(coc-diagnostic-prev)'         , 'prev diagnostic'],
       \ 'P' : ['<Plug>(coc-diagnostic-prev-error)'   , 'prev error'],
       \ 'q' : ['<Plug>(coc-fix-current)'             , 'quickfix'],
+      \ 'r' : ['write | edit | TSBufEnable highlight'  , 'syntax reset'],
       \ }
 
 let g:which_key_map.l.f = {

@@ -21,20 +21,18 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/vim-easy-align'
     Plug 'honza/vim-snippets'
     Plug 'airblade/vim-rooter'
-    Plug 'https://github.com/itchyny/calendar.vim.git'
-
-    " New
-    Plug 'https://github.com/skywind3000/asynctasks.vim.git'
-    Plug 'pechorin/any-jump.vim'
-    Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh \| UpdateRemotePlugins' }
-    " Plug 'nvim-treesitter/nvim-treesitter'
-    Plug 'szymonmaszke/vimpyter' "vim-plug"
     Plug 'https://github.com/tpope/vim-surround.git'
 
+    " New
+    Plug 'szymonmaszke/vimpyter' "vim-plug"
+    Plug 'pechorin/any-jump.vim'
+    " Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'bagrat/vim-buffet'
     " Coc.nvim 
+    "
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'liuchengxu/vista.vim'
     Plug 'jackguo380/vim-lsp-cxx-highlight'
+    Plug 'liuchengxu/vista.vim'
 
     " Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
@@ -46,7 +44,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
     " Navigation
-    Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
+    " Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
 
@@ -63,7 +61,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-airline/vim-airline-themes'
     Plug 'ryanoasis/vim-devicons'
     Plug 'liuchengxu/space-vim-theme'
-
+    Plug 'dracula/vim', { 'as': 'dracula' }
+    Plug 'reewr/vim-monokai-phoenix'
+    Plug 'https://github.com/cocopon/iceberg.vim.git'
+    
     " Markdown
     Plug 'godlygeek/tabular'
     Plug 'plasticboy/vim-markdown'

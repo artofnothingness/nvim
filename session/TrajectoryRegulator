@@ -2,72 +2,62 @@ let SessionLoad = 1
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/ros/trajectory_ws/src/trajectory_regulator
+cd ~/.config/nvim
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +8 ~/.config/nvim/init.vim
-badd +101 ~/ros/aruco_ws/src/fiducials/fiducial_slam/src/fiducial_slam.cpp
-badd +1 src/modern_robotics.cpp
+badd +23 init.vim
+badd +35 vim-plug/plugins.vim
+badd +18 ~/ros/trajectory_ws/src/trajectory_regulator/src/nodes/TrajectoryRegulatorStart.cpp
+badd +78 ~/ros/aruco_ws/src/fiducials/fiducial_slam/src/fiducial_slam.cpp
+badd +1 ~/ros/trajectory_ws/src/trajectory_regulator/src/modern_robotics.cpp
 badd +1 ~/ros/aruco_ws/src/tagslam/include/ModernRobotics.h
-badd +20 src/module/include/TrajectoryRegulator.h
-badd +31 src/nodes/TrajectoryRegulatorStart.cpp
-badd +65 CMakeLists.txt
-badd +214 src/module/src/LQR.cpp
-badd +4 src/module/src/PlanerTrajectory.cpp
-badd +1 src/functional/State.h
-badd +1 src/module/include/PlannerTrajectory.h
-badd +61 ~/.config/nvim/vim-plug/plugins.vim
+badd +2 ~/ros/trajectory_ws/src/trajectory_regulator/src/module/include/TrajectoryRegulator.h
+badd +65 ~/ros/trajectory_ws/src/trajectory_regulator/CMakeLists.txt
+badd +60 ~/ros/trajectory_ws/src/trajectory_regulator/src/module/src/LQR.cpp
+badd +12 ~/ros/trajectory_ws/src/trajectory_regulator/src/module/src/PlanerTrajectory.cpp
+badd +1 ~/ros/trajectory_ws/src/trajectory_regulator/src/functional/State.h
+badd +6 ~/ros/trajectory_ws/src/trajectory_regulator/src/module/include/PlannerTrajectory.h
 badd +61 ~/ros/aruco_ws/src/tagslam/src/board.cpp
 badd +32 ~/ros/aruco_ws/src/tagslam/include/tagslam/board.h
 badd +22 ~/ros/aruco_ws/src/tagslam/include/tagslam/body.h
 badd +17 ~/ros/aruco_ws/src/tagslam/src/body.cpp
-badd +7 src/functional/ComputeModuls.cpp
-badd +1 src/module/src/TrajectoryRegulator.cpp
+badd +8 ~/ros/trajectory_ws/src/trajectory_regulator/src/functional/ComputeModuls.cpp
+badd +8 ~/ros/trajectory_ws/src/trajectory_regulator/src/module/src/TrajectoryRegulator.cpp
 badd +29 ~/ros/aruco_ws/src/tagslam/CMakeLists.txt
 badd +16 ~/ros/aruco_ws/src/tagslam/src/camera.cpp
 badd +1 ~/ros/aruco_ws/src/tagslam/src/camerainfo_to_kalibr.py
 badd +6 ~/ros/aruco_ws/src/tagslam/src/geometry.cpp
-badd +12 src/module/structures/PlannerParams.h
-badd +19 src/module/structures/State.h
-badd +1 src/scripts/LQRSimulation.py
-badd +33 src/scripts/SSC.py
-badd +1 src/scripts/CubicSplinePlanerExample.py
-badd +1 src/scripts/MPC.py
-badd +8 src/scripts/CubicSplineExample.py
-badd +35 src/module/include/TrajectoryRegulator.hpp
-badd +36 src/module/include/LQR.hpp
-badd +2 src/module/include/PlannerTrajectory.hpp
-badd +7 src/module/structures/PathPlannerParams.hpp
-badd +13 src/module/structures/State.hpp
+badd +1 ~/ros/trajectory_ws/src/trajectory_regulator/src/module/structures/PlannerParams.h
+badd +1 ~/ros/trajectory_ws/src/trajectory_regulator/src/module/structures/State.h
+badd +1 ~/ros/trajectory_ws/src/trajectory_regulator/src/scripts/LQRSimulation.py
+badd +33 ~/ros/trajectory_ws/src/trajectory_regulator/src/scripts/SSC.py
+badd +1 ~/ros/trajectory_ws/src/trajectory_regulator/src/scripts/CubicSplinePlanerExample.py
+badd +1 ~/ros/trajectory_ws/src/trajectory_regulator/src/scripts/MPC.py
+badd +8 ~/ros/trajectory_ws/src/trajectory_regulator/src/scripts/CubicSplineExample.py
+badd +1 ~/ros/trajectory_ws/src/trajectory_regulator/src/module/include/TrajectoryRegulator.hpp
+badd +1 ~/ros/trajectory_ws/src/trajectory_regulator/src/module/include/LQR.hpp
+badd +1 ~/ros/trajectory_ws/src/trajectory_regulator/src/module/include/PlannerTrajectory.hpp
+badd +1 ~/ros/trajectory_ws/src/trajectory_regulator/src/module/structures/PathPlannerParams.hpp
+badd +1 ~/ros/trajectory_ws/src/trajectory_regulator/src/module/structures/State.hpp
+badd +3 coc-settings.json
+badd +28 ~/ros/trajectory_ws/src/trajectory_regulator/src/module/include/LQR.h
+badd +9 ~/ros/trajectory_ws/src/trajectory_regulator/src/module/structures/PathPlannerParams.h
+badd +30 keys/which-key.vim
+badd +1 plug-config/buffet.vim
+badd +1 ~/ros/aruco_ws/src/fiducials/split
+badd +48 ~/.config/nvim/keys/mappings.vim
+badd +46 ~/.config/nvim/general/settings.vim
 argglobal
 %argdel
-edit src/module/src/TrajectoryRegulator.cpp
+edit init.vim
 set splitbelow splitright
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
 wincmd t
 set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 30 + 95) / 191)
-exe 'vert 2resize ' . ((&columns * 160 + 95) / 191)
-argglobal
-enew
-file \[coc-explorer]-1
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-wincmd w
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -78,16 +68,12 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 515 - ((34 * winheight(0) + 25) / 51)
+let s:l = 23 - ((22 * winheight(0) + 23) / 46)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-515
-normal! 07|
-wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 30 + 95) / 191)
-exe 'vert 2resize ' . ((&columns * 160 + 95) / 191)
+23
+normal! 0
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
