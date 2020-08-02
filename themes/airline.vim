@@ -13,7 +13,7 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 
 " Switch to your current theme
-let g:airline_theme = "deus"
+let g:airline_theme = "jellybeans"
 
 " Always show tabs
 

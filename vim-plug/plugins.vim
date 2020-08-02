@@ -22,19 +22,20 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'honza/vim-snippets'
     Plug 'airblade/vim-rooter'
     Plug 'https://github.com/tpope/vim-surround.git'
+    Plug 'https://github.com/xolox/vim-misc.git'
+    Plug 'lervag/vimtex'
+    Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+    Plug 'https://github.com/vim-syntastic/syntastic.git'
 
     " New
+    Plug 'https://github.com/mbbill/undotree.git'
     Plug 'szymonmaszke/vimpyter' "vim-plug"
-    Plug 'pechorin/any-jump.vim'
-    " Plug 'nvim-treesitter/nvim-treesitter'
-    Plug 'bagrat/vim-buffet'
+
     " Coc.nvim 
-    "
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'jackguo380/vim-lsp-cxx-highlight'
     Plug 'liuchengxu/vista.vim'
 
-    " Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
@@ -44,7 +45,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
     " Navigation
-    " Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
 

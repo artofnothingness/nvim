@@ -1,0 +1,93 @@
+let SessionLoad = 1
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+cd ~/Documents/LaTeX/University/practice
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +4 term://.//11661:cat\ \'/tmp/nvimVmWhjs/77\'\|\'/home/aleksei/.fzf/bin/fzf\'\ \ \'+m\'\ \'-x\'\ \'--tiebreak=index\'\ \'--header-lines=1\'\ \'--ansi\'\ \'-d\'\ \'\\t\'\ \'--with-nth\'\ \'2..\'\ \'-n\'\ \'2,1..2\'\ \'--prompt\'\ \'Buf>\ \'\ \'--query\'\ \'\'\ \'-d\'\ \'\	\'\ \'--preview-window\'\ \'right\'\ \'--preview\'\ \'\'\\\'\'/home/aleksei/.config/nvim/autoload/plugged/fzf.vim/bin/preview.sh\'\\\'\'\ \{1}\'\ --expect=ctrl-v,ctrl-x,ctrl-t\ --no-height\ >\ /tmp/nvimVmWhjs/76;\#FZF
+badd +25 main.tex
+badd +1 Preambule/preambule.tex
+badd +25 Preambule/theorems.tex
+badd +2 Preambule/math.tex
+badd +1 Preambule/pagestyle.tex
+badd +1 Preambule/packages.tex
+badd +3 Src/Intro.aux
+badd +21 Src/Intro.tex
+badd +6 Src/Body.tex
+badd +1 Src/Conclusions.tex
+badd +13 Src/Refs.aux
+badd +3 Src/Refs.tex
+badd +4 Src/Applications.tex
+badd +2 Src/Titule.tex
+badd +41 ~/Documents/LaTeX/University/Exam_engineer/1_1.tex
+badd +107 ~/Documents/LaTeX/Education/Calculus/Src/ch1.tex
+badd +2 Preambule/items.tex
+badd +5 Preambule/docstyle.tex
+badd +3 ~/.config/nvim/init.vim
+badd +54 ~/.config/nvim/general/settings.vim
+badd +333 ~/.vimrc
+badd +28 ~/.config/nvim/vim-plug/plugins.vim
+badd +2 Preambule/hyperref.tex
+argglobal
+%argdel
+edit main.tex
+set splitbelow splitright
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe '1resize ' . ((&lines * 31 + 23) / 47)
+exe '2resize ' . ((&lines * 11 + 23) / 47)
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 13 - ((12 * winheight(0) + 15) / 31)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+13
+normal! 0
+wincmd w
+argglobal
+enew
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+lcd ~/Documents/LaTeX/University/practice
+wincmd w
+exe '1resize ' . ((&lines * 31 + 23) / 47)
+exe '2resize ' . ((&lines * 11 + 23) / 47)
+tabnext 1
+if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 winminheight=1 winminwidth=1 shortmess=filnxtToOFcI
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

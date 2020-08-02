@@ -1,3 +1,4 @@
+
 " Plugins
 source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/plug-config/coc.vim
@@ -11,11 +12,7 @@ source $HOME/.config/nvim/plug-config/vista.vim
 source $HOME/.config/nvim/plug-config/gitgutter.vim
 source $HOME/.config/nvim/plug-config/netrw.vim
 source $HOME/.config/nvim/plug-config/easyalign.vim
-
-" source $HOME/.config/nvim/plug-config/tree-sitter.vim
-
 source $HOME/.config/nvim/plug-config/easymotion.vim
-" source $HOME/.config/nvim/plug-config/ctrlp.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 
 " General
@@ -28,6 +25,4 @@ source $HOME/.config/nvim/general/functions.vim
 
 " Themes
 source $HOME/.config/nvim/themes/airline.vim
-" source $HOME/.config/nvim/themes/onedark.vim
-
 colo shado 

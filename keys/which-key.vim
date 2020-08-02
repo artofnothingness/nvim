@@ -32,15 +32,17 @@ let g:which_key_map['h'] = [ ':CocCommand clangd.switchSourceHeader'            
 " Leader
 
  " Local Leader
-let g:which_key_map_ll['e'] = [ ':CocCommand explorer'       , 'Explorer' ]
-let g:which_key_map_ll['r'] = [ ':Ranger'                    , 'Ranger' ]
-let g:which_key_map_ll['b'] = [ ':TagbarToggle'              , 'BarTags' ]
-let g:which_key_map_ll['v'] = [ ':Vista!!'                   , 'Vista']
-let g:which_key_map_ll['j'] = [ '<C-W>s'                     , 'split below']
-let g:which_key_map_ll['l'] = [ '<C-W>v'                     , 'split right']
-let g:which_key_map_ll['d'] = [ 'cd %:h'                     , 'current dir']
-let g:which_key_map_ll['g'] = [ ':Startify'                  , 'Startify' ]
+let g:which_key_map_ll['e'] = [ ':CocCommand explorer'              , 'Explorer' ]
+let g:which_key_map_ll['r'] = [ ':Ranger'                           , 'Ranger' ]
+let g:which_key_map_ll['b'] = [ ':TagbarToggle'                     , 'BarTags' ]
+let g:which_key_map_ll['v'] = [ ':Vista!!'                          , 'Vista']
+let g:which_key_map_ll['j'] = [ '<C-W>s'                            , 'split below']
+let g:which_key_map_ll['l'] = [ '<C-W>v'                            , 'split right']
+let g:which_key_map_ll['d'] = [ 'cd %:h'                            , 'current dir']
+let g:which_key_map_ll['g'] = [ ':Startify'                         , 'Startify' ]
 let g:which_key_map_ll['s'] = [ ':CocCommand snippets.editSnippets' , 'Snippets']
+let g:which_key_map_ll['u'] = [ ':UndotreeToggle'                   , 'UndoTree']
+
 
 let g:which_key_map_ll.c = {
       \ 'name' : '+configs' ,

@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/aleksei/anaconda3'
 let g:netrw_dirhist_2='/home/aleksei/ros/trajectory_ws/logs/trajectory_regulator'
 let g:netrw_dirhist_1='/home/aleksei'
 let g:netrw_dirhist_0='/home/aleksei/.oh-my-zsh/plugins'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_7='/home'
 let g:netrw_dirhist_6='/home/aleksei'
 let g:netrw_dirhist_5='/home/aleksei/.config/nvim/colors'
 let g:netrw_dirhist_4='/home/aleksei/ros/aruco_ws/src'
-let g:netrw_dirhist_3='/home/aleksei/ros/aruco_ws'
