@@ -17,6 +17,7 @@ let g:startify_bookmarks = [
             \ { 'ro': '~/ros' },
             \ { 'do': '~/Documents' },
             \ ]
+
 " map <leader>g :Startify<CR>
 " let g:startify_session_delete_buffers = 1
 let g:startify_session_sort = 1

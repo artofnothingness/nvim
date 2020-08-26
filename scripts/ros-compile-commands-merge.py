@@ -1,5 +1,6 @@
 import os
 import sys
+
 workspace_path = os.popen('catkin locate --workspace $(pwd)').read().rstrip()
 
 if not workspace_path:

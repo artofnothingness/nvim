@@ -29,7 +29,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " New
     Plug 'https://github.com/mbbill/undotree.git'
-    Plug 'szymonmaszke/vimpyter' "vim-plug"
+    " Plug 'szymonmaszke/vimpyter' "vim-plug"
 
     " Coc.nvim 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}

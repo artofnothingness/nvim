@@ -1,4 +1,3 @@
-
 " Plugins
 source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/plug-config/coc.vim
@@ -25,4 +24,4 @@ source $HOME/.config/nvim/general/functions.vim
 
 " Themes
 source $HOME/.config/nvim/themes/airline.vim
-colo shado 
+source $HOME/.config/nvim/themes/onedark.vim
