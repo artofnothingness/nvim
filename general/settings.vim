@@ -50,6 +50,9 @@ set cursorline                          " Enable highlighting of the current lin
 let g:lsp_cxx_hl_use_text_props = 1
 " You can't stop me
 cmap w!! w !sudo tee %
+set sessionoptions+=globals
+
+autocmd BufEnter * silent! :lcd%:p:h
 
 " set spell spelllang=ru_ru,en_us
 " hi SpellBad cterm=underline ctermfg=white

@@ -24,4 +24,6 @@ source $HOME/.config/nvim/general/functions.vim
 
 " Themes
 source $HOME/.config/nvim/themes/airline.vim
+source $HOME/.config/nvim/plug-config/spaceline.vim
 source $HOME/.config/nvim/themes/onedark.vim
+colo shado

@@ -13,4 +13,4 @@ let g:instant_markdown_autoscroll = 1
 let g:instant_markdown_browser = "chromium-browser --new-window"
 let g:instant_markdown_mathjax = 1
 
-map <C-m> :InstantMarkdownPreview<CR>
+" map <C-m> :InstantMarkdownPreview<CR>

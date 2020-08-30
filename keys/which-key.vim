@@ -7,7 +7,7 @@ nnoremap <localleader> :<c-u>WhichKey  ','<CR>
 vnoremap <localleader> :<c-u>WhichKeyVisual  ','<CR>
 let g:which_key_map =  {}
 let g:which_key_sep = '→'
-" set timeoutlen=100
+" set timeoutlen=200
 
 let g:which_key_map_ll =  {}
 let g:which_key_sep_ll = '→'
@@ -29,31 +29,22 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Single mappings
 
 let g:which_key_map['h'] = [ ':CocCommand clangd.switchSourceHeader'                     , 'cpp switch h/s']
+let g:which_key_map['q'] = [ ':bdelete'                     , 'Kill Buffer']
+
 " Leader
 
  " Local Leader
-let g:which_key_map_ll['e'] = [ ':CocCommand explorer'              , 'Explorer' ]
+let g:which_key_map_ll['e'] = [ 'NERDTreeToggleVCS'                 , 'Explorer' ]
+let g:which_key_map_ll['w'] = [ ':CocCommand explorer'              , 'Coc Explorer' ]
 let g:which_key_map_ll['r'] = [ ':Ranger'                           , 'Ranger' ]
 let g:which_key_map_ll['b'] = [ ':TagbarToggle'                     , 'BarTags' ]
 let g:which_key_map_ll['v'] = [ ':Vista!!'                          , 'Vista']
 let g:which_key_map_ll['j'] = [ '<C-W>s'                            , 'split below']
 let g:which_key_map_ll['l'] = [ '<C-W>v'                            , 'split right']
-let g:which_key_map_ll['d'] = [ 'cd %:h'                            , 'current dir']
+let g:which_key_map_ll['d'] = [ 'cd %:p:h'                          , 'current dir']
 let g:which_key_map_ll['g'] = [ ':Startify'                         , 'Startify' ]
 let g:which_key_map_ll['s'] = [ ':CocCommand snippets.editSnippets' , 'Snippets']
 let g:which_key_map_ll['u'] = [ ':UndotreeToggle'                   , 'UndoTree']
-
-
-let g:which_key_map_ll.c = {
-      \ 'name' : '+configs' ,
-      \ 'c' : [':CocConfig'                           ,'coc'],
-      \ 'v' : [':e $MYVIMRC'                          ,'vim'],
-      \ 'i' : [':e ~/.config/i3/config'               ,'i3'],
-      \ 'a' : [':e ~/.config/alacritty/alacritty.yml' ,'alacritty'],
-      \ 'z' : [':e ~/.zshrc'                          ,'zsh'],
-      \}
-
-
 
 let g:which_key_map_ll.t = {
       \ 'name' : '+terminal' ,
@@ -179,8 +170,6 @@ let g:which_key_map.l.o = {
       \ 'h' : ['<Plug>(coc-float-hide)'              , 'hide'],
       \ }
 
-" Register which key map
-" nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 
 call which_key#register('<Space>', "g:which_key_map")
 call which_key#register(',',       "g:which_key_map_ll")

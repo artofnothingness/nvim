@@ -2,8 +2,8 @@
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  "autocmd VimEnter * PlugInstall
-  "autocmd VimEnter * PlugInstall | source $MYVIMRC
+      autocmd VimEnter * PlugInstall
+      autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
@@ -20,15 +20,18 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'voldikss/vim-floaterm'
     Plug 'junegunn/vim-easy-align'
     Plug 'honza/vim-snippets'
-    Plug 'airblade/vim-rooter'
+    " Plug 'airblade/vim-rooter'
     Plug 'https://github.com/tpope/vim-surround.git'
     Plug 'https://github.com/xolox/vim-misc.git'
-    Plug 'lervag/vimtex'
+    " Plug 'lervag/vimtex'
     Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
     Plug 'https://github.com/vim-syntastic/syntastic.git'
-
     " New
+    Plug 'edkolev/tmuxline.vim'
     Plug 'https://github.com/mbbill/undotree.git'
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'preservim/nerdtree'
+    " Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
     " Plug 'szymonmaszke/vimpyter' "vim-plug"
 
     " Coc.nvim 
@@ -60,6 +63,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'ryanoasis/vim-devicons'
+    Plug 'hardcoreplayers/spaceline.vim'
+
     Plug 'liuchengxu/space-vim-theme'
     Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'reewr/vim-monokai-phoenix'

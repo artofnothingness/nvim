@@ -11,6 +11,9 @@ let g:startify_bookmarks = [
             \ { 'nv': '~/.config/nvim/init.vim' },
             \ { 'zs': '~/.zshrc' },
             \ { 'al': '~/.config/alacritty/alacritty.yml' },
+            \ { 'mp': '~/.config/mpd/mpd.conf' },
+            \ { 'nc': '~/.ncmpcpp/config' },
+            \ { 'po': '~/.config/polybar/config' },
             \ 
             \ { 'zc': '~/.config/zsh' },
             \ { 'dv': '~/dev' },
