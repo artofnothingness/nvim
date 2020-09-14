@@ -9,6 +9,7 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
 
    " General
+    Plug 'preservim/nerdtree'
     Plug 'https://github.com/taketwo/vim-ros.git'
     Plug 'https://github.com/tpope/vim-commentary.git'
     Plug 'https://github.com/easymotion/vim-easymotion.git'
@@ -20,17 +21,16 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'voldikss/vim-floaterm'
     Plug 'junegunn/vim-easy-align'
     Plug 'honza/vim-snippets'
-    " Plug 'airblade/vim-rooter'
+    Plug 'airblade/vim-rooter'
     Plug 'https://github.com/tpope/vim-surround.git'
     Plug 'https://github.com/xolox/vim-misc.git'
     " Plug 'lervag/vimtex'
     Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
     Plug 'https://github.com/vim-syntastic/syntastic.git'
-    " New
-    Plug 'edkolev/tmuxline.vim'
-    Plug 'https://github.com/mbbill/undotree.git'
     Plug 'ryanoasis/vim-devicons'
-    Plug 'preservim/nerdtree'
+    " New
+    Plug 'https://github.com/mbbill/undotree.git'
+    Plug 'frazrepo/vim-rainbow'
     " Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
     " Plug 'szymonmaszke/vimpyter' "vim-plug"
 
@@ -67,6 +67,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     Plug 'liuchengxu/space-vim-theme'
     Plug 'dracula/vim', { 'as': 'dracula' }
+    Plug 'NLKNguyen/papercolor-theme'
     Plug 'reewr/vim-monokai-phoenix'
     Plug 'https://github.com/cocopon/iceberg.vim.git'
     

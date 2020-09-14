@@ -34,17 +34,10 @@ vnoremap > >gv
 nmap < <<
 nmap > >>
 
-
-map <localleader>d :cd %:p:h
-
-nnoremap <C-c> :cd %:p:h<CR>
-
 nnoremap <M-j>    :resize -2<CR>
 nnoremap <M-k>    :resize +2<CR>
 nnoremap <M-h>    :vertical resize -2<CR>
 nnoremap <M-l>    :vertical resize +2<CR>
 
-" Light Plugins configs
-nmap <C-_> :Commentary<CR>
 vmap <C-_> :Commentary<CR>gv
 nmap <leader>b :TagbarToggle<CR>

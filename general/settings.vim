@@ -7,7 +7,7 @@ set termguicolors "Allows for hex coloring
 set t_Co=256
 
 set hidden                              " Required to keep multiple buffers open multiple buffers
-set nowrap                              " Display long lines as just one line
+" set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
@@ -56,3 +56,9 @@ autocmd BufEnter * silent! :lcd%:p:h
 
 " set spell spelllang=ru_ru,en_us
 " hi SpellBad cterm=underline ctermfg=white
+"
+if exists('$TMUX')
+  " Colors in tmux
+  let &t_8f = "<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "<Esc>[48;2;%lu;%lu;%lum"
+endif

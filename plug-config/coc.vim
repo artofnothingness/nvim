@@ -1,6 +1,7 @@
 let g:coc_global_extensions = 
   \[ 
     \'coc-python',
+    \'coc-snippets',
     \'coc-clangd', 
     \'coc-tag', 
     \'coc-vimlsp',
@@ -170,7 +171,4 @@ nnoremap <silent><nowait> <leader>ss :<C-u>CocList -I symbols<cr>
 " Resume latest coc list.
 nnoremap <silent><nowait> <leader>lor  :<C-u>CocListResume<CR>
 
-nmap <localleader>e :CocCommand explorer<CR>
-" nmap <space>f :CocCommand explorer --preset floating<CR>
-autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 

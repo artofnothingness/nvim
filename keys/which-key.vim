@@ -30,12 +30,13 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 let g:which_key_map['h'] = [ ':CocCommand clangd.switchSourceHeader'                     , 'cpp switch h/s']
 let g:which_key_map['q'] = [ ':bdelete'                     , 'Kill Buffer']
+let g:which_key_map['R'] = [ ':RainbowToggle'               , 'RainbowToggle']
 
 " Leader
 
  " Local Leader
-let g:which_key_map_ll['e'] = [ 'NERDTreeToggleVCS'                 , 'Explorer' ]
-let g:which_key_map_ll['w'] = [ ':CocCommand explorer'              , 'Coc Explorer' ]
+let g:which_key_map_ll['w'] = [ 'NERDTreeToggleVCS'                 , 'Explorer' ]
+let g:which_key_map_ll['e'] = [ ':CocCommand explorer'              , 'Coc Explorer' ]
 let g:which_key_map_ll['r'] = [ ':Ranger'                           , 'Ranger' ]
 let g:which_key_map_ll['b'] = [ ':TagbarToggle'                     , 'BarTags' ]
 let g:which_key_map_ll['v'] = [ ':Vista!!'                          , 'Vista']

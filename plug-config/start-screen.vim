@@ -1,20 +1,23 @@
 let g:startify_session_dir = '~/.config/nvim/session'
 
 let g:startify_lists = [
-          \ { 'type': 'sessions',  'header': ['   Sessions']       },
+          \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
           \ { 'type': 'files',     'header': ['   Files']            },
+          \ { 'type': 'sessions',  'header': ['   Sessions']       },
           \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
           \ ]
-          " \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
 let g:startify_bookmarks = [
             \ { 'i3': '~/.config/i3/config' },
             \ { 'nv': '~/.config/nvim/init.vim' },
             \ { 'zs': '~/.zshrc' },
             \ { 'al': '~/.config/alacritty/alacritty.yml' },
             \ { 'mp': '~/.config/mpd/mpd.conf' },
-            \ { 'nc': '~/.ncmpcpp/config' },
+            \ { 'nc': '~/.config/ncmpcpp/config' },
             \ { 'po': '~/.config/polybar/config' },
             \ 
+            \ { 'za': '~/.config/zathura/zathurarc' },
+            \ { 'ra': '~/.config/ranger/rc.conf' },
+            \ { 'tm': '~/.tmux.conf.local' },
             \ { 'zc': '~/.config/zsh' },
             \ { 'dv': '~/dev' },
             \ { 'ro': '~/ros' },
@@ -25,5 +28,5 @@ let g:startify_bookmarks = [
 " let g:startify_session_delete_buffers = 1
 let g:startify_session_sort = 1
 " let g:startify_session_persistence = 0
-" let g:startify_custom_header = [
-" ]
+let g:startify_custom_header = [ 
+      \ ]
