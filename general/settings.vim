@@ -2,6 +2,12 @@
 let g:mapleader = "\<Space>"
 let g:maplocalleader = ','
 
+" checks if your terminal has 24-bit color support
+if (has("termguicolors"))
+    set termguicolors
+    hi LineNr ctermbg=NONE guibg=NONE
+endif
+
 syntax enable "Allows for syntax highlighting
 set termguicolors "Allows for hex coloring
 set t_Co=256
@@ -57,6 +63,7 @@ autocmd BufEnter * silent! :lcd%:p:h
 " set spell spelllang=ru_ru,en_us
 " hi SpellBad cterm=underline ctermfg=white
 "
+let g:syntastic_cpp_compiler_options = '-std=c++20'
 if exists('$TMUX')
   " Colors in tmux
   let &t_8f = "<Esc>[38;2;%lu;%lu;%lum"

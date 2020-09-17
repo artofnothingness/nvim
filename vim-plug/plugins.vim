@@ -10,7 +10,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
    " General
     Plug 'https://github.com/tpope/vim-commentary.git'
-    Plug 'https://github.com/vim-syntastic/syntastic.git'
     Plug 'majutsushi/tagbar'
     Plug 'jiangmiao/auto-pairs'
 
@@ -57,6 +56,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Themes
     Plug 'ryanoasis/vim-devicons'
+    Plug 'ayu-theme/ayu-vim'
     Plug 'whatyouhide/vim-gotham'
     Plug 'joshdick/onedark.vim'
     Plug 'liuchengxu/space-vim-theme'
@@ -64,6 +64,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'NLKNguyen/papercolor-theme'
     Plug 'reewr/vim-monokai-phoenix'
     Plug 'https://github.com/cocopon/iceberg.vim.git'
+    Plug 'junegunn/seoul256.vim'
 
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'

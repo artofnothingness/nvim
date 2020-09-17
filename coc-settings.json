@@ -1,4 +1,9 @@
 {
+  "clangd.enabled": true,
+  "clangd.fallbackFlags": [
+    "-std=c++1z",
+    "-I/usr/include"
+  ],
   "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
   // python config
   "python.linting.enabled": true,
