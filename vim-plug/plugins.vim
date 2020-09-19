@@ -74,5 +74,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'plasticboy/vim-markdown'
     Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
     Plug 'ajorgensen/vim-markdown-toc'
+    Plug 'lervag/vimtex'
 
+    " Latex
+    
 call plug#end()

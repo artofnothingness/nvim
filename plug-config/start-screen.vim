@@ -1,7 +1,6 @@
 let g:startify_session_dir = '~/.config/nvim/session'
-
+let g:startify_padding_left = 20
 let g:startify_lists = [
-          \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
           \ { 'type': 'files',     'header': ['   Files']            },
           \ { 'type': 'sessions',  'header': ['   Sessions']       },
           \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
@@ -28,5 +27,21 @@ let g:startify_bookmarks = [
 " let g:startify_session_delete_buffers = 1
 let g:startify_session_sort = 1
 " let g:startify_session_persistence = 0
-let g:startify_custom_header = [ 
-      \ ]
+"
+let g:startify_custom_header = [  
+         \'',
+         \'',
+         \'',
+         \'                                          ████████▄   ▄██████▄   ▄██████▄    ▄▄▄▄███▄▄▄▄         ▄█    █▄   ▄█    ▄▄▄▄███▄▄▄▄  ',
+         \'                                          ███   ▀███ ███    ███ ███    ███ ▄██▀▀▀███▀▀▀██▄      ███    ███ ███  ▄██▀▀▀███▀▀▀██▄',
+         \'                                          ███    ███ ███    ███ ███    ███ ███   ███   ███      ███    ███ ███▌ ███   ███   ███',
+         \'                                          ███    ███ ███    ███ ███    ███ ███   ███   ███      ███    ███ ███▌ ███   ███   ███',
+         \'                                          ███    ███ ███    ███ ███    ███ ███   ███   ███      ███    ███ ███▌ ███   ███   ███',
+         \'                                          ███    ███ ███    ███ ███    ███ ███   ███   ███      ███    ███ ███  ███   ███   ███',
+         \'                                          ███   ▄███ ███    ███ ███    ███ ███   ███   ███      ███    ███ ███  ███   ███   ███',
+         \'                                          ████████▀   ▀██████▀   ▀██████▀   ▀█   ███   █▀        ▀██████▀  █▀    ▀█   ███   █▀ ',
+         \'',
+         \'',
+         \'',
+         \ ]
+
