@@ -14,7 +14,6 @@ source $HOME/.config/nvim/plug-config/tex.vim
 source $HOME/.config/nvim/plug-config/rnvimr.vim
 source $HOME/.config/nvim/plug-config/tree-sitter.vim
 
-
 " General
 source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/general/settings.vim
