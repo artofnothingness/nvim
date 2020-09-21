@@ -1,5 +1,5 @@
 let g:startify_session_dir = '~/.config/nvim/session'
-let g:startify_padding_left = 20
+" let g:startify_padding_left = 20
 let g:startify_lists = [
           \ { 'type': 'files',     'header': ['   Files']            },
           \ { 'type': 'sessions',  'header': ['   Sessions']       },
@@ -10,17 +10,11 @@ let g:startify_bookmarks = [
             \ { 'nv': '~/.config/nvim/init.vim' },
             \ { 'zs': '~/.zshrc' },
             \ { 'al': '~/.config/alacritty/alacritty.yml' },
-            \ { 'mp': '~/.config/mpd/mpd.conf' },
-            \ { 'nc': '~/.config/ncmpcpp/config' },
             \ { 'po': '~/.config/polybar/config' },
             \ 
             \ { 'za': '~/.config/zathura/zathurarc' },
             \ { 'ra': '~/.config/ranger/rc.conf' },
             \ { 'tm': '~/.tmux.conf.local' },
-            \ { 'zc': '~/.config/zsh' },
-            \ { 'dv': '~/dev' },
-            \ { 'ro': '~/ros' },
-            \ { 'do': '~/Documents' },
             \ ]
 
 " map <leader>g :Startify<CR>
@@ -44,4 +38,3 @@ let g:startify_custom_header = [
          \'',
          \'',
          \ ]
-

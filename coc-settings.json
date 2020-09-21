@@ -13,7 +13,7 @@
     "~/.config/nvim/utils/snips"
   ],
   // coc-explorer
-  "explorer.width": 30,
+  "explorer.width": 40,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
   "explorer.keyMappings": {
@@ -25,6 +25,8 @@
     "v": "open:vsplit"
   },
   "coc.preferences.formatOnSaveFiletypes": [
+    "cpp",
+    "c",
     "javascript",
     "typescript",
     "typescriptreact",

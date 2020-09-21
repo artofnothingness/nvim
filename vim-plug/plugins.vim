@@ -20,6 +20,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 
     Plug 'https://github.com/easymotion/vim-easymotion.git'
+    Plug 'justinmk/vim-sneak'
     Plug 'junegunn/vim-easy-align'
     Plug 'https://github.com/tpope/vim-surround.git'
     Plug 'honza/vim-snippets'
@@ -31,6 +32,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'https://github.com/taketwo/vim-ros.git'
     Plug 'https://github.com/PotatoesMaster/i3-vim-syntax.git'
     " New
+    Plug 'nvim-treesitter/nvim-treesitter'
 
     " Coc.nvim 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -42,7 +44,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sheerun/vim-polyglot'
 
     " File Explorers
-    Plug 'francoiscabrol/ranger.vim'
+    Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
     " Navigation
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -55,6 +57,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'rbong/vim-flog'
 
     " Themes
+    Plug 'sainnhe/gruvbox-material'
+
     Plug 'ryanoasis/vim-devicons'
     Plug 'ayu-theme/ayu-vim'
     Plug 'whatyouhide/vim-gotham'

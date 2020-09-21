@@ -1,6 +1,6 @@
 " set leader key
 let g:mapleader = "\<Space>"
-let g:maplocalleader = ','
+let g:maplocalleader = 'm'
 
 " checks if your terminal has 24-bit color support
 if (has("termguicolors"))
@@ -12,6 +12,7 @@ syntax enable "Allows for syntax highlighting
 set termguicolors "Allows for hex coloring
 set t_Co=256
 
+set ignorecase
 set hidden                              " Required to keep multiple buffers open multiple buffers
 " set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
@@ -60,9 +61,6 @@ set sessionoptions+=globals
 
 autocmd BufEnter * silent! :lcd%:p:h
 
-" set spell spelllang=ru_ru,en_us
-" hi SpellBad cterm=underline ctermfg=white
-"
 let g:syntastic_cpp_compiler_options = '-std=c++20'
 if exists('$TMUX')
   " Colors in tmux
