@@ -93,8 +93,8 @@ nnoremap <space>P P=`]
 cnoremap <C-j> <Down>
 cnoremap <C-k> <Up>
 
-cnoremap <expr> <Tab> getcmdtype() ==# '/' \|\| getcmdtype() ==# '?' ? '<CR>/<C-r>/' : '<C-z>'
-cnoremap <expr> <S-Tab> getcmdtype() ==# '/' \|\| getcmdtype() ==# '?' ? '<CR>?<C-r>/' : '<S-Tab>'
+" cnoremap <expr> <Tab> getcmdtype() ==# '/' \|\| getcmdtype() ==# '?' ? '<CR>/<C-r>/' : '<C-z>'
+" cnoremap <expr> <S-Tab> getcmdtype() ==# '/' \|\| getcmdtype() ==# '?' ? '<CR>?<C-r>/' : '<S-Tab>'
 
 map <localleader>Rm :!python3 ~/.config/nvim/scripts/ros-compile-commands-merge.py<CR>
 map <localleader>Rb :!catkin build 

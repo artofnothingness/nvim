@@ -2,16 +2,7 @@
 let g:mapleader = "\<Space>"
 let g:maplocalleader = 'm'
 
-" checks if your terminal has 24-bit color support
-if (has("termguicolors"))
-    set termguicolors
-    hi LineNr ctermbg=NONE guibg=NONE
-endif
-
 syntax enable "Allows for syntax highlighting
-set termguicolors "Allows for hex coloring
-set t_Co=256
-
   
 set backspace=indent,eol,start " Allow backspacing over everything in insert mode.
 set smartcase
@@ -79,10 +70,3 @@ let g:lsp_cxx_hl_use_text_props = 1
 cmap w!! w !sudo tee %
 set sessionoptions+=globals
 
-if exists('$TMUX')
-  " Colors in tmux
-  let &t_8f = "<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "<Esc>[48;2;%lu;%lu;%lum"
-endif
-
-" NEW

@@ -8,4 +8,3 @@ call SourceDirectory('~/.config/nvim/keys')
 source $HOME/.config/nvim/themes/theme.vim
 source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/themes/material.vim
-

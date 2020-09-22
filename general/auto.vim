@@ -1,7 +1,7 @@
-augroup savebuffer
-	autocmd!
-	autocmd InsertLeave,TextChanged * nested silent! update
-augroup end
+" augroup savebuffer
+" 	autocmd!
+" 	autocmd InsertLeave,TextChanged * nested silent! update
+" augroup end
 
 
 autocmd VimEnter *

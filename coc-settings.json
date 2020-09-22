@@ -24,21 +24,6 @@
     ],
     "v": "open:vsplit"
   },
-  "coc.preferences.formatOnSaveFiletypes": [
-    "cpp",
-    "c",
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "json",
-    "javascriptreact",
-    "typescript.tsx",
-    "html",
-    "css",
-    "makrdown",
-    "python",
-    "javascript.jsx"
-  ],
   "languageserver": {
     "bash": {
       "command": "bash-language-server",
