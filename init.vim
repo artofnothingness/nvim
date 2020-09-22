@@ -6,7 +6,7 @@ source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/snips.vim
 source $HOME/.config/nvim/plug-config/vista.vim
 source $HOME/.config/nvim/plug-config/gitgutter.vim
-source $HOME/.config/nvim/plug-config/sneak.vim
+source $HOME/.config/nvim/plug-config/easymotion.vim
 
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/rainbow.vim

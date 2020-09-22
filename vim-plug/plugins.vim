@@ -20,7 +20,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 
     Plug 'https://github.com/easymotion/vim-easymotion.git'
-    Plug 'justinmk/vim-sneak'
     Plug 'junegunn/vim-easy-align'
     Plug 'https://github.com/tpope/vim-surround.git'
     Plug 'honza/vim-snippets'
