@@ -1,11 +1,3 @@
-" auto-install vim-plug
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-      autocmd VimEnter * PlugInstall
-      autocmd VimEnter * PlugInstall | source $MYVIMRC
-endif
-
 call plug#begin('~/.config/nvim/autoload/plugged')
 
    " General
@@ -57,7 +49,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Themes
     Plug 'sainnhe/gruvbox-material'
-
+    Plug 'kaicataldo/material.vim', { 'branch': 'main' }
     Plug 'ryanoasis/vim-devicons'
     Plug 'ayu-theme/ayu-vim'
     Plug 'whatyouhide/vim-gotham'

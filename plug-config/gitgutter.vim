@@ -1,4 +1,4 @@
-nmap <leader>gs <Plug>(GitGutterStageHunk)
-nmap <leader>gu <Plug>(GitGutterUndoHunk)
-nmap <leader>gH <Plug>(GitGutterPreviewHunk)
+nmap <localleader>gs <Plug>(GitGutterStageHunk)
+nmap <localleader>gu <Plug>(GitGutterUndoHunk)
+nmap <localleader>gH <Plug>(GitGutterPreviewHunk)
 

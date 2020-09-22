@@ -12,9 +12,11 @@ syntax enable "Allows for syntax highlighting
 set termguicolors "Allows for hex coloring
 set t_Co=256
 
-set ignorecase
+  
+set backspace=indent,eol,start " Allow backspacing over everything in insert mode.
+set smartcase
 set hidden                              " Required to keep multiple buffers open multiple buffers
-" set nowrap                              " Display long lines as just one line
+set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
@@ -26,13 +28,18 @@ set splitbelow                          " Horizontal splits will automatically b
 set splitright                          " Vertical splits will automatically be to the right
 set t_Co=256                            " Support 256 colors
 set conceallevel=0                      " So that I can see `` in markdown files
-set tabstop=2                           " Insert 2 spaces for a tab
-set shiftwidth=2                        " Change the number of space characters inserted for indentation
-set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
+     
+" Indentation
+set autoindent " Copy indent from current line when starting a new line.
+set nosmarttab " Tab key always inserts blanks according to 'tabstop'.
+set shiftround " Round indent to multiple of 'shiftwidth'. Applies to > and < commands.
 set expandtab                           " Converts tabs to spaces
-set smartindent                         " Makes indenting smart
-set autoindent                          " Good auto indent
+set shiftwidth=4 " Affects what happens when you press `>>`, `<<` or `==`.
+set smartindent " Automatically inserts one extra level of indentation in some cases.
+set tabstop=4 " TAB character length.
+
 set laststatus=0                        " Always display the status line
+set number
 set relativenumber                      " Line numbers
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs
@@ -43,27 +50,39 @@ set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
-"set autochdir                           " Your working directory will always be the same as your working directory
+set autochdir                           " Your working directory will always be the same as your working directory
 
-"Old config settings
-" New config settings
 set conceallevel=2
 set cursorline                          " Enable highlighting of the current line
-" set colorcolumn=80
 
+" Folding
+set foldlevelstart=99 " Start editing with all folds open.
+set foldmethod=indent " Use indent model for folding mechanism.
 
+" Backup
+set backupdir=~/.config/nvim/cache/backup// " The directory for backup files.
+set directory=~/.config/nvim/cache/swap// " The directory for swap files.
+set undodir=~/.config/nvim/cache/undo// " The directory for undo files.
+set undofile " Undo tree to be saved to a file when exiting a buffer.
+set undolevels=100000 " Maximum undo limit.
+set updatecount=100 " Typing this many characters will create the swap file.
+set viewdir=~/.config/nvim/cache/view// " Name of the directory where to store files for :mkview.
+set viewoptions=cursor,folds,unix,slash " Options used by `mkview` and `loadview` command.
 " au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+
+ " Buffers, Windows, Tabs
+set autoread " Read the file again if have been changed outside of Vim.
+set switchbuf=useopen " Jump to the first open window that contains the specified buffer.
 
 let g:lsp_cxx_hl_use_text_props = 1
 " You can't stop me
 cmap w!! w !sudo tee %
 set sessionoptions+=globals
 
-autocmd BufEnter * silent! :lcd%:p:h
-
-let g:syntastic_cpp_compiler_options = '-std=c++20'
 if exists('$TMUX')
   " Colors in tmux
   let &t_8f = "<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "<Esc>[48;2;%lu;%lu;%lum"
 endif
+
+" NEW

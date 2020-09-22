@@ -7,7 +7,7 @@ nmap <localleader> :<c-u>WhichKey  'm'<CR>
 vmap <localleader> :<c-u>WhichKeyVisual  'm'<CR>
 let g:which_key_map =  {}
 let g:which_key_sep = '→'
-" set timeoutlen=100
+set timeoutlen=500
 
 let g:which_key_map_ll =  {}
 let g:which_key_sep_ll = '→'
@@ -32,12 +32,12 @@ let g:which_key_map['h']    = [ ':CocCommand clangd.switchSourceHeader', 'sw h/s
 let g:which_key_map['q']    = [ ':bdelete',                              'Kill Buffer']
 let g:which_key_map['w']    = [ ':Buffers!',                             'Search Buffers']
 let g:which_key_map['s']    = [ ':CocList -I symbols',                   'Search Symbols']
+let g:which_key_map['R']    = [ ':so $MYVIMRC',                          'source vimrc']
 
 " LOCAL LEADER
 " ###################################################################################################################################################################
 " ###################################################################################################################################################################
-" ###################################################################################################################################################################
-" ###################################################################################################################################################################
+"
 let g:which_key_map_ll['R']    = [ ':RainbowToggle',                        'RainbowToggle']
 let g:which_key_map_ll[' '] = [ ':Startify',                             'Startify' ]
 let g:which_key_map_ll['e'] = [ ':CocCommand explorer',                  'Coc Explorer' ]
