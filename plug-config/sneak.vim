@@ -9,5 +9,6 @@ let g:sneak#absolute_dir = 1
  onoremap <silent> f :<C-U>call sneak#wrap(v:operator,   1, 0, 1, 1)<CR>
  onoremap <silent> F :<C-U>call sneak#wrap(v:operator,   1, 1, 1, 1)<CR>
 
- highlight Sneak guifg=black guibg=red ctermfg=black ctermbg=red
- highlight SneakScope guifg=red guibg=yellow ctermfg=red ctermbg=yellow
+
+let g:sneak#target_labels =';123456789qwerasdfzxcvuiopjkl;nmtgyhbQWERASDFZXCVUIOPJKLNMTGYHB'       
+
