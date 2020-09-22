@@ -4,13 +4,13 @@
     "-std=c++1z",
     "-I/usr/include"
   ],
-  "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
+  "snippets.userSnippetsDirectory": "~/.config/nvim/plug-data/snippets",
   // python config
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
   "snippets.ultisnips.directories": [
     "UltiSnips",
-    "~/.config/nvim/utils/snips"
+    "~/.config/nvim/plug-data/utils/snippets"
   ],
   // coc-explorer
   "explorer.width": 40,
