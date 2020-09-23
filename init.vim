@@ -1,9 +1,9 @@
-source $HOME/.config/nvim/source/functions.vim
+source $HOME/.config/nvim/sources/functions.vim
 
-call SourceDirectory('~/.config/nvim/source/general')
-call SourceDirectory('~/.config/nvim/source/plug-config')
-call SourceDirectory('~/.config/nvim/source/keys')
+call SourceDirectory('~/.config/nvim/sources/settings')
+call SourceDirectory('~/.config/nvim/sources/plug-config')
+call SourceDirectory('~/.config/nvim/sources/keys')
 
 " Themes
-source $HOME/.config/nvim/source/themes/material.vim
+source $HOME/.config/nvim/sources/themes/material.vim
 
