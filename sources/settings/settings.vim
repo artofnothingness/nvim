@@ -9,11 +9,9 @@ if (has("termguicolors"))
     " hi Normal guibg=NONE ctermbg=NONE
 endif
 
-
 if (has('nvim'))
   let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 endif
-
 
 set shortmess+=c " Don't pass messages to |ins-completion-menu|.
 set backspace=indent,eol,start " Allow backspacing over everything in insert mode.
