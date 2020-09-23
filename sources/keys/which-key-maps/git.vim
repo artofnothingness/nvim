@@ -1,29 +1,33 @@
 let g:which_key_map_ll.g = {
       \ 'name' : '+git' ,
-      \ 'A' : [':Git add .'                        , 'add all'],
-      \ 'a' : [':Git add %'                        , 'add current'],
-      \ 'c' : [':Git commit'                       , 'commit'],
-      \ 'p' : [':Git push'                         , 'push'],
-      \ 'P' : [':Git pull'                         , 'pull'],
-      \ 'r' : [':GRemove'                          , 'remove'],
+      \ 'A' : [':Git add .'                        , 'Add all'],
+      \ 'a' : [':Git add %'                        , 'Add current'],
+      \ 'c' : [':Git commit'                       , 'Commit'],
+      \ 'p' : [':Git push'                         , 'Push'],
+      \ 'P' : [':Git pull'                         , 'Pull'],
+      \ 'r' : [':GRemove'                          , 'Remove'],
       \ }
 
 let g:which_key_map_ll.g.i = {
-      \ 'name' : '+info' ,
-      \ 'f' : [':Flog'                             , 'Flog'],
-      \ 'b' : [':Git blame'                        , 'Blame'],
-      \ 's' : [':Gstatus'                          , 'Status'],
-      \ 'l' : [':Git log'                          , 'Log'],
-      \ 'd' : [':Git diff'                         , 'diff'],
-      \ 'D' : [':Gdiffsplit'                       , 'diff split'],
+      \ 'name' : '+info',
+      \ 'c' : [':Commits!',   'Commits'],
+      \ 'C' : [':BCommits!',  'Buffer commits'],
+      \ 'f' : [':Flog',       'Flog'],
+      \ 'b' : [':Git blame',  'Blame'],
+      \ 's' : [':Gstatus',    'Status'],
+      \ 'l' : [':Git log',    'Log'],
+      \ 'd' : [':Git diff',   'Diff'],
+      \ 'D' : [':Gdiffsplit', 'Diff split'],
+      \ 'F' : [':GFiles!',    'Git files'],
+      \ 'm' : [':GFiles!?',   'Modified git files'],
       \ }
 
 let g:which_key_map_ll.g.h = {
       \ 'name' : '+hunk' ,
-      \ 'p' : ['<Plug>(GitGutterPreviewHunk)'      , 'preview hunk'],
-      \ 'j' : ['<Plug>(GitGutterNextHunk)'         , 'next hunk'],
-      \ 'k' : ['<Plug>(GitGutterPrevHunk)'         , 'prev hunk'],
-      \ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'undo hunk'],
-      \ 's' : ['<Plug>(GitGutterStageHunk)'        , 'stage hunk'],
+      \ 'p' : ['<Plug>(GitGutterPreviewHunk)'      , 'Preview'],
+      \ 'j' : ['<Plug>(GitGutterNextHunk)'         , 'Next'],
+      \ 'k' : ['<Plug>(GitGutterPrevHunk)'         , 'Prev'],
+      \ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'Undo'],
+      \ 's' : ['<Plug>(GitGutterStageHunk)'        , 'Stage'],
       \ }
 
