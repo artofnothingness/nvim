@@ -1,12 +1,9 @@
 let g:which_key_map.c = {
       \ 'name' : '+codeCoc',
-      \'r' : [':<Plug>(coc-rename)',                   'Rename'],
-      \'F' : [':<Plug>(coc-format-selected)',          'Format'],
-      \'a' : [':<Plug>(coc-codeaction-selected)',      'Action'],
-      \'A' : [':<Plug>(coc-codeaction)',               'Action All'],
-      \'f' : [':<Plug>(coc-fix-current)',              'Fix'],
-      \'R' : [':<Plug>(coc-range-select)',              'Range'],
-      \'k' : [':call <SID>show_documentation()',       'Documentation'],
-      \'h' : [':CocCommand clangd.switchSourceHeader', 'Source/Header'],
       \ }
 
+nmap <leader>cr <Plug>(coc-rename)
+nmap <leader>cf <Plug>(coc-fix-current)
+
+nnoremap <leader>cw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>cs :CocSearch 

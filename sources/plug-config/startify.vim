@@ -53,7 +53,7 @@ let g:startify_change_to_vcs_root = 1
 let g:startify_update_oldfiles = 1
 let g:startify_use_env = 1
 
-hi! link StartifyHeader Title
+hi! link StartifyHeader LineNr
 hi! link StartifyFile Directory
 hi! link StartifyPath LineNr
 hi! link StartifySlash StartifyPath

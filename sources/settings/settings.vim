@@ -13,6 +13,8 @@ if (has('nvim'))
   let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 endif
 
+set completeopt=menuone,noinsert,noselect
+
 set shortmess+=c " Don't pass messages to |ins-completion-menu|.
 set backspace=indent,eol,start " Allow backspacing over everything in insert mode.
 set smartcase
@@ -74,6 +76,7 @@ set viewoptions=cursor,folds,unix,slash " Options used by `mkview` and `loadview
 set autoread " Read the file again if have been changed outside of Vim.
 set switchbuf=useopen " Jump to the first open window that contains the specified buffer.
 
+set inccommand=split
 " You can't stop me
 cmap w!! w !sudo tee %
 set sessionoptions+=globals

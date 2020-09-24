@@ -24,10 +24,11 @@ autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
-
 call which_key#register('<Space>', "g:which_key_map")
 call which_key#register('m',       "g:which_key_map_ll")
 
 " source all mappings in dir
-call SourceDirectory('~/.config/nvim/sources/keys/which-key-maps')
+
 call SourceDirectory('~/.config/nvim/sources/keys/default-maps')
+call SourceDirectory('~/.config/nvim/sources/keys/which-key-maps')
+

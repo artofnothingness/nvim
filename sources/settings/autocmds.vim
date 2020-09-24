@@ -10,3 +10,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
       autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
+" augroup highlightYank
+"     autocmd!
+"     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 140})
+" augroup END

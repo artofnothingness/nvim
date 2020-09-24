@@ -10,6 +10,3 @@ let g:which_key_map_ll.s = {
       \ 'T' : [':BTags!'        , 'Btags'],
       \ }
 
-nnoremap <silent> <c-f> :FZF <cr>
-nmap // :BLines!<CR>
-nmap ?? :Rg!<CR>
