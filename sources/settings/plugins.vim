@@ -26,9 +26,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
    Plug 'vuciv/vim-bujo'
 
    " LSP 
-   Plug 'neovim/nvim-lspconfig'
-   Plug 'nvim-lua/completion-nvim'
-   Plug 'tjdevries/nlua.nvim'
+   " Plug 'neovim/nvim-lspconfig'
+   " Plug 'nvim-lua/completion-nvim'
+   " Plug 'tjdevries/nlua.nvim'
    Plug 'neoclide/coc.nvim', {'branch': 'release'}
    Plug 'jackguo380/vim-lsp-cxx-highlight'
    Plug 'liuchengxu/vista.vim'
