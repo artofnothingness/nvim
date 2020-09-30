@@ -10,7 +10,8 @@
   "python.linting.pylintEnabled": true,
   "snippets.ultisnips.directories": [
     "UltiSnips",
-    "~/.config/nvim/plug-data/utils/snippets"
+    "~/.config/nvim/plug-data/utils/snippets",
+    "~/.config/nvim/autoload/plugged/vim-snippets/UltiSnips"
   ],
   // coc-explorer
   "explorer.width": 40,

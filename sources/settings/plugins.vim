@@ -18,12 +18,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
    Plug 'https://github.com/taketwo/vim-ros.git'
    Plug 'https://github.com/PotatoesMaster/i3-vim-syntax.git'
-
-   " New
+   Plug 'vuciv/vim-bujo'
    Plug 'ThePrimeagen/vim-be-good'
    Plug 'nvim-treesitter/nvim-treesitter'
    Plug 'sbdchd/neoformat'
-   Plug 'vuciv/vim-bujo'
+
+   " New
 
    " LSP 
    " Plug 'neovim/nvim-lspconfig'

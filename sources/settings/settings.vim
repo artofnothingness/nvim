@@ -16,7 +16,7 @@ endif
 set completeopt=menuone,noinsert,noselect
 
 set shortmess+=c " Don't pass messages to |ins-completion-menu|.
-set backspace=indent,eol,start " Allow backspacing over everything in insert mode.
+" set backspace=indent,eol,start " Allow backspacing over everything in insert mode.
 set smartcase
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
@@ -37,9 +37,9 @@ set autoindent " Copy indent from current line when starting a new line.
 set nosmarttab " Tab key always inserts blanks according to 'tabstop'.
 set shiftround " Round indent to multiple of 'shiftwidth'. Applies to > and < commands.
 set expandtab                           " Converts tabs to spaces
-set shiftwidth=2 " Affects what happens when you press `>>`, `<<` or `==`.
+set shiftwidth=4 " Affects what happens when you press `>>`, `<<` or `==`.
 set smartindent " Automatically inserts one extra level of indentation in some cases.
-set tabstop=2 " TAB character length.
+set tabstop=4 " TAB character length.
 
 set laststatus=0                        " Always display the status line
 set number
@@ -76,7 +76,10 @@ set viewoptions=cursor,folds,unix,slash " Options used by `mkview` and `loadview
 set autoread " Read the file again if have been changed outside of Vim.
 set switchbuf=useopen " Jump to the first open window that contains the specified buffer.
 
-set inccommand=split
 " You can't stop me
 cmap w!! w !sudo tee %
 set sessionoptions+=globals
+
+" New
+set scrolloff=999
+set inccommand=split
