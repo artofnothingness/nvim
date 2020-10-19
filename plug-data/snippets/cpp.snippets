@@ -26,18 +26,6 @@
 
 snippet comp "Compepative Simple Template" b
 #include <iostream>
-
-int main() {
-	std::ios_base::sync_with_stdio(false);
-	std::cin.tie(NULL);
-
-	return 0;
-}
-endsnippet
-
-
-snippet comps "Compepative Super Template" b
-#include <iostream>
 #include <vector>
 #include <map>
 #include <set>
@@ -51,25 +39,21 @@ using namespace std;
 using ll = long long;
 using ld = long double;
 
-using vecInt = vector<int>;
-using vecPairInt = vector<pair<int,int>>;
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
 
-using vecDb = vector<double>;
-using vecPairDb = vector<pair<double,double>>;
+	return 0;
+}
+endsnippet
 
+snippet printCont "Print container func" b
 template <class T, template <class, class...> class Container>
 void printCont(Container<T> cont) {
 	for (auto i : cont) {
 		cout << i << " ";
 	}
 	cout << endl;
-}
-
-int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
-
-	return 0;
 }
 endsnippet
 

@@ -7,6 +7,12 @@
   xnoremap L g_
   noremap J 5j
   noremap K 5k
+  noremap K 5k
+
+  
+  " Escape from instert
+  inoremap jk <esc>
+  inoremap kj <esc>
 
   nnoremap U J
 
