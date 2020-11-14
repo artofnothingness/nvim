@@ -12,5 +12,5 @@ endif
 
 " augroup highlightYank
 "     autocmd!
-"     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 140})
+"     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 2000})
 " augroup END

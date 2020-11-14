@@ -16,3 +16,6 @@ syntax on
 colorscheme onedark
 
 
+hi LineNr       term=bold cterm=bold ctermfg=2 guifg=#00CF91 
+hi CursorLineNR       term=bold cterm=bold ctermfg=2 guifg=#1EC9E8 guibg=#1B2423
+hi HighlightedyankRegion term=bold ctermbg=0 guibg=#00CF91
