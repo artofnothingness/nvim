@@ -5,7 +5,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'https://github.com/tpope/vim-commentary.git'
 Plug 'majutsushi/tagbar'
 Plug 'jiangmiao/auto-pairs'
-Plug 'mhinz/vim-startify'
+" Plug 'mhinz/vim-startify'
 Plug 'liuchengxu/vim-which-key'
 Plug 'voldikss/vim-floaterm'
 Plug 'preservim/nerdtree'
@@ -15,21 +15,36 @@ Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'honza/vim-snippets'
 
 Plug 'ryanoasis/vim-devicons'
-Plug 'airblade/vim-rooter'
+Plug 'kyazdani42/nvim-web-devicons'
 
+Plug 'airblade/vim-rooter'
 Plug 'https://github.com/taketwo/vim-ros.git'
 Plug 'https://github.com/PotatoesMaster/i3-vim-syntax.git'
 Plug 'vuciv/vim-bujo'
-Plug 'ThePrimeagen/vim-be-good'
 Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'sbdchd/neoformat'
+Plug 'ianding1/leetcode.vim'
+Plug 'rhysd/vim-clang-format'
+Plug 'romgrk/barbar.nvim'
+Plug 'ntpeters/vim-better-whitespace'
 
 " New
+Plug 'puremourning/vimspector'
+Plug 'szw/vim-maximizer'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/telescope.nvim'
 
+Plug 'glepnir/dashboard-nvim'
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 " LSP
 " Plug 'neovim/nvim-lspconfig'
-" Plug 'nvim-lua/completion-nvim'
 " Plug 'tjdevries/nlua.nvim'
+
+" Plug 'nvim-lua/completion-nvim'
+" Plug 'steelsojka/completion-buffers'
+" Plug 'kristijanhusak/completion-tags'
+Plug 'nvim-treesitter/completion-treesitter'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'liuchengxu/vista.vim'
@@ -51,17 +66,13 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'rbong/vim-flog'
 
 " Themes
-Plug 'ryanoasis/vim-devicons'
-
 Plug 'sainnhe/gruvbox-material'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
-Plug 'whatyouhide/vim-gotham'
 Plug 'joshdick/onedark.vim'
-Plug 'reewr/vim-monokai-phoenix'
-Plug 'https://github.com/cocopon/iceberg.vim.git'
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'hardcoreplayers/spaceline.vim'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 
 " Markdown
 Plug 'godlygeek/tabular'

@@ -6,7 +6,7 @@ syntax enable "Allows for syntax highlighting
   
 if (has("termguicolors"))
     set termguicolors
-    " hi Normal guibg=NONE ctermbg=NONE
+    hi Normal guibg=NONE ctermbg=NONE
 endif
 
 if (has('nvim'))
@@ -34,14 +34,15 @@ set conceallevel=0                      " So that I can see `` in markdown files
      
 " Indentation
 set autoindent " Copy indent from current line when starting a new line.
+set cindent 
 set nosmarttab " Tab key always inserts blanks according to 'tabstop'.
 set shiftround " Round indent to multiple of 'shiftwidth'. Applies to > and < commands.
 set expandtab                           " Converts tabs to spaces
-set shiftwidth=4 " Affects what happens when you press `>>`, `<<` or `==`.
+set shiftwidth=2 " Affects what happens when you press `>>`, `<<` or `==`.
 set smartindent " Automatically inserts one extra level of indentation in some cases.
-set tabstop=4 " TAB character length.
+set tabstop=2 " TAB character length.
 
-set laststatus=0                        " Always display the status line
+set laststatus=2                        " Always display the status line
 set number
 set relativenumber                      " Line numbers
 set background=dark                     " tell vim what the background color looks like

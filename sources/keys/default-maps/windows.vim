@@ -1,6 +1,4 @@
 " Buffer Navigation
-  nnoremap <TAB> :bnext<CR>
-  nnoremap <S-TAB> :bprevious<CR>
 
 "  Window Navigation
   nnoremap <C-h> <C-w>h

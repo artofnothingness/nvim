@@ -7,4 +7,4 @@ call SourceDirectory('~/.config/nvim/sources/plug-config')
 call SourceDirectory('~/.config/nvim/sources/keys')
 
 " Theme
-source $HOME/.config/nvim/sources/themes/onedark.vim
+source $HOME/.config/nvim/sources/themes/material.vim
