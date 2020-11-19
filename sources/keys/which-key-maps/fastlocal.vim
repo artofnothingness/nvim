@@ -5,5 +5,6 @@ let g:which_key_map_ll['b'] = [ ':TagbarToggle',        'BarTags' ]
 let g:which_key_map_ll['v'] = [ ':Vista!!',             'Vista']
 let g:which_key_map_ll['_'] = [ '<C-W>s',               'SplitDown']
 let g:which_key_map_ll['-'] = [ '<C-W>v',               'SplitRight']
-let g:which_key_map_ll['m'] = [ 'InstantMarkdownPreview',               'InstantMarkdownPreview']
+let g:which_key_map_ll['p'] = [ 'InstantMarkdownPreview', 'InstantMarkdownPreview']
 
+let g:which_key_map_ll['c'] = [ 'DashboardChangeColorscheme',               'DashboardChangeColorscheme']

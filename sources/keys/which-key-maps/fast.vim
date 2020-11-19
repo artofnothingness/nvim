@@ -4,8 +4,9 @@ let g:which_key_map['s']    = [ ':CocList -I symbols',      'Symbols']
 let g:which_key_map['g']    = [ ':Clap grep2',              'Grep']
 let g:which_key_map['f']    = [ ':Clap files',              'Files']
 let g:which_key_map['y']    = [ ':CocList -A --normal yank',                'Yanks']
-let g:which_key_map['r']    = [ ':Clap history',             'Recently']
+let g:which_key_map['h']    = [ ':Clap history',             'History']
 let g:which_key_map['F']    = [ ':Clap filer',               'Dir Filer']
+let g:which_key_map['m']    = [ ':Clap marks',               'Marks']
 
 nmap // :Clap lines<CR>
 nmap ?? :Clap blines<CR>

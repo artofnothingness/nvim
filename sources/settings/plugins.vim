@@ -34,6 +34,7 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/telescope.nvim'
 
+Plug 'Yggdroot/indentLine'
 Plug 'glepnir/dashboard-nvim'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 " LSP
