@@ -2,7 +2,8 @@
   "clangd.enabled": true,
   "clangd.fallbackFlags": [
     "-std=c++1z",
-    "-I/usr/include"
+    "-I/usr/include",
+    "-I/opt/ros/melodic/include"
   ],
   "snippets.userSnippetsDirectory": "~/.config/nvim/plug-data/snippets",
   // python config

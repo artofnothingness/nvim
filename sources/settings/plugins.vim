@@ -21,7 +21,6 @@ Plug 'airblade/vim-rooter'
 Plug 'https://github.com/taketwo/vim-ros.git'
 Plug 'https://github.com/PotatoesMaster/i3-vim-syntax.git'
 Plug 'vuciv/vim-bujo'
-Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'ianding1/leetcode.vim'
 Plug 'rhysd/vim-clang-format'
 Plug 'romgrk/barbar.nvim'
@@ -34,21 +33,21 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/telescope.nvim'
 
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
 Plug 'glepnir/dashboard-nvim'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 " LSP
-" Plug 'neovim/nvim-lspconfig'
-" Plug 'tjdevries/nlua.nvim'
-
-" Plug 'nvim-lua/completion-nvim'
-" Plug 'steelsojka/completion-buffers'
-" Plug 'kristijanhusak/completion-tags'
+Plug 'neovim/nvim-lspconfig'
+Plug 'tjdevries/nlua.nvim'
+Plug 'nvim-lua/completion-nvim'
+Plug 'steelsojka/completion-buffers'
+Plug 'kristijanhusak/completion-tags'
+Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-treesitter/completion-treesitter'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jackguo380/vim-lsp-cxx-highlight'
-Plug 'liuchengxu/vista.vim'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'jackguo380/vim-lsp-cxx-highlight'
+" Plug 'liuchengxu/vista.vim'
 
 " Better Syntax Support
 Plug 'sheerun/vim-polyglot'
@@ -67,13 +66,14 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'rbong/vim-flog'
 
 " Themes
+Plug 'sjl/badwolf'
 Plug 'sainnhe/gruvbox-material'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'joshdick/onedark.vim'
 
-Plug 'hardcoreplayers/spaceline.vim'
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
+" Plug 'hardcoreplayers/spaceline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Markdown
 Plug 'godlygeek/tabular'
