@@ -37,17 +37,18 @@ Plug 'nvim-lua/telescope.nvim'
 Plug 'glepnir/dashboard-nvim'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 " LSP
-Plug 'neovim/nvim-lspconfig'
-Plug 'tjdevries/nlua.nvim'
-Plug 'nvim-lua/completion-nvim'
-Plug 'steelsojka/completion-buffers'
-Plug 'kristijanhusak/completion-tags'
 Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'nvim-treesitter/completion-treesitter'
 
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neovim/nvim-lspconfig'
+" Plug 'tjdevries/nlua.nvim'
+" Plug 'nvim-lua/completion-nvim'
+" Plug 'steelsojka/completion-buffers'
+" Plug 'kristijanhusak/completion-tags'
+" Plug 'nvim-treesitter/completion-treesitter'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'jackguo380/vim-lsp-cxx-highlight'
-" Plug 'liuchengxu/vista.vim'
+Plug 'liuchengxu/vista.vim'
 
 " Better Syntax Support
 Plug 'sheerun/vim-polyglot'
@@ -68,6 +69,7 @@ Plug 'rbong/vim-flog'
 " Themes
 Plug 'sjl/badwolf'
 Plug 'sainnhe/gruvbox-material'
+Plug 'morhetz/gruvbox'
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 Plug 'joshdick/onedark.vim'
 

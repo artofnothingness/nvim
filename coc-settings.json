@@ -15,10 +15,10 @@
     "~/.config/nvim/autoload/plugged/vim-snippets/UltiSnips"
   ],
   // coc-explorer
-  "explorer.width": 40,
+  "explorer.width": 50,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
-  "explorer.keyMappings": {
+  "explorer.keyMappings.global": {
     "<cr>": [
       "expandable?",
       "expand",
