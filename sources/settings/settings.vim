@@ -18,6 +18,7 @@ set completeopt=menuone,noinsert,noselect
 set shortmess+=c " Don't pass messages to |ins-completion-menu|.
 " set backspace=indent,eol,start " Allow backspacing over everything in insert mode.
 set smartcase
+set ignorecase
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed

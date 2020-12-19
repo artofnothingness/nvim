@@ -56,3 +56,5 @@ exe 'hi default BufferInactiveTarget   guifg=red gui=bold guibg=' . bg_inactive
 hi default BufferShadow guifg=#000000 guibg=#000000
 
 
+
+

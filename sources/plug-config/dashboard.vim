@@ -7,7 +7,6 @@ nnoremap <silent> <Leader>g :DashboardFindWord<CR>
 nnoremap <silent> <Leader>w :DashboardJumpMark<CR>
 nnoremap <silent> <Leader>e :DashboardNewFile<CR>
 
-let g:dashboard_default_header = "commicgirl7"
 let g:indentLine_fileTypeExclude = ['dashboard']
 autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
 
