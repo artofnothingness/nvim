@@ -1,5 +1,6 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
 
+Plug 'jiangmiao/auto-pairs'
 Plug 'https://github.com/tpope/vim-commentary.git'
 Plug 'liuchengxu/vim-which-key'
 Plug 'voldikss/vim-floaterm'
@@ -33,8 +34,5 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'justinmk/vim-sneak'
-
-" New
-Plug 'metakirby5/codi.vim'
 
 call plug#end()

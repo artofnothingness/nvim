@@ -22,7 +22,3 @@ autocmd FileType python vnoremap <buffer><A-f> :Format<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><A-f> :ClangFormat<CR>
 
 autocmd FileType c,cpp,objc noremap <leader>1 :CocCommand clangd.switchSourceHeader<CR>
-
-
-nmap <leader>0 :colo goodwolf<CR>
-nmap <leader>9 :colo badwolf<CR>

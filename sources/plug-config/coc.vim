@@ -6,15 +6,10 @@ let g:coc_global_extensions =
     \'coc-tag', 
     \'coc-vimlsp',
     \'coc-syntax',
-    \'coc-todolist',
-    \'coc-omni',
     \'coc-marketplace',
     \'coc-lists',
-    \'coc-floaterm',
-    \'coc-highlight',
     \'coc-explorer',
     \'coc-xml',
-    \'coc-vimtex',
     \'coc-json',
     \'coc-cmake'
   \]
