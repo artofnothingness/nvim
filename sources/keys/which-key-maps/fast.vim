@@ -7,6 +7,7 @@ let g:which_key_map['y']    = [ ':CocList -A --normal yank',             'Yanks'
 let g:which_key_map['h']    = [ ':Clap history',                         'History']
 let g:which_key_map['F']    = [ ':Clap filer',                           'Dir Filer']
 let g:which_key_map['m']    = [ ':Clap marks',                           'Marks']
+let g:which_key_map['t']    = [ ':Clap proj_tags',                           'Tags']
 
 " let g:which_key_map['4']    = [ ':CocCommand clangd.switchSourceHeader', 'Switch Source/Header']
 

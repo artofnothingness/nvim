@@ -1,6 +1,11 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-Plug 'jiangmiao/auto-pairs'
+" New
+Plug 'https://github.com/cohama/lexima.vim.git'
+Plug 'nvim-treesitter/nvim-treesitter'
+
+Plug 'tpope/vim-surround'
+
 Plug 'https://github.com/tpope/vim-commentary.git'
 Plug 'liuchengxu/vim-which-key'
 Plug 'voldikss/vim-floaterm'
@@ -19,20 +24,21 @@ Plug 'szw/vim-maximizer'
 Plug 'glepnir/dashboard-nvim'
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 
-Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/vista.vim'
 
+Plug 'justinmk/vim-sneak'
+Plug 'preservim/tagbar'
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
 
 Plug 'https://github.com/airblade/vim-gitgutter.git'
 Plug 'tpope/vim-fugitive'
 
-Plug 'christianchiarulli/nvcode-color-schemes.vim'
-
+" Themes
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'justinmk/vim-sneak'
 
 call plug#end()

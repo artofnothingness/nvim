@@ -19,3 +19,4 @@ let g:dashboard_custom_shortcut={
   \ 'book_marks'         : 'SPC m  ',
   \ 'change_colorscheme' : 'M c    ',
   \ }
+let g:dashboard_default_header='cres' 
