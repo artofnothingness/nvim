@@ -1,22 +1,12 @@
 " set leader key
-  let g:mapleader = "\<Space>"
-  let g:maplocalleader = 'm'
+let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
 
-syntax enable "Allows for syntax highlighting
-  
-if (has("termguicolors"))
-    set termguicolors
-    hi Normal guibg=NONE ctermbg=NONE
-endif
-
-if (has('nvim'))
-  let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
-endif
+let g:mapleader = "\<Space>"
+let g:maplocalleader = 'm'
 
 set completeopt=menuone,noinsert,noselect
-
 set shortmess+=c " Don't pass messages to |ins-completion-menu|.
-" set backspace=indent,eol,start " Allow backspacing over everything in insert mode.
+set termguicolors
 set smartcase
 set ignorecase
 set hidden                              " Required to keep multiple buffers open multiple buffers
@@ -82,6 +72,5 @@ set switchbuf=useopen " Jump to the first open window that contains the specifie
 cmap w!! w !sudo tee %
 set sessionoptions+=globals
 
-" New
 set scrolloff=999
 set inccommand=split

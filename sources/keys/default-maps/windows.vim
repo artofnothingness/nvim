@@ -1,5 +1,3 @@
-" Buffer Navigation
-
 "  Window Navigation
   nnoremap <C-h> <C-w>h
   nnoremap <C-j> <C-w>j

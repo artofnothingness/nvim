@@ -1,3 +1,3 @@
-nnoremap <silent><F5> :MaximizerToggle<CR>
-vnoremap <silent><F5> :MaximizerToggle<CR>gv
-inoremap <silent><F5> <C-o>:MaximizerToggle<CR>
+nnoremap <silent><F4> :MaximizerToggle<CR>
+vnoremap <silent><F4> :MaximizerToggle<CR>gv
+inoremap <silent><F4> <C-o>:MaximizerToggle<CR>

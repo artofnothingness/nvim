@@ -5,7 +5,6 @@ let g:coc_global_extensions =
     \'coc-clangd', 
     \'coc-tag', 
     \'coc-vimlsp',
-    \'coc-syntax',
     \'coc-marketplace',
     \'coc-lists',
     \'coc-explorer',
@@ -45,13 +44,6 @@ else
 endif
 
 
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -77,5 +69,3 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-autocmd FileType c,cpp,objc nnoremap <silent> <leader>2 :call <SID>show_documentation()<CR>

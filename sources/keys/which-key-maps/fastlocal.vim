@@ -1,9 +1,7 @@
-let g:which_key_map_ll[' '] = [ ':Dashboard',            'Startify' ]
+let g:which_key_map_ll[' '] = [ ':Startify',            'Startify' ]
 let g:which_key_map_ll['e'] = [ ':CocCommand explorer', 'Coc Explorer' ]
 let g:which_key_map_ll['r'] = [ ':RnvimrToggle',        'Ranger' ]
 let g:which_key_map_ll['b'] = [ ':TagbarToggle',        'BarTags' ]
 let g:which_key_map_ll['_'] = [ '<C-W>s',               'SplitDown']
 let g:which_key_map_ll['-'] = [ '<C-W>v',               'SplitRight']
-let g:which_key_map_ll['p'] = [ 'InstantMarkdownPreview', 'InstantMarkdownPreview']
-
 let g:which_key_map_ll['c'] = [ 'DashboardChangeColorscheme',               'DashboardChangeColorscheme']

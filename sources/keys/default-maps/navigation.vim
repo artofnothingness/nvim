@@ -5,6 +5,7 @@
   onoremap L $
   xnoremap H ^
   xnoremap L g_
+
   noremap J 5j
   noremap K 5k
   noremap K 5k
