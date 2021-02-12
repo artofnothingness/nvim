@@ -1,12 +1,20 @@
 " set leader key
-let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
+  
+if (has("termguicolors"))
+    set termguicolors
+    hi Normal guibg=NONE ctermbg=NONE
+endif
+
+if (has('nvim'))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
+endif
+
 
 let g:mapleader = "\<Space>"
 let g:maplocalleader = 'm'
 
 set completeopt=menuone,noinsert,noselect
 set shortmess+=c " Don't pass messages to |ins-completion-menu|.
-set termguicolors
 set smartcase
 set ignorecase
 set hidden                              " Required to keep multiple buffers open multiple buffers

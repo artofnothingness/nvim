@@ -1,3 +1,5 @@
+" let g:coc_start_at_startup = v:false
+
 let g:coc_global_extensions = 
   \[ 
     \'coc-python',

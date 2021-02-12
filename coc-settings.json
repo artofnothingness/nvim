@@ -1,7 +1,7 @@
 {
   "clangd.enabled": true,
   "clangd.fallbackFlags": [
-    "-std=c++1z",
+    "-std=c++2x",
     "-I/usr/include",
     "-I/opt/ros/melodic/include"
   ],
