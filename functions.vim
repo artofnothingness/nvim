@@ -3,5 +3,3 @@ function! SourceDirectory(file)
     exe 'source' s:fPath
   endfor
 endfunction
-
-

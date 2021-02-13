@@ -1,10 +1,9 @@
 colorscheme 256_noir
 
-hi Number guifg=#0596F3
-hi Operator guifg=#1EED1E
-hi TSPunctDelimiter guifg=#0596F3
+hi Operator guifg=#BB8FCE
+hi TSPunctDelimiter guifg=red
 
-hi TSPunctBracket guifg=#965EE7
+hi TSPunctBracket guifg=#0476F7
 
 hi StatusLine guifg=#abb2bf ctermfg=249 guibg=#2c323c ctermbg=236 gui=NONE cterm=NONE
 hi StatusLineNC guifg=#5c6370 ctermfg=241 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE

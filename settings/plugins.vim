@@ -35,7 +35,7 @@ Plug 'tpope/vim-fugitive'
 " Themes
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'bluz71/vim-nightfly-guicolors'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()

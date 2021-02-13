@@ -1,9 +1,9 @@
-source functions.vim
+source $HOME/.config/nvim/functions.vim
 
-call SourceDirectory('settings')
+call SourceDirectory('$HOME/.config/nvim/settings')
 
-call SourceDirectory('configs')
+call SourceDirectory('$HOME/.config/nvim/configs')
 
-call SourceDirectory('keys')
+call SourceDirectory('$HOME/.config/nvim/keys')
 
-source color.vim
+source $HOME/.config/nvim/color.vim
