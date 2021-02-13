@@ -1,9 +1,9 @@
-source $HOME/.config/nvim/sources/functions.vim
+source functions.vim
 
-call SourceDirectory('~/.config/nvim/sources/settings')
+call SourceDirectory('settings')
 
-call SourceDirectory('~/.config/nvim/sources/plug-config')
+call SourceDirectory('configs')
 
-call SourceDirectory('~/.config/nvim/sources/keys')
+call SourceDirectory('keys')
 
-colorscheme nightfly
+source color.vim
