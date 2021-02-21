@@ -8,7 +8,9 @@ endfunction
 
 let g:which_key_map['k']    = [ ':bdelet',                               'Kill Buffer']
 let g:which_key_map['b']    = [ ':Clap buffers',                         'Buffers']
+
 let g:which_key_map['s']    = [ ':CocList -I symbols',                   'Symbols']
+
 let g:which_key_map['g']    = [ ':Clap grep2',                           'Grep']
 let g:which_key_map['f']    = [ ':Clap files',                           'Files']
 let g:which_key_map['y']    = [ ':CocList -A --normal yank',             'Yanks']
