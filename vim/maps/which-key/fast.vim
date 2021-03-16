@@ -23,10 +23,10 @@ let g:which_key_map.s = {
       \ 'g' : [':Telescope live_grep'                   , 'Grep'],
       \ 'y' : [':Telescope symbols'                     , 'symbols'],
       \ 'Y' : [':Telescope lsp_workspace_symbols'       , 'lsp_workspace_symbols'],
-      \ 'w' : [':Telescope file_browser'                , 'buf_fuz_find'],
+      \ 'w' : [':Telescope file_browser'                , 'file browser'],
       \ 'z' : [':Telescope current_buffer_fuzzy_find'   , 'buf_fuz_find'],
+      \ 'r' : [':Telescope oldfiles'                    , 'recent files'],
       \ }
-
 
 let g:which_key_map.S = {
       \ 'name' : '+Session' ,
