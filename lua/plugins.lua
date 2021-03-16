@@ -69,7 +69,6 @@ return require('packer').startup(function()
   use 'godlygeek/tabular'
   use 'dhruvasagarrkdownPreviewTogglec/vim-table-mode'
 
-  use 'tpope/vim-surround'
   use 'tpope/vim-commentary.git'
   use 'PotatoesMaster/i3-vim-syntax.git'
   use 'rhysd/vim-clang-format'

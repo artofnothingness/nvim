@@ -1,5 +1,6 @@
 vim.cmd('set iskeyword+=-')                  --treat dash separated words as a word text object"
 vim.cmd('set shortmess+=c')                 --Don't pass messages to |ins-completion-menu|.
+
 vim.o.hidden=true                              --Required to keep multiple buffers open multiple buffers
 vim.wo.wrap=false                              --Display long lines as just one line
 vim.cmd('set whichwrap+=<,>,[,],h,l')
@@ -50,8 +51,7 @@ vim.o.foldmethod = 'indent'
 
 vim.o.backupdir="/home/alex/.config/nvim/utils/cache/backup" 
 vim.o.undodir="/home/alex/.config/nvim/utils/cache/undo" 
-vim.o.undodir="/home/alex/.config/nvim/utils/cache/undo" 
-vim.o.directory="/home/alex/.config/nvim/autoload/cache/swap//"
+vim.o.directory="/home/alex/.config/nvim/utils/cache/swap"
 
 vim.o.undofile = true 
 vim.o.undolevels=100000 
