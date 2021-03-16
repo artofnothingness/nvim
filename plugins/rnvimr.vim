@@ -21,9 +21,6 @@ let g:rnvimr_enable_bw = 1
 
 highlight link RnvimrNormal CursorLine
 
-
-nnoremap <silent> <localleader>r :RnvimrToggle<CR>
-
 " Map Rnvimr action
 let g:rnvimr_action = {
             \ '<C-t>': 'NvimEdit tabedit',
@@ -41,21 +38,3 @@ let g:rnvimr_layout = { 'relative': 'editor',
             \ 'row': float2nr(round(0.1 * &lines)),
             \ 'style': 'minimal' }
 
-" Customize multiple preset layouts
-" '{}' represents the initial layout
-let g:rnvimr_presets = [
-            \ {},
-            \ {'width': 0.700, 'height': 0.700},
-            \ {'width': 0.800, 'height': 0.800},
-            \ {'width': 0.950, 'height': 0.950},
-            \ {'width': 0.500, 'height': 0.500, 'col': 0, 'row': 0},
-            \ {'width': 0.500, 'height': 0.500, 'col': 0, 'row': 0.5},
-            \ {'width': 0.500, 'height': 0.500, 'col': 0.5, 'row': 0},
-            \ {'width': 0.500, 'height': 0.500, 'col': 0.5, 'row': 0.5},
-            \ {'width': 0.500, 'height': 1.000, 'col': 0, 'row': 0},
-            \ {'width': 0.500, 'height': 1.000, 'col': 0.5, 'row': 0},
-            \ {'width': 1.000, 'height': 0.500, 'col': 0, 'row': 0},
-            \ {'width': 1.000, 'height': 0.500, 'col': 0, 'row': 0.5}]
-
-" Only use initial preset layout
-" let g:rnvimr_presets = [{}]

@@ -5,11 +5,11 @@ function! SourceDirectory(file)
 endfunction
 
 call SourceDirectory('$HOME/.config/nvim/plugins/')
-call SourceDirectory('$HOME/.config/nvim/plugins/configs')
-call SourceDirectory('$HOME/.config/nvim/settings')
-call SourceDirectory('$HOME/.config/nvim/keys')
 
 lua require('plugins')
+lua require('utils')
+lua require('maps')
+lua require('settings')
 
 lua require('floaterm')
 lua require('galaxy-line')
@@ -18,4 +18,5 @@ lua require('nv-tree')
 lua require('quick-scope')
 lua require('treesitter')
 
+call SourceDirectory('$HOME/.config/nvim/keys')
 colorscheme nvcode
