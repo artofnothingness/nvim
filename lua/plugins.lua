@@ -43,14 +43,13 @@ return require('packer').startup(function()
   use 'unblevable/quick-scope' 
   use 'airblade/vim-rooter'
   use 'kevinhwang91/rnvimr'
-  use 'mhinz/vim-startify'
   use 'psliwka/vim-smoothie'
-  use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
-  use 'liuchengxu/vim-which-key'
   use 'voldikss/vim-floaterm'
-  use 'phaazon/hop.nvim' 
 
+  use 'liuchengxu/vim-which-key'
+  use 'mhinz/vim-startify'
 
+  use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
   use 'mzlogin/vim-markdown-toc'
   use 'godlygeek/tabular'
   use 'dhruvasagar/vim-table-mode'
@@ -63,7 +62,6 @@ return require('packer').startup(function()
   use 'szw/vim-maximizer'
 
   use 'neoclide/coc.nvim'
-  use 'liuchengxu/vista.vim'
   use 'preservim/tagbar'
   use 'mbbill/undotree'
 
@@ -77,6 +75,5 @@ return require('packer').startup(function()
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-media-files.nvim'
-
 
 end)

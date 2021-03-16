@@ -11,7 +11,6 @@ lua require('utils')
 
 lua require('floaterm')
 lua require('galaxy-line')
-lua require('hop')
 lua require('nv-tree')
 lua require('quick-scope')
 lua require('treesitter')
