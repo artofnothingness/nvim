@@ -40,6 +40,8 @@ return require('packer').startup(function()
   use 'kaicataldo/material.vim'
 
   -- General Plugins
+  -- use 'neoclide/coc.nvim'
+
   use 'unblevable/quick-scope' 
   use 'airblade/vim-rooter'
   use 'kevinhwang91/rnvimr'
@@ -60,8 +62,6 @@ return require('packer').startup(function()
   use 'rhysd/vim-clang-format'
 
   use 'szw/vim-maximizer'
-
-  use 'neoclide/coc.nvim'
   use 'preservim/tagbar'
   use 'mbbill/undotree'
 
@@ -75,5 +75,7 @@ return require('packer').startup(function()
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-media-files.nvim'
+
+  use 'phaazon/hop.nvim'
 
 end)
