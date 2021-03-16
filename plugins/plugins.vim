@@ -9,7 +9,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'mzlogin/vim-markdown-toc'
   Plug 'godlygeek/tabular'
   Plug 'dhruvasagar/vim-table-mode'
-  " Plug 'ntpeters/vim-better-whitespace'
   Plug 'nvim-treesitter/nvim-treesitter'
 
   Plug 'tpope/vim-surround'
@@ -20,7 +19,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'kyazdani42/nvim-web-devicons'
 
   Plug 'airblade/vim-rooter'
-  " Plug 'https://github.com/taketwo/vim-ros.git'
   Plug 'https://github.com/PotatoesMaster/i3-vim-syntax.git'
   Plug 'rhysd/vim-clang-format'
 
