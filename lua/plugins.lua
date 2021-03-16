@@ -66,8 +66,9 @@ return require('packer').startup(function()
   use 'liuchengxu/vista.vim'
   use 'preservim/tagbar'
 
-  use 'https://github.com/airblade/vim-gitgutter.git'
-  use 'tpope/vim-fugitive'
+  use 'TimUntersberger/neogit'
+  use {'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+  use 'f-person/git-blame.nvim'
 
   use 'mbbill/undotree'
 

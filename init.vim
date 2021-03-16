@@ -16,8 +16,11 @@ lua require('nv-tree')
 lua require('quick-scope')
 lua require('treesitter')
 
+lua require('git-blame')
+lua require('git-neo')
+lua require('git-signs')
+
+lua require('colorscheme')
 
 call SourceDirectory('$HOME/.config/nvim/vim/configs/')
 call SourceDirectory('$HOME/.config/nvim/vim/maps/')
-
-colorscheme nvcode
