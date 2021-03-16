@@ -61,11 +61,8 @@ nnoremap vv _vg_
   xnoremap H ^
   xnoremap L g_
 
-  noremap J 5j
-  noremap K 5k
-
-  noremap <A-j> 10j
-  noremap <A-k> 10k
+  noremap <A-j> 5j
+  noremap <A-k> 5k
 
 " Escape from instert
   inoremap jk <esc>

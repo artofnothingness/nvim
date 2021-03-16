@@ -50,6 +50,8 @@ vim.o.foldmethod = 'indent'
 
 vim.o.backupdir="/home/alex/.config/nvim/utils/cache/backup" 
 vim.o.undodir="/home/alex/.config/nvim/utils/cache/undo" 
+vim.o.undodir="/home/alex/.config/nvim/utils/cache/undo" 
+vim.o.directory="/home/alex/.config/nvim/autoload/cache/swap//"
 
 vim.o.undofile = true 
 vim.o.undolevels=100000 
