@@ -16,6 +16,8 @@ lua require('nv-tree')
 lua require('quick-scope')
 lua require('treesitter')
 
+lua require('telescope')
+
 lua require('git-blame')
 lua require('git-neo')
 lua require('git-signs')

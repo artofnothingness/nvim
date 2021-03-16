@@ -48,13 +48,12 @@ vim.o.autochdir = true
 vim.o.foldlevelstart = 999
 vim.o.foldmethod = 'indent'
 
-vim.o.backupdir="~/.config/nvim/autoload/cache/backup///" 
-vim.o.directory="~/.config/nvim/autoload/cache/swap//" 
-vim.o.undodir="~/.config/nvim/autoload/cache/undo//" 
+vim.o.backupdir="/home/alex/.config/nvim/utils/cache/backup" 
+vim.o.undodir="/home/alex/.config/nvim/utils/cache/undo" 
+
 vim.o.undofile = true 
 vim.o.undolevels=100000 
 vim.o.updatecount=100 
-vim.o.viewdir="~/.config/nvim/autoload/cache/view//"
 vim.o.viewoptions="cursor,folds,unix,slash"
 
 vim.o.autoread = true  -- Read the file again if have been changed outside of Vim.

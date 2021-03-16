@@ -56,8 +56,8 @@ return require('packer').startup(function()
   use 'dhruvasagar/vim-table-mode'
 
   use 'tpope/vim-surround'
-  use 'https://github.com/tpope/vim-commentary.git'
-  use 'https://github.com/PotatoesMaster/i3-vim-syntax.git'
+  use 'tpope/vim-commentary.git'
+  use 'PotatoesMaster/i3-vim-syntax.git'
   use 'rhysd/vim-clang-format'
 
   use 'szw/vim-maximizer'
@@ -65,11 +65,18 @@ return require('packer').startup(function()
   use 'neoclide/coc.nvim'
   use 'liuchengxu/vista.vim'
   use 'preservim/tagbar'
+  use 'mbbill/undotree'
 
+  -- Git
   use 'TimUntersberger/neogit'
-  use {'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+  use 'lewis6991/gitsigns.nvim'
   use 'f-person/git-blame.nvim'
 
-  use 'mbbill/undotree'
+  -- Telescope 
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-telescope/telescope-media-files.nvim'
+
 
 end)

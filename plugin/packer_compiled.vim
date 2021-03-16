@@ -40,13 +40,29 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/barbar.nvim"
   },
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/coc.nvim"
+  },
   ["galaxyline.nvim"] = {
     loaded = true,
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
   },
+  ["git-blame.nvim"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/git-blame.nvim"
+  },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+  },
   ["hop.nvim"] = {
     loaded = true,
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/hop.nvim"
+  },
+  ["i3-vim-syntax.git"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/i3-vim-syntax.git"
   },
   ["markdown-preview.nvim"] = {
     commands = { "MarkdownPreview" },
@@ -57,6 +73,10 @@ _G.packer_plugins = {
   ["material.vim"] = {
     loaded = true,
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/material.vim"
+  },
+  neogit = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/neogit"
   },
   ["nvcode-color-schemes.vim"] = {
     loaded = true,
@@ -90,6 +110,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/popup.nvim"
+  },
   ["quick-scope"] = {
     loaded = true,
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/quick-scope"
@@ -98,6 +126,34 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/rnvimr"
   },
+  tabular = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/tabular"
+  },
+  tagbar = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/tagbar"
+  },
+  ["telescope-media-files.nvim"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  undotree = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/undotree"
+  },
+  ["vim-clang-format"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/vim-clang-format"
+  },
+  ["vim-commentary.git"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/vim-commentary.git"
+  },
   ["vim-devicons"] = {
     loaded = true,
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/vim-devicons"
@@ -105,6 +161,14 @@ _G.packer_plugins = {
   ["vim-floaterm"] = {
     loaded = true,
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/vim-floaterm"
+  },
+  ["vim-markdown-toc"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/vim-markdown-toc"
+  },
+  ["vim-maximizer"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/vim-maximizer"
   },
   ["vim-nightfly-guicolors"] = {
     loaded = true,
@@ -122,9 +186,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/vim-startify"
   },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/vim-surround"
+  },
+  ["vim-table-mode"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/vim-table-mode"
+  },
   ["vim-which-key"] = {
     loaded = true,
     path = "/home/alex/.local/share/nvim/site/pack/packer/start/vim-which-key"
+  },
+  ["vista.vim"] = {
+    loaded = true,
+    path = "/home/alex/.local/share/nvim/site/pack/packer/start/vista.vim"
   }
 }
 
