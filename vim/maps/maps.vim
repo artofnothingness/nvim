@@ -81,7 +81,6 @@ nnoremap vv _vg_
   tnoremap <C-v><Esc> <Esc>
 
 " Plugins
-nmap <localleader>m <Plug>MarkdownPreviewToggle
 
 autocmd FileType c,cpp,objc nnoremap <buffer><A-f> :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><A-f> :ClangFormat<CR>

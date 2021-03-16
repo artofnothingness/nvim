@@ -9,17 +9,24 @@ lua require('maps')
 lua require('settings')
 lua require('utils')
 
-lua require('floaterm')
-lua require('galaxy-line')
-lua require('nv-tree')
-lua require('quick-scope')
-lua require('treesitter')
+lua require('a-floaterm')
+lua require('a-galaxy-line')
+lua require('a-nv-tree')
+lua require('a-quick-scope')
+lua require('a-treesitter')
+lua require('a-hop')
 
-lua require('telescope')
+lua require('a-git-blame')
+lua require('a-git-neo')
+lua require('a-git-signs')
 
-lua require('git-blame')
-lua require('git-neo')
-lua require('git-signs')
+lua require('a-lsp')
+lua require('a-lsp.python')
+lua require('a-lsp.clangd')
+lua require('a-lspkind')
+
+lua require('a-compe')
+lua require('a-telescope')
 
 lua require('colorscheme')
 

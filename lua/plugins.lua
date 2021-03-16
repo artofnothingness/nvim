@@ -14,6 +14,17 @@ return require('packer').startup(function()
   -- Packer can manage itself as an optional plugin
   use {'wbthomason/packer.nvim'}
 
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+  use 'glepnir/lspsaga.nvim'
+  use 'onsails/lspkind-nvim'
+  use 'kosayoda/nvim-lightbulb'
+
+  -- Autocomplete
+  use 'hrsh7th/nvim-compe'
+  use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/vim-vsnip-integ'
+
   -- Quality of life improvements
   use 'norcalli/nvim_utils' 
 
@@ -40,7 +51,6 @@ return require('packer').startup(function()
   use 'kaicataldo/material.vim'
 
   -- General Plugins
-  -- use 'neoclide/coc.nvim'
 
   use 'unblevable/quick-scope' 
   use 'airblade/vim-rooter'
