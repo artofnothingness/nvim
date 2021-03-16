@@ -78,13 +78,43 @@ let g:which_key_map_ll['v'] = [ '<C-W>v',               'SplitVertical']
 
 nmap <localleader>m <Plug>MarkdownPreviewToggle
 
-" let g:which_key_map_ll.g = {
-"       \ 'name' : '+git' ,
-"       \ }
+let g:which_key_map_ll.g = {
+      \ 'name' : '+git' ,
+      \ 'b' : [':GitBlameToggle'                   , 'blame'],
+      \ 'B' : [':GBrowse'                          , 'browse'],
+      \ 'd' : [':Git diff'                         , 'diff'],
+      \ 'i' : [':Gist -b'                          , 'post gist'],
+      \ 'l' : [':Git log'                          , 'log'],
+      \ 'S' : [':Gstatus'                          , 'status'],
+      \ }
 
-" let g:which_key_map_ll.g.i = {
-"       \ }
+let g:which_key_map.l = {
+      \ 'name' : '+lsp' ,
+      \ 'a' : [':Lspsaga code_action'                , 'code action'],
+      \ 'A' : [':Lspsaga range_code_action'          , 'selected action'],
+      \ 'd' : [':Telescope lsp_document_diagnostics' , 'document diagnostics'],
+      \ 'D' : [':Telescope lsp_workspace_diagnostics', 'workspace diagnostics'],
+      \ 'f' : [':LspFormatting'                      , 'format'],
+      \ 'H' : [':Lspsaga signature_help'             , 'signature_help'],
+      \ 'I' : [':LspInfo'                            , 'lsp info'],
+      \ 'l' : [':Lspsaga lsp_finder'                 , 'lsp finder'],
+      \ 'L' : [':Lspsaga show_line_diagnostics'      , 'line_diagnostics'],
+      \ 'o' : [':Vista!!'                            , 'outline'],
+      \ 'p' : [':Lspsaga preview_definition'         , 'preview definition'],
+      \ 'q' : [':Telescope quickfix'                 , 'quickfix'],
+      \ 'r' : [':LspRename'                          , 'rename'],
+      \ 'T' : [':LspTypeDefinition'                  , 'type defintion'],
+      \ 'x' : [':cclose'                             , 'close quickfix'],
+      \ 's' : [':Telescope lsp_document_symbols'     , 'document symbols'],
+      \ 'S' : [':Telescope lsp_workspace_symbols'    , 'workspace symbols'],
+      \ }
 
-" let g:which_key_map_ll.g.h = {
-"       \ 'name' : '+hunk' ,
-"       \ }
+" t is for terminal
+let g:which_key_map.t = {
+      \ 'name' : '+terminal' ,
+      \ ';' : [':FloatermNew --wintype=normal --height=6'       , 'terminal'],
+      \ 'g' : [':FloatermNew lazygit'                           , 'git'],
+      \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
+      \ 'p' : [':FloatermNew python'                            , 'python'],
+      \ 't' : [':FloatermToggle'                                , 'toggle'],
+      \ }

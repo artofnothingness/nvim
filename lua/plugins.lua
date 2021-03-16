@@ -19,6 +19,7 @@ return require('packer').startup(function()
   use 'glepnir/lspsaga.nvim'
   use 'onsails/lspkind-nvim'
   use 'kosayoda/nvim-lightbulb'
+  use 'liuchengxu/vista.vim'
 
   -- Autocomplete
   use 'hrsh7th/nvim-compe'
@@ -54,6 +55,8 @@ return require('packer').startup(function()
 
   use 'unblevable/quick-scope' 
   use 'airblade/vim-rooter'
+  use 'windwp/nvim-autopairs'
+
   use 'kevinhwang91/rnvimr'
   use 'psliwka/vim-smoothie'
   use 'voldikss/vim-floaterm'
@@ -64,7 +67,7 @@ return require('packer').startup(function()
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
   use 'mzlogin/vim-markdown-toc'
   use 'godlygeek/tabular'
-  use 'dhruvasagar/vim-table-mode'
+  use 'dhruvasagarrkdownPreviewTogglec/vim-table-mode'
 
   use 'tpope/vim-surround'
   use 'tpope/vim-commentary.git'
@@ -79,6 +82,8 @@ return require('packer').startup(function()
   use 'TimUntersberger/neogit'
   use 'lewis6991/gitsigns.nvim'
   use 'f-person/git-blame.nvim'
+  use 'tpope/vim-fugitive'
+  use 'tpope/vim-rhubarb'
 
   -- Telescope 
   use 'nvim-lua/popup.nvim'
