@@ -4,12 +4,10 @@ function! SourceDirectory(file)
   endfor
 endfunction
 
-call SourceDirectory('$HOME/.config/nvim/plugins/')
-
 lua require('plugins')
-lua require('utils')
 lua require('maps')
 lua require('settings')
+lua require('utils')
 
 lua require('floaterm')
 lua require('galaxy-line')
@@ -18,5 +16,8 @@ lua require('nv-tree')
 lua require('quick-scope')
 lua require('treesitter')
 
-call SourceDirectory('$HOME/.config/nvim/keys')
+
+call SourceDirectory('$HOME/.config/nvim/vim/configs/')
+call SourceDirectory('$HOME/.config/nvim/vim/maps/')
+
 colorscheme nvcode

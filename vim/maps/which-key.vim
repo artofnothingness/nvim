@@ -29,5 +29,5 @@ call which_key#register('m',       "g:which_key_map_ll")
 
 " source all mappings in dir
 
-call SourceDirectory('~/.config/nvim/keys/which-key')
+call SourceDirectory('~/.config/nvim/vim/maps/which-key')
 
