@@ -61,8 +61,8 @@ nnoremap vv _vg_
   xnoremap H ^
   xnoremap L g_
 
-  noremap <A-j> 5j
-  noremap <A-k> 5k
+  noremap J 5j
+  noremap K 5k
 
 " Escape from instert
   inoremap jk <esc>
@@ -91,3 +91,10 @@ vnoremap <silent><F4> :MaximizerToggle<CR>gv
 inoremap <silent><F4> <C-o>:MaximizerToggle<CR>
 
 nnoremap <F6> :UndotreeToggle<CR>
+
+" Compe
+inoremap <silent><expr> <C-Space> compe#complete()
+inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })

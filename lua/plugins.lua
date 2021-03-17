@@ -90,6 +90,8 @@ return require('packer').startup(function()
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-media-files.nvim'
 
+
+  use 'kyazdani42/blue-moon'
   use 'phaazon/hop.nvim'
 
 end)
