@@ -37,7 +37,7 @@ gls.left[2] = {
                           rm = colors.cyan, ['r?'] = colors.cyan,
                           ['!']  = colors.red,t = colors.red}
       vim.api.nvim_command('hi GalaxyViMode guifg='..mode_color[vim.fn.mode()])
-      return '   '
+      return ' ☯  '
     end,
     highlight = {colors.red,colors.bg,'bold'},
   },
@@ -104,21 +104,6 @@ gls.left[10] = {
     provider = 'DiagnosticInfo',
     icon = '  ',
     highlight = {colors.blue,colors.bg},
-  }
-}
-
-gls.mid[1] = {
-  ShowLspClient = {
-    provider = 'GetLspClient',
-    condition = function ()
-      local tbl = {['dashboard'] = true,['']=true}
-      if tbl[vim.bo.filetype] then
-        return false
-      end
-      return true
-    end,
-    icon = ' ☯ ',
-    highlight = {colors.cyan,colors.bg,'bold'}
   }
 }
 
