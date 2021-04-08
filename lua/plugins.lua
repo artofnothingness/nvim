@@ -96,5 +96,6 @@ return require('packer').startup(function()
   use 'kshenoy/vim-signature'
   use {'kkoomen/vim-doge', run = ':call doge#install()'}
   use 'ray-x/lsp_signature.nvim'
+  use 'Shadorain/shadotheme'
 
 end)
