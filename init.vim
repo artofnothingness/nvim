@@ -17,6 +17,7 @@ lua require('a-colorizer')
 lua require('a-treesitter')
 
 lua require('a-doge')
+lua require('dashboard')
 
 lua require('a-git-blame')
 lua require('a-git-neo')

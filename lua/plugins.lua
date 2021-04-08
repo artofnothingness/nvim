@@ -44,12 +44,13 @@ return require('packer').startup(function()
   -- Explorer
   use 'kyazdani42/nvim-tree.lua' -- NEW
 
-  -- Color
+  -- Colors and Themes
   use 'christianchiarulli/nvcode-color-schemes.vim' 
   use 'rafi/awesome-vim-colorschemes'
   use 'bluz71/vim-nightfly-guicolors'
-  use 'norcalli/nvim-colorizer.lua'
   use 'kaicataldo/material.vim'
+
+  use 'norcalli/nvim-colorizer.lua'
 
   -- General Plugins
 
@@ -62,7 +63,7 @@ return require('packer').startup(function()
   use 'voldikss/vim-floaterm'
 
   use 'liuchengxu/vim-which-key'
-  use 'mhinz/vim-startify'
+  use 'glepnir/dashboard-nvim'
 
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
   use 'mzlogin/vim-markdown-toc'
@@ -95,4 +96,5 @@ return require('packer').startup(function()
   use 'kshenoy/vim-signature'
   use {'kkoomen/vim-doge', run = ':call doge#install()'}
   use 'ray-x/lsp_signature.nvim'
+
 end)
