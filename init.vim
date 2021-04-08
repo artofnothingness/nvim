@@ -5,34 +5,32 @@ function! SourceDirectory(file)
 endfunction
 
 lua require('plugins')
+
+lua require('config.floaterm')
+lua require('config.galaxy-line')
+lua require('config.nv-tree')
+lua require('config.quick-scope')
+lua require('config.treesitter')
+lua require('config.doge')
+lua require('config.dashboard')
+lua require('config.compe')
+lua require('config.telescope')
+
+lua require('config.git.blame')
+lua require('config.git.neo')
+lua require('config.git.signs')
+
+lua require('lsp')
+lua require('lsp.python')
+lua require('lsp.clangd')
+
+lua require('lsp.kind')
+lua require('lsp.signature')
+
 lua require('maps')
 lua require('settings')
-lua require('utils')
-
-lua require('a-floaterm')
-lua require('a-galaxy-line')
-lua require('a-nv-tree')
-lua require('a-quick-scope')
-lua require('a-colorizer')
-lua require('a-treesitter')
-
-lua require('a-doge')
-lua require('dashboard')
-
-lua require('a-git-blame')
-lua require('a-git-neo')
-lua require('a-git-signs')
-
-lua require('a-lsp')
-lua require('a-lsp.python')
-lua require('a-lsp.clangd')
-lua require('a-lsp.kind')
-lua require('a-lsp.signature')
-
-lua require('a-compe')
-lua require('a-telescope')
-
 lua require('colorscheme')
 
-call SourceDirectory('$HOME/.config/nvim/vim/configs/')
-call SourceDirectory('$HOME/.config/nvim/vim/maps/')
+lua require('config.colorizer')
+call SourceDirectory('$HOME/.config/nvim/vim-script/configs/')
+call SourceDirectory('$HOME/.config/nvim/vim-script/maps/')
