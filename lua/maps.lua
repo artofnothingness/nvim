@@ -1,8 +1,8 @@
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'm', '<NOP>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', ',', '<NOP>', { noremap = true, silent = true })
 
 vim.g.mapleader = ' '
-vim.g.maplocalleader = 'm'
+vim.g.maplocalleader = ','
 
 -- Move selected line / block of text in visual mode
 -- vim.api.nvim_set_keymap('v', 'K', ':move \'<-2<CR>gv-gv', { noremap = true, silent = true })

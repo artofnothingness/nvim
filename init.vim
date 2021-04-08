@@ -16,6 +16,8 @@ lua require('a-quick-scope')
 lua require('a-colorizer')
 lua require('a-treesitter')
 
+lua require('a-doge')
+
 lua require('a-git-blame')
 lua require('a-git-neo')
 lua require('a-git-signs')
@@ -23,7 +25,8 @@ lua require('a-git-signs')
 lua require('a-lsp')
 lua require('a-lsp.python')
 lua require('a-lsp.clangd')
-lua require('a-lspkind')
+lua require('a-lsp.kind')
+lua require('a-lsp.signature')
 
 lua require('a-compe')
 lua require('a-telescope')

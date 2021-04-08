@@ -1,8 +1,8 @@
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 
-nnoremap <silent> <localleader> :<c-u>WhichKey  'm'<CR>
-vnoremap <silent> <localleader> :<c-u>WhichKeyVisual  'm'<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
+vnoremap <silent> <localleader> :<c-u>WhichKeyVisual  ','<CR>
 
 let g:which_key_map =  {}
 let g:which_key_sep = '→'
@@ -25,7 +25,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 call which_key#register('<Space>', "g:which_key_map")
-call which_key#register('m',       "g:which_key_map_ll")
+call which_key#register(',',       "g:which_key_map_ll")
 
 " --------------------------------------MAPS ---------------------------------------
 
@@ -76,7 +76,7 @@ let g:which_key_map_ll['b'] = [ ':TagbarToggle',        'BarTags' ]
 let g:which_key_map_ll['h'] = [ '<C-W>s',               'SplitHorizontal']
 let g:which_key_map_ll['v'] = [ '<C-W>v',               'SplitVertical']
 
-nmap <localleader>m <Plug>MarkdownPreviewToggle
+nmap <localleader>m :MarkdownPreviewToggle<CR>
 
 let g:which_key_map_ll.g = {
       \ 'name' : '+git' ,

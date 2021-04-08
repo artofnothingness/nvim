@@ -89,9 +89,10 @@ return require('packer').startup(function()
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-media-files.nvim'
-
-
-  use 'kyazdani42/blue-moon'
   use 'phaazon/hop.nvim'
 
+  -- NEW
+  use 'kshenoy/vim-signature'
+  use {'kkoomen/vim-doge', run = ':call doge#install()'}
+  use 'ray-x/lsp_signature.nvim'
 end)
