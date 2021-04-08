@@ -1,1 +1,1 @@
-vim.cmd('colorscheme shado')
+vim.cmd('colorscheme xshado')
