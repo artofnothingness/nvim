@@ -29,52 +29,91 @@ call which_key#register(',',       "g:which_key_map_ll")
 
 " --------------------------------------MAPS ---------------------------------------
 
-let g:which_key_map['k']    = [ ':bdelet',                               'Kill Buffer']
-" s is for search powered by telescope
-let g:which_key_map.s = {
-      \ 'name' : '+search' ,
-      \ 'a' : [':Telescope lsp_code_actions'            , 'code_actions'],
-      \ 'b' : [':Telescope buffers'                     , 'buffers'],
-      \ 'B' : [':Telescope git_branches'                , 'git branches'],
-      \ 'd' : [':Telescope lsp_document_diagnostics'    , 'document_diagnostics'],
-      \ 'D' : [':Telescope lsp_workspace_diagnostics'   , 'workspace_diagnostics'],
-      \ 'f' : [':Telescope find_files'                  , 'files'],
-      \ 'g' : [':Telescope live_grep'                   , 'Grep'],
-      \ 's' : [':Telescope lsp_document_symbols'        , 'Symbols'],
-      \ 'S' : [':Telescope lsp_workspace_symbols'       , 'Global Symbols'],
-      \ 'W' : [':Telescope file_browser'                , 'file browser'],
+let g:which_key_map['k']    = [ ':bdelet',                               'kill buffer']
+let g:which_key_map['w']    = [ ':Telescope lsp_workspace_symbols',      'find symbols']
+let g:which_key_map['s']    = [ ':Telescope lsp_document_symbols',       'find current symbols']
+let g:which_key_map['f']    = [ ':Telescope find_files',                 'find files']
+let g:which_key_map['b']    = [ ':Telescope buffers',                    'find buffers']
+let g:which_key_map['g']    = [ ':Telescope live_grep',                  'find grep']
+let g:which_key_map['r']    = [ ':Telescope oldfiles',                   'find recent']
+let g:which_key_map['q']    = [ ':Telescope quickfix',                   'find quickfix']
+let g:which_key_map['c']    = [ ':Telescope lsp_code_actions',           'find code actions']
+let g:which_key_map['d']    = [ ':Telescope lsp_document_diagnostics',   'find diagnostics']
+
+let g:which_key_map['a']    = [ ':Lspsaga code_action',                  'code action']
+let g:which_key_map['R']    = [ ':Lspsaga rename',                       'rename']
+let g:which_key_map['?']    = [ ':Lspsaga signature_help',               'signature']
+let g:which_key_map['p']    = [ ':Lspsaga preview_definition',           'preview']
+let g:which_key_map['*']    = [ ':Lspsaga lsp_finder',                   'references']
+
+let g:which_key_map.t = {
+      \ 'name' : '+Search' ,
+      \ 'b' : [':Telescope git_branches'                , 'git branches'],
+      \ 'f' : [':Telescope file_browser'                , 'file browser'],
       \ 'z' : [':Telescope current_buffer_fuzzy_find'   , 'buf_fuz_find'],
-      \ 'r' : [':Telescope oldfiles'                    , 'recent files'],
       \ 'k' : [':Telescope keymaps'                     , 'keymaps'],
       \ 'm' : [':Telescope man_pages'                   , 'man_pages'],
       \ }
 
+let g:which_key_map.m = {
+\ 'name': '+Mark',
+    \ 't' : [':BookmarkToggle'     , 'toggle'],
+    \ 'a' : [':BookmarkAnnotate'   , 'annotate'],
+    \ 'j' : [':BookmarkNext'       , 'next mark'],
+    \ 'k' : [':BookmarkPrev'       , 'prev mark'],
+    \ 's' : [':BookmarkShowAll'    , 'show all']
+    \ }
+
 let g:which_key_map.S = {
       \ 'name' : '+Session' ,
       \ 'c' : [':SClose'          , 'Close Session']  ,
-      \ 'd' : [':SDelete'         , 'Delete Session'] ,
-      \ 'l' : [':SLoad'           , 'Load Session']     ,
-      \ 's' : [':Startify'        , 'Start Page']     ,
-      \ 'S' : [':SSave'           , 'Save Session']   ,
+      \ 'd' : [':SDelete'         , 'Delete Session'],
+      \ 'l' : [':SLoad'           , 'Load Session'],
+      \ 's' : [':Startify'        , 'Start Page'],
+      \ 'S' : [':SSave'           , 'Save Session'],
       \ }
 
 let g:which_key_map.F = {
-    \ 'name': '+fold',
-    \ '1' : [':set foldlevel=1', 'level1'],
-    \ '2' : [':set foldlevel=2', 'level2'],
-    \ '3' : [':set foldlevel=3', 'level3'],
-    \ '4' : [':set foldlevel=4', 'level4'],
-    \ '5' : [':set foldlevel=5', 'level5'],
-    \ '6' : [':set foldlevel=6', 'level6']
+    \ 'name': '+Fold',
+    \ '1' : [':set foldlevel=1', 'level 1'],
+    \ '2' : [':set foldlevel=2', 'level 2'],
+    \ '3' : [':set foldlevel=3', 'level 3'],
+    \ '4' : [':set foldlevel=4', 'level 4'],
+    \ '5' : [':set foldlevel=5', 'level 5'],
+    \ '6' : [':set foldlevel=6', 'level 6']
     \ }
+let g:which_key_map.g = {
+      \ 'name' : '+Git' ,
+      \ 'b' : [':GitBlameToggle'                   , 'blame'],
+      \ 'B' : [':GBrowse'                          , 'browse'],
+      \ 'd' : [':Git diff'                         , 'diff'],
+      \ 'j' : [':NextHunk'                         , 'next hunk'],
+      \ 'k' : [':PrevHunk'                         , 'prev hunk'],
+      \ 'l' : [':Git log'                          , 'log'],
+      \ 'p' : [':PreviewHunk'                      , 'preview hunk'],
+      \ 'r' : [':ResetHunk'                        , 'reset hunk'],
+      \ 'R' : [':ResetBuffer'                      , 'reset buffer'],
+      \ 's' : [':StageHunk'                        , 'stage hunk'],
+      \ 'S' : [':Gstatus'                          , 'status'],
+      \ 'u' : [':UndoStageHunk'                    , 'undo stage hunk'],
+      \ }
+      " \ 'n' : [':Neogit'                           , 'neogit'],
 
-let g:which_key_map_ll[' '] = [ ':Startify',            'Startify' ]
-let g:which_key_map_ll['c'] = [ ':NvimTreeFindFile'                               , 'find current file' ]
-let g:which_key_map_ll['e'] = [ ':NvimTreeToggle'                                 , 'explorer' ]
-let g:which_key_map_ll['r'] = [ ':RnvimrToggle',        'Ranger' ]
-let g:which_key_map_ll['b'] = [ ':TagbarToggle',        'BarTags' ]
-let g:which_key_map_ll['h'] = [ '<C-W>s',               'SplitHorizontal']
-let g:which_key_map_ll['v'] = [ '<C-W>v',               'SplitVertical']
+let g:which_key_map.l = {
+      \ 'name' : '+Lsp' ,
+      \ 'i' : [':LspInfo'                            , 'lsp info'],
+      \ 'd' : [':Telescope lsp_workspace_diagnostics', 'workspace diagnostics'],
+      \ 'a' : [':Lspsaga range_code_action'          , 'selected action'],
+      \ 'x' : [':cclose'                             , 'close quickfix'],
+      \ }
+
+let g:which_key_map_ll[' '] = [ ':Startify',             'startify' ]
+let g:which_key_map_ll['c'] = [ ':NvimTreeFindFile',     'find current file' ]
+let g:which_key_map_ll['e'] = [ ':NvimTreeToggle',       'explorer' ]
+let g:which_key_map_ll['r'] = [ ':RnvimrToggle',         'ranger' ]
+let g:which_key_map_ll['b'] = [ ':TagbarToggle',         'bar tags' ]
+let g:which_key_map_ll['h'] = [ '<C-W>s',                'split h']
+let g:which_key_map_ll['v'] = [ '<C-W>v',                'split v']
 
 nmap <localleader>m :MarkdownPreviewToggle<CR>
 
@@ -88,28 +127,10 @@ let g:which_key_map_ll.g = {
       \ 'S' : [':Gstatus'                          , 'status'],
       \ }
 
-let g:which_key_map.l = {
-      \ 'name' : '+lsp' ,
-      \ 's' : [':Telescope lsp_document_symbols'     , 'Symbols'],
-      \ 'S' : [':Telescope lsp_workspace_symbols'    , 'Global Symbols'],
-      \ 'h' : [':Lspsaga signature_help'             , 'Open Signature'],
-      \ 'f' : [':Lspsaga lsp_finder'                 , 'Finder'],
-      \ 'd' : [':Telescope lsp_document_diagnostics' , 'document diagnostics'],
-      \ 'p' : [':Lspsaga preview_definition'         , 'preview definition'],
-      \ 'v' : [':Vista!!'                            , 'Vista'],
-      \ 'q' : [':Telescope quickfix'                 , 'quickfix'],
-      \ 'r' : [':Lspsaga rename'                     , 'rename'],
-      \ 'x' : [':cclose'                             , 'close quickfix'],
-      \ 'a' : [':Lspsaga code_action'                , 'code action'],
-      \ 'A' : [':Lspsaga range_code_action'          , 'selected action'],
-      \ 'D' : [':Telescope lsp_workspace_diagnostics', 'workspace diagnostics'],
-      \ 'F' : [':LspFormatting'                      , 'format'],
-      \ 'I' : [':LspInfo'                            , 'lsp info'],
-      \ 'L' : [':Lspsaga show_line_diagnostics'      , 'line_diagnostics'],
-      \ }
+
 
 " t is for terminal
-let g:which_key_map.t = {
+let g:which_key_map_ll.t = {
       \ 'name' : '+terminal' ,
       \ ';' : [':FloatermNew --wintype=normal --height=6'       , 'terminal'],
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],

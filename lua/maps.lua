@@ -9,9 +9,9 @@ vim.g.maplocalleader = ','
 -- vim.api.nvim_set_keymap('v', 'J', ':move \'>+1<CR>gv-gv', { noremap = true, silent = true })
 
 
-vim.api.nvim_set_keymap('n', 's', ":HopWord<CR>", { noremap = false, silent = true })
+vim.api.nvim_set_keymap('n', 's',     ":HopWord<CR>", { noremap = false, silent = true })
 vim.api.nvim_set_keymap('n', '<A-l>', ":HopLine<CR>", { noremap = false, silent = true })
-vim.api.nvim_set_keymap('n', 'S', ":HopChar2<CR>", { noremap = false, silent = true })
+vim.api.nvim_set_keymap('n', 'S',     ":HopChar2<CR>", { noremap = false, silent = true })
 
 -- LSP    
 vim.fn.sign_define("LspDiagnosticsSignError", {texthl = "LspDiagnosticsSignError", text = "", numhl = "LspDiagnosticsSignError"})
@@ -23,12 +23,11 @@ vim.cmd('nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>')
 vim.cmd('nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>')
 vim.cmd('nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>')
 vim.cmd('nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>')
-
-vim.cmd('nnoremap <silent> <A-k> :Lspsaga hover_doc<CR>')
-
 vim.cmd('nnoremap <silent> <C-p> :Lspsaga diagnostic_jump_prev<CR>')
 vim.cmd('nnoremap <silent> <C-n> :Lspsaga diagnostic_jump_next<CR>')
+vim.cmd('nnoremap <silent> <C-k> ::Lspsaga show_line_diagnostics<CR>')
 
+vim.cmd('nnoremap <silent> <A-k> :Lspsaga hover_doc<CR>')
 
 -- scroll up and down hover doc or scroll in definition preview
 vim.cmd('nnoremap <silent> <C-f> <cmd>lua require(\'lspsaga.action\').smart_scroll_with_saga(1)<CR>')

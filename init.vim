@@ -25,13 +25,11 @@ lua require('lsp.python')
 lua require('lsp.clangd')
 
 lua require('lsp.kind')
-lua require('lsp.signature')
 
 lua require('maps')
 lua require('settings')
 lua require('colorscheme')
 
 lua require('config.colorizer')
-call SourceDirectory('$HOME/.config/nvim/vim-script/configs/')
+call SourceDirectory('$HOME/.config/nvim/vim-script/config/')
 call SourceDirectory('$HOME/.config/nvim/vim-script/maps/')
-

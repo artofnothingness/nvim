@@ -31,7 +31,6 @@ return require('packer').startup(function()
 
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use 'p00f/nvim-ts-rainbow' -- NEW
 
   -- Icons
   use 'kyazdani42/nvim-web-devicons'
@@ -49,6 +48,7 @@ return require('packer').startup(function()
   use 'rafi/awesome-vim-colorschemes'
   use 'bluz71/vim-nightfly-guicolors'
   use 'kaicataldo/material.vim'
+  use 'Shadorain/shadotheme'
 
   use 'norcalli/nvim-colorizer.lua'
 
@@ -92,10 +92,10 @@ return require('packer').startup(function()
   use 'nvim-telescope/telescope-media-files.nvim'
   use 'phaazon/hop.nvim'
 
-  -- NEW
-  use 'kshenoy/vim-signature'
   use {'kkoomen/vim-doge', run = ':call doge#install()'}
-  use 'ray-x/lsp_signature.nvim'
-  use 'Shadorain/shadotheme'
+  -- NEW
+  use 'MattesGroeger/vim-bookmarks'
+  use 'p00f/nvim-ts-rainbow' -- NEW
+  use {'andymass/vim-matchup', event = 'VimEnter'}
 
 end)
