@@ -1,8 +1,8 @@
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
-vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
+vnoremap <silent> <leader>       :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
 
-nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
-vnoremap <silent> <localleader> :<c-u>WhichKeyVisual  ','<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey  'm'<CR>
+vnoremap <silent> <localleader> :<c-u>WhichKeyVisual  'm'<CR>
 
 let g:which_key_map =  {}
 let g:which_key_sep = '→'
@@ -25,7 +25,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 call which_key#register('<Space>', "g:which_key_map")
-call which_key#register(',',       "g:which_key_map_ll")
+call which_key#register('m',       "g:which_key_map_ll")
 
 " --------------------------------------MAPS ---------------------------------------
 
@@ -82,7 +82,7 @@ let g:which_key_map.F = {
     \ '5' : [':set foldlevel=5', 'level 5'],
     \ '6' : [':set foldlevel=6', 'level 6']
     \ }
-let g:which_key_map.g = {
+let g:which_key_map.G = {
       \ 'name' : '+Git' ,
       \ 'b' : [':GitBlameToggle'                   , 'blame'],
       \ 'B' : [':GBrowse'                          , 'browse'],
@@ -107,15 +107,16 @@ let g:which_key_map.l = {
       \ 'x' : [':cclose'                             , 'close quickfix'],
       \ }
 
-let g:which_key_map_ll[' '] = [ ':Startify',             'startify' ]
+" let g:which_key_map_ll[' '] = [ ':Startify',             'startify' ]
 let g:which_key_map_ll['c'] = [ ':NvimTreeFindFile',     'find current file' ]
 let g:which_key_map_ll['e'] = [ ':NvimTreeToggle',       'explorer' ]
 let g:which_key_map_ll['r'] = [ ':RnvimrToggle',         'ranger' ]
 let g:which_key_map_ll['b'] = [ ':TagbarToggle',         'bar tags' ]
 let g:which_key_map_ll['h'] = [ '<C-W>s',                'split h']
 let g:which_key_map_ll['v'] = [ '<C-W>v',                'split v']
-
-nmap <localleader>m :MarkdownPreviewToggle<CR>
+let g:which_key_map_ll['m'] = [ ':MarkdownPreviewToggle',                'markdown preview']
+let g:which_key_map_ll['t'] = [ ':FloatermNew --wintype=normal --height=10',                'terminal']
+let g:which_key_map_ll['l'] = [ ':FloatermNew lazygit',                'lazygit']
 
 let g:which_key_map_ll.g = {
       \ 'name' : '+git' ,
@@ -128,13 +129,9 @@ let g:which_key_map_ll.g = {
       \ }
 
 
-
-" t is for terminal
-let g:which_key_map_ll.t = {
-      \ 'name' : '+terminal' ,
-      \ ';' : [':FloatermNew --wintype=normal --height=6'       , 'terminal'],
+let g:which_key_map_ll.o = {
+      \ 'name' : '+open' ,
       \ 'g' : [':FloatermNew lazygit'                           , 'git'],
       \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
       \ 'p' : [':FloatermNew python'                            , 'python'],
-      \ 't' : [':FloatermToggle'                                , 'toggle'],
       \ }

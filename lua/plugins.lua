@@ -94,8 +94,7 @@ return require('packer').startup(function()
 
   use {'kkoomen/vim-doge', run = ':call doge#install()'}
   -- NEW
-  use 'MattesGroeger/vim-bookmarks'
-  use 'p00f/nvim-ts-rainbow' -- NEW
   use {'andymass/vim-matchup', event = 'VimEnter'}
+  use 'MattesGroeger/vim-bookmarks'
 
 end)

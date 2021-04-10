@@ -15,6 +15,7 @@ lua require('config.doge')
 lua require('config.dashboard')
 lua require('config.compe')
 lua require('config.telescope')
+lua require('config.bookmarks')
 
 lua require('config.git.blame')
 lua require('config.git.neo')

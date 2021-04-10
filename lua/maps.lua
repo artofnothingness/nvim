@@ -1,17 +1,16 @@
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', ',', '<NOP>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'm', '<NOP>', { noremap = true, silent = true })
 
 vim.g.mapleader = ' '
-vim.g.maplocalleader = ','
+vim.g.maplocalleader = 'm'
 
 -- Move selected line / block of text in visual mode
 -- vim.api.nvim_set_keymap('v', 'K', ':move \'<-2<CR>gv-gv', { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap('v', 'J', ':move \'>+1<CR>gv-gv', { noremap = true, silent = true })
 
 
-vim.api.nvim_set_keymap('n', 's',     ":HopWord<CR>", { noremap = false, silent = true })
+vim.api.nvim_set_keymap('n', 's',     ":HopChar2<CR>", { noremap = false, silent = true })
 vim.api.nvim_set_keymap('n', '<A-l>', ":HopLine<CR>", { noremap = false, silent = true })
-vim.api.nvim_set_keymap('n', 'S',     ":HopChar2<CR>", { noremap = false, silent = true })
 
 -- LSP    
 vim.fn.sign_define("LspDiagnosticsSignError", {texthl = "LspDiagnosticsSignError", text = "", numhl = "LspDiagnosticsSignError"})
