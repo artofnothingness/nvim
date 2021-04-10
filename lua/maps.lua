@@ -24,7 +24,6 @@ vim.cmd('nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>')
 vim.cmd('nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>')
 vim.cmd('nnoremap <silent> <C-p> :Lspsaga diagnostic_jump_prev<CR>')
 vim.cmd('nnoremap <silent> <C-n> :Lspsaga diagnostic_jump_next<CR>')
-vim.cmd('nnoremap <silent> <C-k> ::Lspsaga show_line_diagnostics<CR>')
 
 vim.cmd('nnoremap <silent> <A-k> :Lspsaga hover_doc<CR>')
 

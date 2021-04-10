@@ -59,11 +59,13 @@ let g:which_key_map.t = {
 
 let g:which_key_map.m = {
 \ 'name': '+Mark',
-    \ 't' : [':BookmarkToggle'     , 'toggle'],
+    \ 'm' : [':BookmarkToggle'     , 'toggle'],
     \ 'a' : [':BookmarkAnnotate'   , 'annotate'],
-    \ 'j' : [':BookmarkNext'       , 'next mark'],
-    \ 'k' : [':BookmarkPrev'       , 'prev mark'],
-    \ 's' : [':BookmarkShowAll'    , 'show all']
+    \ 'n' : [':BookmarkNext'       , 'next mark'],
+    \ 'p' : [':BookmarkPrev'       , 'prev mark'],
+    \ 's' : [':BookmarkShowAll'    , 'search'],
+    \ 'c' : [':BookmarkClear'      , 'clear'],
+    \ 'C' : [':BookmarkClearAll'   , 'clear all'],
     \ }
 
 let g:which_key_map.S = {
