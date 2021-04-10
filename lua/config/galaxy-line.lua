@@ -57,21 +57,31 @@ gls.left[4] = {
   }
 }
 
-gls.right[5] = {
+gls.left[5] = {
+  PerCent = {
+    provider = 'LinePercent',
+    separator = ' ',
+    separator_highlight = {'NONE',colors.bg},
+    highlight = {colors.fg,colors.bg,'bold'},
+  }
+}
+
+
+gls.right[6] = {
   delim = {
     provider = function() return '  ' end,
     highlight = {colors.bg,colors.bg}
   },
 }
 
-gls.left[6] = {
+gls.left[7] = {
   DiagnosticError = {
     provider = 'DiagnosticError',
     icon = '  ',
     highlight = {colors.red,colors.bg}
   }
 }
-gls.left[7] = {
+gls.left[8] = {
   DiagnosticWarn = {
     provider = 'DiagnosticWarn',
     icon = '  ',
@@ -79,7 +89,7 @@ gls.left[7] = {
   }
 }
 
-gls.left[7] = {
+gls.left[9] = {
   DiagnosticHint = {
     provider = 'DiagnosticHint',
     icon = '  ',
@@ -87,43 +97,11 @@ gls.left[7] = {
   }
 }
 
-gls.left[8] = {
+gls.left[10] = {
   DiagnosticInfo = {
     provider = 'DiagnosticInfo',
     icon = '  ',
     highlight = {colors.blue,colors.bg},
-  }
-}
-
-gls.left[9] = {
-  delim = {
-    provider = function() return '  ' end,
-    highlight = {colors.bg,colors.bg}
-  },
-}
-
-gls.left[10] = {
-  DiffAdd = {
-    provider = 'DiffAdd',
-    condition = condition.hide_in_width,
-    icon = '  ',
-    highlight = {colors.green,colors.bg},
-  }
-}
-gls.left[11] = {
-  DiffModified = {
-    provider = 'DiffModified',
-    condition = condition.hide_in_width,
-    icon = ' 柳',
-    highlight = {colors.orange,colors.bg},
-  }
-}
-gls.left[12] = {
-  DiffRemove = {
-    provider = 'DiffRemove',
-    condition = condition.hide_in_width,
-    icon = '  ',
-    highlight = {colors.red,colors.bg},
   }
 }
 
@@ -147,15 +125,6 @@ gls.right[2] = {
   }
 }
 
-gls.right[3] = {
-  PerCent = {
-    provider = 'LinePercent',
-    separator = ' ',
-    separator_highlight = {'NONE',colors.bg},
-    highlight = {colors.fg,colors.bg,'bold'},
-  }
-}
-
 gls.right[4] = {
   GitIcon = {
     provider = function() return '  ' end,
@@ -173,9 +142,42 @@ gls.right[5] = {
     highlight = {colors.violet,colors.bg,'bold'},
   }
 }
+
 gls.right[6] = {
+  delim = {
+    provider = function() return '  ' end,
+    highlight = {colors.bg,colors.bg}
+  },
+}
+
+gls.right[7] = {
+  DiffAdd = {
+    provider = 'DiffAdd',
+    condition = condition.hide_in_width,
+    icon = '  ',
+    highlight = {colors.green,colors.bg},
+  }
+}
+gls.right[8] = {
+  DiffModified = {
+    provider = 'DiffModified',
+    condition = condition.hide_in_width,
+    icon = ' 柳',
+    highlight = {colors.orange,colors.bg},
+  }
+}
+gls.right[9] = {
+  DiffRemove = {
+    provider = 'DiffRemove',
+    condition = condition.hide_in_width,
+    icon = '  ',
+    highlight = {colors.red,colors.bg},
+  }
+}
+
+gls.right[10] = {
   RainbowBlue = {
-    provider = function() return '  ▊' end,
+    provider = function() return ' ▊' end,
     highlight = {colors.blue,colors.bg}
   },
 }
