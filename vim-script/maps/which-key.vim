@@ -45,6 +45,8 @@ let g:which_key_map['R']    = [ ':Lspsaga rename',                       'rename
 let g:which_key_map['?']    = [ ':Lspsaga signature_help',               'signature']
 let g:which_key_map['p']    = [ ':Lspsaga preview_definition',           'preview']
 let g:which_key_map['*']    = [ ':Lspsaga lsp_finder',                   'references']
+let g:which_key_map['z']    = [ ':MaximizerToggle',                   'zoom']
+
 
 let g:which_key_map.t = {
       \ 'name' : '+Search' ,
@@ -115,7 +117,7 @@ let g:which_key_map_ll['b'] = [ ':TagbarToggle',         'bar tags' ]
 let g:which_key_map_ll['h'] = [ '<C-W>s',                'split h']
 let g:which_key_map_ll['v'] = [ '<C-W>v',                'split v']
 let g:which_key_map_ll['m'] = [ ':MarkdownPreviewToggle',                'markdown preview']
-let g:which_key_map_ll['t'] = [ ':FloatermNew --wintype=normal --height=10',                'terminal']
+let g:which_key_map_ll['t'] = [ ':FloatermNew --wintype=normal --height=15',                'terminal']
 let g:which_key_map_ll['l'] = [ ':FloatermNew lazygit',                'lazygit']
 
 let g:which_key_map_ll.g = {

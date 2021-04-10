@@ -1,9 +1,3 @@
-function! SourceDirectory(file)
-  for s:fPath in split(globpath(a:file, '*.vim'), '\n')
-    exe 'source' s:fPath
-  endfor
-endfunction
-
 lua require('plugins')
 
 lua require('config.floaterm')
@@ -24,13 +18,16 @@ lua require('config.git.signs')
 lua require('lsp')
 lua require('lsp.python')
 lua require('lsp.clangd')
-
 lua require('lsp.kind')
 
 lua require('maps')
 lua require('settings')
 lua require('colorscheme')
-
 lua require('config.colorizer')
-call SourceDirectory('$HOME/.config/nvim/vim-script/config/')
-call SourceDirectory('$HOME/.config/nvim/vim-script/maps/')
+
+source $HOME/.config/nvim/vim-script/config/clang-format.vim
+source $HOME/.config/nvim/vim-script/config/markdown.vim
+source $HOME/.config/nvim/vim-script/config/rnvimr.vim
+
+source $HOME/.config/nvim/vim-script/maps/which-key.vim
+source $HOME/.config/nvim/vim-script/maps/maps.vim

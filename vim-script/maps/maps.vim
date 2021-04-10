@@ -28,9 +28,6 @@ nmap ga <Plug>(EasyAlign)
 nnoremap <silent>    <TAB> :BufferNext<CR>
 nnoremap <silent>    <S-TAB> :BufferPrevious<CR>
 
-nnoremap <silent>    <A-,> :BufferMovePrevious<CR>
-nnoremap <silent>    <A-.> :BufferMoveNext<CR>
-
 vmap <C-_> :Commentary<CR>gv
 nmap <C-_> :Commentary<CR>
 
@@ -70,8 +67,6 @@ nnoremap <silent> <BS> :let @/ = ''<Enter>
 autocmd FileType c,cpp,objc nnoremap <buffer><A-f> :<C-u>ClangFormat<CR>
 autocmd FileType python noremap  <buffer><A-f> :<C-u>Format<CR>
 autocmd FileType python vnoremap <buffer><A-f> :Format<CR>
-
-nnoremap <silent><F4> :MaximizerToggle<CR>
 nnoremap <F6> :UndotreeToggle<CR>
 
 " Compe
