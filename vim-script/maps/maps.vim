@@ -37,11 +37,12 @@ nnoremap <M-C-k>    :resize +2<CR>
 nnoremap <M-C-h>    :vertical resize -2<CR>
 nnoremap <M-C-l>    :vertical resize +2<CR>
 
+" Now using vim-tmux
 " Window Navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-l> <C-w>l
 
 " Faster Navigation
 noremap H ^

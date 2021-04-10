@@ -28,6 +28,7 @@ lua require('config.colorizer')
 source $HOME/.config/nvim/vim-script/config/clang-format.vim
 source $HOME/.config/nvim/vim-script/config/markdown.vim
 source $HOME/.config/nvim/vim-script/config/rnvimr.vim
+source $HOME/.config/nvim/vim-script/config/tmux.vim
 
 source $HOME/.config/nvim/vim-script/maps/which-key.vim
 source $HOME/.config/nvim/vim-script/maps/maps.vim

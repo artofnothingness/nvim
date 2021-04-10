@@ -94,5 +94,6 @@ return require('packer').startup(function()
 
   use {'kkoomen/vim-doge', run = ':call doge#install()'}
   use 'MattesGroeger/vim-bookmarks'
+  use 'christoomey/vim-tmux-navigator'
 
 end)
