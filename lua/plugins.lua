@@ -93,8 +93,6 @@ return require('packer').startup(function()
   use 'phaazon/hop.nvim'
 
   use {'kkoomen/vim-doge', run = ':call doge#install()'}
-  -- NEW
-  use {'andymass/vim-matchup', event = 'VimEnter'}
   use 'MattesGroeger/vim-bookmarks'
 
 end)
