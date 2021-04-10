@@ -21,7 +21,7 @@ local colors = {
 gls.left[1] = {
   RainbowRed = {
     provider = function() return '▊ ' end,
-    highlight = {colors.red,colors.bg}
+    highlight = {colors.blue,colors.bg}
   },
 }
 gls.left[2] = {
@@ -174,9 +174,9 @@ gls.right[5] = {
   }
 }
 gls.right[6] = {
-  RainbowRedRight = {
+  RainbowBlue = {
     provider = function() return '  ▊' end,
-    highlight = {colors.red,colors.bg}
+    highlight = {colors.blue,colors.bg}
   },
 }
 
