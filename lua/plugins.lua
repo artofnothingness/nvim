@@ -14,6 +14,7 @@ return require('packer').startup(function()
   -- Packer can manage itself as an optional plugin
   use {'wbthomason/packer.nvim'}
 
+  use 'sheerun/vim-polyglot'
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'glepnir/lspsaga.nvim'
@@ -47,8 +48,17 @@ return require('packer').startup(function()
   use 'christianchiarulli/nvcode-color-schemes.vim' 
   use 'rafi/awesome-vim-colorschemes'
   use 'bluz71/vim-nightfly-guicolors'
+  use 'bluz71/vim-moonfly-colors'
   use 'kaicataldo/material.vim'
+  use 'tanvirtin/monokai.nvim'
   use 'Shadorain/shadotheme'
+  use {
+    'novakne/kosmikoa.nvim',
+    branch = 'main',
+    config = function()
+      require'kosmikoa'.setup()
+    end,
+  }
 
   use 'norcalli/nvim-colorizer.lua'
 
@@ -93,7 +103,13 @@ return require('packer').startup(function()
   use 'phaazon/hop.nvim'
 
   use {'kkoomen/vim-doge', run = ':call doge#install()'}
-  use 'MattesGroeger/vim-bookmarks'
   use 'christoomey/vim-tmux-navigator'
+
+  -- NEW
+  use 'MattesGroeger/vim-bookmarks'
+  use 'beauwilliams/focus.nvim'
+  use 'akinsho/nvim-toggleterm.lua'
+  use 'lambdalisue/suda.vim'
+  use 'ray-x/lsp_signature.nvim'
 
 end)
