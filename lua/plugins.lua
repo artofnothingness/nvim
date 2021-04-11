@@ -50,20 +50,10 @@ return require('packer').startup(function()
   use 'bluz71/vim-nightfly-guicolors'
   use 'bluz71/vim-moonfly-colors'
   use 'kaicataldo/material.vim'
-  use 'tanvirtin/monokai.nvim'
   use 'Shadorain/shadotheme'
-  use {
-    'novakne/kosmikoa.nvim',
-    branch = 'main',
-    config = function()
-      require'kosmikoa'.setup()
-    end,
-  }
-
   use 'norcalli/nvim-colorizer.lua'
 
   -- General Plugins
-
   use 'unblevable/quick-scope' 
   use 'airblade/vim-rooter'
   use 'windwp/nvim-autopairs'
