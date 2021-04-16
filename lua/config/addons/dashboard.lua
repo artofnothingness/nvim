@@ -32,3 +32,8 @@ vim.g.dashboard_custom_section = {
 }
 
 vim.g.dashboard_custom_footer = {'github.com/artofnothingness'}
+
+vim.cmd("hi! dashboardHeader   guifg=#9788b9")
+vim.cmd("hi! dashboardCenter   guifg=#51afef")
+vim.cmd("hi! dashboardShortcut guifg=#9788b9")
+vim.cmd("hi! dashboardFooter   guifg=#586268")

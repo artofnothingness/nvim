@@ -13,14 +13,12 @@ end
 return require('packer').startup(function()
   -- Packer can manage itself as an optional plugin
   use {'wbthomason/packer.nvim'}
-
-  use 'sheerun/vim-polyglot'
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'glepnir/lspsaga.nvim'
   use 'onsails/lspkind-nvim'
   use 'kosayoda/nvim-lightbulb'
-  use 'liuchengxu/vista.vim'
+  use 'ray-x/lsp_signature.nvim'
 
   -- Autocomplete
   use 'hrsh7th/nvim-compe'
@@ -45,13 +43,17 @@ return require('packer').startup(function()
   use 'kyazdani42/nvim-tree.lua' -- NEW
 
   -- Colors and Themes
+  use 'norcalli/nvim-colorizer.lua'
+  use 'tjdevries/colorbuddy.nvim'
+
   use 'christianchiarulli/nvcode-color-schemes.vim' 
-  use 'rafi/awesome-vim-colorschemes'
+  -- use 'rafi/awesome-vim-colorschemes'
   use 'bluz71/vim-nightfly-guicolors'
   use 'bluz71/vim-moonfly-colors'
   use 'kaicataldo/material.vim'
-  use 'Shadorain/shadotheme'
-  use 'norcalli/nvim-colorizer.lua'
+  use 'ayu-theme/ayu-vim' 
+  use 'drewtempelmeyer/palenight.vim'
+  use 'artofnothingness/doom-one.vim'
 
   -- General Plugins
   use 'unblevable/quick-scope' 
@@ -62,7 +64,6 @@ return require('packer').startup(function()
   use 'psliwka/vim-smoothie'
   use 'voldikss/vim-floaterm'
 
-  use 'liuchengxu/vim-which-key'
   use 'glepnir/dashboard-nvim'
 
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
@@ -71,7 +72,7 @@ return require('packer').startup(function()
   use 'dhruvasagarrkdownPreviewTogglec/vim-table-mode'
 
   use 'tpope/vim-commentary.git'
-  use 'PotatoesMaster/i3-vim-syntax.git'
+  -- use 'PotatoesMaster/i3-vim-syntax.git'
   use 'rhysd/vim-clang-format'
 
   use 'szw/vim-maximizer'
@@ -95,11 +96,12 @@ return require('packer').startup(function()
   use {'kkoomen/vim-doge', run = ':call doge#install()'}
   use 'christoomey/vim-tmux-navigator'
 
-  -- NEW
-  use 'MattesGroeger/vim-bookmarks'
-  use 'beauwilliams/focus.nvim'
+  -- General 2
   use 'akinsho/nvim-toggleterm.lua'
   use 'lambdalisue/suda.vim'
-  use 'ray-x/lsp_signature.nvim'
+  -- NEW
+  use 'numToStr/Navigator.nvim' 
+  use { 'AckslD/nvim-whichkey-setup.lua', requires = {'liuchengxu/vim-which-key'}, }
+  use 'windwp/nvim-spectre'
 
 end)
