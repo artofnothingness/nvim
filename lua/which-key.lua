@@ -1,7 +1,13 @@
 local which_key = require('whichkey_setup')
+vim.g.which_key_disable_default_offset = 1
+vim.g.which_key_use_floating_win = 0
+vim.g.which_key_run_map_on_popup = 1
+
+vim.cmd("highlight default link WhichKeySeperator Operator")
+vim.cmd("highlight default link WhichKeyGroup     SpecialKey")
 
 which_key.config {
-    hide_statusline = false,
+    hide_statusline = true,
     default_keymap_settings = {
         silent=true,
         noremap=true,
@@ -10,13 +16,13 @@ which_key.config {
 }
 
 local leader_map_normal = {
-    k  = { ':bdelet<CR>'                                         , 'Kill buffer'}         ,
-    z  = { ':MaximizerToggle<CR>'                                , 'Zoom'}                ,
+    k  = { ':bdelet<CR>'                                         , 'kill'}         ,
+    z  = { ':MaximizerToggle<CR>'                                , 'zoom'}                ,
     s  = {
         name = '+Search'                                         ,
         o = {":lua require('spectre').open()<CR>"                , 'open'}                ,
         w = {"viw:lua require('spectre').open_visual()<CR>"      , 'word'}                ,
-        f = {"viw:lua require('spectre').open_file_search()<CR>" , 'word in file search'} ,
+        f = {"viw:lua require('spectre').open_file_search()<CR>" , 'file word'} ,
     }                                                            ,
     f  = {
         name = '+Find'                                           ,
@@ -44,21 +50,21 @@ which_key.register_keymap('leader', leader_map_normal)
 which_key.register_keymap('leader', leader_map_visual, {mode = 'v'})
 
 local local_leader_map_normal = {
-    g  = { ':Neogit<CR>'                   , 'Neogit'}  ,
-    r  = { ':RnvimrToggle<CR>'             , 'Ranger'}  ,
+    g  = { ':Neogit<CR>'                   , 'neogit'}  ,
+    r  = { ':RnvimrToggle<CR>'             , 'ranger'}  ,
     p  = {
         name = '+Packer'                   ,
-        u = {':PackerUpdate<CR>'           , 'Update'}  ,
-        s = {':PackerSync<CR>'             , 'Sync'}    ,
-        C = {':PackerClean<CR>'            , 'Clean'}   ,
-        c = {':PackerCompile<CR>'          , 'Compile'} ,
+        u = {':PackerUpdate<CR>'           , 'update'}  ,
+        s = {':PackerSync<CR>'             , 'sync'}    ,
+        C = {':PackerClean<CR>'            , 'clean'}   ,
+        c = {':PackerCompile<CR>'          , 'compile'} ,
     }                                      ,
     o  = {
         name = '+Open'                     ,
-        l = {':FloatermNew lazygit<CR>'    , 'Git'}     ,
-        d = {':FloatermNew lazydocker<CR>' , 'Docker'}  ,
-        p = {':FloatermNew python<CR>'     , 'Python'}  ,
-        h = {':FloatermNew htop<CR>'       , 'Htop'}    ,
+        l = {':FloatermNew lazygit<CR>'    , 'git'}     ,
+        d = {':FloatermNew lazydocker<CR>' , 'docker'}  ,
+        p = {':FloatermNew python<CR>'     , 'python'}  ,
+        h = {':FloatermNew htop<CR>'       , 'htop'}    ,
     }                                      ,
 }
 which_key.register_keymap('localleader', local_leader_map_normal)

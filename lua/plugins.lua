@@ -74,4 +74,5 @@ return require('packer').startup(function()
 
   -- NEW
   use 'windwp/nvim-spectre'
+
 end)
