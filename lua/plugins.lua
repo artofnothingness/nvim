@@ -46,7 +46,10 @@ return require('packer').startup(function()
   use 'norcalli/nvim-colorizer.lua'
   use 'tjdevries/colorbuddy.nvim'
 
-  use 'christianchiarulli/nvcode-color-schemes.vim' 
+  -- use 'christianchiarulli/nvcode-color-schemes.vim' 
+
+  use 'dracula/vim' 
+
   -- use 'rafi/awesome-vim-colorschemes'
   use 'bluz71/vim-nightfly-guicolors'
   use 'bluz71/vim-moonfly-colors'
@@ -69,7 +72,7 @@ return require('packer').startup(function()
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
   use 'mzlogin/vim-markdown-toc'
   use 'godlygeek/tabular'
-  use 'dhruvasagarrkdownPreviewTogglec/vim-table-mode'
+  -- use 'dhruvasagarrkdownPreviewTogglec/vim-table-mode'
 
   use 'tpope/vim-commentary.git'
   -- use 'PotatoesMaster/i3-vim-syntax.git'
@@ -99,9 +102,8 @@ return require('packer').startup(function()
   -- General 2
   use 'akinsho/nvim-toggleterm.lua'
   use 'lambdalisue/suda.vim'
-  -- NEW
   use 'numToStr/Navigator.nvim' 
   use { 'AckslD/nvim-whichkey-setup.lua', requires = {'liuchengxu/vim-which-key'}, }
+  -- NEW
   use 'windwp/nvim-spectre'
-
 end)

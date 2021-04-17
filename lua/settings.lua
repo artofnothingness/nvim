@@ -61,4 +61,3 @@ vim.o.autoread = true  -- Read the file again if have been changed outside of Vi
 vim.o.switchbuf="useopen" -- Jump to the first open window that contains the specified buffer.
 
 vim.cmd('set sessionoptions+=globals')
-
