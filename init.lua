@@ -31,4 +31,3 @@ require('look.galaxy-line')
 require('look.colorscheme')
 require('look.colorizer')
 require('look.dashboard')
-

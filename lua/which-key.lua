@@ -1,4 +1,6 @@
-require("whichkey_setup").config{
+local which_key = require('whichkey_setup')
+
+which_key.config {
     hide_statusline = false,
     default_keymap_settings = {
         silent=true,
@@ -6,8 +8,6 @@ require("whichkey_setup").config{
     },
     default_mode = 'n',
 }
-
-local which_key = require('whichkey_setup')
 
 local leader_map_normal = {
     k  = { ':bdelet<CR>',                                   'Kill buffer'},
