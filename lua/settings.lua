@@ -1,8 +1,8 @@
 vim.cmd('set iskeyword+=-')                  --treat dash separated words as a word text object"
 vim.cmd('set shortmess+=c')                 --Don't pass messages to |ins-completion-menu|.
 
-vim.o.hidden=true                              --Required to keep multiple buffers open multiple buffers
-vim.wo.wrap=false                              --Display long lines as just one line
+vim.o.hidden=true 
+vim.wo.wrap=false 
 vim.cmd('set whichwrap+=<,>,[,],h,l')
 vim.o.encoding="utf-8"                      --The encoding displayed
 vim.o.pumheight=10                        --Makes popup menu smaller
@@ -14,16 +14,19 @@ vim.o.splitbelow=true                          --Horizontal splits will automati
 vim.o.termguicolors=true
 vim.o.splitright=true                          --Vertical splits will automatically be to the right
 vim.o.conceallevel=0                      --So that I can see `` in markdown files
-vim.o.tabstop=2                           --Insert 2 spaces for a tab
-vim.o.shiftwidth=2                        --Change the number of space characters inserted for indentation
+vim.o.tabstop=4                           --Insert 2 spaces for a tab
+vim.o.shiftwidth=4                        --Change the number of space characters inserted for indentation
 vim.o.smarttab=true                            --Makes tabbing smarter will realize you have 2 vs 4
 vim.o.expandtab=true                           --Converts tabs to spaces
 vim.o.smartindent=true                         --Makes indenting smart
 vim.o.autoindent=true                          --Good auto indent
+
 vim.o.laststatus=2                        --Always display the status line
+
 vim.wo.number = true
 vim.o.cursorline=true                          --Enable highlighting of the current line
 vim.o.background="dark"                     --tell vim what the background color looks like
+
 vim.o.showtabline=2                       --Always show tabs
 vim.o.showmode=false                          --We don't need to see things like -- INSERT -- anymore
 vim.o.backup=false                            --This is recommended by coc
