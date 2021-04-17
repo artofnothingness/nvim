@@ -56,23 +56,13 @@ map('n', "<S-TAB>", ":BufferPrevious<CR>", opts)
 map('n', "<C-_>", ":Commentary<CR>", opts)
 map('v', "<C-_>", ":Commentary<CR>gv", opts)
 
-
-map('n', "H",    "^", opts)
-map('n', "L",    "$", opts)
-
-map('o', "H",    "^", opts)
-map('o', "L",    "$", opts)
-
-map('x', "H",    "^", opts)
-map('x', "L",    "g_", opts)
-
-map('n', "J",    "5j", opts)
-map('n', "K",    "5k", opts)
-
-map('n', "U",    "J", opts)
+map('', "H",    "^", opts)
+map('', "L",    "$", opts)
+map('', "J",    "5j", opts)
+map('', "K",    "5k", opts)
+map('', "U",    "J", opts)
 
 map('n', "<BS>",    ":let @/ = ''<Enter>", opts)
-
 map('n', "<F6>",    ":UndotreeToggle<CR>", opts)
 
 vim.cmd("inoremap <silent><expr> <C-Space> compe#complete()")

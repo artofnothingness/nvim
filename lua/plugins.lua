@@ -13,74 +13,56 @@ end
 return require('packer').startup(function()
   -- Packer can manage itself as an optional plugin
   use {'wbthomason/packer.nvim'}
-  -- LSP
+
+  use { 'AckslD/nvim-whichkey-setup.lua', requires = {'liuchengxu/vim-which-key'}, }
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-lua/plenary.nvim'
+  -- Code 
   use 'neovim/nvim-lspconfig'
   use 'glepnir/lspsaga.nvim'
   use 'onsails/lspkind-nvim'
   use 'kosayoda/nvim-lightbulb'
   use 'ray-x/lsp_signature.nvim'
-
-  -- Autocomplete
-  use 'hrsh7th/nvim-compe'
-  use 'hrsh7th/vim-vsnip'
-  use 'hrsh7th/vim-vsnip-integ'
-
-  -- Quality of life improvements
-  use 'norcalli/nvim_utils' 
-
-  -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'hrsh7th/nvim-compe'
+  use 'rhysd/vim-clang-format'
+  use {'kkoomen/vim-doge', run = ':call doge#install()'}
 
   -- Icons
   use 'kyazdani42/nvim-web-devicons'
   use 'ryanoasis/vim-devicons'
 
-  -- Status Line and Bufferline
+  -- Look 
+  use 'artofnothingness/doom-one.vim'
+  use 'norcalli/nvim-colorizer.lua'
   use 'romgrk/barbar.nvim'
   use 'glepnir/galaxyline.nvim' 
-
-  -- Explorer
-  use 'kyazdani42/nvim-tree.lua' -- NEW
-
-  -- Colors and Themes
-  use 'norcalli/nvim-colorizer.lua'
-  use 'tjdevries/colorbuddy.nvim'
-
-  -- use 'christianchiarulli/nvcode-color-schemes.vim' 
-
-  use 'dracula/vim' 
-
-  -- use 'rafi/awesome-vim-colorschemes'
-  use 'bluz71/vim-nightfly-guicolors'
-  use 'bluz71/vim-moonfly-colors'
-  use 'kaicataldo/material.vim'
-  use 'ayu-theme/ayu-vim' 
-  use 'drewtempelmeyer/palenight.vim'
-  use 'artofnothingness/doom-one.vim'
-
-  -- General Plugins
-  use 'unblevable/quick-scope' 
-  use 'airblade/vim-rooter'
-  use 'windwp/nvim-autopairs'
-
-  use 'kevinhwang91/rnvimr'
   use 'psliwka/vim-smoothie'
-  use 'voldikss/vim-floaterm'
-
+  use 'preservim/tagbar'
   use 'glepnir/dashboard-nvim'
 
+  -- Addons 
+  use 'kevinhwang91/rnvimr'
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
-  use 'mzlogin/vim-markdown-toc'
-  use 'godlygeek/tabular'
   -- use 'dhruvasagarrkdownPreviewTogglec/vim-table-mode'
-
-  use 'tpope/vim-commentary.git'
-  -- use 'PotatoesMaster/i3-vim-syntax.git'
-  use 'rhysd/vim-clang-format'
-
-  use 'szw/vim-maximizer'
-  use 'preservim/tagbar'
+  use 'voldikss/vim-floaterm'
+  use 'mzlogin/vim-markdown-toc'
   use 'mbbill/undotree'
+  use 'akinsho/nvim-toggleterm.lua'
+
+  -- Navigation 
+  use 'unblevable/quick-scope' 
+  use 'airblade/vim-rooter'
+  use 'nvim-telescope/telescope.nvim'
+  use 'phaazon/hop.nvim'
+  use 'numToStr/Navigator.nvim' 
+
+  -- Editing 
+  use 'windwp/nvim-autopairs'
+  use 'tpope/vim-commentary.git'
+  use 'godlygeek/tabular'
+  use 'szw/vim-maximizer'
+  use 'lambdalisue/suda.vim'
 
   -- Git
   use 'TimUntersberger/neogit'
@@ -89,21 +71,7 @@ return require('packer').startup(function()
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
 
-  -- Telescope 
-  use 'nvim-lua/popup.nvim'
-  use 'nvim-lua/plenary.nvim'
-  use 'nvim-telescope/telescope.nvim'
-  use 'nvim-telescope/telescope-media-files.nvim'
-  use 'phaazon/hop.nvim'
 
-  use {'kkoomen/vim-doge', run = ':call doge#install()'}
-  use 'christoomey/vim-tmux-navigator'
-
-  -- General 2
-  use 'akinsho/nvim-toggleterm.lua'
-  use 'lambdalisue/suda.vim'
-  use 'numToStr/Navigator.nvim' 
-  use { 'AckslD/nvim-whichkey-setup.lua', requires = {'liuchengxu/vim-which-key'}, }
   -- NEW
   use 'windwp/nvim-spectre'
 end)

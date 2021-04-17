@@ -2,7 +2,8 @@ require('plugins')
 
 require('addons.toggleterm')
 require('addons.floaterm')
-require('addons.tree')
+require('addons.ranger')
+require('addons.markdown')
 
 require('navigation.quick-scope')
 require('navigation.telescope')
@@ -32,5 +33,3 @@ require('look.colorscheme')
 require('look.colorizer')
 require('look.dashboard')
 
-require('addons.ranger')
-require('addons.markdown')

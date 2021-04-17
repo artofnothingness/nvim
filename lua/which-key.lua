@@ -14,10 +14,9 @@ local leader_map_normal = {
     z  = { ':MaximizerToggle<CR>',                    'Zoom'},
     s  = { 
         name = '+Search',
-        o = {":lua require('spectre').open()<CR>",                 'open'},
-        w = {"viw:lua require('spectre').open_visual()<CR>",                 'word'},
-        v = {"lua require('spectre').open_visual()<CR>",                 'word'},
-        f = {"viw:lua require('spectre').open_file_search()<CR>",     'file search'},
+        o = {":lua require('spectre').open()<CR>",                    'open'},
+        w = {"viw:lua require('spectre').open_visual()<CR>",          'word'},
+        f = {"viw:lua require('spectre').open_file_search()<CR>",     'word in file search'},
     },
     f  = { 
         name = '+Find',
