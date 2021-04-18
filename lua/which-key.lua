@@ -16,38 +16,33 @@ which_key.config {
 }
 
 local leader_map_normal = {
-    k  = { ':bdelet<CR>'                                         , 'kill'}         ,
-    z  = { ':MaximizerToggle<CR>'                                , 'zoom'}                ,
+    k  = { ':bdelet<CR>'                                      , 'kill'}          ,
+    z  = { ':MaximizerToggle<CR>'                             , 'zoom'}          ,
     s  = {
-        name = '+Search'                                         ,
-        o = {":lua require('spectre').open()<CR>"                , 'open'}                ,
-        w = {"viw:lua require('spectre').open_visual()<CR>"      , 'word'}                ,
-        f = {"viw:lua require('spectre').open_file_search()<CR>" , 'file word'} ,
-    }                                                            ,
+        name = '+Search'                                      ,
+        s = {":lua require('spectre').open()<CR>"             , 'open'}          ,
+        t = {":lua require('spectre').open_file_search()<CR>" , 'file word'}     ,
+        w = {"viw:lua require('spectre').open_visual()<CR>"   , 'word'}          ,
+    }                                                         ,
     f  = {
-        name = '+Find'                                           ,
-        f = {'<cmd>Telescope find_files<CR>'                     , 'files'}               ,
-        b = {'<cmd>Telescope buffers<CR>'                        , 'buffers'}             ,
-        r = {'<cmd>Telescope oldfiles<CR>'                       , 'recent'}              ,
-        S = {':Telescope lsp_workspace_symbols<CR>'              , 'symbols'}             ,
-        s = {':Telescope lsp_document_symbols<CR>'               , 'file symbols'}        ,
-    }                                                            ,
+        name = '+Find'                                        ,
+        f = {'<cmd>Telescope find_files<CR>'                  , 'files .'}         ,
+        b = {'<cmd>Telescope buffers<CR>'                     , 'buffers'}       ,
+        r = {'<cmd>Telescope oldfiles<CR>'                    , 'recent files'}        ,
+        w = {':Telescope lsp_workspace_symbols<CR>'           , 'workspace symbols'}       ,
+        s = {':Telescope lsp_document_symbols<CR>'            , 'file symbols'}  ,
+    }                                                         ,
     c = {
-        name = '+Code'                                           ,
-        r = {':Lspsaga rename<CR>'                               , 'rename'}              ,
-        f = {':Lspsaga lsp_finder<CR>'                           , 'references'}          ,
-        s = {':Lspsaga signature_help<CR>'                       , 'signature'}           ,
-        p = {':Lspsaga preview_definition<CR>'                   , 'preview'}             ,
-        d = {':DogeGenerate<CR>'                                 , 'documentation'}       ,
+        name = '+Code'                                        ,
+        r = {':Lspsaga rename<CR>'                            , 'rename'}        ,
+        f = {':Lspsaga lsp_finder<CR>'                        , 'references'}    ,
+        s = {':Lspsaga signature_help<CR>'                    , 'signature'}     ,
+        p = {':Lspsaga preview_definition<CR>'                , 'preview'}       ,
+        d = {':DogeGenerate<CR>'                              , 'documentation'} ,
         }
 }
 
-local leader_map_visual = {
-    s = {"lua require('spectre').open_visual()<CR>",                 'word'},
-}
-
-which_key.register_keymap('leader', leader_map_normal)
-which_key.register_keymap('leader', leader_map_visual, {mode = 'v'})
+which_key.register_keymap('leader', leader_map_normal, {mode = 'n'})
 
 local local_leader_map_normal = {
     g  = { ':Neogit<CR>'                   , 'neogit'}  ,
