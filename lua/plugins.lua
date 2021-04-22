@@ -49,6 +49,7 @@ return require('packer').startup(function()
   use 'mzlogin/vim-markdown-toc'
   use 'mbbill/undotree'
   use 'akinsho/nvim-toggleterm.lua'
+  use 'kyazdani42/nvim-tree.lua'
 
   -- Navigation 
   use 'unblevable/quick-scope' 
@@ -73,6 +74,6 @@ return require('packer').startup(function()
 
 
   -- NEW
-  use 'windwp/nvim-spectre'
+    use 'windwp/nvim-spectre'
 
 end)

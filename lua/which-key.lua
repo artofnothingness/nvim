@@ -29,14 +29,14 @@ local leader_map_normal = {
         f = {'<cmd>Telescope find_files<CR>'                  , 'files .'}         ,
         b = {'<cmd>Telescope buffers<CR>'                     , 'buffers'}       ,
         r = {'<cmd>Telescope oldfiles<CR>'                    , 'recent files'}        ,
-        w = {':Telescope lsp_workspace_symbols<CR>'           , 'workspace symbols'}       ,
-        s = {':Telescope lsp_document_symbols<CR>'            , 'file symbols'}  ,
     }                                                         ,
     c = {
         name = '+Code'                                        ,
+        w = {':Telescope lsp_workspace_symbols<CR>'           , 'workspace symbols'}       ,
+        s = {':Telescope lsp_document_symbols<CR>'            , 'file symbols'}  ,
         r = {':Lspsaga rename<CR>'                            , 'rename'}        ,
         f = {':Lspsaga lsp_finder<CR>'                        , 'references'}    ,
-        s = {':Lspsaga signature_help<CR>'                    , 'signature'}     ,
+        h = {':Lspsaga signature_help<CR>'                    , 'signature'}     ,
         p = {':Lspsaga preview_definition<CR>'                , 'preview'}       ,
         d = {':DogeGenerate<CR>'                              , 'documentation'} ,
         }
@@ -47,6 +47,7 @@ which_key.register_keymap('leader', leader_map_normal, {mode = 'n'})
 local local_leader_map_normal = {
     g  = { ':Neogit<CR>'                   , 'neogit'}  ,
     r  = { ':RnvimrToggle<CR>'             , 'ranger'}  ,
+    e  = { ':NvimTreeToggle<CR>'           , 'editor'}  ,
     p  = {
         name = '+Packer'                   ,
         u = {':PackerUpdate<CR>'           , 'update'}  ,

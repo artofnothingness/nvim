@@ -4,6 +4,7 @@ require('addons.toggleterm')
 require('addons.floaterm')
 require('addons.ranger')
 require('addons.markdown')
+require('addons.nvim-tree')
 
 require('navigation.quick-scope')
 require('navigation.telescope')
