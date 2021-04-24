@@ -21,7 +21,7 @@ local leader_map_normal = {
     s  = {
         name = '+Search'                                      ,
         s = {":lua require('spectre').open()<CR>"             , 'open'}          ,
-        t = {":lua require('spectre').open_file_search()<CR>" , 'file word'}     ,
+        t = {":lua require('spectre').open_file_search()<CR>" , 'this file'}     ,
         w = {"viw:lua require('spectre').open_visual()<CR>"   , 'word'}          ,
     }                                                         ,
     f  = {
@@ -63,4 +63,26 @@ local local_leader_map_normal = {
         h = {':FloatermNew htop<CR>'       , 'htop'}    ,
     }                                      ,
 }
+
 which_key.register_keymap('localleader', local_leader_map_normal)
+
+
+local keymap_go_next = {
+    name = "+go next",
+    b = { ":BufferNext<CR>", "buffer" },
+    t = { ":tabnext<CR>",    "tab" },
+    d = { ":Lspsaga diagnostic_jump_next<CR>",    "diagnostics" },
+  }
+
+
+local keymap_go_prev = {
+    name = "+go prev",
+    b = { ":BufferPrev<CR>", "buffer" },
+    t = { ":tabprev<CR>",    "tab" },
+    d = { ":Lspsaga diagnostic_jump_prev<CR>",    "diagnostics" },
+  }
+
+which_key.register_keymap("[", keymap_go_prev, {mode = 'n'})
+which_key.register_keymap("]", keymap_go_next, {mode = 'n'})
+
+
