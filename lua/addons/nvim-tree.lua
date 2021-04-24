@@ -1,11 +1,11 @@
-vim.g.nvim_tree_width = 42 
+vim.g.nvim_tree_width = 46
 vim.g.nvim_tree_disable_netrw = 0
 vim.g.nvim_tree_hide_dotfiles = 1 
-vim.g.nvim_tree_indent_markers = 1 
+vim.g.nvim_tree_indent_markers = 0
 vim.g.nvim_tree_follow = 1 -- "0 by default, this option allows the cursor to be updated when entering a buffer
 vim.g.nvim_tree_auto_close = 1 
 vim.g.nvim_tree_auto_ignore_ft = {'startify', 'dashboard'}
-vim.g.nvim_tree_add_trailing = 1 
+vim.g.nvim_tree_add_trailing = 0
 vim.g.nvim_tree_ignore = { '.git', 'node_modules', '.cache', '__pycache__' }
 
 vim.g.nvim_tree_show_icons = {

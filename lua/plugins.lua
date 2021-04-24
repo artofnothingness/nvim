@@ -75,5 +75,6 @@ return require('packer').startup(function()
 
   -- NEW
     use 'windwp/nvim-spectre'
+    use {'npxbr/glow.nvim', run = ':GlowInstall'}
 
 end)

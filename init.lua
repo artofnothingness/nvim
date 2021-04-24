@@ -14,6 +14,7 @@ require('editing.doge')
 require('editing.autopairs')
 
 require('code.lang.python')
+require('code.lang.efm')
 require('code.lang.cpp')
 require('code.kind')
 require('code.signature')
