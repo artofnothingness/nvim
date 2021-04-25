@@ -12,6 +12,7 @@ require('addons.nvim-tree')
 require('navigation.quick-scope')
 require('navigation.telescope')
 require('navigation.tmux-navigator')
+require('navigation.vista')
 
 require('editing.doge')
 require('editing.autopairs')

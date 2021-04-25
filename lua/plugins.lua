@@ -76,5 +76,6 @@ return require('packer').startup(function()
   -- NEW
   use "rafamadriz/friendly-snippets"
   use 'hrsh7th/vim-vsnip' 
+  use 'liuchengxu/vista.vim'
 
 end)

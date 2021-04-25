@@ -1,4 +1,4 @@
-vim.g.nvim_tree_width = 46
+vim.g.nvim_tree_width = 50 
 vim.g.nvim_tree_disable_netrw = 0
 vim.g.nvim_tree_hide_dotfiles = 1 
 vim.g.nvim_tree_indent_markers = 0

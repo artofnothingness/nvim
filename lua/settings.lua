@@ -1,3 +1,5 @@
+vim.cmd('command! -nargs=0 LspVirtualTextToggle lua require("lsp/virtual_text").toggle()')
+
 vim.cmd('set iskeyword+=-')                  --treat dash separated words as a word text object"
 vim.cmd('set shortmess+=c')                 --Don't pass messages to |ins-completion-menu|.
 
