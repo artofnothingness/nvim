@@ -34,7 +34,7 @@ return require('packer').startup(function()
   use 'norcalli/nvim-colorizer.lua'
   use 'romgrk/barbar.nvim'
   use 'glepnir/galaxyline.nvim' 
-  use 'psliwka/vim-smoothie'
+  -- use 'psliwka/vim-smoothie'
   use 'preservim/tagbar'
   use 'glepnir/dashboard-nvim'
 
@@ -73,6 +73,7 @@ return require('packer').startup(function()
 
 
   -- NEW
+  use 'karb94/neoscroll.nvim'
   use "rafamadriz/friendly-snippets"
   use 'hrsh7th/vim-vsnip' 
 
