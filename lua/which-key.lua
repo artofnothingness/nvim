@@ -34,12 +34,13 @@ local leader_map_normal = {
         name = '+Code'                                        ,
         w = {':Telescope lsp_workspace_symbols<CR>'           , 'workspace symbols'}       ,
         s = {':Telescope lsp_document_symbols<CR>'            , 'file symbols'}  ,
+        d = {':Telescope lsp_document_diagnostics<CR>'            , 'diagnostics'}  ,
         r = {':Lspsaga rename<CR>'                            , 'rename'}        ,
         f = {':Lspsaga lsp_finder<CR>'                        , 'references'}    ,
         h = {':Lspsaga signature_help<CR>'                    , 'signature'}     ,
         p = {':Lspsaga preview_definition<CR>'                , 'preview'}       ,
-        d = {':DogeGenerate<CR>'                              , 'documentation'} ,
-        }
+        D = {':DogeGenerate<CR>'                              , 'documentation'} ,
+        },
 }
 
 which_key.register_keymap('leader', leader_map_normal, {mode = 'n'})

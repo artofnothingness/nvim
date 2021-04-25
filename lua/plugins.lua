@@ -74,5 +74,6 @@ return require('packer').startup(function()
 
   -- NEW
   use "rafamadriz/friendly-snippets"
-  use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/vim-vsnip' 
+
 end)
