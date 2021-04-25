@@ -5,17 +5,22 @@ local condition = require('galaxyline.condition')
 gl.short_line_list = {'NvimTree','vista','dbui','packer'}
 
 local colors = {
-  bg = '#23272e',
-  yellow = '#fabd2f',
-  cyan = '#008080',
-  darkblue = '#081633',
-  green = '#608B4E',
-  orange = '#FF8800',
-  purple = '#5d4d7a',
-  magenta = '#d16d9e',
-  grey = '#c0c0c0',
-  blue = '#51afef',
-  red = '#D16969'
+    bg        = '#23272e',
+    darkblue  = '#081633',
+    purple    = '#785DA9',
+    grey      = '#c0c0c0',
+    red       = '#ff6c6b',
+    orange    = '#da8548',
+    green     = '#98be65',
+    teal      = '#4db5bd',
+    yellow    = '#ECBE7B',
+    blue      = '#51afef',
+    dark_blue = '#2257A0',
+    magenta   = '#c678dd',
+    violet    = '#a9a1e1',
+    cyan      = '#46D9FF',
+    dark_cyan = '#5699AF',
+    white     = '#efefef',
 }
 
 gls.left[1] = {
@@ -28,7 +33,7 @@ gls.left[2] = {
   ViMode = {
     provider = function()
       -- auto change color according the vim mode
-      local mode_color = {n = colors.red, i = colors.green,v=colors.blue,
+      local mode_color = {n = colors.violet, i = colors.green, v=colors.blue,
                           [''] = colors.blue,V=colors.blue,
                           c = colors.magenta,no = colors.red,s = colors.orange,
                           S=colors.orange,[''] = colors.orange,
@@ -111,7 +116,7 @@ gls.right[1] = {
     condition = condition.hide_in_width,
     separator = ' ',
     separator_highlight = {'NONE',colors.bg},
-    highlight = {colors.green,colors.bg,'bold'}
+    highlight = {colors.blue,colors.bg,'bold'}
   }
 }
 
@@ -121,7 +126,7 @@ gls.right[2] = {
     condition = condition.hide_in_width,
     separator = ' ',
     separator_highlight = {'NONE',colors.bg},
-    highlight = {colors.green,colors.bg,'bold'}
+    highlight = {colors.blue,colors.bg,'bold'}
   }
 }
 
