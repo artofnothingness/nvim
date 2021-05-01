@@ -74,6 +74,8 @@ return require('packer').startup(function()
 
 
   -- NEW
+  
+  use "PotatoesMaster/i3-vim-syntax.git"
   use "rafamadriz/friendly-snippets"
   use 'hrsh7th/vim-vsnip' 
   use 'liuchengxu/vista.vim'

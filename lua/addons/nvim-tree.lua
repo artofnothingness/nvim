@@ -6,7 +6,7 @@ vim.g.nvim_tree_follow = 1 -- "0 by default, this option allows the cursor to be
 vim.g.nvim_tree_auto_close = 1 
 vim.g.nvim_tree_auto_ignore_ft = {'startify', 'dashboard'}
 vim.g.nvim_tree_add_trailing = 0
-vim.g.nvim_tree_ignore = { '.git', 'node_modules', '.cache', '__pycache__' }
+vim.g.nvim_tree_ignore = { '.git', 'node_modules', '.cache', '__pycache__', '*.pyc' }
 
 vim.g.nvim_tree_show_icons = {
     ['git'] = 0,

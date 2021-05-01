@@ -33,5 +33,5 @@ require('git.neo')
 require('git.signs')
 
 require('look.colorizer')
-require('look.dashboard')
 require('look.colorscheme')
+require('look.dashboard')

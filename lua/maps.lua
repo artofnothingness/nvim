@@ -15,7 +15,6 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = 'm'
 
 local normal_maps = {
-    {'<A-l>'   , ":HopLine<CR>"}                                                        ,
     {'gd'      , '<cmd>lua vim.lsp.buf.definition()<CR>'}                               ,
     {'gD'      , '<cmd>lua vim.lsp.buf.declaration()<CR>'}                              ,
     {'gr'      , '<cmd>lua vim.lsp.buf.references()<CR>'}                               ,
@@ -53,7 +52,7 @@ local visual_maps = {
 
 local universal_maps = {
     {"H"       , "^"},
-    {'s'       , ":HopChar2<CR>"},
+    {'s'       , ":HopChar1<CR>"},
     {"L"       , "$"},
     {"J"       , "5j"},
     {"K"       , "5k"},
