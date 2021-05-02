@@ -51,6 +51,7 @@ local leader = {
             p  = { ':lua require"telescope".extensions.project.project{}<CR>',  'projects'},
             z  = { ':MaximizerToggle<CR>',                                      'zoom'},
             s  = {
+               name = '+SnipRun',
                r = {':lua require"sniprun".run()<CR>',                                   'run'},
                R = {':lua require"sniprun".reset()<CR>',                                 'reset'},
                c = {':lua require"sniprun.display".close()<CR>',                         'close'},
@@ -90,6 +91,7 @@ local leader = {
         },
         keys = {
             s  = {
+               name = '+SnipRun',
                r = {':lua require"sniprun".run("v")<CR>',                                'run'},
                R = {':lua require"sniprun".reset()<CR>',                                 'reset'},
                c = {':lua require"sniprun.display".close()<CR>',                         'close'},
