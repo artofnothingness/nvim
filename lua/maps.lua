@@ -8,8 +8,8 @@ local function set_keymaps(mode, keymaps, opts)
     end
 end
 
-map('n', '<Space>', '<NOP>', opts)
-map('n', 'm', '<NOP>', opts)
+-- map('n', '<Space>', '<NOP>', opts)
+-- map('n', 'm', '<NOP>', opts)
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = 'm'

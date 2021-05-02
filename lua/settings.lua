@@ -16,12 +16,14 @@ vim.o.splitbelow=true                          --Horizontal splits will automati
 vim.o.termguicolors=true
 vim.o.splitright=true                          --Vertical splits will automatically be to the right
 vim.o.conceallevel=0                      --So that I can see `` in markdown files
-vim.o.tabstop=4                           --Insert 2 spaces for a tab
-vim.o.shiftwidth=4                        --Change the number of space characters inserted for indentation
-vim.o.smarttab=true                            --Makes tabbing smarter will realize you have 2 vs 4
-vim.o.expandtab=true                           --Converts tabs to spaces
 vim.o.smartindent=true                         --Makes indenting smart
 vim.o.autoindent=true                          --Good auto indent
+
+vim.o.expandtab=true                           --Converts tabs to spaces
+vim.o.tabstop=8                           --Insert 2 spaces for a tab
+vim.o.shiftwidth=4                        --Change the number of space characters inserted for indentation
+vim.o.smarttab=true                            --Makes tabbing smarter will realize you have 2 vs 4
+vim.o.softtabstop=0
 
 vim.o.laststatus=2                        --Always display the status line
 
@@ -35,7 +37,7 @@ vim.o.backup=false                            --This is recommended by coc
 vim.o.writebackup=false                       --This is recommended by coc
 vim.wo.signcolumn="yes"                      --Always show the signcolumn, otherwise it would shift the text each time
 vim.o.updatetime=300                      --Faster completion
-vim.o.timeoutlen=100                      --By default timeoutlen is 1000 ms
+vim.o.timeoutlen=300                      --By default timeoutlen is 1000 ms
 vim.o.clipboard="unnamedplus"               --Copy paste between vim and everything else
 vim.o.incsearch=true
 vim.o.guifont="JetBrainsMono\\ Nerd\\ Font\\ Mono:h18"

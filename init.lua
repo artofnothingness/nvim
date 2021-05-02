@@ -1,7 +1,7 @@
 require('settings')
 require('maps')
-require('which-key')
 require('plugins')
+require('which-key-maps')
 
 require('addons.toggleterm')
 require('addons.floaterm')
