@@ -57,7 +57,7 @@ return require('packer').startup(function()
     -- Navigation 
     use 'unblevable/quick-scope' 
     use 'airblade/vim-rooter'
-    use { 'nvim-telescope/telescope-project.nvim', branch = 'feature/display-path', config = function() require'telescope'.load_extension('project') end}
+    use { 'nvim-telescope/telescope-project.nvim', config = function() require'telescope'.load_extension('project') end}
     use 'nvim-telescope/telescope.nvim'
     use 'phaazon/hop.nvim'
     use 'numToStr/Navigator.nvim' 
