@@ -12,8 +12,6 @@ return require('packer').startup(function()
     use {'wbthomason/packer.nvim'}
 
     use 'folke/which-key.nvim'
-    use 'nvim-luopta/popup.nvim'
-    use 'nvim-lua/plenary.nvim'
     -- Code 
     use 'neovim/nvim-lspconfig'
     use 'glepnir/lspsaga.nvim'
@@ -58,7 +56,12 @@ return require('packer').startup(function()
     use 'unblevable/quick-scope' 
     use 'airblade/vim-rooter'
     use { 'nvim-telescope/telescope-project.nvim', config = function() require'telescope'.load_extension('project') end}
-    use 'nvim-telescope/telescope.nvim'
+
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+    }
+
     use 'phaazon/hop.nvim'
     use 'numToStr/Navigator.nvim' 
 
@@ -78,4 +81,8 @@ return require('packer').startup(function()
     use 'windwp/nvim-spectre'
 
     -- NEW
+    use 'sunjon/shade.nvim'
+    use 'navarasu/onedark.nvim'
+    use 'lourenci/github-colors'
+
 end)

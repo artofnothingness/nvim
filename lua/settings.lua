@@ -29,7 +29,6 @@ vim.o.laststatus=2                        --Always display the status line
 
 vim.wo.number = true
 vim.o.cursorline=true                          --Enable highlighting of the current line
-vim.o.background="dark"                     --tell vim what the background color looks like
 
 vim.o.showtabline=2                       --Always show tabs
 vim.o.showmode=false                          --We don't need to see things like -- INSERT -- anymore
@@ -70,3 +69,4 @@ vim.o.switchbuf="useopen" -- Jump to the first open window that contains the spe
 vim.cmd('set sessionoptions+=globals')
 
 vim.cmd('au BufRead,BufNewFile *.launch set filetype=xml')
+vim.cmd('au BufRead,BufNewFile *.cfg set filetype=python')
