@@ -6,6 +6,7 @@ vim.cmd('set shortmess+=c')                 --Don't pass messages to |ins-comple
 vim.o.hidden=true 
 vim.wo.wrap=false 
 vim.cmd('set whichwrap+=<,>,[,],h,l')
+
 vim.o.encoding="utf-8"                      --The encoding displayed
 vim.o.pumheight=10                        --Makes popup menu smaller
 vim.o.fileencoding="utf-8"                  --The encoding written to file
@@ -27,7 +28,6 @@ vim.o.softtabstop=0
 
 vim.o.laststatus=2                        --Always display the status line
 
-vim.wo.number = true
 vim.o.cursorline=true                          --Enable highlighting of the current line
 
 vim.o.showtabline=2                       --Always show tabs
@@ -67,6 +67,5 @@ vim.o.autoread = true  -- Read the file again if have been changed outside of Vi
 vim.o.switchbuf="useopen" -- Jump to the first open window that contains the specified buffer.
 
 vim.cmd('set sessionoptions+=globals')
-
 vim.cmd('au BufRead,BufNewFile *.launch set filetype=xml')
 vim.cmd('au BufRead,BufNewFile *.cfg set filetype=python')

@@ -34,10 +34,10 @@ return require('packer').startup(function()
     use 'artofnothingness/doom-one.vim'
     use 'norcalli/nvim-colorizer.lua'
     use 'romgrk/barbar.nvim'
-    use 'glepnir/galaxyline.nvim' 
     use 'psliwka/vim-smoothie'
     use 'preservim/tagbar'
     use 'glepnir/dashboard-nvim'
+    use "windwp/windline.nvim"
 
     -- Addons 
     use "PotatoesMaster/i3-vim-syntax.git"
@@ -83,6 +83,6 @@ return require('packer').startup(function()
     -- NEW
     use 'sunjon/shade.nvim'
     use 'navarasu/onedark.nvim'
-    use 'lourenci/github-colors'
+
 
 end)
