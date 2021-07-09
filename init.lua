@@ -35,6 +35,4 @@ require('git.signs')
 require('look.colorizer')
 require('look.colorscheme')
 require('look.dashboard')
-require('look.shada')
-
 require('look.line')

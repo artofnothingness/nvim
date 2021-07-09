@@ -37,14 +37,14 @@ return require('packer').startup(function()
     use 'psliwka/vim-smoothie'
     use 'preservim/tagbar'
     use 'glepnir/dashboard-nvim'
-    use "windwp/windline.nvim"
+    use 'windwp/windline.nvim'
 
     -- Addons 
-    use "PotatoesMaster/i3-vim-syntax.git"
+    use "PotatoesMaster/i3-vim-syntax"
     use 'liuchengxu/vista.vim'
     use 'kevinhwang91/rnvimr'
     use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
-    -- use 'dhruvasagarrkdownPreviewTogglec/vim-table-mode'
+    -- use 'MarkdownPreviewTogglec/vim-table-mode'
     use 'voldikss/vim-floaterm'
     use 'mzlogin/vim-markdown-toc'
     use 'mbbill/undotree'
@@ -67,7 +67,7 @@ return require('packer').startup(function()
 
     -- Editing 
     use 'windwp/nvim-autopairs'
-    use 'tpope/vim-commentary.git'
+    use 'tpope/vim-commentary'
     use 'szw/vim-maximizer'
     use 'lambdalisue/suda.vim'
 
@@ -81,8 +81,8 @@ return require('packer').startup(function()
     use 'windwp/nvim-spectre'
 
     -- NEW
-    use 'sunjon/shade.nvim'
     use 'navarasu/onedark.nvim'
-
+    use 'godlygeek/tabular'
+    use 'nxvu699134/vn-night.nvim'
 
 end)

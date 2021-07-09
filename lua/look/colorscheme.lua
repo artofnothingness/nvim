@@ -1,15 +1,7 @@
-vim.g.tokyonight_style = "night"
-vim.g.tokyonight_transparent = true
-
-vim.g.tokyonight_dark_sidebar = true
-vim.g.tokyonight_dark_float	= true
-vim.g.tokyonight_italic_keywords = false
-vim.g.tokyonight_italic_comments = false
-
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd('colorscheme vn-night')
 -- require('look.galaxy-line-tokyo')
 
-vim.o.background="dark"                     --tell vim what the background color looks like
+-- vim.o.background="dark"                     --tell vim what the background color looks like
 
 
  vim.fn.sign_define("LspDiagnosticsSignError", {texthl = "LspDiagnosticsSignError", text = "", numhl = "LspDiagnosticsSignError"})
