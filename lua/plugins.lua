@@ -1,6 +1,5 @@
 local install_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
-
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   execute('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
   execute 'packadd packer.nvim'
@@ -31,7 +30,7 @@ return require('packer').startup(function()
 
     -- Look 
     use 'folke/tokyonight.nvim'
-    use 'artofnothingness/doom-one.vim'
+    use 'nxvu699134/vn-night.nvim'
     use 'norcalli/nvim-colorizer.lua'
     use 'romgrk/barbar.nvim'
     use 'psliwka/vim-smoothie'
@@ -70,6 +69,7 @@ return require('packer').startup(function()
     use 'tpope/vim-commentary'
     use 'szw/vim-maximizer'
     use 'lambdalisue/suda.vim'
+    use 'godlygeek/tabular'
 
     -- Git
     use 'TimUntersberger/neogit'
@@ -81,8 +81,19 @@ return require('packer').startup(function()
     use 'windwp/nvim-spectre'
 
     -- NEW
-    use 'navarasu/onedark.nvim'
-    use 'godlygeek/tabular'
-    use 'nxvu699134/vn-night.nvim'
+
+    use {
+        "folke/trouble.nvim",
+        requires = "kyazdani42/nvim-web-devicons",
+        config = function()
+            require("trouble").setup {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+            }
+        end
+    }
+
+    use 'NTBBloodbath/doom-one.nvim'
 
 end)

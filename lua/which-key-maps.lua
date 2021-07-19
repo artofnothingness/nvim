@@ -37,7 +37,7 @@ wk.setup {
 }
 
 local leader = {
-    n = {
+    normal = {
         opts = {
             mode    = "n", -- NORMAL mode
             prefix  = "<leader>",
@@ -71,7 +71,7 @@ local leader = {
                 name = '+Code',
                 w = {':Telescope lsp_workspace_symbols<CR>', 'workspace symbols'},
                 s = {':Telescope lsp_document_symbols<CR>', 'file symbols'},
-                d = {':Telescope lsp_document_diagnostics<CR>', 'diagnostics'},
+                d = {':TroubleToggle<CR>', 'diagnostics'},
                 r = {':Lspsaga rename<CR>', 'rename'},
                 f = {':Lspsaga lsp_finder<CR>', 'references'},
                 h = {':Lspsaga signature_help<CR>', 'signature'},
@@ -80,7 +80,7 @@ local leader = {
                 }
             }
     },
-    v = {
+    visual = {
         opts = {
             mode    = "v", -- NORMAL mode
             prefix  = "<leader>",
@@ -96,14 +96,19 @@ local leader = {
                R = {':lua require"sniprun".reset()<CR>',                                 'reset'},
                c = {':lua require"sniprun.display".close()<CR>',                         'close'},
                C = {':lua require"sniprun".clear_repl()<CR>',                            'clean memory'},
-           }
+           },
+            t  = {
+            name = '+Tabularize',
+            [','] = {':Tabularize /,\\zs<CR>',                                'comma'},
+            ['='] = {':Tabularize /=<CR>',                                 'equal'},
+        }
 
         }
     }
 }
 
 local localleader = {
-    n = {
+    normal = {
         keys = {
             g  = { ':Neogit<CR>', 'neogit'},
             r  = { ':RnvimrToggle<CR>', 'ranger'},
@@ -137,6 +142,11 @@ local localleader = {
 
 
 
-wk.register(leader['n']['keys'], leader['n']['opts'])
-wk.register(leader['v']['keys'], leader['v']['opts'])
-wk.register(localleader['n']['keys'], localleader['n']['opts'])
+wk.register(leader['normal']['keys'], 
+            leader['normal']['opts'])
+
+wk.register(leader['visual']['keys'], 
+            leader['visual']['opts'])
+
+wk.register(localleader['normal']['keys'], 
+            localleader['normal']['opts'])
