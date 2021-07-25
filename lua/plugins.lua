@@ -9,8 +9,8 @@ end
 return require('packer').startup(function()
   -- Packer can manage itself as an optional plugin
     use {'wbthomason/packer.nvim'}
-
     use 'folke/which-key.nvim'
+
     -- Code 
     use 'neovim/nvim-lspconfig'
     use 'glepnir/lspsaga.nvim'
@@ -23,6 +23,7 @@ return require('packer').startup(function()
     use {'kkoomen/vim-doge', run = ':call doge#install()'}
     use "rafamadriz/friendly-snippets"
     use 'hrsh7th/vim-vsnip' 
+    use "stevearc/aerial.nvim" 
 
     -- Icons
     use 'kyazdani42/nvim-web-devicons'
@@ -30,7 +31,7 @@ return require('packer').startup(function()
 
     -- Look 
     use 'folke/tokyonight.nvim'
-    use 'nxvu699134/vn-night.nvim'
+    use { "nxvu699134/vn-night.nvim", config = function() require('vn-night').setup() end }
     use 'norcalli/nvim-colorizer.lua'
     use 'romgrk/barbar.nvim'
     use 'psliwka/vim-smoothie'
@@ -80,20 +81,16 @@ return require('packer').startup(function()
     use {'npxbr/glow.nvim', run = ':GlowInstall'} 
     use 'windwp/nvim-spectre'
 
-    -- NEW
 
+    -- NEW
+    use "jbyuki/venn.nvim"
+    use "arzg/vim-substrata"
+    
     use {
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons",
-        config = function()
-            require("trouble").setup {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
-            }
-        end
+        config = function() require("trouble").setup { } end
     }
 
-    use 'NTBBloodbath/doom-one.nvim'
 
 end)

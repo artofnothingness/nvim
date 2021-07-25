@@ -16,7 +16,7 @@ local normal_maps = {
     {'gD' ,            '<cmd>lua vim.lsp.buf.declaration()<CR>'},
     {'gr' ,            '<cmd>lua vim.lsp.buf.references()<CR>'},
     {'gi' ,            '<cmd>lua vim.lsp.buf.implementation()<CR>'},
-    {'<A-k>' ,         ':Lspsaga hover_doc<CR>'},
+    {'<A-d>' ,         ':Lspsaga hover_doc<CR>'},
     {'<C-f>' ,         '<cmd>lua require(\'lspsaga.action\').smart_scroll_with_saga(1)<CR>'},
     {'<C-b>' ,         '<cmd>lua require(\'lspsaga.action\').smart_scroll_with_saga(-1)<CR>'},
     {"<C-h>" ,         "<CMD>lua require('Navigator').left()<CR>"},
@@ -53,10 +53,11 @@ local universal_maps = {
     {"L" ,      "$"},
     {"J" ,      "5j"},
     {"K" ,      "5k"},
+    {"<A-j>" ,  "<C-d>"},
+    {"<A-k>" ,  "<C-u>"},
     {"U" ,      "J"},
     {"<A-q>" ,  ":q<CR>"},
     {"<A-w>" ,  ":w<CR>"},
-
 }
 
 set_keymaps('n', normal_maps, opts)

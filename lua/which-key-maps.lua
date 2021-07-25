@@ -77,6 +77,7 @@ local leader = {
                 h = {':Lspsaga signature_help<CR>', 'signature'},
                 p = {':Lspsaga preview_definition<CR>', 'preview'},
                 g = {':DogeGenerate<CR>', 'gen documentation'},
+                k = {':ClangdSwitchSourceHeader<CR>', 'switch source/header'},
                 }
             }
     },
@@ -90,6 +91,7 @@ local leader = {
             nowait  = false -- use `nowait` when creating keymaps
         },
         keys = {
+            b = {':VBox<CR>',                                'box'},
             s  = {
                name = '+SnipRun',
                r = {':lua require"sniprun".run("v")<CR>',                                'run'},

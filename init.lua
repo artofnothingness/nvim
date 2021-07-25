@@ -27,6 +27,7 @@ require('code.kind')
 require('code.signature')
 require('code.treesitter')
 require('code.compe')
+require('code.aerial')
 
 require('git.blame')
 require('git.neo')
@@ -35,4 +36,4 @@ require('git.signs')
 require('look.colorizer')
 require('look.colorscheme')
 require('look.dashboard')
-require('look.line')
+
