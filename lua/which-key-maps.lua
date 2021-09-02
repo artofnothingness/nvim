@@ -48,16 +48,7 @@ local leader = {
         },
         keys = {
             k  = { ':bdelet<CR>',                                               'kill'},
-            p  = { ':lua require"telescope".extensions.project.project{}<CR>',  'projects'},
             z  = { ':MaximizerToggle<CR>',                                      'zoom'},
-            s  = {
-               name = '+SnipRun',
-               r = {':lua require"sniprun".run()<CR>',                                   'run'},
-               R = {':lua require"sniprun".reset()<CR>',                                 'reset'},
-               c = {':lua require"sniprun.display".close()<CR>',                         'close'},
-               C = {':lua require"sniprun".clear_repl()<CR>',                            'clean memory'},
-
-           },
             f  = {
                 name = '+Find',
                 d = {':TroubleToggle<CR>', 'diagnostics'},
@@ -68,7 +59,7 @@ local leader = {
                 g = {":lua require('spectre').open()<CR>",  'open'},
                 t = {":lua require('spectre').open_file_search()<CR>",  'this file'},
                 w = {"viw:lua require('spectre').open_visual()<CR>",  'word'},
-            }                                                                 ,
+            },
             c = {
                 name = '+Code',
                 w = {':Telescope lsp_workspace_symbols<CR>', 'workspace symbols'},
@@ -78,8 +69,9 @@ local leader = {
                 p = {':Lspsaga preview_definition<CR>', 'preview'},
                 g = {':DogeGenerate<CR>', 'gen documentation'},
                 k = {':ClangdSwitchSourceHeader<CR>', 'switch source/header'},
-                }
             }
+
+        },
     },
     visual = {
         opts = {
@@ -91,14 +83,6 @@ local leader = {
             nowait  = false -- use `nowait` when creating keymaps
         },
         keys = {
-            b = {':VBox<CR>',                                'box'},
-            s  = {
-               name = '+SnipRun',
-               r = {':lua require"sniprun".run("v")<CR>',                                'run'},
-               R = {':lua require"sniprun".reset()<CR>',                                 'reset'},
-               c = {':lua require"sniprun.display".close()<CR>',                         'close'},
-               C = {':lua require"sniprun".clear_repl()<CR>',                            'clean memory'},
-           },
             t  = {
             name = '+Tabularize',
             [','] = {':Tabularize /,\\zs<CR>',                                'comma'},
@@ -112,11 +96,7 @@ local leader = {
 local localleader = {
     normal = {
         keys = {
-            g  = { ':Neogit<CR>', 'neogit'},
             r  = { ':RnvimrToggle<CR>', 'ranger'},
-            e  = { ':NvimTreeToggle<CR>', 'tree'},
-            v  = { ':Vista!!<CR>', 'vista'},
-            a  = { ':AerialToggle<CR>', 'Aeria'},
             p  = {
                 name = '+Packer',
                 u = {':PackerUpdate<CR>', 'update'},
@@ -124,13 +104,6 @@ local localleader = {
                 C = {':PackerClean<CR>', 'clean'},
                 c = {':PackerCompile<CR>', 'compile'},
             },
-            o  = {
-                name = '+Open',
-                l = {':FloatermNew lazygit<CR>', 'git'},
-                d = {':FloatermNew lazydocker<CR>', 'docker'},
-                p = {':FloatermNew python<CR>', 'python'},
-                h = {':FloatermNew htop<CR>', 'htop'},
-            }
         },
         opts = {
             mode = "n", -- NORMAL mode

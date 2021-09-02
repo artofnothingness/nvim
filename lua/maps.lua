@@ -12,27 +12,13 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = 'm'
 
 local normal_maps = {
-    {'gd' ,            '<cmd>lua vim.lsp.buf.definition()<CR>'},
-    {'gD' ,            '<cmd>lua vim.lsp.buf.declaration()<CR>'},
-    {'gp' ,            ':Lspsaga preview_definition<CR>'},
-    {'ga' ,            ':Lspsaga code_action<CR>'},
-    {'gr' ,            ':Lspsaga lsp_finder<CR>'},
-    {'gi' ,            '<cmd>lua vim.lsp.buf.implementation()<CR>'},
-    {'gh' ,            ':Lspsaga hover_doc<CR>'},
-    {'gs' ,            ':Lspsaga signature_help<CR>'},
-
-    {'<C-f>' ,         '<cmd>lua require(\'lspsaga.action\').smart_scroll_with_saga(1)<CR>'},
-    {'<C-b>' ,         '<cmd>lua require(\'lspsaga.action\').smart_scroll_with_saga(-1)<CR>'},
     {"<C-h>" ,         "<CMD>lua require('Navigator').left()<CR>"},
     {"<C-k>" ,         "<CMD>lua require('Navigator').up()<CR>"},
     {"<C-l>" ,         "<CMD>lua require('Navigator').right()<CR>"},
     {"<C-j>" ,         "<CMD>lua require('Navigator').down()<CR>"},
-    -- {"<A-f>" ,         "<cmd>lua vim.lsp.buf.formatting()<CR>"},
     {"<C-_>" ,         ":Commentary<CR>"},
     {"<BS>" ,          ":let @/ = ''<Enter>"},
     {"<F6>" ,          ":UndotreeToggle<CR>"},
-    {"<C-p>" ,         ":Lspsaga diagnostic_jump_prev<CR>"},
-    {"<C-n>" ,         ":Lspsaga diagnostic_jump_next<CR>"},
     {"<TAB>" ,         ":BufferNext<CR>"},
     {"<S-TAB>" ,       ":BufferPrevious<CR>"},
     {'<' ,             '<<'},
@@ -45,7 +31,6 @@ local normal_maps = {
 
 
 local visual_maps = {
-    {"<A-f>",  "<cmd>lua vim.lsp.buf.range_formatting()<CR>"},
     {"<C-_>",  ":Commentary<CR>gv"},
     {'<',      '<gv'},
     {'>',      '>gv'},
@@ -53,11 +38,11 @@ local visual_maps = {
 
 local universal_maps = {
     {"H" ,      "^"},
-    {'s' ,      ":HopChar1<CR>"},
     {"L" ,      "$"},
     {"J" ,      "5j"},
     {"K" ,      "5k"},
     {"U" ,      "J"},
+    {'s' ,      ":HopChar1<CR>"},
     {"<A-q>" ,  ":q<CR>"},
     {"<A-w>" ,  ":w<CR>"},
 }
