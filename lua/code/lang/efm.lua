@@ -1,11 +1,11 @@
 local python_args = {}
 local lua_args = {}
 
-local flake8 = {
-    LintCommand = "flake8 --ignore=E501 --stdin-display-name ${INPUT} -",
-    lintStdin = true,
-    lintFormats = {"%f:%l:%c: %m"}
-}
+-- local flake8 = {
+--     LintCommand = "flake8 --ignore=E501 --stdin-display-name ${INPUT} -",
+--     lintStdin = true,
+--     lintFormats = {"%f:%l:%c: %m"}
+-- }
 
 local autopep8 = {formatCommand = "autopep8 --max-line-length 100 -", formatStdin = true}
 local lua_fmt = {formatCommand = "lua-format -i", formatStdin = true}

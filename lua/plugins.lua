@@ -18,20 +18,31 @@ return require('packer').startup(function()
     use 'kosayoda/nvim-lightbulb'
     use 'ray-x/lsp_signature.nvim'
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-    use 'hrsh7th/nvim-compe'
+
     use 'rhysd/vim-clang-format'
     use {'kkoomen/vim-doge', run = ':call doge#install()'}
     use "rafamadriz/friendly-snippets"
-    use 'hrsh7th/vim-vsnip' 
+
+    use {
+      "hrsh7th/nvim-cmp",
+      requires = {
+        "hrsh7th/vim-vsnip",
+        "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-nvim-lsp",
+        "hrsh7th/cmp-path",
+        "hrsh7th/cmp-vsnip",
+        "f3fora/cmp-spell",
+      }
+    }
+
     use "stevearc/aerial.nvim" 
+    use { 'liuchengxu/vista.vim', config = "vim.g.vista_sidebar_width=50" }  
 
     -- Icons
     use 'kyazdani42/nvim-web-devicons'
     use 'ryanoasis/vim-devicons'
 
     -- Look 
-    use 'folke/tokyonight.nvim'
-    use { "nxvu699134/vn-night.nvim", config = function() require('vn-night').setup() end }
     use 'norcalli/nvim-colorizer.lua'
     use 'romgrk/barbar.nvim'
     use 'psliwka/vim-smoothie'
@@ -39,17 +50,25 @@ return require('packer').startup(function()
     use 'glepnir/dashboard-nvim'
     use 'windwp/windline.nvim'
 
+    -- Themes
+    use 'folke/tokyonight.nvim'
+    use 'Iron-E/nvim-highlite'
+    use 'NTBBloodbath/doom-one.nvim'
+    use 'kdheepak/monochrome.nvim'
+
     -- Addons 
     use "PotatoesMaster/i3-vim-syntax"
-    use 'liuchengxu/vista.vim'
+    use "jbyuki/venn.nvim"
+    
+
     use 'kevinhwang91/rnvimr'
     use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
-    -- use 'MarkdownPreviewTogglec/vim-table-mode'
+    use 'dhruvasagar/vim-table-mode'
     use 'voldikss/vim-floaterm'
     use 'mzlogin/vim-markdown-toc'
     use 'mbbill/undotree'
     use 'akinsho/nvim-toggleterm.lua'
-    use 'kyazdani42/nvim-tree.lua'
+    -- use 'kyazdani42/nvim-tree.lua'
     use { 'michaelb/sniprun', run = 'bash ./install.sh', config= function() require'sniprun'.initial_setup() end}
 
     -- Navigation 
@@ -78,19 +97,17 @@ return require('packer').startup(function()
     use 'f-person/git-blame.nvim'
     use 'tpope/vim-fugitive'
     use 'tpope/vim-rhubarb'
-    use {'npxbr/glow.nvim', run = ':GlowInstall'} 
     use 'windwp/nvim-spectre'
 
 
     -- NEW
-    use "jbyuki/venn.nvim"
-    use "arzg/vim-substrata"
-    
     use {
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons",
         config = function() require("trouble").setup { } end
     }
+    use 'mfussenegger/nvim-lint'
+
 
 
 end)

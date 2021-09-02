@@ -14,16 +14,20 @@ vim.g.maplocalleader = 'm'
 local normal_maps = {
     {'gd' ,            '<cmd>lua vim.lsp.buf.definition()<CR>'},
     {'gD' ,            '<cmd>lua vim.lsp.buf.declaration()<CR>'},
-    {'gr' ,            '<cmd>lua vim.lsp.buf.references()<CR>'},
+    {'gp' ,            ':Lspsaga preview_definition<CR>'},
+    {'ga' ,            ':Lspsaga code_action<CR>'},
+    {'gr' ,            ':Lspsaga lsp_finder<CR>'},
     {'gi' ,            '<cmd>lua vim.lsp.buf.implementation()<CR>'},
-    {'<A-d>' ,         ':Lspsaga hover_doc<CR>'},
+    {'gh' ,            ':Lspsaga hover_doc<CR>'},
+    {'gs' ,            ':Lspsaga signature_help<CR>'},
+
     {'<C-f>' ,         '<cmd>lua require(\'lspsaga.action\').smart_scroll_with_saga(1)<CR>'},
     {'<C-b>' ,         '<cmd>lua require(\'lspsaga.action\').smart_scroll_with_saga(-1)<CR>'},
     {"<C-h>" ,         "<CMD>lua require('Navigator').left()<CR>"},
     {"<C-k>" ,         "<CMD>lua require('Navigator').up()<CR>"},
     {"<C-l>" ,         "<CMD>lua require('Navigator').right()<CR>"},
     {"<C-j>" ,         "<CMD>lua require('Navigator').down()<CR>"},
-    {"<A-f>" ,         "<cmd>lua vim.lsp.buf.formatting()<CR>"},
+    -- {"<A-f>" ,         "<cmd>lua vim.lsp.buf.formatting()<CR>"},
     {"<C-_>" ,         ":Commentary<CR>"},
     {"<BS>" ,          ":let @/ = ''<Enter>"},
     {"<F6>" ,          ":UndotreeToggle<CR>"},
@@ -53,8 +57,6 @@ local universal_maps = {
     {"L" ,      "$"},
     {"J" ,      "5j"},
     {"K" ,      "5k"},
-    {"<A-j>" ,  "<C-d>"},
-    {"<A-k>" ,  "<C-u>"},
     {"U" ,      "J"},
     {"<A-q>" ,  ":q<CR>"},
     {"<A-w>" ,  ":w<CR>"},
@@ -70,11 +72,3 @@ map("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
 map("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 map("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 map("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-
-vim.cmd('nnoremap <silent> <C-f> <cmd>lua require(\'lspsaga.action\').smart_scroll_with_saga(1)<CR>')
-vim.cmd('nnoremap <silent> <C-b> <cmd>lua require(\'lspsaga.action\').smart_scroll_with_saga(-1)<CR>')
-vim.cmd("inoremap <silent><expr> <C-Space> compe#complete()")
-vim.cmd("inoremap <silent><expr> <CR>      compe#confirm('<CR>')")
-vim.cmd("inoremap <silent><expr> <C-e>     compe#close('<C-e>')")
-vim.cmd("inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })")
-vim.cmd("inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })")

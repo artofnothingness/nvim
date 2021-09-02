@@ -22,3 +22,5 @@ lang.capabilities.textDocument.completion.completionItem.resolveSupport = {
     }
 }
 
+
+lang.capabilities = require('cmp_nvim_lsp').update_capabilities(lang.capabilities)

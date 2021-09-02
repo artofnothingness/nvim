@@ -1,4 +1,6 @@
-require'lspconfig'.clangd.setup {
+ local lsp = require "lspconfig"
+
+lsp.clangd.setup {
     cmd = { "clangd-11", "--background-index" },
     handlers = lang.handlers,
     capabilities = lang.capabilities,

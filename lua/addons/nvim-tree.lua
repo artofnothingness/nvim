@@ -1,15 +1,15 @@
 vim.g.nvim_tree_width = 50 
 vim.g.nvim_tree_disable_netrw = 0
 vim.g.nvim_tree_hide_dotfiles = 1 
-vim.g.nvim_tree_indent_markers = 0
+vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_follow = 1 -- "0 by default, this option allows the cursor to be updated when entering a buffer
-vim.g.nvim_tree_auto_close = 1 
+vim.g.nvim_tree_auto_close = 0 
 vim.g.nvim_tree_auto_ignore_ft = {'startify', 'dashboard'}
 vim.g.nvim_tree_add_trailing = 0
 vim.g.nvim_tree_ignore = { '.git', 'node_modules', '.cache', '__pycache__', '*.pyc' }
 
 vim.g.nvim_tree_show_icons = {
-    ['git'] = 0,
+    ['git'] = 1,
     ['folders'] = 1,
     ['files'] = 1,
     }
@@ -46,10 +46,9 @@ local tree_cb = require'nvim-tree.config'.nvim_tree_callback
         { key = {"q"},               cb = tree_cb("close")} ,
     }
 
--- vim.g.nvim_tree_show_icons = {git = 1, folders = 1, files = 1}
-vim.g.nvim_tree_icons = {
-    default = '',
-    symlink = '',
-    git = {unstaged = "", staged = "✓", unmerged = "", renamed = "➜", untracked = ""},
-    folder = {default = "", open = "", empty = "", empty_open = "", symlink = ""}
-}
+-- vim.g.nvim_tree_icons = {
+--     default = '',
+--     symlink = '',
+--     git = {unstaged = "", staged = "✓", unmerged = "", renamed = "➜", untracked = ""},
+--     folder = {default = "", open = "", empty = "", empty_open = "", symlink = ""}
+-- }

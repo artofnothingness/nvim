@@ -22,7 +22,7 @@ vim.o.autoindent=true                          --Good auto indent
 
 vim.o.expandtab=true                           --Converts tabs to spaces
 vim.o.tabstop=8                           --Insert 2 spaces for a tab
-vim.o.shiftwidth=4                        --Change the number of space characters inserted for indentation
+vim.o.shiftwidth=2                        --Change the number of space characters inserted for indentation
 vim.o.smarttab=true                            --Makes tabbing smarter will realize you have 2 vs 4
 vim.o.softtabstop=0
 
@@ -51,8 +51,10 @@ vim.wo.relativenumber = true
 vim.o.completeopt="menuone,noinsert,noselect"               --Copy paste between vim and everything else
 vim.o.autochdir = true
 
-vim.o.foldlevelstart = 999
-vim.o.foldmethod = 'indent'
+vim.o.foldlevelstart=999
+-- vim.o.foldmethod = 'indent'
+vim.wo.foldmethod='expr'
+vim.wo.foldexpr='nvim_treesitter#foldexpr()'
 
 vim.o.backupdir="/home/alex/.config/nvim/utils/cache/backup" 
 vim.o.undodir="/home/alex/.config/nvim/utils/cache/undo" 
@@ -62,6 +64,7 @@ vim.o.undofile = true
 vim.o.undolevels=100000 
 vim.o.updatecount=100 
 vim.o.viewoptions="cursor,folds,unix,slash"
+-- vim.o.so=999
 
 vim.o.autoread = true  -- Read the file again if have been changed outside of Vim.
 vim.o.switchbuf="useopen" -- Jump to the first open window that contains the specified buffer.
@@ -69,3 +72,5 @@ vim.o.switchbuf="useopen" -- Jump to the first open window that contains the spe
 vim.cmd('set sessionoptions+=globals')
 vim.cmd('au BufRead,BufNewFile *.launch set filetype=xml')
 vim.cmd('au BufRead,BufNewFile *.cfg set filetype=python')
+
+
