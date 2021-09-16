@@ -7,20 +7,36 @@ end
 
 
 return require('packer').startup(function()
-  -- Packer can manage itself as an optional plugin
     use {'wbthomason/packer.nvim'}
     use 'folke/which-key.nvim'
 
+    -- Icons
+    use 'kyazdani42/nvim-web-devicons'
+    use 'ryanoasis/vim-devicons'
+
     -- Code 
     use 'neovim/nvim-lspconfig'
-    use 'glepnir/lspsaga.nvim'
+    use {'glepnir/lspsaga.nvim', config =
+      function()
+        local saga = require 'lspsaga'
+        saga.init_lsp_saga() 
+      end}
+
     use 'onsails/lspkind-nvim'
     use 'kosayoda/nvim-lightbulb'
-    use 'ray-x/lsp_signature.nvim'
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use {'ray-x/lsp_signature.nvim', config = 
+      function()
+        require'lsp_signature'.on_attach()
+      end}
 
-    use 'rhysd/vim-clang-format'
-    use {'kkoomen/vim-doge', run = ':call doge#install()'}
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    
+    use {'kkoomen/vim-doge', run = ':call doge#install()', config  = 
+      function() 
+        vim.g.doge_enable_mappings = 0
+        vim.g.doge_doc_standard_python = 'google'
+      end}
+
     use "rafamadriz/friendly-snippets"
 
     use {
@@ -38,24 +54,21 @@ return require('packer').startup(function()
     use "stevearc/aerial.nvim" 
     use { 'liuchengxu/vista.vim', config = "vim.g.vista_sidebar_width=50" }  
 
-    -- Icons
-    use 'kyazdani42/nvim-web-devicons'
-    use 'ryanoasis/vim-devicons'
-
     -- Look 
     use 'norcalli/nvim-colorizer.lua'
     use 'romgrk/barbar.nvim'
     use 'psliwka/vim-smoothie'
     use 'preservim/tagbar'
     use 'glepnir/dashboard-nvim'
-    use 'windwp/windline.nvim'
+    -- use {'windwp/windline.nvim', config = function() require('wlsample.evil_line') end}
+
 
     -- Themes
     use 'folke/tokyonight.nvim'
-    use 'Iron-E/nvim-highlite'
+    use 'artofnothingness/nvim-highlite'
     use 'NTBBloodbath/doom-one.nvim'
     use 'kdheepak/monochrome.nvim'
-
+    use "Pocco81/Catppuccino.nvim"
     -- Addons 
     use "PotatoesMaster/i3-vim-syntax"
     use "jbyuki/venn.nvim"
@@ -68,11 +81,16 @@ return require('packer').startup(function()
     use 'mzlogin/vim-markdown-toc'
     use 'mbbill/undotree'
     use 'akinsho/nvim-toggleterm.lua'
-    -- use 'kyazdani42/nvim-tree.lua'
+    use 'kyazdani42/nvim-tree.lua'
     use { 'michaelb/sniprun', run = 'bash ./install.sh', config= function() require'sniprun'.initial_setup() end}
 
     -- Navigation 
-    use 'unblevable/quick-scope' 
+    use {'unblevable/quick-scope', config = 
+      function()
+        vim.g.qs_highlight_on_keys = {'f', 'F', 'T', 'T'}
+        vim.g.qs_max_chars=150
+      end}
+
     use 'airblade/vim-rooter'
     use { 'nvim-telescope/telescope-project.nvim', config = function() require'telescope'.load_extension('project') end}
 
@@ -82,32 +100,90 @@ return require('packer').startup(function()
     }
 
     use 'phaazon/hop.nvim'
-    use 'numToStr/Navigator.nvim' 
+    use {'numToStr/Navigator.nvim' , config = 
+      function()
+        require('Navigator').setup({
+            auto_save = 'current',
+            disable_on_zoom = true
+        })
+      end}
 
-    -- Editing 
-    use 'windwp/nvim-autopairs'
+    use {'windwp/nvim-autopairs', config = 
+      function() require('nvim-autopairs').setup() end}
+
     use 'tpope/vim-commentary'
     use 'szw/vim-maximizer'
     use 'lambdalisue/suda.vim'
     use 'godlygeek/tabular'
 
     -- Git
-    use 'TimUntersberger/neogit'
+    use {'TimUntersberger/neogit', config = 
+      function() 
+        require("neogit").setup {
+          disable_signs = false,
+          disable_context_highlighting = false,
+        }
+      end}
+
     use 'lewis6991/gitsigns.nvim'
-    use 'f-person/git-blame.nvim'
+
+    use {'f-person/git-blame.nvim', config =
+      function() 
+        vim.cmd('highlight default link gitblame SpecialComment')
+        vim.g.gitblame_enabled = 0
+      end}
+
     use 'tpope/vim-fugitive'
     use 'tpope/vim-rhubarb'
     use 'windwp/nvim-spectre'
 
-
     -- NEW
-    use {
-        "folke/trouble.nvim",
-        requires = "kyazdani42/nvim-web-devicons",
-        config = function() require("trouble").setup { } end
-    }
-    use 'mfussenegger/nvim-lint'
+    use {"folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons", config = function() require("trouble").setup {} end}
 
+    use {'mfussenegger/nvim-lint' , config = 
+    function()
+      require('lint').linters_by_ft = {
+        cpp = {'cppcheck',}
+      }
+    end}
+
+
+  use { 
+      "vhyrro/neorg",
+      config = function()
+          require('neorg').setup {
+              -- Tell Neorg what modules to load
+              load = {
+                  ["core.defaults"] = {}, -- Load all the default modules
+                  ["core.keybinds"] = { -- Configure core.keybinds
+                    config = {
+                      default_keybinds = true, -- Generate the default keybinds
+                      neorg_leader = "<Leader>o" -- This is the default if unspecified
+                    }
+                  },
+                  ["core.norg.concealer"] = {}, -- Allows for use of icons
+                  ["core.norg.dirman"] = { -- Manage your directories with Neorg
+                    config = {
+                      workspaces = {
+                        my_workspace = "~/Documents/Notes/neorg"
+                      }
+                    }
+                  },
+                  ["core.norg.completion"] = {
+                    config = {
+                      engine = "nvim-cmp"
+                    }
+                  }
+              },
+          }
+      end,
+      requires = "nvim-lua/plenary.nvim"
+  }
+
+  use {'tanvirtin/monokai.nvim' , config = 
+  function()
+    require('monokai')
+  end}
 
 
 end)
