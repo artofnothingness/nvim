@@ -15,13 +15,8 @@ return require('packer').startup(function()
     use 'ryanoasis/vim-devicons'
 
     -- Code 
+    use {"folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons", config = function() require("trouble").setup {} end}
     use 'neovim/nvim-lspconfig'
-    use {'glepnir/lspsaga.nvim', config =
-      function()
-        local saga = require 'lspsaga'
-        saga.init_lsp_saga() 
-      end}
-
     use 'onsails/lspkind-nvim'
     use 'kosayoda/nvim-lightbulb'
     use {'ray-x/lsp_signature.nvim', config = 
@@ -64,11 +59,16 @@ return require('packer').startup(function()
 
 
     -- Themes
+    use 'Iron-E/nvim-highlite'
     use 'folke/tokyonight.nvim'
-    use 'artofnothingness/nvim-highlite'
     use 'NTBBloodbath/doom-one.nvim'
     use 'kdheepak/monochrome.nvim'
     use "Pocco81/Catppuccino.nvim"
+    use {'tanvirtin/monokai.nvim' , config = 
+    function()
+      require('monokai')
+    end}
+
     -- Addons 
     use "PotatoesMaster/i3-vim-syntax"
     use "jbyuki/venn.nvim"
@@ -81,8 +81,39 @@ return require('packer').startup(function()
     use 'mzlogin/vim-markdown-toc'
     use 'mbbill/undotree'
     use 'akinsho/nvim-toggleterm.lua'
-    use 'kyazdani42/nvim-tree.lua'
     use { 'michaelb/sniprun', run = 'bash ./install.sh', config= function() require'sniprun'.initial_setup() end}
+
+    use { 
+        "vhyrro/neorg",
+        config = function()
+            require('neorg').setup {
+                -- Tell Neorg what modules to load
+                load = {
+                    ["core.defaults"] = {}, -- Load all the default modules
+                    ["core.keybinds"] = { -- Configure core.keybinds
+                      config = {
+                        default_keybinds = true, -- Generate the default keybinds
+                        neorg_leader = "<Leader>o" -- This is the default if unspecified
+                      }
+                    },
+                    ["core.norg.concealer"] = {}, -- Allows for use of icons
+                    ["core.norg.dirman"] = { -- Manage your directories with Neorg
+                      config = {
+                        workspaces = {
+                          my_workspace = "~/Documents/Notes/neorg"
+                        }
+                      }
+                    },
+                    ["core.norg.completion"] = {
+                      config = {
+                        engine = "nvim-cmp"
+                      }
+                    }
+                },
+            }
+        end,
+        requires = "nvim-lua/plenary.nvim"
+    }
 
     -- Navigation 
     use {'unblevable/quick-scope', config = 
@@ -137,53 +168,18 @@ return require('packer').startup(function()
     use 'tpope/vim-rhubarb'
     use 'windwp/nvim-spectre'
 
-    -- NEW
-    use {"folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons", config = function() require("trouble").setup {} end}
-
     use {'mfussenegger/nvim-lint' , config = 
     function()
       require('lint').linters_by_ft = {
         cpp = {'cppcheck',}
       }
+      -- vim.cmd('au BufWritePost <buffer> lua require("lint").try_lint()')
+
     end}
+    use 'olimorris/onedarkpro.nvim'
 
+    use {"luukvbaal/stabilize.nvim", config = 
+    function() require("stabilize").setup() end}
 
-  use { 
-      "vhyrro/neorg",
-      config = function()
-          require('neorg').setup {
-              -- Tell Neorg what modules to load
-              load = {
-                  ["core.defaults"] = {}, -- Load all the default modules
-                  ["core.keybinds"] = { -- Configure core.keybinds
-                    config = {
-                      default_keybinds = true, -- Generate the default keybinds
-                      neorg_leader = "<Leader>o" -- This is the default if unspecified
-                    }
-                  },
-                  ["core.norg.concealer"] = {}, -- Allows for use of icons
-                  ["core.norg.dirman"] = { -- Manage your directories with Neorg
-                    config = {
-                      workspaces = {
-                        my_workspace = "~/Documents/Notes/neorg"
-                      }
-                    }
-                  },
-                  ["core.norg.completion"] = {
-                    config = {
-                      engine = "nvim-cmp"
-                    }
-                  }
-              },
-          }
-      end,
-      requires = "nvim-lua/plenary.nvim"
-  }
-
-  use {'tanvirtin/monokai.nvim' , config = 
-  function()
-    require('monokai')
-  end}
-
-
+    use "wuelnerdotexe/vim-enfocado"
 end)

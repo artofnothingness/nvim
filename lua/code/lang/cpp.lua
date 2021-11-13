@@ -1,7 +1,11 @@
- local lsp = require "lspconfig"
+local lsp = require "lspconfig"
 
 lsp.clangd.setup {
-    cmd = { "clangd-11", "--background-index" },
+    cmd = { 
+      "clangd", 
+      "--background-index",
+      "--suggest-missing-includes"
+  },
     handlers = lang.handlers,
     capabilities = lang.capabilities,
     on_attach = function(client, bufnr)

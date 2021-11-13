@@ -2,12 +2,12 @@ require('settings')
 require('maps')
 require('plugins')
 require('which-key-maps')
+require('look.colorscheme')
 
 require('addons.toggleterm')
 require('addons.floaterm')
 require('addons.ranger')
 require('addons.markdown')
-require('addons.nvim-tree')
 
 require('navigation.telescope')
 
@@ -25,5 +25,4 @@ require('code.aerial')
 require('git.signs')
 
 require('look.colorizer')
-require('look.colorscheme')
 require('look.dashboard')

@@ -47,6 +47,8 @@ local leader = {
             nowait  = false -- use `nowait` when creating keymaps
         },
         keys = {
+
+            v  = { ':set ve=all<CR>',                                'set veall'},
             k  = { ':bdelet<CR>',                                               'kill'},
             p  = { ':lua require"telescope".extensions.project.project{}<CR>',  'projects'},
             z  = { ':MaximizerToggle<CR>',                                      'zoom'},
@@ -71,13 +73,9 @@ local leader = {
             }                                                                 ,
             c = {
                 name = '+Code',
-                w = {':Telescope lsp_workspace_symbols<CR>', 'workspace symbols'},
-                r = {':Lspsaga rename<CR>', 'rename'},
-                f = {':Lspsaga lsp_finder<CR>', 'references'},
-                h = {':Lspsaga signature_help<CR>', 'signature'},
-                p = {':Lspsaga preview_definition<CR>', 'preview'},
                 g = {':DogeGenerate<CR>', 'gen documentation'},
                 k = {':ClangdSwitchSourceHeader<CR>', 'switch source/header'},
+                r = {'<cmd>lua vim.lsp.buf.rename()<CR>', 'rename'},
                 }
             }
     },
