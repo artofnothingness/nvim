@@ -1,4 +1,4 @@
-vim.cmd('colorscheme enfocado')
+vim.cmd('colorscheme highlite')
 
 
 vim.cmd('highlight QuickScopePrimary guifg=\'#EF390C\' gui=underline ctermfg=155 cterm=underline', false)

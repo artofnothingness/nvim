@@ -20,8 +20,6 @@ local cmp = require'cmp'
       { name = 'nvim_lsp' },
       { name = 'buffer' },
       { name = 'path' },
-      { name = 'vsnip' },
-      { name = 'spell' },
       { name = "neorg" }
     }
   })

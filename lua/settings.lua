@@ -32,14 +32,11 @@ vim.o.cursorline=true                          --Enable highlighting of the curr
 
 vim.o.showtabline=2                       --Always show tabs
 vim.o.showmode=false                          --We don't need to see things like -- INSERT -- anymore
-vim.o.backup=false                            --This is recommended by coc
-vim.o.writebackup=false                       --This is recommended by coc
 vim.wo.signcolumn="yes"                      --Always show the signcolumn, otherwise it would shift the text each time
 vim.o.updatetime=300                      --Faster completion
 vim.o.timeoutlen=300                      --By default timeoutlen is 1000 ms
 vim.o.clipboard="unnamedplus"               --Copy paste between vim and everything else
 vim.o.incsearch=true
-vim.o.guifont="JetBrainsMono\\ Nerd\\ Font\\ Mono:h18"
 
 vim.o.smartcase=true
 vim.o.ignorecase=true
@@ -48,11 +45,10 @@ vim.o.shiftround=true
 vim.wo.number = true
 vim.wo.relativenumber = true
 
-vim.o.completeopt="menuone,noinsert,noselect"               --Copy paste between vim and everything else
+vim.o.completeopt="menuone,noinsert,noselect"
 vim.o.autochdir = true
 
 vim.o.foldlevelstart=999
--- vim.o.foldmethod = 'indent'
 vim.wo.foldmethod='expr'
 vim.wo.foldexpr='nvim_treesitter#foldexpr()'
 
@@ -70,7 +66,6 @@ vim.o.autoread = true  -- Read the file again if have been changed outside of Vi
 vim.o.switchbuf="useopen" -- Jump to the first open window that contains the specified buffer.
 
 vim.cmd('set sessionoptions+=globals')
+
 vim.cmd('au BufRead,BufNewFile *.launch set filetype=xml')
 vim.cmd('au BufRead,BufNewFile *.cfg set filetype=python')
-
-
