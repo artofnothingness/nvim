@@ -1,13 +1,14 @@
 -- Declare Vars
 lang = {
     capabilities = vim.lsp.protocol.make_client_capabilities(),
-    handlers = {["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, { 
-            virtual_text = { spacing = 15, },
-            signs = true,
-            underline = false,
-            update_in_insert = true,
-            }
-        )
+    handlers = {["textDocument/publishDiagnostics"] = 
+      vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, { 
+        virtual_text = false,
+        signs = true,
+        underline = false,
+        update_in_insert = true,
+        }
+      )
     },
 }
 

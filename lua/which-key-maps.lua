@@ -47,22 +47,10 @@ local leader = {
             nowait  = false -- use `nowait` when creating keymaps
         },
         keys = {
-
-            v  = { ':set ve=all<CR>',                                'set veall'},
             k  = { ':bdelet<CR>',                                               'kill'},
-            p  = { ':lua require"telescope".extensions.project.project{}<CR>',  'projects'},
             z  = { ':MaximizerToggle<CR>',                                      'zoom'},
-            s  = {
-               name = '+SnipRun',
-               r = {':lua require"sniprun".run()<CR>',                                   'run'},
-               R = {':lua require"sniprun".reset()<CR>',                                 'reset'},
-               c = {':lua require"sniprun.display".close()<CR>',                         'close'},
-               C = {':lua require"sniprun".clear_repl()<CR>',                            'clean memory'},
-
-           },
             f  = {
                 name = '+Find',
-                d = {':TroubleToggle<CR>', 'diagnostics'},
                 s = {':Telescope lsp_dynamic_workspace_symbols<CR>', 'ws symbols'},
                 f = {'<cmd>Telescope find_files<CR>',  'files .'},
                 b = {'<cmd>Telescope buffers<CR>',  'buffers'},
@@ -89,20 +77,11 @@ local leader = {
             nowait  = false -- use `nowait` when creating keymaps
         },
         keys = {
-            b = {':VBox<CR>',                                'box'},
-            s  = {
-               name = '+SnipRun',
-               r = {':lua require"sniprun".run("v")<CR>',                                'run'},
-               R = {':lua require"sniprun".reset()<CR>',                                 'reset'},
-               c = {':lua require"sniprun.display".close()<CR>',                         'close'},
-               C = {':lua require"sniprun".clear_repl()<CR>',                            'clean memory'},
-           },
             t  = {
-            name = '+Tabularize',
-            [','] = {':Tabularize /,\\zs<CR>',                                'comma'},
-            ['='] = {':Tabularize /=<CR>',                                 'equal'},
-        }
-
+              name = '+Tabularize',
+              [','] = {':Tabularize /,\\zs<CR>',                                'comma'},
+              ['='] = {':Tabularize /=<CR>',                                 'equal'},
+            }
         }
     }
 }
@@ -110,11 +89,8 @@ local leader = {
 local localleader = {
     normal = {
         keys = {
-            g  = { ':Neogit<CR>', 'neogit'},
             r  = { ':RnvimrToggle<CR>', 'ranger'},
             e  = { ':NvimTreeToggle<CR>', 'tree'},
-            v  = { ':Vista!!<CR>', 'vista'},
-            a  = { ':AerialToggle<CR>', 'Aeria'},
             p  = {
                 name = '+Packer',
                 u = {':PackerUpdate<CR>', 'update'},
@@ -122,13 +98,6 @@ local localleader = {
                 C = {':PackerClean<CR>', 'clean'},
                 c = {':PackerCompile<CR>', 'compile'},
             },
-            o  = {
-                name = '+Open',
-                l = {':FloatermNew lazygit<CR>', 'git'},
-                d = {':FloatermNew lazydocker<CR>', 'docker'},
-                p = {':FloatermNew python<CR>', 'python'},
-                h = {':FloatermNew htop<CR>', 'htop'},
-            }
         },
         opts = {
             mode = "n", -- NORMAL mode

@@ -7,11 +7,9 @@ require('navigation.telescope')
 
 require('code.lang')
 require('code.lang.python')
-require('code.lang.efm')
 require('code.lang.cpp')
-
-require('code.treesitter')
 require('code.cmp')
+require('code.treesitter')
 
 require('git.signs')
 
