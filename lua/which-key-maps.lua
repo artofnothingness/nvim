@@ -49,6 +49,16 @@ local leader = {
         keys = {
             k  = { ':bdelet<CR>',                                               'kill'},
             z  = { ':MaximizerToggle<CR>',                                      'zoom'},
+            g  = {
+                name = '+Git',
+                a = {':Git add .<CR>',   'add'},
+                c = {':Git commit<CR>',  'commit'},
+                l = {':Git log<CR>',     'log'},
+                m = {':Git merge<CR>',   'merge'},
+                d = {':Git diff<CR>',    'diff'},
+                b = {':Git branch<CR>',  'branch'},
+                B = {':Git blame<CR>',   'blame'},
+            },
             f  = {
                 name = '+Find',
                 s = {':Telescope lsp_dynamic_workspace_symbols<CR>', 'ws symbols'},
