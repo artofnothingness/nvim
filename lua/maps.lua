@@ -17,15 +17,15 @@ local normal_maps = {
     {'gi' ,            '<cmd>lua vim.lsp.buf.implementation()<CR>'},
     {'gr' ,            '<cmd>lua vim.lsp.buf.references()<CR>'},
     {"ga" ,            "<cmd>lua vim.lsp.buf.code_action()<CR>"},
+    {"gs" ,            "<cmd>lua vim.lsp.buf.signature_help()<CR>"},
     {"<M-k>" ,         "<cmd>lua vim.lsp.buf.hover()<CR>"},
     {"<C-h>" ,         "<cmd>lua require('Navigator').left()<CR>"},
     {"<C-k>" ,         "<cmd>lua require('Navigator').up()<CR>"},
     {"<C-l>" ,         "<cmd>lua require('Navigator').right()<CR>"},
     {"<C-j>" ,         "<cmd>lua require('Navigator').down()<CR>"},
-    {"<A-f>" ,         "<cmd>lua vim.lsp.buf.formatting()<CR>"},
+    {"<A-f>" ,         ":ClangFormat<CR>"},
     {"<C-p>" ,         "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>"},
     {"<C-n>" ,         "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>"},
-    {"<C-_>" ,         ":Commentary<CR>"},
     {"<BS>" ,          ":let @/ = ''<Enter>"},
     {"<F6>",           ":UndotreeToggle<CR>"},
     {"<TAB>" ,         ":BufferNext<CR>"},
@@ -41,7 +41,6 @@ local normal_maps = {
 
 local visual_maps = {
     {"<A-f>",  "<cmd>lua vim.lsp.buf.range_formatting()<CR>"},
-    {"<C-_>",  ":Commentary<CR>gv"},
     {'<',      '<gv'},
     {'>',      '>gv'},
 }
@@ -60,10 +59,3 @@ local universal_maps = {
 set_keymaps('n', normal_maps, opts)
 set_keymaps('v', visual_maps, opts)
 set_keymaps('', universal_maps, opts)
-
-map('i', '<c-j>', '<C-n>', {expr = true, noremap = true})
-map('i', '<c-k>', '<C-p>', {expr = true, noremap = true})
-map("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
-map("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
-map("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-map("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})

@@ -3,12 +3,14 @@ require('maps')
 require('plugins')
 require('which-key-maps')
 
+require('addons.tree')
 require('navigation.telescope')
 
-require('code.lang')
+require('code')
 require('code.lang.python')
 require('code.lang.cpp')
 require('code.cmp')
+require('code.snip')
 require('code.treesitter')
 
 require('git.signs')

@@ -3,9 +3,25 @@ vim.cmd('command! -nargs=0 LspVirtualTextToggle lua require("lsp/virtual_text").
 vim.cmd('set iskeyword+=-')                  --treat dash separated words as a word text object"
 vim.cmd('set shortmess+=c')                 --Don't pass messages to |ins-completion-menu|.
 
+-- <<< NEW
+
+vim.o.termguicolors = true
+vim.o.hlsearch = false
+vim.o.breakindent = true
+vim.o.smartcase=true
+vim.o.ignorecase=true
+vim.wo.signcolumn="yes"                      --Always show the signcolumn, otherwise it would shift the text each time
+vim.o.updatetime=300                      --Faster completion
+
+
+
+-- >>> NEW
+
+
 vim.o.hidden=true 
 vim.wo.wrap=false 
 vim.cmd('set whichwrap+=<,>,[,],h,l')
+
 
 vim.o.encoding="utf-8"                      --The encoding displayed
 vim.o.pumheight=10                        --Makes popup menu smaller
@@ -32,20 +48,15 @@ vim.o.cursorline=true                          --Enable highlighting of the curr
 
 vim.o.showtabline=2                       --Always show tabs
 vim.o.showmode=false                          --We don't need to see things like -- INSERT -- anymore
-vim.wo.signcolumn="yes"                      --Always show the signcolumn, otherwise it would shift the text each time
-vim.o.updatetime=300                      --Faster completion
 vim.o.timeoutlen=300                      --By default timeoutlen is 1000 ms
 vim.o.clipboard="unnamedplus"               --Copy paste between vim and everything else
 vim.o.incsearch=true
-
-vim.o.smartcase=true
-vim.o.ignorecase=true
 
 vim.o.shiftround=true
 vim.wo.number = true
 vim.wo.relativenumber = true
 
-vim.o.completeopt="menuone,noinsert,noselect"
+vim.o.completeopt = 'menuone,noselect'
 vim.o.autochdir = true
 
 vim.o.foldlevelstart=999
@@ -56,7 +67,8 @@ vim.o.backupdir="/home/alex/.config/nvim/utils/cache/backup"
 vim.o.undodir="/home/alex/.config/nvim/utils/cache/undo" 
 vim.o.directory="/home/alex/.config/nvim/utils/cache/swap"
 
-vim.o.undofile = true 
+
+vim.opt.undofile = true
 vim.o.undolevels=100000 
 vim.o.updatecount=100 
 vim.o.viewoptions="cursor,folds,unix,slash"
@@ -69,3 +81,8 @@ vim.cmd('set sessionoptions+=globals')
 
 vim.cmd('au BufRead,BufNewFile *.launch set filetype=xml')
 vim.cmd('au BufRead,BufNewFile *.cfg set filetype=python')
+
+if vim.g.nvui then
+  -- Configure through vim commands
+  vim.cmd [[NvuiCmdFontFamily Jetbrains Mono]]
+end
