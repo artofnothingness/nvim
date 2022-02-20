@@ -84,5 +84,5 @@ vim.cmd('au BufRead,BufNewFile *.cfg set filetype=python')
 
 if vim.g.nvui then
   -- Configure through vim commands
-  vim.cmd [[NvuiCmdFontFamily Jetbrains Mono]]
+  -- vim.cmd [[NvuiCmdFontFamily Jetbrains Mono]]
 end

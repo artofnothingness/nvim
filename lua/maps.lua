@@ -56,6 +56,12 @@ local universal_maps = {
     {"<A-w>" ,  ":w<CR>"},
 }
 
+
+local insert_map = {
+    {"<S-TAB>" ,      "<C-d>"},
+}
+
 set_keymaps('n', normal_maps, opts)
+set_keymaps('i', insert_map, opts)
 set_keymaps('v', visual_maps, opts)
 set_keymaps('', universal_maps, opts)
