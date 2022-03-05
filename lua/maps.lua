@@ -47,7 +47,8 @@ local visual_maps = {
 
 local universal_maps = {
     {"H" ,      "^"},
-    {'s' ,      ":HopChar1<CR>"},
+    {'s' ,      ":Pounce<CR>"},
+    {'S' ,      ":PounceRepeat<CR>"},
     {"L" ,      "$"},
     {"J" ,      "5j"},
     {"K" ,      "5k"},

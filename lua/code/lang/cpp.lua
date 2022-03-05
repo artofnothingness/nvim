@@ -6,7 +6,6 @@ require("clangd_extensions").setup {
         "--background-index",
         "--enable-config"
       },
-
       on_attach = function(client, bufnr)
           if lsp_status ~= nil then
               lsp_status.on_attach(client, bufnr)

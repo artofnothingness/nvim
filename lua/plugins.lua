@@ -78,6 +78,14 @@ use {
     vim.opt.listchars:append("space:⋅")
     vim.opt.listchars:append("eol:↴")
     
+
+    vim.g.indent_blankline_filetype_exclude = {
+      "lspinfo",
+      "packer",
+      "checkhealth",
+      "help",
+      'dashboard'
+    }
     require("indent_blankline").setup {
         show_trailing_blankline_indent = false,
         space_char_blankline = " ",
@@ -111,6 +119,7 @@ use "Pocco81/Catppuccino.nvim"
 use "rebelot/kanagawa.nvim"
 use 'yashguptaz/calvera-dark.nvim'
 use 'mjlbach/onedark.nvim' -- Theme inspired by Atom
+use 'tanvirtin/monokai.nvim'
 -- << Themes
 
 use "PotatoesMaster/i3-vim-syntax"
@@ -224,5 +233,19 @@ use {
 }
 
 use 'p00f/clangd_extensions.nvim'
+use 'dhruvasagar/vim-table-mode'
+
+
+use {
+  'rlane/pounce.nvim',
+  config = function()
+    require'pounce'.setup{
+      accept_keys = "JFKDLSAHGNUVRBYTMICEOXWPQZ",
+      accept_best_key = "<enter>",
+      multi_window = true,
+      debug = false,
+    }
+  end
+}
 
 end)
