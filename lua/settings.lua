@@ -63,9 +63,9 @@ vim.o.foldlevelstart=999
 vim.wo.foldmethod='expr'
 vim.wo.foldexpr='nvim_treesitter#foldexpr()'
 
-vim.o.backupdir="~/.config/nvim/utils/cache/backup" 
-vim.o.undodir="~/.config/nvim/utils/cache/undo" 
-vim.o.directory="~/.config/nvim/utils/cache/swap"
+vim.o.backupdir= vim.env.HOME .. "/.config/nvim/utils/cache/backup"
+vim.o.undodir= vim.env.HOME .. "/.config/nvim/utils/cache/undo"
+vim.o.directory= vim.env.HOME .. "/.config/nvim/utils/cache/swap"
 
 
 vim.opt.undofile = true
