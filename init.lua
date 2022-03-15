@@ -10,7 +10,6 @@ require('code')
 require('code.lang.python')
 require('code.lang.cpp')
 require('code.cmp')
-require('code.snip')
 require('code.treesitter')
 
 require('git.signs')

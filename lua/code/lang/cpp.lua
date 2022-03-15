@@ -1,6 +1,10 @@
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
 require("clangd_extensions").setup {
     server = {
+      capabilities = capabilities,
       cmd = { 
         "clangd", 
         "--background-index",
@@ -32,7 +36,7 @@ require("clangd_extensions").setup {
             -- whether to show parameter hints with the inlay hints or not
             show_parameter_hints = true,
             -- whether to show variable name before type hints with the inlay hints or not
-            show_variable_name = false,
+            show_variable_name = true,
             -- prefix for parameter hints
             parameter_hints_prefix = "<- ",
             -- prefix for all the other hints (type, chaining)
