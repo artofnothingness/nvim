@@ -85,3 +85,5 @@ if vim.g.nvui then
   -- Configure through vim commands
   -- vim.cmd [[NvuiCmdFontFamily Jetbrains Mono]]
 end
+
+vim.cmd('colorscheme highlite')

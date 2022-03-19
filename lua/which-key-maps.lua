@@ -68,10 +68,8 @@ local leader = {
                 f = {'<cmd>Telescope find_files<CR>',  'files .'},
                 b = {'<cmd>Telescope buffers<CR>',  'buffers'},
                 r = {'<cmd>Telescope oldfiles<CR>',  'recent files'},
-                g = {":lua require('spectre').open()<CR>",  'open'},
-                t = {":lua require('spectre').open_file_search()<CR>",  'this file'},
-                w = {"viw:lua require('spectre').open_visual()<CR>",  'word'},
-            }                                                                 ,
+                g = {"<cmd>Telescope live_grep<cr>",  'open'},
+            },
             c = {
                 name = '+Code',
                 g = {':DogeGenerate<CR>', 'gen documentation'},
@@ -105,6 +103,7 @@ local localleader = {
             r  = { ':RnvimrToggle<CR>', 'ranger'},
             v  = { ':Vista!!<CR>', 'vista'},
             d  = { ':Dirbuf<CR>', 'Dirbuf'},
+            s = {":lua require('spectre').open()<CR>",  'spectre'},
             p  = {
                 name = '+Packer',
                 u = {':PackerUpdate<CR>', 'update'},
