@@ -6,7 +6,6 @@ vim.cmd('set shortmess+=c')                 --Don't pass messages to |ins-comple
 -- <<< NEW
 
 vim.o.termguicolors = true
-vim.o.hlsearch = false
 vim.o.breakindent = true
 vim.o.smartcase=true
 vim.o.ignorecase=true
