@@ -26,3 +26,5 @@ end
 --   sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=DiagnosticLineNrHint
 -- ]]
 --
+
+require'lspconfig'.cmake.setup{}
