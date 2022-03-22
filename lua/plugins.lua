@@ -38,6 +38,7 @@ function()
   use 'kyazdani42/nvim-web-devicons'
   use 'ryanoasis/vim-devicons'
   use 'Iron-E/nvim-highlite'
+
   use 'folke/tokyonight.nvim'
   use 'NTBBloodbath/doom-one.nvim'
   use 'kdheepak/monochrome.nvim'
@@ -100,5 +101,3 @@ function()
   end
 
 end)
-
-vim.cmd('colorscheme highlite')
