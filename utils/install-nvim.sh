@@ -9,3 +9,5 @@ pip install cmake-language-server
 
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+
+pip3 install pynvim

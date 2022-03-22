@@ -100,3 +100,5 @@ function()
   end
 
 end)
+
+vim.cmd('colorscheme highlite')
