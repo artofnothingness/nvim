@@ -1,3 +1,12 @@
+git clone https://github.com/neovim/neovim.git
+cd neovim 
+
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+sudo make install
+cd ..
+
+sudo rm -rf neovim
+
 sudo apt update
 sudo apt install libtool -y
 sudo apt install libvterm-dev -y
