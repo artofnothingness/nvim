@@ -61,6 +61,7 @@ function()
   use {'lewis6991/gitsigns.nvim',              config = cfg('signs')}
   use {'rlane/pounce.nvim',                    config = cfg('pounce')}
   use {'elihunter173/dirbuf.nvim',             config = cfg('dirbuf')}
+  use {'mfussenegger/nvim-lint',               config = cfg('nvim-lint')}
 
 
   use {'nvim-telescope/telescope.nvim',
@@ -87,7 +88,7 @@ function()
 
   use {
     "nvim-neo-tree/neo-tree.nvim",
-      branch = "v1.x",
+      branch = "v2.x",
       requires = { 
         "nvim-lua/plenary.nvim",
         "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
