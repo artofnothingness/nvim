@@ -24,6 +24,10 @@ local normal_maps = {
     {"<C-l>" ,         "<cmd>lua require('Navigator').right()<CR>"},
     {"<C-j>" ,         "<cmd>lua require('Navigator').down()<CR>"},
     {"<A-f>" ,         ":ClangFormat<CR>"},
+    {"<A-b>" ,         ":ReachOpen buffers<CR>"},
+    {"<A-m>" ,         ":ReachOpen marks<CR>"},
+    {"<A-t>" ,         ":ReachOpen tabpages<CR>"},
+    {"<A-z>" ,         ":MaximizerToggle<CR>"},
     {"<C-p>" ,         "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>"},
     {"<C-n>" ,         "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>"},
     {"<BS>" ,          ":let @/ = ''<Enter>"},
@@ -55,6 +59,7 @@ local universal_maps = {
     {"U" ,      "J"},
     {"<A-q>" ,  ":q<CR>"},
     {"<A-w>" ,  ":w<CR>"},
+    {"<A-e>" ,  ":bdelet<CR>"},
 }
 
 

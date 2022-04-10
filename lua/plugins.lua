@@ -30,7 +30,6 @@ function()
   use 'godlygeek/tabular'
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use {'phaazon/hop.nvim' ,        config = function() require'hop'.setup() end }
-  use {"ahmedkhalf/project.nvim",  config = function() require("project_nvim").setup{} end}
   use {'numToStr/Comment.nvim',    config = function() require('Comment').setup() end}
   use {'windwp/nvim-autopairs',    config = function() require('nvim-autopairs').setup() end }
   use {'j-hui/fidget.nvim',        config = function() require"fidget".setup{} end}
@@ -62,6 +61,14 @@ function()
   use {'rlane/pounce.nvim',                    config = cfg('pounce')}
   use {'elihunter173/dirbuf.nvim',             config = cfg('dirbuf')}
   use {'mfussenegger/nvim-lint',               config = cfg('nvim-lint')}
+
+  -- new stuffs
+  use {'toppair/reach.nvim',  config = 
+    function() 
+      require('reach').setup({ notifications = true })
+    end}
+  use 'cljoly/telescope-repo.nvim'
+  ---
 
 
   use {'nvim-telescope/telescope.nvim',

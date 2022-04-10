@@ -47,8 +47,6 @@ local leader = {
             nowait  = false -- use `nowait` when creating keymaps
         },
         keys = {
-            k  = { ':bdelet<CR>',                                               'kill'},
-            z  = { ':MaximizerToggle<CR>',                                      'zoom'},
             g  = {
                 name = '+Git',
                 a = {':Git add .<CR>',   'add'},
@@ -64,7 +62,7 @@ local leader = {
             f  = {
                 name = '+Find',
                 s = {':Telescope lsp_dynamic_workspace_symbols<CR>', 'ws symbols'},
-                p = {':Telescope projects<CR>', 'projects'},
+                p = {':Telescope repo list<CR>', 'projects'},
                 f = {'<cmd>Telescope find_files<CR>',  'files .'},
                 b = {'<cmd>Telescope buffers<CR>',  'buffers'},
                 r = {'<cmd>Telescope oldfiles<CR>',  'recent files'},
