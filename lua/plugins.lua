@@ -33,6 +33,7 @@ function()
   use {'numToStr/Comment.nvim',    config = function() require('Comment').setup() end}
   use {'windwp/nvim-autopairs',    config = function() require('nvim-autopairs').setup() end }
   use {'j-hui/fidget.nvim',        config = function() require"fidget".setup{} end}
+  use { "ahmedkhalf/project.nvim", config = function() require("project_nvim").setup{} end }
   -- >> Themes
   use 'kyazdani42/nvim-web-devicons'
   use 'ryanoasis/vim-devicons'
