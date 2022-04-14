@@ -14,3 +14,14 @@ vim.g.rnvimr_action = {
   ['gb']     = 'JumpNvimCwd',
   ['cd']     = 'EmitRangerCwd'
 }
+
+vim.cmd([[
+let g:rnvimr_layout = {
+          \ 'relative': 'editor',
+          \ 'width': &columns,
+          \ 'height': &lines - 2,
+          \ 'col': 0,
+          \ 'row': 0,
+          \ 'style': 'minimal'
+          \ }
+]])
