@@ -1,6 +1,6 @@
 -- Add additional capabilities supported by nvim-cmp
 vim.diagnostic.config({
-  virtual_text = false,
+  virtual_text = true,
   signs = true,
   underline = false,
   update_in_insert = false,
@@ -26,7 +26,8 @@ require("clangd_extensions").setup {
       cmd = { 
         "clangd", 
         "--background-index",
-        "--enable-config"
+        "--enable-config",
+        "--compile-commands-dir=/home/alex/Media/Develop/My/ros2/rolling/wheeled_ws/build"
       },
       on_attach = function(client, bufnr)
           if lsp_status ~= nil then
