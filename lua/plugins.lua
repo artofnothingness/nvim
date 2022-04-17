@@ -63,15 +63,6 @@ function()
   use {'elihunter173/dirbuf.nvim',             config = cfg('dirbuf')}
   use {'mfussenegger/nvim-lint',               config = cfg('nvim-lint')}
 
-  -- new stuffs
-  use {'toppair/reach.nvim',  config = 
-    function() 
-      require('reach').setup({ notifications = true })
-    end}
-  use 'cljoly/telescope-repo.nvim'
-  ---
-
-
   use {'nvim-telescope/telescope.nvim',
       requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
       config = cfg('telescope')
@@ -104,6 +95,13 @@ function()
       },
       config = cfg('neotree')
   }
+
+  -- new stuffs
+  use {'toppair/reach.nvim',  config = 
+  function() 
+    require('reach').setup({ notifications = true })
+  end}
+  ---
 
   if packer_bootstrap then
     require('packer').sync()
