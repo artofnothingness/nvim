@@ -73,8 +73,16 @@ local leader = {
                 g = {':DogeGenerate<CR>', 'gen documentation'},
                 k = {':ClangdSwitchSourceHeader<CR>', 'switch source/header'},
                 r = {'<cmd>lua vim.lsp.buf.rename()<CR>', 'rename'},
+                w = {'<cmd>lua vim.lsp.buf.rename()<CR>', 'rename'},
+                },
+            w = {
+                name = '+Workspace',
+                l = {'<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', 'list workspaces'},
+                r = {'<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', 'remove workspaces'},
+                a = {'<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', 'add workspace'},
                 }
-            }
+            },
+
     },
     visual = {
         opts = {
