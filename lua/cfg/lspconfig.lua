@@ -1,12 +1,15 @@
 -- Add additional capabilities supported by nvim-cmp
 vim.diagnostic.config({
-  virtual_text = true,
+  virtual_text = false,
   signs = true,
   underline = false,
   update_in_insert = false,
   severity_sort = false,
+  float = { border = "single" },
 })
 
+
+vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
@@ -27,7 +30,7 @@ require("clangd_extensions").setup {
         "clangd", 
         "--background-index",
         "--enable-config",
-        "--compile-commands-dir=/home/alex/Media/Develop/My/ros2/rolling/wheeled_ws/build"
+        "--compile-commands-dir="
       },
       on_attach = function(client, bufnr)
           if lsp_status ~= nil then

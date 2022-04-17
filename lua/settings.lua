@@ -10,8 +10,7 @@ vim.o.breakindent = true
 vim.o.smartcase=true
 vim.o.ignorecase=true
 vim.wo.signcolumn="yes"                      --Always show the signcolumn, otherwise it would shift the text each time
-vim.o.updatetime=300                      --Faster completion
-
+vim.o.updatetime=250                      --Faster completion
 
 
 -- >>> NEW
