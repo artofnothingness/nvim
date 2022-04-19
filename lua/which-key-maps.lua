@@ -47,6 +47,8 @@ local leader = {
             nowait  = false -- use `nowait` when creating keymaps
         },
         keys = {
+            k  = { ':<cmd>lua vim.lsp.buf.hover()<CR>', 'hover'},
+            u  = { ':UndotreeToggle<CR>', 'undo tree'},
             g  = {
                 name = '+Git',
                 a = {':Git add .<CR>',   'add'},
