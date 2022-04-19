@@ -50,7 +50,6 @@ function()
   -- << Themes
   use {'neovim/nvim-lspconfig',                config = cfg('lspconfig')}
   use {'nvim-treesitter/nvim-treesitter',      config = cfg('treesitter'),        run = ':TSUpdate'}
-  use {'kkoomen/vim-doge',                     config = cfg('doge'),              run = ':call doge#install()'}
   use {"lukas-reineke/indent-blankline.nvim",  config = cfg('indent-blankline')}
   use {'norcalli/nvim-colorizer.lua',          config = cfg('colorizer')}
   use {'glepnir/dashboard-nvim',               config = cfg('dashboard') }
@@ -100,6 +99,15 @@ function()
   function() 
     require('reach').setup({ notifications = true })
   end}
+  use {
+      "danymat/neogen",
+      config = function()
+          require('neogen').setup {}
+      end,
+      requires = "nvim-treesitter/nvim-treesitter",
+      -- Uncomment next line if you want to follow only stable versions
+      -- tag = "*"
+  }
   ---
 
   if packer_bootstrap then

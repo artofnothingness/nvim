@@ -24,7 +24,7 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 require'lspconfig'.ccls.setup {
   init_options = {
-    compilationDatabaseDirectory = "/home/alex/Media/Develop/My/ros2/rolling/wheeled_ws/build/";
+    compilationDatabaseDirectory = "build/";
     index = {
       threads = 0;
     };

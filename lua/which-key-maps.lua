@@ -70,7 +70,7 @@ local leader = {
             },
             c = {
                 name = '+Code',
-                g = {':DogeGenerate<CR>', 'gen documentation'},
+                g = {':Neogen<CR>', 'gen documentation'},
                 k = {':ClangdSwitchSourceHeader<CR>', 'switch source/header'},
                 r = {'<cmd>lua vim.lsp.buf.rename()<CR>', 'rename'},
                 w = {'<cmd>lua vim.lsp.buf.rename()<CR>', 'rename'},
