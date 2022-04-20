@@ -95,10 +95,6 @@ function()
   }
 
   -- new stuffs
-  use {'toppair/reach.nvim',  config = 
-  function() 
-    require('reach').setup({ notifications = true })
-  end}
   use {
       "danymat/neogen",
       config = function()
