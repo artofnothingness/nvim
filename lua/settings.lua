@@ -40,7 +40,7 @@ vim.o.shiftwidth=2                        --Change the number of space character
 vim.o.smarttab=true                            --Makes tabbing smarter will realize you have 2 vs 4
 vim.o.softtabstop=0
 
-vim.o.laststatus=2                        --Always display the status line
+vim.o.laststatus=3                        --Always display the status line
 
 vim.o.cursorline=true                          --Enable highlighting of the current line
 
