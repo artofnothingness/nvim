@@ -1,3 +1,3 @@
-sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update
-sudo apt install neovim
+sudo apt install neovim -y
