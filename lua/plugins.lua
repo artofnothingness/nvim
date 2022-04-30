@@ -60,6 +60,7 @@ function()
   use {'lewis6991/gitsigns.nvim',              config = cfg('signs')}
   use {'rlane/pounce.nvim',                    config = cfg('pounce')}
   use {'elihunter173/dirbuf.nvim',             config = cfg('dirbuf')}
+  use {'akinsho/toggleterm.nvim',              config = cfg('toggleterm')}
 
   use {'nvim-telescope/telescope.nvim',
       requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
