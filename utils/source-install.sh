@@ -14,7 +14,7 @@ sudo apt install gettext  -y
 sudo apt install unzip -y
 
 # Run deps
-sudo apt install clangd-12 ripgrep xclip -y
+sudo apt install python3-pip clangd-12 ripgrep xclip -y
 sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-12 100
 pip install cmake-language-server
 pip install pynvim
