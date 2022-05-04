@@ -67,10 +67,13 @@ function()
       config = cfg('telescope')
   }
 
-  use {'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-    config = cfg('lualine')
-  }
+  -- use {'nvim-lualine/lualine.nvim',
+  --   requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+  --   config = cfg('lualine')
+  -- }
+
+
+  use {'b0o/incline.nvim', config = function() require('incline').setup() end }
 
   use {
     "hrsh7th/nvim-cmp",
