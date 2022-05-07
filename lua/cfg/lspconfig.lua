@@ -5,11 +5,7 @@ vim.diagnostic.config({
   underline = false,
   update_in_insert = false,
   severity_sort = false,
-  float = { border = "single" },
 })
-
-
-vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
