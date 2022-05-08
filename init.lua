@@ -3,4 +3,4 @@ require('maps')
 require('plugins')
 require('which-key-maps')
 
-vim.cmd('colorscheme doom-one')
+vim.cmd('colorscheme highlite')
