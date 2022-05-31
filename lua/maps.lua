@@ -28,8 +28,8 @@ local normal_maps = {
     {"<C-p>" ,         "<cmd>lua vim.diagnostic.goto_prev()<CR>"},
     {"<C-n>" ,         "<cmd>lua vim.diagnostic.goto_next()<CR>"},
     {"<BS>" ,          ":let @/ = ''<Enter>"},
-    {"<TAB>" ,         ":BufferNext<CR>"},
-    {"<S-TAB>" ,       ":BufferPrevious<CR>"},
+    {"<TAB>" ,         ":tabn<CR>"},
+    {"<S-TAB>" ,       ":tabp<CR>"},
     {'<M-C-j>' ,       ':resize -3<CR>'},
     {'<M-C-k>' ,       ':resize +3<CR>'},
     {'<M-C-h>' ,       ':vertical resize -3<CR>'},
@@ -37,7 +37,6 @@ local normal_maps = {
     {'<' ,             '<<'},
     {'>' ,             '>>'},
 }
-
 
 local visual_maps = {
     {"<A-f>",  "<cmd>lua vim.lsp.buf.range_formatting()<CR>"},

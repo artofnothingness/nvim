@@ -82,9 +82,15 @@ local leader = {
                 l = {'<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', 'list workspaces'},
                 r = {'<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', 'remove workspaces'},
                 a = {'<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', 'add workspace'},
+                },
+
+            t = {
+                name = '+Tabs',
+                n = {':$tabnew<CR>', 'new'},
+                c = {':tabclose<CR>', 'close'},
+                a = {'<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', 'add workspace'},
                 }
             },
-
     },
     visual = {
         opts = {

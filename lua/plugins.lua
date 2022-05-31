@@ -11,18 +11,19 @@ end
 
 return require('packer').startup(
 function()
+  use 'p00f/clangd_extensions.nvim'
+
   use 'wbthomason/packer.nvim'
   use 'nvim-telescope/telescope-ui-select.nvim'
   use 'folke/which-key.nvim'
-  use 'romgrk/barbar.nvim'
+  -- use 'romgrk/barbar.nvim'
+  use {"nanozuki/tabby.nvim", config = function() require("tabby").setup() end, }
+
   use 'psliwka/vim-smoothie'
   use "PotatoesMaster/i3-vim-syntax"
   use 'mbbill/undotree'
-  use 'p00f/clangd_extensions.nvim'
   use 'dhruvasagar/vim-table-mode'
   use 'windwp/nvim-spectre'
-  use 'kyazdani42/nvim-tree.lua'
-  use 'rhysd/vim-clang-format'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
   use 'tpope/vim-commentary'
@@ -48,6 +49,7 @@ function()
   use 'mjlbach/onedark.nvim'
   use 'tanvirtin/monokai.nvim'
   -- << Themes
+    --
   use {'neovim/nvim-lspconfig',                config = cfg('lspconfig')}
   use {'nvim-treesitter/nvim-treesitter',      config = cfg('treesitter'),        run = ':TSUpdate'}
   use {"lukas-reineke/indent-blankline.nvim",  config = cfg('indent-blankline')}
@@ -59,19 +61,12 @@ function()
   use {'numToStr/Navigator.nvim' ,             config = cfg('navigator')}
   use {'lewis6991/gitsigns.nvim',              config = cfg('signs')}
   use {'rlane/pounce.nvim',                    config = cfg('pounce')}
-  use {'elihunter173/dirbuf.nvim',             config = cfg('dirbuf')}
   use {'akinsho/toggleterm.nvim',              config = cfg('toggleterm')}
 
   use {'nvim-telescope/telescope.nvim',
       requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
       config = cfg('telescope')
   }
-
-  -- use {'nvim-lualine/lualine.nvim',
-  --   requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-  --   config = cfg('lualine')
-  -- }
-
 
   use {'b0o/incline.nvim', config = function() require('incline').setup() end }
 
@@ -85,17 +80,6 @@ function()
       'L3MON4D3/LuaSnip',
     },
     config = cfg('cmp')
-  }
-
-  use {
-    "nvim-neo-tree/neo-tree.nvim",
-      branch = "v2.x",
-      requires = { 
-        "nvim-lua/plenary.nvim",
-        "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
-        "MunifTanjim/nui.nvim" 
-      },
-      config = cfg('neotree')
   }
 
   -- new stuffs
