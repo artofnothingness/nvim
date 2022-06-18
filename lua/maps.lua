@@ -23,6 +23,8 @@ local normal_maps = {
     {"<C-k>" ,         "<cmd>lua require('Navigator').up()<CR>"},
     {"<C-l>" ,         "<cmd>lua require('Navigator').right()<CR>"},
     {"<C-j>" ,         "<cmd>lua require('Navigator').down()<CR>"},
+    {"<C-p>" ,         "<cmd>lua vim.diagnostic.goto_prev()<CR>"},
+    {"<C-n>" ,         "<cmd>lua vim.diagnostic.goto_next()<CR>"},
     {"<A-f>" ,         "<cmd>lua vim.lsp.buf.formatting()<CR>"},
     {"<BS>" ,          ":let @/ = ''<Enter>"},
     {"<TAB>" ,         ":tabn<CR>"},
@@ -48,6 +50,8 @@ local universal_maps = {
     {"J" ,      "5j"},
     {"K" ,      "5k"},
     {"U" ,      "J"},
+    {"<A-q>" ,  ":q<CR>"},
+    {"<A-w>" ,  ":w<CR>"},
 }
 
 
