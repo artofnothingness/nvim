@@ -29,7 +29,8 @@ require'lspconfig'.ccls.setup {
       extraArgs = { "-std=c++17"};
       excludeArgs = { "-fconcepts"};
     };
-  }
+  },
+  root_dir = util.root_pattern("build", "compile_commands.json", ".git");
 }
 
 
@@ -53,7 +54,7 @@ require'lspconfig'.ccls.setup {
 --       '.clang-format',
 --       'compile_commands.json',
 --       'compile_flags.txt'
---       );
+--       ),
 --     },
 --     extensions = {
 --         -- defaults:
