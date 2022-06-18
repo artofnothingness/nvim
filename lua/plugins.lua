@@ -60,7 +60,7 @@ function()
 
   -- File managing
   use {'kevinhwang91/rnvimr', config = cfg('rnvimr')}
-  use "elihunter173/dirbuf.nvim"
+  use {"elihunter173/dirbuf.nvim"}
 
   -- Markdown
   use 'dhruvasagar/vim-table-mode'
