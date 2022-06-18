@@ -56,7 +56,17 @@ function()
   use {'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup() end }
   use 'godlygeek/tabular'
   use {'akinsho/toggleterm.nvim', config = cfg('toggleterm')}
-  use { "ahmedkhalf/project.nvim", config = function() require("project_nvim").setup{} end }
+
+  use {
+      "ahmedkhalf/project.nvim",
+    config = function()
+      require("project_nvim").setup {
+        detection_methods = { "lsp", "pattern" },
+        patterns = { ".git", "build", },
+        silent_chdir = false,
+      }
+  end
+}
 
   -- File managing
   use {'kevinhwang91/rnvimr', config = cfg('rnvimr')}
