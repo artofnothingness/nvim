@@ -47,8 +47,6 @@ local leader = {
             nowait  = false -- use `nowait` when creating keymaps
         },
         keys = {
-            k  = { ':<cmd>lua vim.lsp.buf.hover()<CR>', 'hover'},
-            u  = { ':UndotreeToggle<CR>', 'undo tree'},
             g  = {
                 name = '+Git',
                 a = {':Git add .<CR>',   'add'},
@@ -64,18 +62,16 @@ local leader = {
             f  = {
                 name = '+Find',
                 s = {':Telescope lsp_dynamic_workspace_symbols<CR>', 'ws symbols'},
-                p = {':Telescope repo list<CR>', 'projects'},
                 f = {'<cmd>Telescope find_files<CR>',  'files .'},
-                b = {'<cmd>Telescope buffers<CR>',  'buffers'},
-                r = {'<cmd>Telescope oldfiles<CR>',  'recent files'},
-                g = {"<cmd>Telescope live_grep<cr>",  'open'},
+                b = {'<cmd>Telescope buffers<CR>',     'buffers'},
+                r = {'<cmd>Telescope oldfiles<CR>',    'recent files'},
+                g = {"<cmd>Telescope live_grep<cr>",   'open'},
             },
             c = {
                 name = '+Code',
                 g = {':Neogen<CR>', 'gen documentation'},
                 k = {':ClangdSwitchSourceHeader<CR>', 'switch source/header'},
                 r = {'<cmd>lua vim.lsp.buf.rename()<CR>', 'rename'},
-                w = {'<cmd>lua vim.lsp.buf.rename()<CR>', 'rename'},
                 },
             w = {
                 name = '+Workspace',
@@ -88,7 +84,6 @@ local leader = {
                 name = '+Tabs',
                 n = {':$tabnew<CR>', 'new'},
                 c = {':tabclose<CR>', 'close'},
-                a = {'<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', 'add workspace'},
                 }
             },
     },

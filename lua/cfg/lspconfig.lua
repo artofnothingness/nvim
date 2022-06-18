@@ -18,27 +18,12 @@ require'lspconfig'.cmake.setup{}
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
--- require'lspconfig'.ccls.setup {
---   init_options = {
---     compilationDatabaseDirectory = "/home/alex/Media/Develop/My/ros2/rolling/wheeled_ws/build/";
---     index = {
---       threads = 0;
---     };
---     clang = {
---       extraArgs = { "-std=c++17"};
---       excludeArgs = { "-fconcepts"};
---     };
---   }
--- }
---
-
 require("clangd_extensions").setup {
     server = {
       capabilities = capabilities,
       cmd = {
         "clangd",
         "--background-index",
-        "--enable-config",
         "--compile-commands-dir="
       },
       on_attach = function(client, bufnr)
@@ -110,7 +95,7 @@ require("clangd_extensions").setup {
   }
 }
 
-require'lspconfig'.pyright.setup{
+require('lspconfig').pyright.setup{
 
     on_attach = function(client, bufnr)
         if lsp_status ~= nil then

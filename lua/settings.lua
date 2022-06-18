@@ -1,25 +1,15 @@
-vim.cmd('command! -nargs=0 LspVirtualTextToggle lua require("lsp/virtual_text").toggle()')
-
 vim.cmd('set iskeyword+=-')                  --treat dash separated words as a word text object"
 vim.cmd('set shortmess+=c')                 --Don't pass messages to |ins-completion-menu|.
 
--- <<< NEW
-
-vim.o.termguicolors = true
 vim.o.breakindent = true
 vim.o.smartcase=true
 vim.o.ignorecase=true
 vim.wo.signcolumn="yes"                      --Always show the signcolumn, otherwise it would shift the text each time
 vim.o.updatetime=250                      --Faster completion
 
-
--- >>> NEW
-
-
 vim.o.hidden=true 
 vim.wo.wrap=false 
 vim.cmd('set whichwrap+=<,>,[,],h,l')
-
 
 vim.o.encoding="utf-8"                      --The encoding displayed
 vim.o.pumheight=10                        --Makes popup menu smaller
@@ -74,13 +64,3 @@ vim.o.viewoptions="cursor,folds,unix,slash"
 
 vim.o.autoread = true  -- Read the file again if have been changed outside of Vim.
 vim.o.switchbuf="useopen" -- Jump to the first open window that contains the specified buffer.
-
-vim.cmd('set sessionoptions+=globals')
-
-vim.cmd('au BufRead,BufNewFile *.launch set filetype=xml')
-vim.cmd('au BufRead,BufNewFile *.cfg set filetype=python')
-
-if vim.g.nvui then
-  -- Configure through vim commands
-  -- vim.cmd [[NvuiCmdFontFamily Jetbrains Mono]]
-end

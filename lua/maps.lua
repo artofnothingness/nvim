@@ -17,16 +17,13 @@ local normal_maps = {
     {'gi' ,            '<cmd>lua vim.lsp.buf.implementation()<CR>'},
     {'gr' ,            '<cmd>lua vim.lsp.buf.references()<CR>'},
     {"ga" ,            "<cmd>lua vim.lsp.buf.code_action()<CR>"},
-    {"gs" ,            "<cmd>lua vim.lsp.buf.signature_help()<CR>"},
+    {"<M-s>" ,         "<cmd>lua vim.lsp.buf.signature_help()<CR>"},
     {"<M-k>" ,         "<cmd>lua vim.lsp.buf.hover()<CR>"},
     {"<C-h>" ,         "<cmd>lua require('Navigator').left()<CR>"},
     {"<C-k>" ,         "<cmd>lua require('Navigator').up()<CR>"},
     {"<C-l>" ,         "<cmd>lua require('Navigator').right()<CR>"},
     {"<C-j>" ,         "<cmd>lua require('Navigator').down()<CR>"},
     {"<A-f>" ,         "<cmd>lua vim.lsp.buf.formatting()<CR>"},
-    {"<A-z>" ,         ":MaximizerToggle<CR>"},
-    {"<C-p>" ,         "<cmd>lua vim.diagnostic.goto_prev()<CR>"},
-    {"<C-n>" ,         "<cmd>lua vim.diagnostic.goto_next()<CR>"},
     {"<BS>" ,          ":let @/ = ''<Enter>"},
     {"<TAB>" ,         ":tabn<CR>"},
     {"<S-TAB>" ,       ":tabp<CR>"},
@@ -39,7 +36,6 @@ local normal_maps = {
 }
 
 local visual_maps = {
-    {"<A-f>",  "<cmd>lua vim.lsp.buf.range_formatting()<CR>"},
     {'<',      '<gv'},
     {'>',      '>gv'},
 }
@@ -52,9 +48,6 @@ local universal_maps = {
     {"J" ,      "5j"},
     {"K" ,      "5k"},
     {"U" ,      "J"},
-    {"<A-q>" ,  ":q<CR>"},
-    {"<A-w>" ,  ":w<CR>"},
-    {"<A-e>" ,  ":bdelet<CR>"},
 }
 
 
