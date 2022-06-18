@@ -61,7 +61,8 @@ local leader = {
             },
             f  = {
                 name = '+Find',
-                s = {':Telescope lsp_dynamic_workspace_symbols<CR>', 'ws symbols'},
+                s = {':Telescope lsp_document_symbols<CR>', 'ws symbols'},
+                S = {':Telescope lsp_dynamic_workspace_symbols<CR>', 'ws symbols'},
                 f = {'<cmd>Telescope find_files<CR>',  'files .'},
                 b = {'<cmd>Telescope buffers<CR>',     'buffers'},
                 r = {'<cmd>Telescope oldfiles<CR>',    'recent files'},
