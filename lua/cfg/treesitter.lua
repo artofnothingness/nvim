@@ -25,6 +25,15 @@ require 'nvim-treesitter.configs'.setup {
 
 
   textobjects = {
+    swap = {
+      enable = true,
+      swap_next = {
+        ["]sa"] = "@parameter.inner",
+      },
+      swap_previous = {
+        ["[sa"] = "@parameter.inner",
+      },
+    },
     select = {
       enable = true,
       lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
@@ -40,20 +49,22 @@ require 'nvim-treesitter.configs'.setup {
       enable = true,
       set_jumps = true, -- whether to set jumps in the jumplist
       goto_next_start = {
-        [']m'] = '@function.outer',
-        [']]'] = '@class.outer',
+        [']f'] = '@function.outer',
+        [']c'] = '@class.outer',
+        [']a'] = '@parameter.inner',
       },
       goto_next_end = {
-        [']M'] = '@function.outer',
-        [']['] = '@class.outer',
+        [']['] = '@function.outer',
+        [']C'] = '@class.outer',
       },
       goto_previous_start = {
-        ['[m'] = '@function.outer',
-        ['[['] = '@class.outer',
+        ['[f'] = '@function.outer',
+        ['[c'] = '@class.outer',
+        ['[a'] = '@parameter.inner',
       },
       goto_previous_end = {
-        ['[M'] = '@function.outer',
-        ['[]'] = '@class.outer',
+        ['[]'] = '@function.outer',
+        ['[C'] = '@class.outer',
       },
     },
   },
