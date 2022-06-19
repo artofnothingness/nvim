@@ -47,6 +47,7 @@ local leader = {
             nowait  = false -- use `nowait` when creating keymaps
         },
         keys = {
+            ['<Space>'] = { ':Dashboard<CR>', 'Dashboard'},
             g  = {
                 name = '+Git',
                 a = {':Git add .<CR>',   'add'},
@@ -66,7 +67,7 @@ local leader = {
                 f = {'<cmd>Telescope find_files<CR>',  'files .'},
                 b = {'<cmd>Telescope buffers<CR>',     'buffers'},
                 r = {'<cmd>Telescope oldfiles<CR>',    'recent files'},
-                g = {"<cmd>Telescope live_grep<cr>",   'open'},
+                w = {'<cmd>Telescope live_grep<cr>',   'word'},
             },
             d = {
                 name = '+Diagnostics',
@@ -119,6 +120,11 @@ local localleader = {
                 s = {':PackerSync<CR>', 'sync'},
                 C = {':PackerClean<CR>', 'clean'},
                 c = {':PackerCompile<CR>', 'compile'},
+            },
+            o  = {
+                name = '+Open',
+                c = {':e ~/.config/nvim/init.lua<CR>', 'configs'},
+                d = {':e ~/.config<CR>', 'dotfiles'},
             },
         },
         opts = {

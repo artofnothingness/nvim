@@ -37,10 +37,9 @@ db.custom_center = {
     {icon = '  ', desc = 'File Browser   ',
     action = 'RnvimrToggle', shortcut = '  m r    '},
     {icon = '  ', desc = 'Neovim Config  ', 
-    action = ':e ~/.config/nvim/init.lua', shortcut = '         '},
+    action = ':e ~/.config/nvim/init.lua', shortcut = '  m o c  '},
     {icon = '  ', desc = 'Dotfiles       ', 
-    action = ':e ~/.config/', shortcut = '         '},
+    action = ':e ~/.config/', shortcut = '  m o d  '},
 }
 
 db.custom_footer = {'github.com/artofnothingness'}
-
