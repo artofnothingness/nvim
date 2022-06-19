@@ -50,6 +50,7 @@ function()
   use {'norcalli/nvim-colorizer.lua', config = cfg('colorizer')}
   use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }, config = function() require('lualine').setup() end}
   use {'glepnir/dashboard-nvim', config = cfg('dashboard') }
+  use {'tversteeg/registers.nvim'}
 
   -- Utils
   use 'szw/vim-maximizer'
@@ -89,7 +90,7 @@ function()
   use 'windwp/nvim-spectre'
   use {'unblevable/quick-scope', config = cfg('quick-scope')}
   use {'rlane/pounce.nvim',config = cfg('pounce')}
-  use 'nvim-telescope/telescope-ui-select.nvim'
+  use {'nvim-telescope/telescope-ui-select.nvim'}
 
   use {'nvim-telescope/telescope.nvim',
       requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},

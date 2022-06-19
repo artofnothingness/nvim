@@ -40,6 +40,14 @@ require('telescope').setup {
             }
         }
     },
+    pickers = {
+      find_files = { theme = "dropdown", },
+      live_grep =  { theme = "dropdown", },
+      buffers = { theme = "dropdown", },
+      lsp_document_symbols = { theme = "dropdown", },
+      lsp_dynamic_workspace_symbols = { theme = "dropdown", },
+      oldfiles = { theme = "dropdown", },
+    },
     extensions = {
       ["ui-select"] = {
         require("telescope.themes").get_cursor {
