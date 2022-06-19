@@ -50,13 +50,6 @@ function()
   use {'norcalli/nvim-colorizer.lua', config = cfg('colorizer')}
   use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }, config = function() require('lualine').setup() end}
   use {'glepnir/dashboard-nvim', config = cfg('dashboard') }
-  use {'nvim-neo-tree/neo-tree.nvim', branch = "v2.x",
-    requires = {
-      "nvim-lua/plenary.nvim",
-      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-    }, config = cfg('neotree')
-  }
 
   -- Utils
   use 'szw/vim-maximizer'
@@ -81,6 +74,13 @@ function()
   -- File managing
   use {'kevinhwang91/rnvimr', config = cfg('rnvimr')}
   use {"elihunter173/dirbuf.nvim"}
+  use {'nvim-neo-tree/neo-tree.nvim', branch = "v2.x",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }, config = cfg('neotree')
+  }
 
   -- Markdown
   use 'dhruvasagar/vim-table-mode'
