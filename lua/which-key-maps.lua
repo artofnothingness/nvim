@@ -68,10 +68,15 @@ local leader = {
                 r = {'<cmd>Telescope oldfiles<CR>',    'recent files'},
                 g = {"<cmd>Telescope live_grep<cr>",   'open'},
             },
+            d = {
+                name = '+Diagnostics',
+                w = {':Trouble workspace_diagnostics<CR>', 'workspace diagnostics'},
+                f = {':Trouble document_diagnostics<CR>', 'file diagnostics'},
+                q = {':Trouble quickfix<CR>', 'quick fixes'},
+                },
             c = {
                 name = '+Code',
                 g = {':Neogen<CR>', 'gen documentation'},
-                k = {':ClangdSwitchSourceHeader<CR>', 'switch source/header'},
                 r = {'<cmd>lua vim.lsp.buf.rename()<CR>', 'rename'},
                 },
             w = {
@@ -80,12 +85,6 @@ local leader = {
                 r = {'<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', 'remove workspaces'},
                 a = {'<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', 'add workspace'},
                 },
-
-            t = {
-                name = '+Tabs',
-                n = {':$tabnew<CR>', 'new'},
-                c = {':tabclose<CR>', 'close'},
-                }
             },
     },
     visual = {

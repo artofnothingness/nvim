@@ -1,65 +1,48 @@
 local map = vim.api.nvim_set_keymap
-
 local opts = { noremap = true, silent = true }
-
-local function set_keymaps(mode, keymaps, opts)
-    for _, keymap in ipairs(keymaps) do
-        vim.api.nvim_set_keymap(mode, keymap[1], keymap[2], opts)
-    end
-end
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = 'm'
 
-local normal_maps = {
-    {'gd' ,            '<cmd>lua vim.lsp.buf.definition()<CR>'},
-    {'gD' ,            '<cmd>lua vim.lsp.buf.declaration()<CR>'},
-    {'gi' ,            '<cmd>lua vim.lsp.buf.implementation()<CR>'},
-    {'gr' ,            '<cmd>lua vim.lsp.buf.references()<CR>'},
-    {"ga" ,            "<cmd>lua vim.lsp.buf.code_action()<CR>"},
-    {"<M-s>" ,         "<cmd>lua vim.lsp.buf.signature_help()<CR>"},
-    {"<M-k>" ,         "<cmd>lua vim.lsp.buf.hover()<CR>"},
-    {"<C-h>" ,         "<cmd>lua require('Navigator').left()<CR>"},
-    {"<C-k>" ,         "<cmd>lua require('Navigator').up()<CR>"},
-    {"<C-l>" ,         "<cmd>lua require('Navigator').right()<CR>"},
-    {"<C-j>" ,         "<cmd>lua require('Navigator').down()<CR>"},
-    {"<C-p>" ,         "<cmd>lua vim.diagnostic.goto_prev()<CR>"},
-    {"<C-n>" ,         "<cmd>lua vim.diagnostic.goto_next()<CR>"},
-    {"<A-f>" ,         "<cmd>lua vim.lsp.buf.formatting()<CR>"},
-    {"<BS>" ,          ":let @/ = ''<Enter>"},
-    {"<TAB>" ,         ":tabn<CR>"},
-    {"<S-TAB>" ,       ":tabp<CR>"},
-    {'<M-C-j>' ,       ':resize -3<CR>'},
-    {'<M-C-k>' ,       ':resize +3<CR>'},
-    {'<M-C-h>' ,       ':vertical resize -3<CR>'},
-    {'<M-C-l>' ,       ':vertical resize +3<CR>'},
-    {'<' ,             '<<'},
-    {'>' ,             '>>'},
-}
+-- LSP
+map('n',  'gd' ,       '<cmd>lua vim.lsp.buf.definition()<CR>',      opts)
+map('n',  'gD' ,       '<cmd>lua vim.lsp.buf.declaration()<CR>',     opts)
+map('n',  'gi' ,       '<cmd>lua vim.lsp.buf.implementation()<CR>',  opts)
+map('n',  'gr' ,       '<cmd>lua vim.lsp.buf.references()<CR>',      opts)
+map('n',  'ga' ,       '<cmd>lua vim.lsp.buf.code_action()<CR>',     opts)
+map('n',  '<M-s>',     '<cmd>lua vim.lsp.buf.signature_help()<CR>',  opts)
+map('n',  '<M-k>' ,    '<cmd>lua vim.lsp.buf.hover()<CR>',           opts)
+map('n',  '<C-p>',     '<cmd>lua vim.diagnostic.goto_prev()<CR>',    opts)
+map('n',  '<C-n>',     '<cmd>lua vim.diagnostic.goto_next()<CR>',    opts)
+map('n',  '<A-f>',     '<cmd>lua vim.lsp.buf.formatting()<CR>',      opts)
 
-local visual_maps = {
-    {'<',      '<gv'},
-    {'>',      '>gv'},
-}
+-- Navigation
+map('',   'H' ,        '^',                        opts)
+map('',   's' ,        ':Pounce<CR>',              opts)
+map('',   'S' ,        ':PounceRepeat<CR>',        opts)
+map('',   'L' ,        '$',                        opts)
+map('',   'J' ,        '5j',                       opts)
+map('',   'K' ,        '5k',                       opts)
+map('',   'U' ,        'J',                        opts)
+map('n',  '<M-C-j>' ,  ':resize -3<CR>',           opts)
+map('n',  '<M-C-k>' ,  ':resize +3<CR>',           opts)
+map('n',  '<M-C-h>' ,  ':vertical resize -3<CR>',  opts)
+map('n',  '<M-C-l>' ,  ':vertical resize +3<CR>',  opts)
 
-local universal_maps = {
-    {"H" ,      "^"},
-    {'s' ,      ":Pounce<CR>"},
-    {'S' ,      ":PounceRepeat<CR>"},
-    {"L" ,      "$"},
-    {"J" ,      "5j"},
-    {"K" ,      "5k"},
-    {"U" ,      "J"},
-    {"<A-q>" ,  ":q<CR>"},
-    {"<A-w>" ,  ":w<CR>"},
-}
+-- Windows
+map('n',  '<C-h>',    '<cmd>lua require("Navigator").left()<CR>',   opts)
+map('n',  '<C-k>',    '<cmd>lua require("Navigator").up()<CR>',     opts)
+map('n',  '<C-l>',    '<cmd>lua require("Navigator").right()<CR>',  opts)
+map('n',  '<C-j>' ,   '<cmd>lua require("Navigator").down()<CR>',   opts)
+map('n',  '<S-Tab>',  '<Cmd>BufferPrevious<CR>',                    opts)
+map('n',  '<Tab>',    '<Cmd>BufferNext<CR>',                        opts)
 
+map('n',  '<BS>' ,    ':let @/ = ""<Enter>',  opts)
+map('n',  '<' ,       '<<',                   opts)
+map('n',  '>' ,       '>>',                   opts)
+map('v',  '<' ,       '<gv',                  opts)
+map('v',  '>' ,       '>gv',                  opts)
+map('i',  '<S-TAB>',  '<C-d>',                opts)
 
-local insert_map = {
-    {"<S-TAB>" ,      "<C-d>"},
-}
-
-set_keymaps('n', normal_maps, opts)
-set_keymaps('i', insert_map, opts)
-set_keymaps('v', visual_maps, opts)
-set_keymaps('', universal_maps, opts)
+map('',  '<A-w>' ,  ':w<CR>',             opts)
+map('',  '<A-q>',   ':q<CR>',             opts)

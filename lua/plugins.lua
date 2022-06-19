@@ -17,6 +17,7 @@ function()
   use {'neovim/nvim-lspconfig', config = cfg('lspconfig')}
   use 'p00f/clangd_extensions.nvim'
   use {'liuchengxu/vista.vim', config = cfg('vista')}
+  use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons", config = function() require("trouble").setup {} end }
 
   use {
     "hrsh7th/nvim-cmp",
@@ -41,12 +42,21 @@ function()
 
   -- UI
   use 'psliwka/vim-smoothie'
-  use {"nanozuki/tabby.nvim", config = function() require("tabby").setup() end, }
+  -- use {"nanozuki/tabby.nvim", config = function() require("tabby").setup() end, }
+  use { 'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'} }
   use 'folke/which-key.nvim'
   use {'b0o/incline.nvim', config = function() require('incline').setup() end }
   use {"lukas-reineke/indent-blankline.nvim", config = cfg('indent-blankline')}
   use {'norcalli/nvim-colorizer.lua', config = cfg('colorizer')}
+  use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }, config = function() require('lualine').setup() end}
   use {'glepnir/dashboard-nvim', config = cfg('dashboard') }
+  use {'nvim-neo-tree/neo-tree.nvim', branch = "v2.x",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }, config = cfg('neotree')
+  }
 
   -- Utils
   use 'szw/vim-maximizer'
