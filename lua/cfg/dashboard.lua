@@ -42,4 +42,5 @@ db.custom_center = {
     action = ':e ~/.config/', shortcut = '         '},
 }
 
-db.custom_footer = 'github.com/artofnothingness'
+db.custom_footer = {'github.com/artofnothingness'}
+
