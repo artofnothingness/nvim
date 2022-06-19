@@ -35,6 +35,7 @@ map('n',  '<C-k>',    '<cmd>lua require("Navigator").up()<CR>',     opts)
 map('n',  '<C-l>',    '<cmd>lua require("Navigator").right()<CR>',  opts)
 map('n',  '<C-j>' ,   '<cmd>lua require("Navigator").down()<CR>',   opts)
 map('n',  '<S-Tab>',  '<Cmd>BufferPrevious<CR>',                    opts)
+map('n',  '<Tab>',    '<Cmd>BufferNext<CR>',                        opts)
 map('n',  '<A-e>',    '<Cmd>BufferClose<CR>',                       opts)
 map('n',  '<A-x>',    '<Cmd>BufferCloseAllButCurrent<CR>',          opts)
 
