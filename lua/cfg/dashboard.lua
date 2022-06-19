@@ -26,23 +26,20 @@ db.custom_header = {
 }
 
 db.custom_center = {
-    {icon = '  ', desc = 'Recently files ',
+    {icon = '  ', desc = 'New File       ',
+    action = 'DashboardNewFile', shortcut = '         '},
+    {icon = '  ', desc = 'Recently Files ',
     action =  'Telescope oldfiles', shortcut = '  SPC f r'},
     {icon = '  ', desc = 'Find  File     ',
     action = 'Telescope find_files', shortcut = '  SPC f f'},
-    {icon = '  ', desc = 'Find  word     ',
+    {icon = '  ', desc = 'Find  Word     ',
     action = 'Telescope live_grep', shortcut = '  SPC f w'},
     {icon = '  ', desc = 'File Browser   ',
     action = 'RnvimrToggle', shortcut = '  m r    '},
-    {icon = '  ', desc = 'New File       ',
-    action = 'DashboardNewFile', shortcut = '         '},
-    {icon = '  ', desc = 'Open config    ', 
-    action = ':e ~/.config/nvim/init.vim', shortcut = '         '},
+    {icon = '  ', desc = 'Neovim Config  ', 
+    action = ':e ~/.config/nvim/init.lua', shortcut = '         '},
+    {icon = '  ', desc = 'Dotfiles       ', 
+    action = ':e ~/.config/', shortcut = '         '},
 }
 
 db.custom_footer = 'github.com/artofnothingness'
-
--- vim.cmd("hi! dashboardHeader   guifg=#9788b9")
--- vim.cmd("hi! dashboardCenter   guifg=#51afef")
--- vim.cmd("hi! dashboardShortcut guifg=#9788b9")
--- vim.cmd("hi! dashboardFooter   guifg=#586268")
