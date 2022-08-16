@@ -112,6 +112,7 @@ local localleader = {
         keys = {
             r  = { ':RnvimrToggle<CR>', 'ranger'},
             v  = { ':Vista!!<CR>', 'vista'},
+            t  = { ':NvimTreeToggle<CR>', 'tree'},
             d  = { ':Dirbuf<CR>', 'Dirbuf'},
             s = {":lua require('spectre').open()<CR>",  'spectre'},
             p  = {
