@@ -1,9 +1,8 @@
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update
-sudo apt install neovim -y
+sudo apt install neovim=`sudo apt policy neovim | grep "   0.8" | sed -n 1p | awk -F ' ' '{print $1}'` -y
 
-sudo apt install python3-pip ripgrep xclip -y
-sudo apt install ccls
+sudo apt install python3-pip ripgrep xclip ccls -y
 pip install cmake-language-server
 pip install pynvim
 
