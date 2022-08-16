@@ -3,4 +3,5 @@ require('maps')
 require('plugins')
 require('which-key-maps')
 
-vim.cmd('colorscheme highlite')
+vim.g.tokyonight_style = "night"
+vim.cmd('colorscheme tokyonight')
