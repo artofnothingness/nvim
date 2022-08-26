@@ -11,5 +11,7 @@ pip install pynvim
 
 sudo apt-get install git -y
 
+sudo apt update
+
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'

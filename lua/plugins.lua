@@ -73,7 +73,6 @@ function()
 }
 
   -- File managing
-  use {'kevinhwang91/rnvimr', config = cfg('rnvimr')}
   use {"elihunter173/dirbuf.nvim"}
 
   -- Markdown
@@ -118,6 +117,8 @@ function()
   }
 
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+  use { "luukvbaal/nnn.nvim", config = function() require("nnn").setup() end }
 
   if packer_bootstrap then
     require('packer').sync()
