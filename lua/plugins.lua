@@ -117,6 +117,8 @@ function()
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
   if packer_bootstrap then
     require('packer').sync()
   end
