@@ -38,7 +38,6 @@ map('n',  '<S-Tab>',  '<Cmd>BufferPrevious<CR>',                    opts)
 map('n',  '<Tab>',    '<Cmd>BufferNext<CR>',                        opts)
 map('n',  '<A-e>',    '<Cmd>BufferClose<CR>',                       opts)
 map('n',  '<A-x>',    '<Cmd>BufferCloseAllButCurrent<CR>',          opts)
-map('n',  '\\',    ':NvimTreeToggle<CR>',          opts)
 
 -- General
 map('n',  '<BS>' ,    ':let @/ = ""<Enter>',  opts)
