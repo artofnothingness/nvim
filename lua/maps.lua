@@ -29,6 +29,10 @@ map('n',  '<M-C-k>' ,  ':resize +3<CR>',           opts)
 map('n',  '<M-C-h>' ,  ':vertical resize -3<CR>',  opts)
 map('n',  '<M-C-l>' ,  ':vertical resize +3<CR>',  opts)
 
+-- File manager
+map('',  '\\',  ':Neotree reveal toggle<CR>',  opts)
+
+
 -- Windows & Tabs
 map('n',  '<C-h>',    '<cmd>lua require("Navigator").left()<CR>',   opts)
 map('n',  '<C-k>',    '<cmd>lua require("Navigator").up()<CR>',     opts)
