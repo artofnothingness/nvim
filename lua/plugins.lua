@@ -46,7 +46,7 @@ function()
   use { 'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'} }
   use 'folke/which-key.nvim'
   use {'b0o/incline.nvim', config = function() require('incline').setup() end }
-  use {"lukas-reineke/indent-blankline.nvim", config = cfg('indent-blankline')}
+  -- use {"lukas-reineke/indent-blankline.nvim", config = cfg('indent-blankline')}
   use {'norcalli/nvim-colorizer.lua', config = cfg('colorizer')}
   use {'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }, config = function() require('lualine').setup() end}
   use {'glepnir/dashboard-nvim', config = cfg('dashboard') }
