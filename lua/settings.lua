@@ -26,7 +26,7 @@ vim.o.autoindent=true                          --Good auto indent
 
 vim.o.expandtab=true                           --Converts tabs to spaces
 vim.o.tabstop=8                           --Insert 2 spaces for a tab
-vim.o.shiftwidth=2                        --Change the number of space characters inserted for indentation
+vim.o.shiftwidth=4                        --Change the number of space characters inserted for indentation
 vim.o.smarttab=true                            --Makes tabbing smarter will realize you have 2 vs 4
 vim.o.softtabstop=0
 
