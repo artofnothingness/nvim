@@ -122,8 +122,8 @@ local localleader = {
                 C = {':PackerClean<CR>', 'clean'},
                 c = {':PackerCompile<CR>', 'compile'},
             },
-            o  = {
-                name = '+Open',
+            c  = {
+                name = '+Confisg',
                 c = {':e ~/.config/nvim/init.lua<CR>', 'configs'},
                 d = {':e ~/.config<CR>', 'dotfiles'},
             },
