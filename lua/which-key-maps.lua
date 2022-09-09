@@ -113,7 +113,12 @@ local localleader = {
             n  = { ':NnnPicker %:p:h<CR>', 'nnn'},
             v  = { ':Vista!!<CR>', 'vista'},
             t  = { ':NvimTreeToggle<CR>', 'tree'},
-            d  = { ':Dirbuf<CR>', 'Dirbuf'},
+            d  = {
+                name = '+Diffview',
+                o = {':DiffviewOpen dev<CR>', 'diff dev'},
+                f = {':DiffviewToggleFiles<CR>', 'toggle files'},
+            },
+            f  = { ':Dirbuf<CR>', 'Dirbuf'},
             s = {":lua require('spectre').open()<CR>",  'spectre'},
             p  = {
                 name = '+Packer',
