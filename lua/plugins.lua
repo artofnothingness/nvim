@@ -122,6 +122,7 @@ function()
   use { 'declancm/windex.nvim',
     config = function() require('windex').setup() end
   }
+  use "EdenEast/nightfox.nvim"
 
   if packer_bootstrap then
     require('packer').sync()

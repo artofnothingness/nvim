@@ -3,4 +3,4 @@ require('maps')
 require('plugins')
 require('which-key-maps')
 
-vim.cmd('colorscheme tokyonight-night')
+vim.cmd('colorscheme carbonfox')
