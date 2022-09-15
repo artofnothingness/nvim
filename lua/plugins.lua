@@ -120,10 +120,21 @@ function()
   use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
   use { "luukvbaal/nnn.nvim", config = function() require("nnn").setup() end }
-  use { 'declancm/windex.nvim',
-    config = function() require('windex').setup() end
-  }
   use "EdenEast/nightfox.nvim"
+
+  use {'mfussenegger/nvim-lint', config = 
+    function() 
+        require('lint').linters_by_ft = {
+            cpp = {'cppcheck'},
+            cmake = {'cmakelint'},
+        }
+
+        vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+        callback = function()
+            require("lint").try_lint()
+        end,
+        })
+    end}
 
   if packer_bootstrap then
     require('packer').sync()
