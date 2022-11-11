@@ -14,7 +14,7 @@ map('n',  '<M-s>',     '<cmd>lua vim.lsp.buf.signature_help()<CR>',  opts)
 map('n',  '<M-k>' ,    '<cmd>lua vim.lsp.buf.hover()<CR>',           opts)
 map('n',  '[d',        '<cmd>lua vim.diagnostic.goto_prev()<CR>',    opts)
 map('n',  ']d',        '<cmd>lua vim.diagnostic.goto_next()<CR>',    opts)
-map('n',  '<A-f>',     '<cmd>lua vim.lsp.buf.formatting()<CR>',      opts)
+map('n',  '<A-f>',     '<cmd>lua vim.lsp.buf.format()<CR>',          opts)
 
 -- Navigation
 map('',   'H' ,        '^',                        opts)
