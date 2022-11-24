@@ -1,4 +1,4 @@
-local map = vim.api.nvim_set_keymap
+local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = ' '
@@ -14,7 +14,7 @@ map('n',  '<M-s>',     '<cmd>lua vim.lsp.buf.signature_help()<CR>',  opts)
 map('n',  '<M-k>' ,    '<cmd>lua vim.lsp.buf.hover()<CR>',           opts)
 map('n',  '[d',        '<cmd>lua vim.diagnostic.goto_prev()<CR>',    opts)
 map('n',  ']d',        '<cmd>lua vim.diagnostic.goto_next()<CR>',    opts)
-map('n',  '<A-f>',     '<cmd>lua vim.lsp.buf.format()<CR>',          opts)
+map('n', '<A-f>', function() vim.lsp.buf.format { async = true } end, opts)
 
 -- Navigation
 map('',   'H' ,        '^',                        opts)
