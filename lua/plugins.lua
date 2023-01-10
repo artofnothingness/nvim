@@ -117,10 +117,16 @@ function()
     }, config = cfg('neotree')
   }
 
-  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+  use {
+    "nvim-zh/colorful-winsep.nvim",
+    config = function ()
+        require('colorful-winsep').setup()
+    end
+  }
 
   use { "luukvbaal/nnn.nvim", config = function() require("nnn").setup() end }
   use "EdenEast/nightfox.nvim"
+
 
   use {'mfussenegger/nvim-lint', config = 
     function() 
