@@ -110,6 +110,8 @@ function()
   use 'yashguptaz/calvera-dark.nvim'
   use 'mjlbach/onedark.nvim'
   use 'tanvirtin/monokai.nvim' 
+  use {'nyoom-engineering/oxocarbon.nvim'}
+
 
   use {'nvim-neo-tree/neo-tree.nvim', branch = "v2.x",
     requires = {
