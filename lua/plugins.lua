@@ -131,6 +131,9 @@ function()
   use { "luukvbaal/nnn.nvim", config = function() require("nnn").setup() end }
   use "EdenEast/nightfox.nvim"
 
+  use { "LeonHeidelbach/trailblazer.nvim", config = cfg('trailblazer')}
+
+
 
   use {'mfussenegger/nvim-lint', config = 
     function() 
