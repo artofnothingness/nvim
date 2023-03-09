@@ -1,9 +1,10 @@
 require 'nvim-treesitter.configs'.setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = { "cpp", "c", "python", "cuda", "json", "cmake", "make", "bash", "lua", "vim", "yaml" },
+  ensure_installed = { "cpp", "c", "python", "cuda", "json", "cmake", "make", "bash", "lua", "vim", "yaml", "markdown", "markdown_inline" },
 
   highlight = {
     enable = true,
+    additional_vim_regex_highlighting = { "markdown" },
   },
 
   incremental_selection = {

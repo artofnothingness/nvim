@@ -1,10 +1,18 @@
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
-if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-  return
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
 end
+
+local packer_bootstrap = ensure_packer()
 
 function cfg(name)
   return string.format('require("cfg/%s")', name)
@@ -40,14 +48,16 @@ function()
 
   -- Syntax
   use "PotatoesMaster/i3-vim-syntax"
-  use 'nvim-treesitter/nvim-treesitter-textobjects'
-  use {'nvim-treesitter/nvim-treesitter', config = cfg('treesitter'),        run = ':TSUpdate'}
+  use {'nvim-treesitter/nvim-treesitter', config = cfg('treesitter'), run = ':TSUpdate'}
+  use {'nvim-treesitter/nvim-treesitter-textobjects', opt = true, requires = {{'nvim-treesitter/nvim-treesitter'}}}
 
   -- UI
   use 'psliwka/vim-smoothie'
   -- use {"nanozuki/tabby.nvim", config = function() require("tabby").setup() end, }
   use { 'romgrk/barbar.nvim', requires = {'kyazdani42/nvim-web-devicons'} }
-  use 'folke/which-key.nvim'
+
+  use { 'folke/which-key.nvim', config = cfg('which-key')}
+
   use {'b0o/incline.nvim', config = function() require('incline').setup() end }
   -- use {"lukas-reineke/indent-blankline.nvim", config = cfg('indent-blankline')}
   use {'norcalli/nvim-colorizer.lua', config = cfg('colorizer')}

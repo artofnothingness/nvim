@@ -64,3 +64,5 @@ vim.o.so=5
 
 vim.o.autoread = true  -- Read the file again if have been changed outside of Vim.
 vim.o.switchbuf="useopen" -- Jump to the first open window that contains the specified buffer.
+
+vim.opt.background = "dark"

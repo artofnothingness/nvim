@@ -1,7 +1,8 @@
 require('settings')
 require('maps')
 require('plugins')
-require('which-key-maps')
 
-vim.opt.background = "dark"
-vim.cmd.colorscheme "oxocarbon"
+local ok, _ = pcall(require, "oxocarbon")
+if ok then
+    vim.cmd.colorscheme "oxocarbon"
+end
