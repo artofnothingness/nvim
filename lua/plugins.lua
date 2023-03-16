@@ -1,6 +1,3 @@
-local fn = vim.fn
-local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-
 local ensure_packer = function()
     local fn = vim.fn
     local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
@@ -14,12 +11,12 @@ end
 
 local packer_bootstrap = ensure_packer()
 
-function cfg(name)
+local function cfg(name)
     return string.format('require("cfg/%s")', name)
 end
 
 return require('packer').startup(
-    function()
+    function(use)
         use 'wbthomason/packer.nvim'
 
         -- LSP && Code
