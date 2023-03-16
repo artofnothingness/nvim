@@ -21,7 +21,7 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 require 'lspconfig'.ccls.setup {
     init_options = {
-        compilationDatabaseDirectory = "",
+        compilationDatabaseDirectory = "/rep/ros2/build/",
         index = {
             threads = 0,
         },

@@ -182,26 +182,44 @@ return require('packer').startup(
 
         use { 'mfussenegger/nvim-dap', config = function()
             local dap = require('dap')
-
-            dap.adapters.codelldb = {
-                type = 'server',
-                port = "${port}",
-                executable = {
-                    command = vim.fn.stdpath 'data' .. '/mason/bin/codelldb',
-                    args = { "--port", "${port}" },
-                }
+            dap.adapters.cppdbg = {
+                id = 'cppdbg',
+                type = 'executable',
+                command = vim.fn.stdpath 'data' .. '/mason/bin/OpenDebugAD7',
             }
+
+            local function BuildArray(generator)
+                local arr = {}
+                for v in generator do
+                    arr[#arr + 1] = v
+                end
+                return arr
+            end
+
+            local prefixed_launch_cmd = "/sda_context/datasets/launch_cmd.txt"
+            local file = io.open(prefixed_launch_cmd, "r")
+            local content = file:read "*a"
+            local parsed_content = BuildArray(string.gmatch(content, "%S+"))
+            local executable = table.remove(parsed_content, 1)
 
             dap.configurations.cpp = {
                 {
                     name = "Launch",
-                    type = "codelldb",
+                    type = "cppdbg",
                     request = "launch",
                     program = function()
-                        return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+                        return executable
                     end,
                     cwd = '${workspaceFolder}',
-                    args = {}
+                    args = parsed_content,
+                    stopAtEntry = true,
+                    setupCommands = {
+                        {
+                            text = '-enable-pretty-printing',
+                            description = 'enable pretty printing',
+                            ignoreFailures = false
+                        },
+                    },
                 }
             }
         end
