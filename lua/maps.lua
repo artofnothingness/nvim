@@ -38,6 +38,14 @@ map('i', '<C-a>', '<Home>', opts)
 map('', '<C-e>', '<End>', opts)
 map('i', '<C-e>', '<End>', opts)
 
+-- Debug
+map('n', '<F5>', '<cmd>DapContinue<CR>', opts)
+map('n', '<F9>', '<cmd>DapStepOut<CR>', opts)
+map('n', '<F10>', '<cmd>DapStepOver<CR>', opts)
+map('n', '<F11>', '<cmd>DapStepInto<CR>', opts)
+map('n', '<F12>', '<cmd>DapTerminate<CR>', opts)
+map('n', '<F12>', '<cmd>DapTerminate<CR>', opts)
+
 
 -- Windows & Tabs
 map('n', '<C-h>', '<cmd>lua require("Navigator").left()<CR>', opts)

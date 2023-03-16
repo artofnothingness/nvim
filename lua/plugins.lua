@@ -69,10 +69,7 @@ return require('packer').startup(
         use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true }, config = function()
             require('lualine').setup()
         end }
-        use { 'glepnir/dashboard-nvim', config = cfg('dashboard') }
         use { 'tversteeg/registers.nvim' }
-
-        -- my next hunk
 
         -- Utils
         use 'szw/vim-maximizer'
@@ -180,126 +177,8 @@ return require('packer').startup(
         end
         }
 
-        use { 'mfussenegger/nvim-dap', config = function()
-            local dap = require('dap')
-            dap.adapters.cppdbg = {
-                id = 'cppdbg',
-                type = 'executable',
-                command = vim.fn.stdpath 'data' .. '/mason/bin/OpenDebugAD7',
-            }
-
-            local function BuildArray(generator)
-                local arr = {}
-                for v in generator do
-                    arr[#arr + 1] = v
-                end
-                return arr
-            end
-
-            local prefixed_launch_cmd = "/sda_context/datasets/launch_cmd.txt"
-            local file = io.open(prefixed_launch_cmd, "r")
-            local content = file:read "*a"
-            local parsed_content = BuildArray(string.gmatch(content, "%S+"))
-            local executable = table.remove(parsed_content, 1)
-
-            dap.configurations.cpp = {
-                {
-                    name = "Launch",
-                    type = "cppdbg",
-                    request = "launch",
-                    program = function()
-                        return executable
-                    end,
-                    cwd = '${workspaceFolder}',
-                    args = parsed_content,
-                    stopAtEntry = true,
-                    setupCommands = {
-                        {
-                            text = '-enable-pretty-printing',
-                            description = 'enable pretty printing',
-                            ignoreFailures = false
-                        },
-                    },
-                }
-            }
-        end
-        }
-        use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" },
-            config = function()
-                require("dapui").setup({
-                    controls = {
-                        element = "repl",
-                        enabled = true,
-                        icons = {
-                            disconnect = "",
-                            pause = "",
-                            play = "",
-                            run_last = "",
-                            step_back = "",
-                            step_into = "",
-                            step_out = "",
-                            step_over = "",
-                            terminate = ""
-                        }
-                    },
-                    element_mappings = {},
-                    expand_lines = true,
-                    floating = {
-                        border = "single",
-                        mappings = {
-                            close = { "q", "<Esc>" }
-                        }
-                    },
-                    force_buffers = true,
-                    icons = {
-                        collapsed = "",
-                        current_frame = "",
-                        expanded = ""
-                    },
-                    layouts = { {
-                        elements = { {
-                            id = "scopes",
-                            size = 0.25
-                        }, {
-                            id = "breakpoints",
-                            size = 0.25
-                        }, {
-                            id = "stacks",
-                            size = 0.25
-                        }, {
-                            id = "watches",
-                            size = 0.25
-                        } },
-                        position = "left",
-                        size = 40
-                    }, {
-                        elements = { {
-                            id = "repl",
-                            size = 0.5
-                        }, {
-                            id = "console",
-                            size = 0.5
-                        } },
-                        position = "bottom",
-                        size = 10
-                    } },
-                    mappings = {
-                        edit = "e",
-                        expand = { "<CR>", "<2-LeftMouse>" },
-                        open = "o",
-                        remove = "d",
-                        repl = "r",
-                        toggle = "t"
-                    },
-                    render = {
-                        indent = 1,
-                        max_value_lines = 100
-                    }
-                }
-                )
-            end
-        }
-
+        use { 'mfussenegger/nvim-dap', config = cfg('dap') }
+        use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" }, config = cfg('dap-ui') }
         use { "folke/neodev.nvim", config = function()
             require("neodev").setup({
                 library = { plugins = { "nvim-dap-ui" }, types = true },

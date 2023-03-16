@@ -45,7 +45,7 @@ wk.register({
             o = { ':Neogit<CR>', 'Neogit Open' },
             d = {
                 name = '+Diffview',
-                o = { ':DiffviewOpen', 'diff open' },
+                o = { ':DiffviewOpen<CR>', 'diff open' },
                 d = { ':DiffviewOpen dev<CR>', 'diff dev' },
                 f = { ':DiffviewToggleFiles<CR>', 'toggle files' },
                 h = { ':DiffviewFileHistory<CR>', 'history' },
@@ -61,15 +61,20 @@ wk.register({
             w = { '<cmd>Telescope live_grep<cr>', 'word' },
         },
         d           = {
-            name = '+Diagnostics',
-            w = { ':Trouble workspace_diagnostics<CR>', 'workspace diagnostics' },
-            f = { ':Trouble document_diagnostics<CR>', 'file diagnostics' },
-            q = { ':Trouble quickfix<CR>', 'quick fixes' },
+            name = '+Debug',
+            t = { '<cmd>require("dapui").toggle()<CR>', 'toggle ui' },
+            b = { '<cmd>DapToggleBreakpoint<CR>', 'toggle breakpoint' },
         },
         c           = {
             name = '+Code',
-            g = { ':Neogen<CR>', 'gen documentation' },
-            r = { '<cmd>lua vim.lsp.buf.rename()<CR>', 'rename' },
+            g    = { ':Neogen<CR>', 'gen documentation' },
+            r    = { '<cmd>lua vim.lsp.buf.rename()<CR>', 'rename' },
+            d    = {
+                name = '+Diagnostics',
+                w = { ':Trouble workspace_diagnostics<CR>', 'workspace diagnostics' },
+                f = { ':Trouble document_diagnostics<CR>', 'file diagnostics' },
+                q = { ':Trouble quickfix<CR>', 'quick fixes' },
+            },
         },
         w           = {
             name = '+Workspace',
@@ -108,6 +113,7 @@ wk.register({
 
 wk.register({
         n = { ':NnnPicker %:p:h<CR>', 'nnn' },
+        m = { ':Mason<CR>', 'mason' },
         v = { ':Vista!!<CR>', 'vista' },
         s = { ":lua require('spectre').open()<CR>", 'spectre' },
         p = {
