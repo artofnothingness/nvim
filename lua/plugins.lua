@@ -40,6 +40,9 @@ return require('packer').startup(
             },
             config = cfg('cmp')
         }
+        use { "dnlhc/glance.nvim", config = function()
+            require('glance').setup {}
+        end }
 
         use { "danymat/neogen", config = function() require('neogen').setup {} end,
             requires = "nvim-treesitter/nvim-treesitter",
@@ -169,6 +172,8 @@ return require('packer').startup(
                     end,
                 })
             end }
+
+        use {'stevearc/dressing.nvim'}
 
         if packer_bootstrap then
             require('packer').sync()

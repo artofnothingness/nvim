@@ -5,10 +5,11 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = 'm'
 
 -- LSP
-map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+map('n', 'gd', '<cmd>Glance definitions<CR>', opts)
+map('n', 'gy', '<cmd>Glance type_definitions<CR>', opts)
+map('n', 'gi', '<cmd>Glance implementations<CR>', opts)
+map('n', 'gr', '<cmd>Glance references<CR>', opts)
 map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 map('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 map('n', '<M-s>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
 map('n', '<M-k>', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
