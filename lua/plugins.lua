@@ -173,7 +173,121 @@ return require('packer').startup(
                 })
             end }
 
-        use {'stevearc/dressing.nvim'}
+        use { 'stevearc/dressing.nvim' }
+
+        use { "williamboman/mason.nvim", config = function()
+            require("mason").setup()
+        end
+        }
+
+        use { 'mfussenegger/nvim-dap', config = function()
+            local dap = require('dap')
+
+            dap.adapters.codelldb = {
+                type = 'server',
+                port = "${port}",
+                executable = {
+                    command = vim.fn.stdpath 'data' .. '/mason/bin/codelldb',
+                    args = { "--port", "${port}" },
+                }
+            }
+
+            dap.configurations.cpp = {
+                {
+                    name = "Launch",
+                    type = "codelldb",
+                    request = "launch",
+                    program = function()
+                        return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+                    end,
+                    cwd = '${workspaceFolder}',
+                    args = {}
+                }
+            }
+        end
+        }
+        use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" },
+            config = function()
+                require("dapui").setup({
+                    controls = {
+                        element = "repl",
+                        enabled = true,
+                        icons = {
+                            disconnect = "",
+                            pause = "",
+                            play = "",
+                            run_last = "",
+                            step_back = "",
+                            step_into = "",
+                            step_out = "",
+                            step_over = "",
+                            terminate = ""
+                        }
+                    },
+                    element_mappings = {},
+                    expand_lines = true,
+                    floating = {
+                        border = "single",
+                        mappings = {
+                            close = { "q", "<Esc>" }
+                        }
+                    },
+                    force_buffers = true,
+                    icons = {
+                        collapsed = "",
+                        current_frame = "",
+                        expanded = ""
+                    },
+                    layouts = { {
+                        elements = { {
+                            id = "scopes",
+                            size = 0.25
+                        }, {
+                            id = "breakpoints",
+                            size = 0.25
+                        }, {
+                            id = "stacks",
+                            size = 0.25
+                        }, {
+                            id = "watches",
+                            size = 0.25
+                        } },
+                        position = "left",
+                        size = 40
+                    }, {
+                        elements = { {
+                            id = "repl",
+                            size = 0.5
+                        }, {
+                            id = "console",
+                            size = 0.5
+                        } },
+                        position = "bottom",
+                        size = 10
+                    } },
+                    mappings = {
+                        edit = "e",
+                        expand = { "<CR>", "<2-LeftMouse>" },
+                        open = "o",
+                        remove = "d",
+                        repl = "r",
+                        toggle = "t"
+                    },
+                    render = {
+                        indent = 1,
+                        max_value_lines = 100
+                    }
+                }
+                )
+            end
+        }
+
+        use { "folke/neodev.nvim", config = function()
+            require("neodev").setup({
+                library = { plugins = { "nvim-dap-ui" }, types = true },
+            })
+        end
+        }
 
         if packer_bootstrap then
             require('packer').sync()
