@@ -27,13 +27,13 @@ require("trailblazer").setup({
         -- buffer_local_chron, buffer_local_line_sorted
         current_trail_mark_mode = "global_chron",
         current_trail_mark_list_type = "quickfix", -- currently only quickfix lists are supported
-        trail_mark_list_rows = 10, -- number of rows to show in the trail mark list
-        verbose_trail_mark_select = true, -- print current mode notification on mode change
-        mark_symbol = "•", --  will only be used if trail_mark_symbol_line_indicators_enabled = true
-        newest_mark_symbol = "⬤", -- disable this mark symbol by setting its value to ""
-        cursor_mark_symbol = "⬤", -- disable this mark symbol by setting its value to ""
-        next_mark_symbol = "⬤", -- disable this mark symbol by setting its value to ""
-        previous_mark_symbol = "⬤", -- disable this mark symbol by setting its value to ""
+        trail_mark_list_rows = 10,                 -- number of rows to show in the trail mark list
+        verbose_trail_mark_select = true,          -- print current mode notification on mode change
+        mark_symbol = "•",                       --  will only be used if trail_mark_symbol_line_indicators_enabled = true
+        newest_mark_symbol = "⬤",                -- disable this mark symbol by setting its value to ""
+        cursor_mark_symbol = "⬤",                -- disable this mark symbol by setting its value to ""
+        next_mark_symbol = "⬤",                  -- disable this mark symbol by setting its value to ""
+        previous_mark_symbol = "⬤",              -- disable this mark symbol by setting its value to ""
         multiple_mark_symbol_counters_enabled = true,
         number_line_color_enabled = true,
         trail_mark_in_text_highlights_enabled = true,
@@ -59,9 +59,9 @@ require("trailblazer").setup({
         -- the "current trail mark cursor" to which you would otherwise move first before continuing
         -- to move through your trail mark stack.
         move_to_nearest_before_peek = false,
-        move_to_nearest_before_peek_motion_directive_up = "fpath_up", -- "up", "fpath_up" -> For more information see section "TrailBlazerMoveToNearest Motion Directives"
+        move_to_nearest_before_peek_motion_directive_up = "fpath_up",     -- "up", "fpath_up" -> For more information see section "TrailBlazerMoveToNearest Motion Directives"
         move_to_nearest_before_peek_motion_directive_down = "fpath_down", -- "down", "fpath_down" -> For more information see section "TrailBlazerMoveToNearest Motion Directives"
-        move_to_nearest_before_peek_dist_type = "lin_char_dist", -- "man_dist", "lin_char_dist" -> Manhattan Distance or Linear Character Distance
+        move_to_nearest_before_peek_dist_type = "lin_char_dist",          -- "man_dist", "lin_char_dist" -> Manhattan Distance or Linear Character Distance
     },
     event_list = {
         -- Add the events you would like to add custom callbacks for here. For more information see section "Custom Events"
@@ -70,8 +70,10 @@ require("trailblazer").setup({
         -- "TrailBlazerCurrentTrailMarkStackChanged",
         -- "TrailBlazerTrailMarkStackSortModeChanged"
     },
-    mappings = { -- rename this to "force_mappings" to completely override default mappings and not merge with them
-        nv = { -- Mode union: normal & visual mode. Can be extended by adding i, x, ...
+    mappings = {
+                 -- rename this to "force_mappings" to completely override default mappings and not merge with them
+        nv = {
+                 -- Mode union: normal & visual mode. Can be extended by adding i, x, ...
             motions = {
                 new_trail_mark = '<A-.>',
                 track_back = '<A-,>',
@@ -94,7 +96,8 @@ require("trailblazer").setup({
         --     ...
         -- },
     },
-    quickfix_mappings = { -- rename this to "force_quickfix_mappings" to completely override default mappings and not merge with them
+    quickfix_mappings = {
+                          -- rename this to "force_quickfix_mappings" to completely override default mappings and not merge with them
         nv = {
             motions = {
                 qf_motion_move_trail_mark_stack_cursor = "<CR>",
@@ -115,5 +118,5 @@ require("trailblazer").setup({
         }
     },
     -- Your custom highlight group overrides go here
-    -- hl_groups = {} 
+    -- hl_groups = {}
 })
