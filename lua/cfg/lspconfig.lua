@@ -30,7 +30,7 @@ require 'lspconfig'.ccls.setup {
             excludeArgs = { "-fconcepts" },
         },
     },
-    root_dir = util.root_pattern("build", "compile_commands.json", ".git"),
+    root_dir = util.root_pattern(".git"),
 }
 
 
