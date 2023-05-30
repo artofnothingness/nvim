@@ -38,7 +38,7 @@ wk.setup {
 
 
 wk.register({
-        ['<Space>'] = { ':Dashboard<CR>', 'Dashboard' },
+        ['<Space>'] = { ':tab new<CR>', 'new tab' },
         g           = {
             name = '+Git',
             b = { ':Git blame<CR>', 'blame' },

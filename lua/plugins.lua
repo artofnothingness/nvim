@@ -58,8 +58,8 @@ return require('packer').startup(
 
         -- UI
         use 'psliwka/vim-smoothie'
-        -- use {"nanozuki/tabby.nvim", config = function() require("tabby").setup() end, }
-        use { 'romgrk/barbar.nvim', requires = { 'kyazdani42/nvim-web-devicons' } }
+        use {"nanozuki/tabby.nvim", config = function() require("tabby").setup() end, }
+        -- use { 'romgrk/barbar.nvim', requires = { 'kyazdani42/nvim-web-devicons' } }
 
         use { 'folke/which-key.nvim', config = cfg('which-key') }
 
