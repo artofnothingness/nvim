@@ -143,7 +143,16 @@ require("lazy").setup({
     'yashguptaz/calvera-dark.nvim',
     'mjlbach/onedark.nvim',
     'tanvirtin/monokai.nvim',
-    { 'nyoom-engineering/oxocarbon.nvim', lazy = false, config = function() vim.cmd([[colorscheme carbonfox]]) end },
+    {
+        'nyoom-engineering/oxocarbon.nvim', lazy = false,
+        config = function()
+            vim.cmd([[colorscheme highlite]])
+            vim.cmd([[colorscheme carbonfox]])
+        end,
+        dependencies = {
+            'Iron-E/nvim-highlite',
+        },
+    },
 
 
     { 'nvim-neo-tree/neo-tree.nvim', branch = "v2.x",
