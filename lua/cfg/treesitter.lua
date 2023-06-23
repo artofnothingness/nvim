@@ -5,7 +5,6 @@ require 'nvim-treesitter.configs'.setup {
 
     highlight = {
         enable = true,
-        additional_vim_regex_highlighting = { "markdown" },
     },
 
     incremental_selection = {
@@ -18,56 +17,6 @@ require 'nvim-treesitter.configs'.setup {
         },
     },
 
-    indent = {
-        enable = true,
-    },
-
     -- Install languages synchronously (only applied to `ensure_installed`)
     sync_install = false,
-
-
-    textobjects = {
-        swap = {
-            enable = true,
-            swap_next = {
-                ["]sa"] = "@parameter.inner",
-            },
-            swap_previous = {
-                ["[sa"] = "@parameter.inner",
-            },
-        },
-        select = {
-            enable = true,
-            lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
-            keymaps = {
-                -- You can use the capture groups defined in textobjects.scm
-                ['af'] = '@function.outer',
-                ['if'] = '@function.inner',
-                ['ac'] = '@class.outer',
-                ['ic'] = '@class.inner',
-            },
-        },
-        move = {
-            enable = true,
-            set_jumps = true, -- whether to set jumps in the jumplist
-            goto_next_start = {
-                [']f'] = '@function.outer',
-                [']c'] = '@class.outer',
-                [']a'] = '@parameter.inner',
-            },
-            goto_next_end = {
-                [']['] = '@function.outer',
-                [']C'] = '@class.outer',
-            },
-            goto_previous_start = {
-                ['[f'] = '@function.outer',
-                ['[c'] = '@class.outer',
-                ['[a'] = '@parameter.inner',
-            },
-            goto_previous_end = {
-                ['[]'] = '@function.outer',
-                ['[C'] = '@class.outer',
-            },
-        },
-    },
 }
