@@ -2,7 +2,7 @@ return {
     { 
         "williamboman/mason.nvim",
         keys = {
-            {'<localleader>m', ':Mason<CR>', 'mason' },
+            {'<localleader>m', ':Mason<CR>'},
         }
     },
 
@@ -24,8 +24,8 @@ return {
         dependencies = { "mfussenegger/nvim-dap" }, 
         config = function () require('plugins/cfg/dap-ui') end,
         keys = {
-            {'<leader>dt', '<cmd>require("dapui").toggle()<CR>', desc = 'toggle ui' },
-            {'<leader>db', '<cmd>DapToggleBreakpoint<CR>', desc = 'toggle breakpoint' },
+            {'<leader>dt', '<cmd>require("dapui").toggle()<CR>', desc = "DapUI"},
+            {'<leader>db', '<cmd>DapToggleBreakpoint<CR>', desc = "Toggle Breakpoint"},
         }
     },
 

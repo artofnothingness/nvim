@@ -2,7 +2,7 @@ return {
     {
         'windwp/nvim-spectre',
         keys = {
-            {'<localleader>s', ":lua require('spectre').open()<CR>", 'spectre' },
+            {'<localleader>s', ":Spectre<CR>"},
         }
     },
 
@@ -16,12 +16,12 @@ return {
         },
         config = function () require('plugins/cfg/telescope') end,
         keys = {
-            {'<leader>fs', ':Telescope lsp_document_symbols<CR>', 'file symbols' },
-            {'<leader>fS', ':Telescope lsp_dynamic_workspace_symbols<CR>', 'ws symbols' },
-            {'<leader>ff', '<cmd>Telescope find_files<CR>', 'files .' },
-            {'<leader>fb', '<cmd>Telescope buffers<CR>', 'buffers' },
-            {'<leader>fr', '<cmd>Telescope oldfiles<CR>', 'recent files' },
-            {'<leader>fw', '<cmd>Telescope live_grep<cr>', 'word' },
+            {'<leader>fs', ':Telescope lsp_document_symbols<CR>', desc = 'file symbols' },
+            {'<leader>fS', ':Telescope lsp_dynamic_workspace_symbols<CR>', desc = 'ws symbols' },
+            {'<leader>ff', '<cmd>Telescope find_files<CR>', desc = 'files .' },
+            {'<leader>fb', '<cmd>Telescope buffers<CR>', desc = 'buffers' },
+            {'<leader>fr', '<cmd>Telescope oldfiles<CR>', desc = 'recent files' },
+            {'<leader>fw', '<cmd>Telescope live_grep<cr>', desc = 'word' },
         }
     }
 }

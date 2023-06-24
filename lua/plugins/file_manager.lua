@@ -2,14 +2,14 @@ return {
     { 
         "luukvbaal/nnn.nvim",
         keys = {
-            {'<localleader>n', ':NnnPicker %:p:h<CR>', 'nnn' },
+            {'<localleader>n', ':NnnPicker %:p:h<CR>'},
         }
     },
     
     { 
         "elihunter173/dirbuf.nvim",
         keys = {
-            {'<localleader>d', ':Dirbuf<CR>', 'Dirbuf' },
+            {'<localleader>d', ':Dirbuf<CR>'},
         }
     },
 

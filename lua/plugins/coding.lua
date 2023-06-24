@@ -4,9 +4,9 @@ return {
         "folke/trouble.nvim", 
         dependencies = "kyazdani42/nvim-web-devicons",
         keys = {
-            {'<leader>cdw', ':Trouble workspace_diagnostics<CR>', 'workspace diagnostics' },
-            {'<leader>cdf', ':Trouble document_diagnostics<CR>', 'file diagnostics' },
-            {'<leader>cdq', ':Trouble quickfix<CR>', 'quick fixes' },
+            {'<leader>cdw', ':Trouble workspace_diagnostics<CR>'},
+            {'<leader>cdf', ':Trouble document_diagnostics<CR>'},
+            {'<leader>cdq', ':Trouble quickfix<CR>'},
         }
     },
 
