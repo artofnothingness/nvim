@@ -1,3 +1,5 @@
+require('load')
+
 require('settings')
 require('maps')
-require('plugins')
+require("lazy").setup("plugins")
