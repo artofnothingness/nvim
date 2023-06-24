@@ -6,6 +6,7 @@ return {
             {'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', desc = 'go to definition'},
             {'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', desc = 'go to declaration'},
             {'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>', desc = 'code action'},
+            {'<leader>cr', '<cmd>lua vim.lsp.buf.rename()<CR>', desc = 'rename' },
             {'<M-s>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', desc = 'sign help'},
             {'<M-k>', '<cmd>lua vim.lsp.buf.hover()<CR>', desc = 'hover'},
             {'gr', '<cmd>Glance references<CR>', desc = 'go to references'},

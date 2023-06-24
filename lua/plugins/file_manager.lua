@@ -1,6 +1,17 @@
 return {
-    { "luukvbaal/nnn.nvim"},
-    { "elihunter173/dirbuf.nvim" },
+    { 
+        "luukvbaal/nnn.nvim",
+        keys = {
+            {'<localleader>n', ':NnnPicker %:p:h<CR>', 'nnn' },
+        }
+    },
+    
+    { 
+        "elihunter173/dirbuf.nvim",
+        keys = {
+            {'<localleader>d', ':Dirbuf<CR>', 'Dirbuf' },
+        }
+    },
 
     { 'nvim-neo-tree/neo-tree.nvim', branch = "v2.x",
         dependencies = {

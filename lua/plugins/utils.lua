@@ -3,7 +3,15 @@ return {
     'mbbill/undotree',
     { 'numToStr/Comment.nvim' },
     { 'windwp/nvim-autopairs' },
-    'godlygeek/tabular',
+
+    {
+        'godlygeek/tabular', 
+        keys = {
+            {'<leader>t,', ':Tabularize /,\\zs<CR>', 'comma', mode = 'v'},
+            {'<leader>t=', ':Tabularize /=<CR>', 'equal', mode = 'v' },
+        }
+    },
+
     { 'akinsho/toggleterm.nvim', config = function () require('plugins/cfg/toggleterm') end},
 
     {

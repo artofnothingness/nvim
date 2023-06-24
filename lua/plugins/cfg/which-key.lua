@@ -38,50 +38,15 @@ wk.setup {
 
 
 wk.register({
-        ['<Space>'] = { ':tab new<CR>', 'new tab' },
-        g           = {
+        g = {
             name = '+Git',
-            b = { ':Git blame<CR>', 'blame' },
-            o = { ':Neogit<CR>', 'Neogit Open' },
-            d = {
-                name = '+Diffview',
-                o = { ':DiffviewOpen<CR>', 'diff open' },
-                d = { ':DiffviewOpen dev<CR>', 'diff dev' },
-                f = { ':DiffviewToggleFiles<CR>', 'toggle files' },
-                h = { ':DiffviewFileHistory<CR>', 'history' },
-            },
+            d = { name = '+Diffview' },
         },
-        f           = {
-            name = '+Find',
-            s = { ':Telescope lsp_document_symbols<CR>', 'file symbols' },
-            S = { ':Telescope lsp_dynamic_workspace_symbols<CR>', 'ws symbols' },
-            f = { '<cmd>Telescope find_files<CR>', 'files .' },
-            b = { '<cmd>Telescope buffers<CR>', 'buffers' },
-            r = { '<cmd>Telescope oldfiles<CR>', 'recent files' },
-            w = { '<cmd>Telescope live_grep<cr>', 'word' },
-        },
-        d           = {
-            name = '+Debug',
-            t = { '<cmd>require("dapui").toggle()<CR>', 'toggle ui' },
-            b = { '<cmd>DapToggleBreakpoint<CR>', 'toggle breakpoint' },
-        },
-        c           = {
+        f = { name = '+Find', },
+        d = { name = '+Debug', },
+        c = {
             name = '+Code',
-            g    = { ':Neogen<CR>', 'gen documentation' },
-            r    = { '<cmd>lua vim.lsp.buf.rename()<CR>', 'rename' },
-            d    = {
-                name = '+Diagnostics',
-                w = { ':Trouble workspace_diagnostics<CR>', 'workspace diagnostics' },
-                f = { ':Trouble document_diagnostics<CR>', 'file diagnostics' },
-                q = { ':Trouble quickfix<CR>', 'quick fixes' },
-            },
-        },
-        w           = {
-            name = '+Workspace',
-            R = { ':Dirbuf<CR>', 'Dirbuf' },
-            l = { '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', 'list workspaces' },
-            r = { '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', 'remove workspaces' },
-            a = { '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', 'add workspace' },
+            d = { name = '+Diagnostics' },
         },
     },
     {
@@ -96,9 +61,7 @@ wk.register({
 
 wk.register({
         t = {
-            name = '+Tabularize',
-            [','] = { ':Tabularize /,\\zs<CR>', 'comma' },
-            ['='] = { ':Tabularize /=<CR>', 'equal' },
+            name = '+Tabular',
         },
     },
     {
@@ -112,21 +75,8 @@ wk.register({
 )
 
 wk.register({
-        n = { ':NnnPicker %:p:h<CR>', 'nnn' },
-        m = { ':Mason<CR>', 'mason' },
-        v = { ':Vista!!<CR>', 'vista' },
-        s = { ":lua require('spectre').open()<CR>", 'spectre' },
-        p = {
-            name = '+Packer',
-            u = { ':PackerUpdate<CR>', 'update' },
-            s = { ':PackerSync<CR>', 'sync' },
-            C = { ':PackerClean<CR>', 'clean' },
-            c = { ':PackerCompile<CR>', 'compile' },
-        },
         c = {
             name = '+Configs',
-            c = { ':e ~/.config/nvim/init.lua<CR>', 'configs' },
-            d = { ':e ~/.config<CR>', 'dotfiles' },
         },
     },
     {

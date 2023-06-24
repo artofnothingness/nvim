@@ -1,5 +1,11 @@
 return {
-    { "williamboman/mason.nvim" },
+    { 
+        "williamboman/mason.nvim",
+        keys = {
+            {'<localleader>m', ':Mason<CR>', 'mason' },
+        }
+    },
+
     { 
         'mfussenegger/nvim-dap', 
         config = function () require('plugins/cfg/dap') end,
@@ -12,7 +18,16 @@ return {
             {'<F12>', '<cmd>DapTerminate<CR>'},
         }
     },
-    { "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" }, config = function () require('plugins/cfg/dap-ui') end},
+
+    { 
+        "rcarriga/nvim-dap-ui", 
+        dependencies = { "mfussenegger/nvim-dap" }, 
+        config = function () require('plugins/cfg/dap-ui') end,
+        keys = {
+            {'<leader>dt', '<cmd>require("dapui").toggle()<CR>', desc = 'toggle ui' },
+            {'<leader>db', '<cmd>DapToggleBreakpoint<CR>', desc = 'toggle breakpoint' },
+        }
+    },
 
 }
 

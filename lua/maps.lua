@@ -36,3 +36,8 @@ map('v', '>', '>gv', opts)
 map('i', '<S-TAB>', '<C-d>', opts)
 map('', '<A-w>', ':w<CR>', opts)
 map('', '<A-q>', ':q<CR>', opts)
+
+-- Configs
+
+map('', '<localleader>cn', ':e ~/.config/nvim/init.lua<CR>', opts)
+map('', '<localleader>cc', ':e ~/.config<CR>', opts)
