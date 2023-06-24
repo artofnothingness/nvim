@@ -20,6 +20,7 @@ return {
 
     {
         'nvim-treesitter/nvim-treesitter', 
+        lazy = false,
         build = ":TSUpdate",
         cmd = { "TSUpdateSync" },
         version = false, 
