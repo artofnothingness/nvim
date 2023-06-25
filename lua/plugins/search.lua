@@ -2,7 +2,7 @@ return {
     {
         'windwp/nvim-spectre',
         keys = {
-            {'<localleader>s', ":Spectre<CR>"},
+            {'<localleader>s', ":Spectre<CR>", desc = "Spectre"},
         }
     },
 

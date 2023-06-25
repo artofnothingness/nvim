@@ -2,14 +2,14 @@ return {
     { 
         "luukvbaal/nnn.nvim",
         keys = {
-            {'<localleader>n', ':NnnPicker %:p:h<CR>'},
+            {'<localleader>n', ':NnnPicker %:p:h<CR>', desc = "NNN"},
         }
     },
     
     { 
         "elihunter173/dirbuf.nvim",
         keys = {
-            {'<localleader>d', ':Dirbuf<CR>'},
+            {'<localleader>d', ':Dirbuf<CR>', desc = "Dirbug"},
         }
     },
 
@@ -21,7 +21,7 @@ return {
         }, 
         config = function () require('plugins/cfg/neotree') end,
         keys = {
-            { '\\', ':Neotree reveal toggle<CR>' }
+            { '\\', ':Neotree reveal toggle<CR>', desc = "Neotree"}
         }
     },
 }

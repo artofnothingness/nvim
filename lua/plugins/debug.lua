@@ -2,7 +2,7 @@ return {
     { 
         "williamboman/mason.nvim",
         keys = {
-            {'<localleader>m', ':Mason<CR>'},
+            {'<localleader>m', ':Mason<CR>', desc = "Mason"},
         }
     },
 

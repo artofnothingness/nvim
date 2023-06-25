@@ -14,7 +14,7 @@ return {
         'liuchengxu/vista.vim', 
         config = function() require('plugins/cfg/vista') end,
         keys = {
-            {'<localleader>v', ':Vista!!<CR>', 'vista' },
+            {'<localleader>v', ':Vista!!<CR>', desc = 'vista' },
         }
     },
 
