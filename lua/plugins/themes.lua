@@ -1,5 +1,12 @@
 return {
-    'folke/tokyonight.nvim',
+    { 
+        'folke/tokyonight.nvim',
+        config = function ()
+         vim.cmd.colorscheme 'highlite'
+         vim.cmd.colorscheme 'tokyonight-night'
+        end
+    },
+
     "EdenEast/nightfox.nvim",
     'kyazdani42/nvim-web-devicons',
     'Iron-E/nvim-highlite',
@@ -15,12 +22,9 @@ return {
         'maxmx03/fluoromachine.nvim',
         config = function ()
          require 'fluoromachine'.setup {
-            glow = true,
+            glow = false,
             theme = 'fluoromachine'
          }
-
-         vim.cmd.colorscheme 'highlite'
-         vim.cmd.colorscheme 'fluoromachine'
         end
     },
 }
