@@ -2,8 +2,6 @@ return {
     { 
         'folke/tokyonight.nvim',
         config = function ()
-         vim.cmd.colorscheme 'highlite'
-         vim.cmd.colorscheme 'tokyonight-night'
         end
     },
 
@@ -17,14 +15,11 @@ return {
     'yashguptaz/calvera-dark.nvim',
     'mjlbach/onedark.nvim',
     'tanvirtin/monokai.nvim',
-    'nyoom-engineering/oxocarbon.nvim',
     {
-        'maxmx03/fluoromachine.nvim',
-        config = function ()
-         require 'fluoromachine'.setup {
-            glow = false,
-            theme = 'fluoromachine'
-         }
+        'nyoom-engineering/oxocarbon.nvim',
+        config = function()
+            vim.cmd.colorscheme 'highlite'
+            vim.cmd.colorscheme 'oxocarbon'
         end
     },
 }
