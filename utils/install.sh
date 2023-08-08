@@ -11,3 +11,5 @@ sudo apt install \
     ccls -y
 
 pip install cmake-language-server pynvim
+
+source "${pwd}/install_clangd.sh"

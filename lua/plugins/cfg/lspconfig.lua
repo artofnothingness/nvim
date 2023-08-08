@@ -16,23 +16,10 @@ end
 
 require 'lspconfig'.cmake.setup {}
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
-
-require 'lspconfig'.ccls.setup {
-    init_options = {
-        compilationDatabaseDirectory = "/rep/ros2/build/",
-        index = {
-            threads = 0,
-        },
-        clang = {
-            extraArgs = { "-std=c++17" },
-            excludeArgs = { "-fconcepts" },
-        },
-    },
+require'lspconfig'.clangd.setup{
+    cmd = {'clangd', '--compile-commands-dir=/rep/ros2/build'},
     root_dir = util.root_pattern(".git"),
-}
-
+ }
 
 require('lspconfig').pyright.setup {
     on_attach = function(client, bufnr)
