@@ -6,25 +6,6 @@ dap.adapters.cppdbg = {
     command = vim.fn.stdpath 'data' .. '/mason/bin/OpenDebugAD7',
 }
 
-local function BuildArray(generator)
-    local arr = {}
-    for v in generator do
-        arr[#arr + 1] = v
-    end
-    return arr
-end
-
-local function parse_launch_args(path)
- local file = io.open(path, "r")
- local content = file:read "*a"
- local parsed_content = BuildArray(string.gmatch(content, "%S+"))
- local executable = table.remove(parsed_content, 1)
- return execuable, parsed_content 
-end
-
-
-vim.g.launch_text_file = nil 
-
 dap.configurations.cpp = {
     {
         name = "Launch",
