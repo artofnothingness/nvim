@@ -5,11 +5,8 @@ sudo apt update
 sudo apt install \
     neovim -y \
     git -y \
-    python3-pip \
-    ripgrep \
-    xclip \
-    ccls -y
+    python3-pip -y \
+    ripgrep -y \
+    xclip -y
 
-pip install cmake-language-server pynvim
-
-source "${pwd}/install_clangd.sh"
+pip install pynvim
