@@ -1,5 +1,16 @@
 local dap = require('dap')
 
+function os.capture(cmd, raw)
+  local f = assert(io.popen(cmd, 'r'))
+  local s = assert(f:read('*a'))
+  f:close()
+  if raw then return s end
+  s = string.gsub(s, '^%s+', '')
+  s = string.gsub(s, '%s+$', '')
+  s = string.gsub(s, '[\n\r]+', ' ')
+  return s
+end
+
 dap.adapters.cppdbg = {
     id = 'cppdbg',
     type = 'executable',
@@ -12,7 +23,13 @@ dap.configurations.cpp = {
         type = "cppdbg",
         request = "launch",
         program = function()
-            return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+            local exec
+            local pkg = vim.fn.input('Pkg')
+            local launch = vim.fn.input('launch')
+            local args = vim.fn.input('args')
+            local cmd = os.capture('ros2 launch ' .. pkg .. ' ' .. launch .. ' ' .. args .. '--launch-prefix=">&2"', false)
+            print(cmd)
+            return  exec
         end,
         cwd = '${workspaceFolder}',
         args = {},

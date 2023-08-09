@@ -3,6 +3,9 @@ return {
         "williamboman/mason.nvim",
         config = function() require('mason').setup() end,
         lazy = false,
+        keys = {
+            { '<localleader>m', ':Mason<CR>', desc = "Mason" },
+        }
     },
     {
         "williamboman/mason-lspconfig.nvim",
