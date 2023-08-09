@@ -23,13 +23,14 @@ dap.configurations.cpp = {
         type = "cppdbg",
         request = "launch",
         program = function()
+            local retnraslate = "~/.config/nvim/utils/retranslate.sh"
             local exec
-            local pkg = vim.fn.input('Pkg')
-            local launch = vim.fn.input('launch')
-            local args = vim.fn.input('args')
-            local cmd = os.capture('ros2 launch ' .. pkg .. ' ' .. launch .. ' ' .. args .. '--launch-prefix=">&2"', false)
+            local pkg = vim.fn.input('Ros2 package name: ')
+            local launch = vim.fn.input('Launch file: ')
+            local args = vim.fn.input('Args: ')
+            local cmd = os.capture('ros2 launch ' .. pkg .. ' ' .. launch .. ' ' .. args .. '--launch-prefix=' .. retnraslate, false)
             print(cmd)
-            return  exec
+            return exec
         end,
         cwd = '${workspaceFolder}',
         args = {},
