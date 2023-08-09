@@ -9,6 +9,7 @@ sudo apt install \
     ripgrep -y \
     unzip -y \
     wget -y \
+    python3-venv -y \
     xclip -y
 
 pip install pynvim
