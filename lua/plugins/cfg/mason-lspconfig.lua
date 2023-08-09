@@ -1,4 +1,4 @@
 require('mason-lspconfig').setup {
-    ensure_installed = { "lua_ls", "pyright", "clangd", "cmake-language-server" },
+    ensure_installed = { "lua_ls", "pyright", "clangd", "cmake" },
     automatic_installation = true,
 }
