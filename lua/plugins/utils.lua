@@ -2,20 +2,20 @@ return {
     'szw/vim-maximizer',
     'mbbill/undotree',
     { 'numToStr/Comment.nvim' },
-    { 'windwp/nvim-autopairs' },
 
     {
-        'godlygeek/tabular', 
+        'godlygeek/tabular',
         keys = {
-            {'<leader>t,', ':Tabularize /,\\zs<CR>', 'comma', mode = 'v'},
-            {'<leader>t=', ':Tabularize /=<CR>', 'equal', mode = 'v' },
+            { '<leader>t,', ':Tabularize /,\\zs<CR>', 'comma', mode = 'v' },
+            { '<leader>t=', ':Tabularize /=<CR>',     'equal', mode = 'v' },
         }
     },
 
-    { 'akinsho/toggleterm.nvim', config = function () require('plugins/cfg/toggleterm') end},
+    { 'akinsho/toggleterm.nvim', config = function() require('plugins/cfg/toggleterm') end },
 
     {
         "ahmedkhalf/project.nvim",
+        lazy = false,
         config = function()
             require("project_nvim").setup {
                 detection_methods = { "lsp", "pattern" },
@@ -24,8 +24,8 @@ return {
             }
         end
     },
-    { 
-        "folke/neodev.nvim", 
+    {
+        "folke/neodev.nvim",
         config = function()
             require("neodev").setup({
                 library = { plugins = { "nvim-dap-ui" }, types = true },

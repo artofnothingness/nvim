@@ -8,8 +8,23 @@ return {
             'hrsh7th/cmp-nvim-lsp-signature-help',
             'hrsh7th/cmp-cmdline',
             'dmitmel/cmp-cmdline-history',
-            'petertriho/cmp-git'
+            'petertriho/cmp-git',
+            'windwp/nvim-autopairs'
         },
         config = function() require('plugins/cfg/cmp') end
+    },
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        opts = {}
+    },
+    {
+        "kylechui/nvim-surround",
+        version = "*", -- Use for stability; omit to use `main` branch for the latest features
+        event = "VeryLazy",
+        config = function()
+            require("nvim-surround").setup({
+            })
+        end
     }
 }

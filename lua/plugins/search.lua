@@ -6,7 +6,6 @@ return {
         }
     },
     { 'nvim-telescope/telescope-ui-select.nvim' },
-
     {
         'nvim-telescope/telescope.nvim',
         dependencies = {
@@ -22,5 +21,5 @@ return {
             { '<leader>fr', '<cmd>Telescope oldfiles<CR>',                  desc = 'recent files' },
             { '<leader>fw', '<cmd>Telescope live_grep<cr>',                 desc = 'word' },
         }
-    }
+    },
 }
