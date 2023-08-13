@@ -9,6 +9,7 @@ sudo apt install \
     ripgrep -y \
     unzip -y \
     wget -y \
+    npm -y \
     python3-venv -y \
     xclip -y
 
