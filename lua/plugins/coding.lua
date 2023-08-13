@@ -1,37 +1,41 @@
 return {
     "PotatoesMaster/i3-vim-syntax",
-    { 
-        "folke/trouble.nvim", 
+    {
+        "folke/trouble.nvim",
         dependencies = "kyazdani42/nvim-web-devicons",
         keys = {
-            {'<leader>cdw', ':Trouble workspace_diagnostics<CR>'},
-            {'<leader>cdf', ':Trouble document_diagnostics<CR>'},
-            {'<leader>cdq', ':Trouble quickfix<CR>'},
-        }
-    },
-
-    { 
-        'liuchengxu/vista.vim', 
-        config = function() require('plugins/cfg/vista') end,
-        keys = {
-            {'<localleader>v', ':Vista!!<CR>', desc = 'vista' },
+            { '<leader>cdw', ':Trouble workspace_diagnostics<CR>' },
+            { '<leader>cdf', ':Trouble document_diagnostics<CR>' },
+            { '<leader>cdq', ':Trouble quickfix<CR>' },
         }
     },
 
     {
-        'nvim-treesitter/nvim-treesitter', 
+        'liuchengxu/vista.vim',
+        config = function() require('plugins/cfg/vista') end,
+        keys = {
+            { '<localleader>v', ':Vista!!<CR>', desc = 'vista' },
+        }
+    },
+
+    {
+        'nvim-treesitter/nvim-treesitter',
         lazy = false,
         build = ":TSUpdate",
         cmd = { "TSUpdateSync" },
-        version = false, 
-        config = function() require('plugins/cfg/treesitter') end, 
+        version = false,
+        config = function() require('plugins/cfg/treesitter') end,
     },
-
-    { 
-        "danymat/neogen", 
+    {
+        'numToStr/Comment.nvim',
+        opts = {},
+        lazy = false,
+    },
+    {
+        "danymat/neogen",
         dependencies = "nvim-treesitter/nvim-treesitter",
         keys = {
-            {'<leader>cg', ':Neogen<CR>', desc = 'gen documentation'},
+            { '<leader>cg', ':Neogen<CR>', desc = 'gen documentation' },
         }
     },
 

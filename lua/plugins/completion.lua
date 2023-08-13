@@ -1,4 +1,4 @@
-return { 
+return {
     {
         "hrsh7th/nvim-cmp",
         dependencies = {
@@ -6,9 +6,10 @@ return {
             'hrsh7th/cmp-buffer',
             'hrsh7th/cmp-path',
             'hrsh7th/cmp-nvim-lsp-signature-help',
-            'saadparwaiz1/cmp_luasnip',
-            'L3MON4D3/LuaSnip',
+            'hrsh7th/cmp-cmdline',
+            'dmitmel/cmp-cmdline-history',
+            'petertriho/cmp-git'
         },
-        config = function () require('plugins/cfg/cmp') end
+        config = function() require('plugins/cfg/cmp') end
     }
 }
