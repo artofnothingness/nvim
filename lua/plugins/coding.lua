@@ -11,10 +11,10 @@ return {
     },
 
     {
-        'liuchengxu/vista.vim',
-        config = function() require('plugins/cfg/vista') end,
+        'simrat39/symbols-outline.nvim',
+        config = function() require("symbols-outline").setup() end,
         keys = {
-            { '<localleader>v', ':Vista!!<CR>', desc = 'vista' },
+            { '<leader>co', ':SymbolsOutline<CR>', desc = 'Outline' },
         }
     },
 

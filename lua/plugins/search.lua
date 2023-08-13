@@ -22,4 +22,32 @@ return {
             { '<leader>fw', '<cmd>Telescope live_grep<cr>',                 desc = 'word' },
         }
     },
+    {
+        "SmiteshP/nvim-navic",
+        lazy = false,
+        config = function() require('plugins/cfg/navic') end,
+        dependencies = "neovim/nvim-lspconfig"
+    },
+
+    {
+        "SmiteshP/nvim-navbuddy",
+        dependencies = {
+            "SmiteshP/nvim-navic",
+            "MunifTanjim/nui.nvim"
+        },
+        opts = { lsp = { auto_attach = true } },
+        keys = {
+            { '<leader>cn', ':Navbuddy<CR>', desc = 'Navbuddy' },
+        }
+    },
+    {
+        "utilyre/barbecue.nvim",
+        name = "barbecue",
+        version = "*",
+        dependencies = {
+            "SmiteshP/nvim-navic",
+        },
+        opts = {},
+    }
+
 }
