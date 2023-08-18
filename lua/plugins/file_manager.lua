@@ -1,27 +1,30 @@
 return {
-    { 
-        "luukvbaal/nnn.nvim",
-        keys = {
-            {'<localleader>n', ':NnnPicker %:p:h<CR>', desc = "NNN"},
-        }
-    },
-    
-    { 
+    {
         "elihunter173/dirbuf.nvim",
         keys = {
-            {'<localleader>d', ':Dirbuf<CR>', desc = "Dirbug"},
+            { '<localleader>d', '<CMD>Dirbuf<CR>', desc = "Dirbug" },
         }
     },
-
-    { 'nvim-neo-tree/neo-tree.nvim', branch = "v2.x",
+    {
+        "nvim-tree/nvim-tree.lua",
+        version = "*",
+        lazy = false,
         dependencies = {
-            "nvim-lua/plenary.nvim",
-            "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
-            "MunifTanjim/nui.nvim",
-        }, 
-        config = function () require('plugins/cfg/neotree') end,
+            "kyazdani42/nvim-web-devicons",
+        },
+        config = function()
+            require("nvim-tree").setup {
+                sync_root_with_cwd = true,
+                respect_buf_cwd = true,
+                update_focused_file = {
+                    enable = true,
+                    update_root = true
+                },
+            }
+        end,
         keys = {
-            { '\\', ':Neotree reveal toggle<CR>', desc = "Neotree"}
+            { '\\',     '<CMD>NvimTreeToggle<CR>',   desc = "Neotree" },
+            { '<C-\\>', '<CMD>NvimTreeFindFile<CR>', desc = "Neotree" }
         }
-    },
+    }
 }

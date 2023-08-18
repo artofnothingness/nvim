@@ -9,7 +9,8 @@ return {
             'hrsh7th/cmp-cmdline',
             'dmitmel/cmp-cmdline-history',
             'petertriho/cmp-git',
-            'windwp/nvim-autopairs'
+            'windwp/nvim-autopairs',
+            'onsails/lspkind.nvim',
         },
         config = function() require('plugins/cfg/cmp') end
     },
