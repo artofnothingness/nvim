@@ -1,8 +1,14 @@
 return {
-    'szw/vim-maximizer',
+    {
+        'szw/vim-maximizer',
+        keys = {
+            { '<leader>z', '<cmd>MaximizerToggle!<CR>', 'zoom', mode = 'n' },
+        }
+    },
     'mbbill/undotree',
-    { 'numToStr/Comment.nvim' },
-
+    {
+        'numToStr/Comment.nvim'
+    },
     {
         'godlygeek/tabular',
         keys = {

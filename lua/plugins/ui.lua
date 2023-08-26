@@ -12,29 +12,21 @@ return {
         'nvim-lualine/lualine.nvim',
         lazy = false,
         dependencies = { 'kyazdani42/nvim-web-devicons' },
-        config = function()
-            require('lualine').setup(
-                {
-                    sections = {
-                        lualine_b = {
-                            {
-                                function()
-                                    local key = require("grapple").key()
-                                    return "  [" .. key .. "]"
-                                end,
-                                cond = require("grapple").exists,
-                            }
-                        }
-                    }
-                }
-
-            )
-        end,
+        config = function() require('lualine').setup({}) end,
         opt = true
     },
     {
         "nvim-zh/colorful-winsep.nvim",
-        config = true,
+        config = function()
+            require("colorful-winsep").setup({
+                highlight = {
+                    bg = "#16161E",
+                    fg = "#1F3442",
+                },
+                interval = 0,
+                no_exec_files = { "packer", "TelescopePrompt", "mason", "CompetiTest", "NvimTree" },
+            })
+        end,
         event = { "WinNew" },
     },
     { 'stevearc/dressing.nvim' },

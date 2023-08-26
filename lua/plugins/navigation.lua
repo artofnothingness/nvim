@@ -30,14 +30,5 @@ return {
         config = function()
             require("wildfire").setup()
         end,
-    },
-    {
-        "cbochs/grapple.nvim",
-        lazy = false,
-        dependencies = { "nvim-lua/plenary.nvim" },
-        keys = {
-            { '<leader>.', '<cmd>lua require("grapple").toggle{}<CR>' },
-            { '<leader><leader>', '<cmd>lua require("grapple").popup_tags()<CR>' },
-        }
     }
 }

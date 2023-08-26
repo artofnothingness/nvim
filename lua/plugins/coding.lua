@@ -1,12 +1,11 @@
 return {
-    "PotatoesMaster/i3-vim-syntax",
     {
         "folke/trouble.nvim",
         dependencies = "kyazdani42/nvim-web-devicons",
         keys = {
-            { '<leader>cdw', ':Trouble workspace_diagnostics<CR>' },
-            { '<leader>cdf', ':Trouble document_diagnostics<CR>' },
-            { '<leader>cdq', ':Trouble quickfix<CR>' },
+            { '<leader>cdw', ':Trouble workspace_diagnostics<CR>', desc = 'Workspace' },
+            { '<leader>cdf', ':Trouble document_diagnostics<CR>',  desc = 'Document' },
+            { '<leader>cdq', ':Trouble quickfix<CR>',              desc = 'Quickfix' },
         }
     },
 
