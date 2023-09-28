@@ -21,6 +21,8 @@ require'lspconfig'.clangd.setup{
     root_dir = util.root_pattern(".git"),
  }
 
+require('lspconfig').jedi_language_server.setup{}
+
 require('lspconfig').lua_ls.setup {
     settings = {
         Lua = {

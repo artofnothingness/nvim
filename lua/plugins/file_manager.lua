@@ -15,7 +15,7 @@ return {
         config = function()
             require("nvim-tree").setup {
                 view = {
-                    width = 40,
+                    width = 55,
                 },
                 sync_root_with_cwd = true,
                 respect_buf_cwd = true,
