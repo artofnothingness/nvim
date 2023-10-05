@@ -4,6 +4,7 @@ sudo add-apt-repository -y ppa:git-core/ppa
 sudo apt update
 sudo apt install \
     neovim -y \
+    ranger -y \
     git -y \
     python3-pip -y \
     ripgrep -y \

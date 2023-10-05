@@ -16,7 +16,11 @@ return {
             { '<leader>t=', ':Tabularize /=<CR>',     'equal', mode = 'v' },
         }
     },
-    { 'akinsho/toggleterm.nvim', config = function() require('plugins/cfg/toggleterm') end },
+    {
+        'akinsho/toggleterm.nvim',
+        lazy = false,
+        config = function() require('plugins/cfg/toggleterm') end
+    },
     {
         "folke/neodev.nvim",
         lazy = false,

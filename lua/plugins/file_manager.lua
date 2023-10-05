@@ -29,5 +29,12 @@ return {
             { '\\',     '<CMD>NvimTreeToggle<CR>',   desc = "Neotree" },
             { '<C-\\>', '<CMD>NvimTreeFindFile<CR>', desc = "Neotree" }
         }
+    },
+    {
+        'kevinhwang91/rnvimr',
+        config = function() require('plugins/cfg/ranger') end,
+        keys = {
+            { '<localleader>r', '<cmd>RnvimrToggle<CR>', desc = "Ranger" },
+        }
     }
 }
