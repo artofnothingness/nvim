@@ -30,5 +30,11 @@ return {
         config = function()
             require("wildfire").setup()
         end,
+    },
+    {
+        "nvim-treesitter/nvim-treesitter-textobjects",
+        lazy = false,
+        config = function() require('plugins/cfg/treesitter-textobjects') end,
+        dependencies = { "nvim-treesitter/nvim-treesitter" },
     }
 }
