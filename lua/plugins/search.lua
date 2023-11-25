@@ -19,8 +19,8 @@ return {
             { '<leader>ff', '<cmd>Telescope find_files<CR>',                    desc = 'files .' },
             { '<leader>fb', '<cmd>Telescope buffers<CR>',                       desc = 'buffers' },
             { '<leader>fr', '<cmd>Telescope oldfiles<CR>',                      desc = 'recent files' },
-            { '<leader>fg', '<cmd>Telescope live_grep<cr>',                     desc = 'grep' },
-            { '<leader>fw', '<cmd>Telescope live_grep<cr>',                     desc = 'word' },
+            { '<leader>fw', '<cmd>Telescope live_grep<CR>',                     desc = 'word' },
+            { '<leader><BS>', '<cmd>Telescope resume<CR>',                        desc = '[S]earch [R]esume' },
         }
     },
     {

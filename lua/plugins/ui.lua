@@ -6,7 +6,6 @@ return {
     { 'romgrk/barbar.nvim',          dependencies = { 'kyazdani42/nvim-web-devicons' } },
     { 'folke/which-key.nvim',        config = function() require('plugins/cfg/which-key') end },
     { 'norcalli/nvim-colorizer.lua', config = function() require('plugins/cfg/colorizer') end },
-
     { 'b0o/incline.nvim' },
     {
         'nvim-lualine/lualine.nvim',

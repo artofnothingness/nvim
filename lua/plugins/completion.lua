@@ -11,6 +11,10 @@ return {
             'petertriho/cmp-git',
             'windwp/nvim-autopairs',
             'onsails/lspkind.nvim',
+
+            "rafamadriz/friendly-snippets",
+            "L3MON4D3/LuaSnip",
+            "saadparwaiz1/cmp_luasnip",
         },
         config = function() require('plugins/cfg/cmp') end
     },
