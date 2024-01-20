@@ -2,6 +2,8 @@ return {
     {
         'folke/tokyonight.nvim',
         config = function()
+            vim.cmd.colorscheme 'highlite'
+            vim.cmd.colorscheme 'tokyonight-night'
         end
     },
 
@@ -18,8 +20,6 @@ return {
     {
         'nyoom-engineering/oxocarbon.nvim',
         config = function()
-            vim.cmd.colorscheme 'highlite'
-            vim.cmd.colorscheme 'oxocarbon'
         end
     },
 }
