@@ -24,6 +24,12 @@ return {
         }
     },
     {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        config = function() require('plugins/cfg/harpoon') end,
+        dependencies = { "nvim-lua/plenary.nvim" }
+    },
+    {
         "sustech-data/wildfire.nvim",
         event = "VeryLazy",
         dependencies = { "nvim-treesitter/nvim-treesitter" },
