@@ -30,6 +30,17 @@ return {
         dependencies = { "nvim-lua/plenary.nvim" }
     },
     {
+        "SmiteshP/nvim-navbuddy",
+        dependencies = {
+            "SmiteshP/nvim-navic",
+            "MunifTanjim/nui.nvim"
+        },
+        opts = { lsp = { auto_attach = true } },
+        keys = {
+            { '<localleader>f', ':Navbuddy<CR>', desc = 'Navbuddy' },
+        }
+    },
+    {
         "sustech-data/wildfire.nvim",
         event = "VeryLazy",
         dependencies = { "nvim-treesitter/nvim-treesitter" },

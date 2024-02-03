@@ -87,17 +87,11 @@ cmp.setup.filetype('gitcommit', {
 cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline(),
     sources = cmp.config.sources({
+        { name = 'cmdline' },
         { name = 'path' },
         { name = 'buffer' },
-        { name = 'cmdline_history' },
-    }, {
-        {
-            name = 'cmdline',
-            option = {
-                ignore_cmds = { 'Man', '!' }
-            }
-        }
-    })
+        { name = 'cmdline_history' } }
+    )
 })
 
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
