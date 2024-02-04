@@ -6,13 +6,12 @@ return {
     { 'romgrk/barbar.nvim',          dependencies = { 'kyazdani42/nvim-web-devicons' } },
     { 'folke/which-key.nvim',        config = function() require('plugins/cfg/which-key') end },
     { 'norcalli/nvim-colorizer.lua', config = function() require('plugins/cfg/colorizer') end },
-    { 'b0o/incline.nvim' },
     {
-        'nvim-lualine/lualine.nvim',
-        lazy = false,
-        dependencies = { 'kyazdani42/nvim-web-devicons' },
-        config = function() require('lualine').setup({}) end,
-        opt = true
+        "windwp/windline.nvim",
+        event = "VeryLazy",
+        config = function()
+            require("wlsample.evil_line")
+        end,
     },
     {
         "nvim-zh/colorful-winsep.nvim",
