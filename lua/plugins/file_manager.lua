@@ -6,12 +6,35 @@ return {
         }
     },
     {
-        'simonmclean/triptych.nvim',
-        event = 'VeryLazy',
+        "nvim-tree/nvim-tree.lua",
+        version = "*",
+        lazy = false,
         dependencies = {
-            'nvim-lua/plenary.nvim', -- required
-            'nvim-tree/nvim-web-devicons', -- optional
+            "kyazdani42/nvim-web-devicons",
         },
-        config = function() require('plugins/cfg/triptych') end,
+        config = function()
+            require("nvim-tree").setup {
+                view = {
+                    width = 55,
+                },
+                sync_root_with_cwd = true,
+                respect_buf_cwd = true,
+                update_focused_file = {
+                    enable = true,
+                    update_root = true
+                },
+            }
+        end,
+        keys = {
+            { '\\',     '<CMD>NvimTreeToggle<CR>',   desc = "Neotree" },
+            { '<C-\\>', '<CMD>NvimTreeFindFile<CR>', desc = "Neotree" }
+        }
+    },
+    {
+        'kevinhwang91/rnvimr',
+        config = function() require('plugins/cfg/ranger') end,
+        keys = {
+            { '<localleader>r', '<cmd>RnvimrToggle<CR>', desc = "Ranger" },
+        }
     }
 }
