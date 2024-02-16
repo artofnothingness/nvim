@@ -21,7 +21,6 @@ return {
             { ']d',         '<cmd>lua vim.diagnostic.goto_next()<CR>',          desc = 'diag next' },
             { '<A-f>',      function() vim.lsp.buf.format { async = true } end, desc = 'format' },
             { '<F2>',       ':ClangdSwitchSourceHeader<CR>',                    desc = 'source/header' },
-
         }
     }
 }

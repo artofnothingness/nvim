@@ -37,9 +37,4 @@ map('i', '<S-TAB>', '<C-d>', opts)
 map('', '<A-w>', ':w<CR>', opts)
 map('', '<A-q>', ':q<CR>', opts)
 
--- Configs
-
-map('', '<localleader>cn', ':e ~/.config/nvim/init.lua<CR>', opts)
-map('', '<localleader>cc', ':e ~/.config<CR>', opts)
-
-map('', '<localleader>l', '<cmd>Lazy<CR>', opts)
+map('', '<localleader>l', '<cmd>Lazy<CR>', { noremap = true, silent = true })

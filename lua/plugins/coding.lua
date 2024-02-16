@@ -8,15 +8,6 @@ return {
             { '<leader>cdq', ':Trouble quickfix<CR>',              desc = 'Quickfix' },
         }
     },
-
-    {
-        'simrat39/symbols-outline.nvim',
-        config = function() require("symbols-outline").setup() end,
-        keys = {
-            { '<localleader>o', ':SymbolsOutline<CR>', desc = 'Outline' },
-        }
-    },
-
     {
         'nvim-treesitter/nvim-treesitter',
         lazy = false,

@@ -5,9 +5,13 @@ return {
             { '<leader>z', '<cmd>MaximizerToggle!<CR>', 'zoom', mode = 'n' },
         }
     },
-    'mbbill/undotree',
     {
-        'numToStr/Comment.nvim'
+        "jiaoshijie/undotree",
+        dependencies = "nvim-lua/plenary.nvim",
+        config = true,
+        keys = { -- load the plugin only when using it's keybinding:
+            { "<leader>u", "<cmd>lua require('undotree').toggle()<cr>" },
+        }
     },
     {
         'godlygeek/tabular',
@@ -15,11 +19,6 @@ return {
             { '<leader>t,', ':Tabularize /,\\zs<CR>', 'comma', mode = 'v' },
             { '<leader>t=', ':Tabularize /=<CR>',     'equal', mode = 'v' },
         }
-    },
-    {
-        'akinsho/toggleterm.nvim',
-        lazy = false,
-        config = function() require('plugins/cfg/toggleterm') end
     },
     {
         "folke/neodev.nvim",

@@ -1,6 +1,3 @@
-vim.cmd('set iskeyword+=-') --treat dash separated words as a word text object"
-vim.cmd('set shortmess+=c') --Don't pass messages to |ins-completion-menu|.
-
 vim.o.breakindent = true
 vim.o.smartcase = true
 vim.o.ignorecase = true
@@ -9,13 +6,12 @@ vim.o.updatetime = 250    --Faster completion
 
 vim.o.hidden = true
 vim.wo.wrap = false
-vim.cmd('set whichwrap+=<,>,[,],h,l')
 
 vim.o.gd = true
 vim.o.encoding = "utf-8"     --The encoding displayed
 vim.o.pumheight = 10         --Makes popup menu smaller
 vim.o.fileencoding = "utf-8" --The encoding written to file
-vim.o.ruler = true           --                " Show the cursor position all the time
+vim.o.ruler = true           --Show the cursor position all the time
 vim.o.cmdheight = 2          --More space for displaying messages
 vim.o.mouse = "a"            --Enable your mouse
 vim.o.splitbelow = true      --Horizontal splits will automatically be below
