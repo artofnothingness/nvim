@@ -1,57 +1,49 @@
 return {
-    {
-        'numToStr/Navigator.nvim',
-        config = function()
-            require('Navigator').setup({
-                auto_save = 'current',
-                disable_on_zoom = true
-            })
-        end,
-        keys = {
-            { '<C-h>', '<cmd>lua require("Navigator").left()<CR>' },
-            { '<C-k>', '<cmd>lua require("Navigator").up()<CR>' },
-            { '<C-l>', '<cmd>lua require("Navigator").right()<CR>' },
-            { '<C-j>', '<cmd>lua require("Navigator").down()<CR>' },
-        }
-
+  {
+    'numToStr/Navigator.nvim',
+    config = function()
+      require('Navigator').setup {
+        auto_save = 'current',
+        disable_on_zoom = true,
+      }
+    end,
+    keys = {
+      { '<C-h>', '<cmd>lua require("Navigator").left()<CR>' },
+      { '<C-k>', '<cmd>lua require("Navigator").up()<CR>' },
+      { '<C-l>', '<cmd>lua require("Navigator").right()<CR>' },
+      { '<C-j>', '<cmd>lua require("Navigator").down()<CR>' },
     },
-    {
-        'rlane/pounce.nvim',
-        config = function() require('plugins/cfg/pounce') end,
-        keys = {
-            { 's', ':Pounce<CR>' },
-            { 'S', ':PounceRepeat<CR>' }
-        }
+  },
+  {
+    'rlane/pounce.nvim',
+    opts = {
+      accept_keys = 'JFKDLSAHGNUVRBYTMICEOXWPQZ',
+      accept_best_key = '<enter>',
+      multi_window = true,
+      debug = false,
     },
-    {
-        "ThePrimeagen/harpoon",
-        branch = "harpoon2",
-        config = function() require('plugins/cfg/harpoon') end,
-        dependencies = { "nvim-lua/plenary.nvim" }
+    keys = {
+      { 's', ':Pounce<CR>' },
+      { 'S', ':PounceRepeat<CR>' },
     },
-    {
-        "SmiteshP/nvim-navbuddy",
-        dependencies = {
-            "SmiteshP/nvim-navic",
-            "MunifTanjim/nui.nvim"
-        },
-        opts = { lsp = { auto_attach = true } },
-        keys = {
-            { '<localleader>f', ':Navbuddy<CR>', desc = 'Navbuddy' },
-        }
+  },
+  {
+    'SmiteshP/nvim-navbuddy',
+    dependencies = {
+      'SmiteshP/nvim-navic',
+      'MunifTanjim/nui.nvim',
     },
-    {
-        "sustech-data/wildfire.nvim",
-        event = "VeryLazy",
-        dependencies = { "nvim-treesitter/nvim-treesitter" },
-        config = function()
-            require("wildfire").setup()
-        end,
+    opts = { lsp = { auto_attach = true } },
+    keys = {
+      { '<localleader>f', ':Navbuddy<CR>', desc = '[F]ile navigation' },
     },
-    {
-        "nvim-treesitter/nvim-treesitter-textobjects",
-        lazy = false,
-        config = function() require('plugins/cfg/treesitter-textobjects') end,
-        dependencies = { "nvim-treesitter/nvim-treesitter" },
-    }
+  },
+  {
+    'sustech-data/wildfire.nvim',
+    event = 'VeryLazy',
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    config = function()
+      require('wildfire').setup()
+    end,
+  },
 }

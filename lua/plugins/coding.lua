@@ -1,32 +1,15 @@
 return {
-    {
-        "folke/trouble.nvim",
-        dependencies = "kyazdani42/nvim-web-devicons",
-        keys = {
-            { '<leader>cdw', ':Trouble workspace_diagnostics<CR>', desc = 'Workspace' },
-            { '<leader>cdf', ':Trouble document_diagnostics<CR>',  desc = 'Document' },
-            { '<leader>cdq', ':Trouble quickfix<CR>',              desc = 'Quickfix' },
-        }
+  'tpope/vim-sleuth',
+  {
+    'numToStr/Comment.nvim',
+    opts = {},
+    -- lazy = false,
+  },
+  {
+    'danymat/neogen',
+    dependencies = 'nvim-treesitter/nvim-treesitter',
+    keys = {
+      { '<leader>cg', ':Neogen<CR>', desc = '[G]enerate doc' },
     },
-    {
-        'nvim-treesitter/nvim-treesitter',
-        lazy = false,
-        build = ":TSUpdate",
-        cmd = { "TSUpdateSync" },
-        version = false,
-        config = function() require('plugins/cfg/treesitter') end,
-    },
-    {
-        'numToStr/Comment.nvim',
-        opts = {},
-        lazy = false,
-    },
-    {
-        "danymat/neogen",
-        dependencies = "nvim-treesitter/nvim-treesitter",
-        keys = {
-            { '<leader>cg', ':Neogen<CR>', desc = 'gen documentation' },
-        }
-    },
-
+  },
 }
