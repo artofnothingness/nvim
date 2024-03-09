@@ -26,7 +26,7 @@ vim.o.mouse = 'a' --Enable your mouse
 vim.o.splitbelow = true --Horizontal splits will automatically be below
 vim.o.splitright = true --Vertical splits will automatically be to the right
 
-vim.o.conceallevel = 0 --So that I can see `` in markdown files
+vim.o.conceallevel = 2 --So that I can see `` in markdown files
 
 vim.o.smartindent = true --Makes indenting smart
 vim.o.autoindent = true --Good auto indent
