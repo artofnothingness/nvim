@@ -11,9 +11,9 @@ return {
     vim.keymap.set('n', '<leader>a', function()
       harpoon:list():append()
     end, { desc = 'Harpoon [A]dd' })
-    vim.keymap.set('n', '`', function()
+    vim.keymap.set('n', '<leader><leader>', function()
       harpoon.ui:toggle_quick_menu(harpoon:list())
-    end, { desc = 'Harpoon select (`)' })
+    end, { desc = '[ ] Harpoon select' })
   end,
   dependencies = { 'nvim-lua/plenary.nvim' },
 }
