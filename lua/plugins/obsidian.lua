@@ -1,5 +1,6 @@
 return {
   'epwalsh/obsidian.nvim',
+
   version = '*', -- recommended, use latest release instead of latest commit
   lazy = false,
   ft = 'markdown',
@@ -39,6 +40,9 @@ return {
 
       daily_notes = {
         folder = 'dailies',
+        date_format = '%Y-%m-%d',
+        alias_format = '%-d %B, %Y',
+        template = nil,
       },
 
       templates = {
@@ -65,11 +69,11 @@ return {
     vim.keymap.set('n', '<leader>oo', '<cmd>ObsidianOpen<CR>', { desc = '[O]bsidian [O]pen' })
     vim.keymap.set('n', '<leader>on', '<cmd>ObsidianNew<CR>', { desc = '[O]bsidian [N]ew' })
     vim.keymap.set('n', '<leader>ob', '<cmd>ObsidianBacklinks<CR>', { desc = '[O]bsidian [B]acklinks' })
-    vim.keymap.set('n', '<leader>of', '<cmd>ObsidianSearch<CR>', { desc = '[O]ind [F]bsidian' })
+    vim.keymap.set('n', '<leader>of', '<cmd>ObsidianSearch<CR>', { desc = '[O]bsidian [F]bsidian' })
     vim.keymap.set('n', '<leader>ol', '<cmd>ObsidianLinks<CR>', { desc = '[O]bsidian [L]inks' })
     vim.keymap.set('n', '<leader>ow', '<cmd>ObsidianWorkspace<CR>', { desc = '[O]bsidian [W]orkspace' })
-    vim.keymap.set('n', '<leader>o,', '<cmd>ObsidianToday<CR>', { desc = '[O]obsidian [.] today' })
-    vim.keymap.set('n', '<leader>o.', '<cmd>ObsidianYesterday<CR>', { desc = '[O]bsidian [,] yesterday' })
+    vim.keymap.set('n', '<leader>o.', '<cmd>ObsidianToday<CR>', { desc = '[O]bsidian [.] today' })
+    vim.keymap.set('n', '<leader>o,', '<cmd>ObsidianYesterday<CR>', { desc = '[O]bsidian [,] yesterday' })
     vim.keymap.set('n', '<leader>op', '<cmd>ObsidianPasteImg<CR>', { desc = '[O]bsidian [P]aste' })
     vim.keymap.set('n', '<leader>or', '<cmd>ObsidianRename<CR>', { desc = '[O]bsidian [R]ename' })
     vim.keymap.set('n', '<leader>ot', '<cmd>ObsidianTags<CR>', { desc = '[O]bsidian [T]ags' })
