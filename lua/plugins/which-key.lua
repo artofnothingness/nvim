@@ -10,6 +10,8 @@ return {
       ['<leader>cd'] = { name = '[C]ode [D]iagnostics', _ = 'which_key_ignore' },
       ['<leader>f'] = { name = '[F]ind', _ = 'which_key_ignore' },
       ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
+      ['<leader>o'] = { name = '[O]bsidian', _ = 'which_key_ignore' },
+      ['<leader>n'] = { name = '[N]abla', _ = 'which_key_ignore' },
     }
 
     require('which-key').register({ ['<leader>t'] = { name = '[T]abularize', _ = 'which_key_ignore' } }, { mode = 'v' })
