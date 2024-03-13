@@ -23,8 +23,8 @@ return {
       debug = false,
     },
     keys = {
-      { 's', ':Pounce<CR>' },
-      { 'S', ':PounceRepeat<CR>' },
+      { '<A-j>', '<cmd>Pounce<CR>' },
+      { '<A-k>', '<cmd>Pounce<CR>' },
     },
   },
   {

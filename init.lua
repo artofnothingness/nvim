@@ -1,5 +1,5 @@
-require('load')
+require 'load'
 
-require('settings')
-require('maps')
-require("lazy").setup("plugins")
+require 'settings'
+require 'maps'
+require('lazy').setup 'plugins'
