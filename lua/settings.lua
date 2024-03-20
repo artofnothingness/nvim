@@ -42,6 +42,9 @@ vim.opt.relativenumber = true
 vim.opt.undofile = true
 vim.opt.undolevels = 100000
 
+vim.cmd [[autocmd FileType markdown set tw=80 wrap]]
+vim.cmd [[autocmd FileType markdown set linebreak]]
+
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
