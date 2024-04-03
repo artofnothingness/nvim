@@ -7,12 +7,10 @@ local cfg = function()
         i = {
           ['<C-j>'] = actions.move_selection_next,
           ['<C-k>'] = actions.move_selection_previous,
-          ['<CR>'] = actions.select_default + actions.center,
         },
         n = {
           ['<C-j>'] = actions.move_selection_next,
           ['<C-k>'] = actions.move_selection_previous,
-          ['<esc>'] = actions.close,
         },
       },
     },
@@ -38,6 +36,7 @@ local cfg = function()
   pcall(require('telescope').load_extension, 'fzf')
   pcall(require('telescope').load_extension, 'ui-select')
   pcall(require('telescope').load_extension, 'projects')
+  pcall(require('telescope').load_extension, 'file_browser')
 
   vim.keymap.set('n', '<leader>fp', '<cmd>Telescope projects<cr>', { desc = '[F]ind [P]rojects' })
 end
