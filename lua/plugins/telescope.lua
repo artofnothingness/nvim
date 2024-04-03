@@ -7,10 +7,12 @@ local cfg = function()
         i = {
           ['<C-j>'] = actions.move_selection_next,
           ['<C-k>'] = actions.move_selection_previous,
+          ['<CR>'] = actions.select_default + actions.center,
         },
         n = {
           ['<C-j>'] = actions.move_selection_next,
           ['<C-k>'] = actions.move_selection_previous,
+          ['<esc>'] = actions.close,
         },
       },
     },
@@ -31,12 +33,11 @@ local cfg = function()
   vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = '[F]ind [D]iagnostics' })
   vim.keymap.set('n', '<leader>f,', builtin.resume, { desc = '[F]ind resume ("," for prev search)' })
   vim.keymap.set('n', '<leader>fr', builtin.oldfiles, { desc = '[F]ind [R]ecent Files ' })
-  vim.keymap.set('n', '<leader>fB', builtin.buffers, { desc = '[F]ind [B]uffers' })
+  vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = '[F]ind [B]uffers' })
 
   pcall(require('telescope').load_extension, 'fzf')
   pcall(require('telescope').load_extension, 'ui-select')
   pcall(require('telescope').load_extension, 'projects')
-  pcall(require('telescope').load_extension, 'file_browser')
 
   vim.keymap.set('n', '<leader>fp', '<cmd>Telescope projects<cr>', { desc = '[F]ind [P]rojects' })
 end
