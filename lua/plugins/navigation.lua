@@ -23,8 +23,7 @@ return {
       debug = false,
     },
     keys = {
-      { '<A-j>', '<cmd>Pounce<CR>' },
-      { '<A-k>', '<cmd>Pounce<CR>' },
+      { 's', '<cmd>Pounce<CR>' },
     },
   },
   {
