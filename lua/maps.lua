@@ -7,6 +7,11 @@ vim.g.maplocalleader = 'm'
 -- Navigation
 map('', 'H', '^', opts)
 map('', 'L', '$', opts)
+
+map('', 'J', '5j', opts)
+map('', 'K', '5k', opts)
+map('', 'U', 'J', opts)
+
 map('', '<C-a>', '<Home>', opts)
 map('i', '<C-a>', '<Home>', opts)
 map('', '<C-e>', '<End>', opts)
