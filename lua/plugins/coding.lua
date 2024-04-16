@@ -7,6 +7,7 @@ return {
   },
   {
     'danymat/neogen',
+    config = true,
     dependencies = 'nvim-treesitter/nvim-treesitter',
     keys = {
       { '<leader>cg', ':Neogen<CR>', desc = '[G]enerate doc' },
