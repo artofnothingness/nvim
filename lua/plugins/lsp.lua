@@ -14,7 +14,7 @@ local cfg = function()
       map('<leader>fs', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[F]ind workspace [S]ymbols')
       map('<leader>cr', vim.lsp.buf.rename, '[C]ode [r]ename')
       map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
-      map('K', vim.lsp.buf.hover, 'Hover Documentation')
+      map('<leader>ci', vim.lsp.buf.hover, '[C]ode Documentation [I]nfo')
       map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
       map('[d', vim.diagnostic.goto_prev, 'Go to previous [D]iagnostic message')
