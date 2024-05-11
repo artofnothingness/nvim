@@ -55,6 +55,11 @@ return {
       attachments = {
         img_folder = 'media/',
       },
+
+      image_name_func = function()
+        return string.format('%s-', os.time())
+      end,
+
       workspaces = {
         {
           name = 'personal',
