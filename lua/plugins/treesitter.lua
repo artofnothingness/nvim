@@ -88,7 +88,6 @@ return {
           'yaml',
           'markdown',
           'markdown_inline',
-          'latex',
         },
 
         highlight = {
