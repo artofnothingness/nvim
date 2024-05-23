@@ -12,6 +12,8 @@ return {
       ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
       ['<leader>o'] = { name = '[O]bsidian', _ = 'which_key_ignore' },
       ['<leader>n'] = { name = '[N]abla', _ = 'which_key_ignore' },
+      ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
+      ['<leader>u'] = { name = '[U]ndo tree', _ = 'which_key_ignore' },
     }
 
     require('which-key').register({ ['<leader>t'] = { name = '[T]abularize', _ = 'which_key_ignore' } }, { mode = 'v' })

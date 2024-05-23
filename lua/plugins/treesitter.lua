@@ -85,6 +85,7 @@ return {
           'bash',
           'lua',
           'vim',
+          'diff',
           'yaml',
           'markdown',
           'markdown_inline',

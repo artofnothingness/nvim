@@ -31,17 +31,35 @@ local cfg = function()
         map('<f2>', ':ClangdSwitchSourceHeader<CR>', 'ClangdSwitchSourceHeader')
       end
 
+      if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
+        map('<leader>th', function()
+          vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+        end, '[T]oggle Inlay [H]ints')
+      end
+
       if client and client.server_capabilities.documentHighlightProvider then
+        local highlight_augroup = vim.api.nvim_create_augroup('lsp-highlight', { clear = false })
+
         vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
           buffer = event.buf,
+          group = highlight_augroup,
           callback = vim.lsp.buf.document_highlight,
         })
 
         vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
           buffer = event.buf,
+          group = highlight_augroup,
           callback = vim.lsp.buf.clear_references,
         })
       end
+    end,
+  })
+
+  vim.api.nvim_create_autocmd('LspDetach', {
+    group = vim.api.nvim_create_augroup('lsp-detach', { clear = true }),
+    callback = function(event)
+      vim.lsp.buf.clear_references()
+      vim.api.nvim_clear_autocmds { group = 'lsp-highlight', buffer = event.buf }
     end,
   })
 
@@ -109,17 +127,18 @@ local cfg = function()
   -- Add additional capabilities supported by nvim-cmp
   vim.diagnostic.config {
     virtual_text = true,
-    signs = true,
+    signs = {
+      text = {
+        [vim.diagnostic.severity.ERROR] = ' ',
+        [vim.diagnostic.severity.WARN] = ' ',
+        [vim.diagnostic.severity.HINT] = ' ',
+        [vim.diagnostic.severity.INFO] = ' ',
+      },
+    },
     underline = true,
     update_in_insert = false,
     severity_sort = false,
   }
-
-  local signs = { Error = ' ', Warn = ' ', Hint = ' ', Info = ' ' }
-  for type, icon in pairs(signs) do
-    local hl = 'DiagnosticSign' .. type
-    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-  end
 end
 
 return {
