@@ -18,7 +18,6 @@ local cfg = function()
     },
     pickers = {},
     extensions = {
-      ['projects'] = {},
       ['ui-select'] = {
         require('telescope.themes').get_dropdown(),
       },
@@ -37,9 +36,6 @@ local cfg = function()
 
   pcall(require('telescope').load_extension, 'fzf')
   pcall(require('telescope').load_extension, 'ui-select')
-  pcall(require('telescope').load_extension, 'projects')
-
-  vim.keymap.set('n', '<leader>fp', '<cmd>Telescope projects<cr>', { desc = '[F]ind [P]rojects' })
 end
 
 return {
@@ -56,12 +52,6 @@ return {
     },
     { 'nvim-telescope/telescope-ui-select.nvim' },
     { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
-    {
-      'ahmedkhalf/project.nvim',
-      config = function()
-        require('project_nvim').setup {}
-      end,
-    },
   },
   config = cfg,
 }
