@@ -18,6 +18,7 @@ return {
     },
     config = function()
       vim.keymap.set('n', '\\', '<CMD>NvimTreeToggle<CR>', { desc = 'Open directory' })
+      vim.keymap.set('n', '<C-\\>', '<CMD>NvimTreeFocus<CR>', { desc = 'Open directory' })
 
       local function on_attach(bufnr)
         local api = require 'nvim-tree.api'
@@ -60,7 +61,12 @@ return {
         vim.keymap.set('n', 'H', api.tree.close, opts 'Collapse All')
       end
 
-      require('nvim-tree').setup { on_attach = on_attach }
+      require('nvim-tree').setup {
+        view = {
+          width = 40,
+        },
+        on_attach = on_attach,
+      }
     end,
   },
   {
