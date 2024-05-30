@@ -71,7 +71,7 @@ local cfg = function()
     jedi_language_server = {},
 
     clangd = {
-      cmd = { 'clangd', '--compile-commands-dir=/rep/ros2/build' },
+      cmd = { 'clangd', '--compile-commands-dir=/rep/ros2/build', "--header-insertion=never"},
       root_dir = require('lspconfig.util').root_pattern '.git',
     },
 
