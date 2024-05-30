@@ -26,7 +26,16 @@ map('n', '<M-C-l>', ':vertical resize +3<CR>', opts)
 map('n', '<S-Tab>', '<Cmd>bprev<CR>', opts)
 map('n', '<Tab>', '<Cmd>bnext<CR>', opts)
 map('n', '<A-e>', '<Cmd>bd<CR>', opts)
-map('n', '<A-x>', '<Cmd>%bd|e#<CR>', opts)
+
+map('n', '<A-x>', function()
+  local bufs = vim.api.nvim_list_bufs()
+  local current_buf = vim.api.nvim_get_current_buf()
+  for _, i in ipairs(bufs) do
+    if i ~= current_buf then
+      vim.api.nvim_buf_delete(i, {})
+    end
+  end
+end, opts)
 
 -- General
 map('n', '<', '<<', opts)
