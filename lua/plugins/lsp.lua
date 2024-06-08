@@ -68,10 +68,11 @@ local cfg = function()
 
   local servers = {
     cmake = {},
+    ruff = {},
     jedi_language_server = {},
 
     clangd = {
-      cmd = { 'clangd', '--compile-commands-dir=/rep/ros2/build', "--header-insertion=never"},
+      cmd = { 'clangd', '--compile-commands-dir=/rep/ros2/build', '--header-insertion=never' },
       root_dir = require('lspconfig.util').root_pattern '.git',
     },
 
@@ -105,6 +106,9 @@ local cfg = function()
   local ensure_installed = vim.tbl_keys(servers or {})
   vim.list_extend(ensure_installed, {
     'stylua',
+    'markdownlint',
+    'jsonlint',
+    'cmakelint',
   })
 
   require('mason-tool-installer').setup { ensure_installed = ensure_installed }
