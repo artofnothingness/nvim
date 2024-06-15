@@ -21,4 +21,11 @@ return {
     'nyoom-engineering/oxocarbon.nvim',
     config = function() end,
   },
+  {
+    'shmerl/neogotham',
+    config = function()
+      -- vim.cmd.colorscheme 'highlite'
+      -- vim.cmd.colorscheme 'neogotham'
+    end,
+  },
 }
