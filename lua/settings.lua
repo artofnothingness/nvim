@@ -1,5 +1,6 @@
 vim.g.have_nerd_font = true
 
+vim.o.termguicolors = true
 vim.opt.breakindent = true
 
 vim.opt.smartcase = true
