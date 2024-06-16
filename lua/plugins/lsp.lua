@@ -6,12 +6,14 @@ local cfg = function()
         vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
       end
 
-      map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
-      map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-      map('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-      map('gtD', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
-      map('<leader>fS', require('telescope.builtin').lsp_document_symbols, '[F]ind file [s]ymbols')
-      map('<leader>fs', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[F]ind workspace [S]ymbols')
+
+      local picker = require 'fzf-lua'
+      map('gd', picker.lsp_definitions, '[G]oto [D]efinition')
+      map('gr', picker.lsp_references, '[G]oto [R]eferences')
+      map('gI', picker.lsp_implementations, '[G]oto [I]mplementation')
+      map('gtD', picker.lsp_typedefs, 'Type [D]efinition')
+      map('<leader>fS', picker.lsp_document_symbols, '[F]ind file [s]ymbols')
+      map('<leader>fs', picker.lsp_live_workspace_symbols, '[F]ind workspace [S]ymbols')
       map('<leader>cr', vim.lsp.buf.rename, '[C]ode [r]ename')
       map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
       map('<leader>ci', vim.lsp.buf.hover, '[C]ode Documentation [I]nfo')
