@@ -27,16 +27,6 @@ map('n', '<S-Tab>', '<Cmd>bprev<CR>', opts)
 map('n', '<Tab>', '<Cmd>bnext<CR>', opts)
 map('n', '<A-e>', '<Cmd>bd<CR>', opts)
 
-map('n', '<A-x>', function()
-  local bufs = vim.api.nvim_list_bufs()
-  local current_buf = vim.api.nvim_get_current_buf()
-  for _, i in ipairs(bufs) do
-    if i ~= current_buf then
-      vim.api.nvim_buf_delete(i, {})
-    end
-  end
-end, opts)
-
 -- General
 map('n', '<', '<<', opts)
 map('n', '>', '>>', opts)
@@ -47,5 +37,3 @@ map('', '<A-w>', ':w<CR>', opts)
 map('', '<A-q>', ':q<CR>', opts)
 map('n', '<Esc>', '<cmd>nohlsearch<CR>', opts)
 map('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
-
-map('', '<localleader>l', '<cmd>Lazy<CR>', { noremap = true, silent = true, desc = '[L]azy' })

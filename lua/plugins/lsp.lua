@@ -6,27 +6,29 @@ local cfg = function()
         vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
       end
 
+      map('gd', function()
+        require('fzf-lua').lsp_definitions { jump_to_single_result = true }
+      end, '[G]oto [D]efinition')
 
-      local picker = require 'fzf-lua'
-      map('gd', picker.lsp_definitions, '[G]oto [D]efinition')
-      map('gr', picker.lsp_references, '[G]oto [R]eferences')
-      map('gI', picker.lsp_implementations, '[G]oto [I]mplementation')
-      map('gtD', picker.lsp_typedefs, 'Type [D]efinition')
-      map('<leader>fS', picker.lsp_document_symbols, '[F]ind file [s]ymbols')
-      map('<leader>fs', picker.lsp_live_workspace_symbols, '[F]ind workspace [S]ymbols')
+      map('gr', function()
+        require('fzf-lua').lsp_references { jump_to_single_result = true }
+      end, '[G]oto [R]eferences')
+
+      map('gI', function()
+        require('fzf-lua').lsp_implementations { jump_to_single_result = true }
+      end, '[G]oto [I]mplementation')
+
+      map('gtd', function()
+        require('fzf-lua').lsp_typedefs.lsp_implementations { jump_to_single_result = true }
+      end, 'Type [D]efinition')
+
+      map('<leader>fS', require('fzf-lua').lsp_document_symbols, '[F]ind file [s]ymbols')
+      map('<leader>fs', require('fzf-lua').lsp_live_workspace_symbols, '[F]ind workspace [S]ymbols')
       map('<leader>cr', vim.lsp.buf.rename, '[C]ode [r]ename')
       map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
       map('<leader>ci', vim.lsp.buf.hover, '[C]ode Documentation [I]nfo')
       map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
-      map('[d', vim.diagnostic.goto_prev, 'Go to previous [D]iagnostic message')
-      map(']d', vim.diagnostic.goto_next, 'Go to next [D]iagnostic message')
-
-      -- The following two autocommands are used to highlight references of the
-      -- word under your cursor when your cursor rests there for a little while.
-      --    See `:help CursorHold` for information about when this is executed
-      --
-      -- When you move your cursor, the highlights will be cleared (the second autocommand).
       local client = vim.lsp.get_client_by_id(event.data.client_id)
 
       if client and client.name == 'clangd' then

@@ -1,4 +1,4 @@
-require 'load'
+require 'load-lazy'
 
 require 'settings'
 require 'maps'
