@@ -4,7 +4,6 @@ return {
   config = function() -- This is the function that runs, AFTER loading
     require('which-key').setup()
 
-    -- Document existing key chains
     require('which-key').register {
       ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
       ['<leader>cd'] = { name = '[C]ode [D]iagnostics', _ = 'which_key_ignore' },
@@ -15,7 +14,5 @@ return {
       ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
       ['<leader>u'] = { name = '[U]ndo tree', _ = 'which_key_ignore' },
     }
-
-    require('which-key').register({ ['<leader>t'] = { name = '[T]abularize', _ = 'which_key_ignore' } }, { mode = 'v' })
   end,
 }
