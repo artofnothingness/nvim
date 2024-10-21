@@ -13,6 +13,7 @@ return {
       { '<leader>o', group = 'Obsidian' },
       { '<leader>d', group = 'Debug' },
       { '<leader>g', group = 'Git' },
+      { '<leader>y', group = 'Yazi' },
     },
   },
 }

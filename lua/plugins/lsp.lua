@@ -32,7 +32,7 @@ local cfg = function()
       local client = vim.lsp.get_client_by_id(event.data.client_id)
 
       if client and client.name == 'clangd' then
-        map('<leader>cs', ':ClangdSwitchSourceHeader<CR>', 'Cpp Switch source/header')
+        map('<leader>cs', '<cmd>ClangdSwitchSourceHeader<CR>', 'Cpp Switch source/header')
       end
 
       if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
@@ -159,6 +159,7 @@ return {
       'williamboman/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
       { 'j-hui/fidget.nvim', opts = {} },
+      'hrsh7th/nvim-cmp',
     },
     config = cfg,
   },

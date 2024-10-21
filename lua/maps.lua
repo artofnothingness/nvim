@@ -23,9 +23,9 @@ map('n', '<M-C-h>', ':vertical resize -3<CR>', opts)
 map('n', '<M-C-l>', ':vertical resize +3<CR>', opts)
 
 -- Windows & Tabs
-map('n', '<S-Tab>', '<Cmd>bprev<CR>', opts)
-map('n', '<Tab>', '<Cmd>bnext<CR>', opts)
-map('n', '<A-e>', '<Cmd>bd<CR>', opts)
+map('n', '<S-Tab>', '<cmd>bprev<CR>', opts)
+map('n', '<Tab>', '<cmd>bnext<CR>', opts)
+map('n', '<A-e>', '<cmd>bd<CR>', opts)
 
 -- General
 map('n', '<', '<<', opts)
@@ -36,4 +36,3 @@ map('i', '<S-TAB>', '<C-d>', opts)
 map('', '<A-w>', ':w<CR>', opts)
 map('', '<A-q>', ':q<CR>', opts)
 map('n', '<Esc>', '<cmd>nohlsearch<CR>', opts)
-map('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
