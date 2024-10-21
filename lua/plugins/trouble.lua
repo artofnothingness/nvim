@@ -4,9 +4,14 @@ return {
   cmd = "Trouble",
   keys = {
     {
-      "<leader>cd",
+      "<leader>wd",
       "<cmd>Trouble diagnostics toggle<cr>",
-      desc = "Code Diagnostics",
+      desc = "Workspace Diagnostics",
+    },
+    {
+      "<leader>dd",
+      "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+      desc = "Document Diagnostics",
     },
   },
 }

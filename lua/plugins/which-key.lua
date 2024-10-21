@@ -11,8 +11,10 @@ return {
       { '<leader>c', group = 'Code', mode = { 'n', 'x' } },
       { '<leader>f', group = 'Find' },
       { '<leader>o', group = 'Obsidian' },
-      { '<leader>d', group = 'Debug' },
+      { '<leader>d', group = 'Document' },
+      { '<leader>w', group = 'Workspace' },
       { '<leader>g', group = 'Git' },
+      { '<leader>e', group = 'File Browser' },
     },
   },
 }
