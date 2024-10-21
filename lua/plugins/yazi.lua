@@ -1,10 +1,9 @@
 return {
-  'DreamMaoMao/yazi.nvim',
-  dependencies = {
-    'nvim-lua/plenary.nvim',
-  },
-
-  keys = {
-    { '\\', '<cmd>Yazi<CR>', desc = 'Toggle Yazi' },
-  },
+    "rolv-apneseth/tfm.nvim",
+    config = function()
+        vim.api.nvim_set_keymap("n", "<leader>e", "", {
+            noremap = true,
+            callback = require("tfm").open,
+        })
+    end,
 }

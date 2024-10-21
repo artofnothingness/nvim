@@ -14,16 +14,4 @@ return {
       { '<C-j>', '<cmd>lua require("Navigator").down()<CR>' },
     },
   },
-  {
-    'rlane/pounce.nvim',
-    opts = {
-      accept_keys = 'JFKDLSAHGNUVRBYTMICEOXWPQZ',
-      accept_best_key = '<enter>',
-      multi_window = true,
-      debug = false,
-    },
-    keys = {
-      { 's', '<cmd>Pounce<CR>' },
-    },
-  },
 }

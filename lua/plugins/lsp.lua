@@ -7,22 +7,23 @@ local cfg = function()
       end
 
       map('gd', function()
-        require('fzf-lua').lsp_definitions { jump_to_single_result = true }
+        require('fzf-lua').lsp_definitions { jump1 = true }
       end, 'Goto Definition')
 
       map('gr', function()
-        require('fzf-lua').lsp_references { jump_to_single_result = true }
+        require('fzf-lua').lsp_references { jump1 = true }
       end, 'Goto References')
 
       map('gI', function()
-        require('fzf-lua').lsp_implementations { jump_to_single_result = true }
+        require('fzf-lua').lsp_implementations { jump1 = true }
       end, 'Goto Implementation')
 
       map('gtd', function()
-        require('fzf-lua').lsp_typedefs.lsp_implementations { jump_to_single_result = true }
+        require('fzf-lua').lsp_typedefs.lsp_implementations { jump1 = true }
       end, 'Type Definition')
 
-      map('<leader>fS', require('fzf-lua').lsp_document_symbols, 'Find file symbols')
+      map('s', require('fzf-lua').lsp_document_symbols, 'Find file symbols')
+
       map('<leader>fs', require('fzf-lua').lsp_live_workspace_symbols, 'Find workspace Symbols')
       map('<leader>cr', vim.lsp.buf.rename, 'Code rename')
       map('<leader>ca', vim.lsp.buf.code_action, 'Code Action')
@@ -32,7 +33,7 @@ local cfg = function()
       local client = vim.lsp.get_client_by_id(event.data.client_id)
 
       if client and client.name == 'clangd' then
-        map('<leader>cs', ':ClangdSwitchSourceHeader<CR>', 'Cpp Switch source/header')
+        map('<leader>cs', '<cmd>ClangdSwitchSourceHeader<CR>', 'Cpp Switch source/header')
       end
 
       if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
@@ -55,15 +56,15 @@ local cfg = function()
           group = highlight_augroup,
           callback = vim.lsp.buf.clear_references,
         })
-      end
-    end,
-  })
 
-  vim.api.nvim_create_autocmd('LspDetach', {
-    group = vim.api.nvim_create_augroup('lsp-detach', { clear = true }),
-    callback = function(event)
-      vim.lsp.buf.clear_references()
-      vim.api.nvim_clear_autocmds { group = 'lsp-highlight', buffer = event.buf }
+        vim.api.nvim_create_autocmd('LspDetach', {
+          group = vim.api.nvim_create_augroup('lsp-detach', { clear = true }),
+          callback = function(event2)
+            vim.lsp.buf.clear_references()
+            vim.api.nvim_clear_autocmds { group = 'lsp-highlight', buffer = event2.buf }
+          end,
+        })
+      end
     end,
   })
 
@@ -88,6 +89,7 @@ local cfg = function()
             checkThirdParty = false,
             -- Tells lua_ls where to find all the Lua files that you have loaded
             -- for your neovim configuration.
+            --
             library = {
               '${3rd}/luv/library',
               unpack(vim.api.nvim_get_runtime_file('', true)),
@@ -159,6 +161,7 @@ return {
       'williamboman/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
       { 'j-hui/fidget.nvim', opts = {} },
+      'hrsh7th/nvim-cmp',
     },
     config = cfg,
   },

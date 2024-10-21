@@ -10,7 +10,22 @@ return {
           ['ctrl-q'] = 'select-all+accept',
         },
       },
+
+      files = {
+        formatter = 'path.filename_first',
+      },
+
+      oldfiles = {
+        formatter = 'path.filename_first',
+      },
+
+      buffers = {
+        formatter = 'path.filename_first',
+      },
     }
+    vim.keymap.set('n', '<TAB>', fzf.buffers, { desc = 'Find Buffers' })
+    vim.keymap.set('n', '<C-g>', fzf.lgrep_curbuf, { desc = 'Find by Grep' })
+
     vim.keymap.set('n', '<leader>fk', fzf.keymaps, { desc = 'Find Keymaps' })
     vim.keymap.set('n', '<leader>ff', fzf.files, { desc = 'Find Files' })
     vim.keymap.set('n', '<leader>fw', fzf.grep_cword, { desc = 'Find current Word' })
@@ -18,7 +33,6 @@ return {
     vim.keymap.set('n', '<leader>fd', fzf.diagnostics_workspace, { desc = 'Find Diagnostics' })
     vim.keymap.set('n', '<leader>f,', fzf.resume, { desc = 'Find resume ("," for prev search)' })
     vim.keymap.set('n', '<leader>fr', fzf.oldfiles, { desc = 'Find Recent Files ' })
-    vim.keymap.set('n', '<leader>fb', fzf.buffers, { desc = 'Find Buffers' })
     vim.keymap.set('n', '<leader>ft', fzf.tmux_buffers, { desc = 'Find Tmux buffers' })
 
     vim.keymap.set('n', '<leader>dfv', fzf.dap_variables, { desc = 'Debug Find Variables' })
