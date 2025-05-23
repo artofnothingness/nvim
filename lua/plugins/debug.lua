@@ -19,29 +19,18 @@ return {
 
       dap.configurations.cpp = {
         {
-          name = 'ROS 2 attach',
+          name = 'ROS 2 attach {pkg} {executble}',
           type = 'codelldb',
           request = 'attach',
           program = function()
-            return require('modules.ros2').get_executable_path(vim.fn.input('ros2 attach {pkg} {executable}', ''))
+            return require('modules.ros2').get_executable_path(vim.fn.input('ros2 attach {pkg} {executable}: ', ''))
           end,
           stopOnEntry = true,
           waitFor = true,
           cwd = '${workspaceFolder}',
         },
         {
-          name = 'Attach',
-          type = 'codelldb',
-          request = 'attach',
-          program = function()
-            return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-          end,
-          stopOnEntry = true,
-          waitFor = true,
-          cwd = '${workspaceFolder}',
-        },
-        {
-          name = 'Run',
+          name = 'Run executable',
           type = 'codelldb',
           request = 'launch',
           program = function()
@@ -70,10 +59,4 @@ return {
       vim.keymap.set('n', '<F10>', "<cmd>DapViewToggle<CR>", { desc = 'Debug: toggle' })
     end,
   },
-  {
-    'igorlfs/nvim-dap-view',
-    opts = {},
-  },
-
-  { 'theHamsta/nvim-dap-virtual-text', config = true },
 }
