@@ -23,7 +23,7 @@ return {
         formatter = 'path.filename_first',
       },
     }
-    vim.keymap.set('n', '<TAB>', fzf.buffers, { desc = 'Find Buffers' })
+    vim.keymap.set('n', '<leader>fb', fzf.buffers, { desc = 'Find Buffers' })
     vim.keymap.set('n', '<C-g>', fzf.lgrep_curbuf, { desc = 'Find by Grep' })
 
     vim.keymap.set('n', '<leader>fk', fzf.keymaps, { desc = 'Find Keymaps' })

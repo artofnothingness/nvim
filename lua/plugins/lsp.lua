@@ -14,26 +14,27 @@ local cfg = function()
         require('fzf-lua').lsp_references { jump1 = true }
       end, 'Goto References')
 
-      map('gI', function()
+      map('gci', function()
         require('fzf-lua').lsp_implementations { jump1 = true }
       end, 'Goto Implementation')
 
-      map('gtd', function()
-        require('fzf-lua').lsp_typedefs.lsp_implementations { jump1 = true }
-      end, 'Type Definition')
+      map('gct', function()
+        require('fzf-lua').lsp_typedefs { jump1 = true }
+      end, 'Type Definitions')
 
-      map('s', require('fzf-lua').lsp_document_symbols, 'Find file symbols')
+      map('gcD', vim.lsp.buf.declaration, 'Goto Declaration')
 
-      map('<leader>fs', require('fzf-lua').lsp_live_workspace_symbols, 'Find workspace Symbols')
+      map('gi', vim.lsp.buf.hover, 'Hover info')
       map('<leader>cr', vim.lsp.buf.rename, 'Code rename')
       map('<leader>ca', vim.lsp.buf.code_action, 'Code Action')
-      map('<leader>ci', vim.lsp.buf.hover, 'Code Documentation Info')
-      map('gD', vim.lsp.buf.declaration, 'Goto Declaration')
+
+      map('s', require('fzf-lua').lsp_document_symbols, 'Find file symbols')
+      map('<leader>fs', require('fzf-lua').lsp_live_workspace_symbols, 'Find workspace Symbols')
 
       local client = vim.lsp.get_client_by_id(event.data.client_id)
 
       if client and client.name == 'clangd' then
-        map('<leader>cs', '<cmd>ClangdSwitchSourceHeader<CR>', 'Cpp Switch source/header')
+        map('<leader>cs', '<cmd>LspClangdSwitchSourceHeader<CR>', 'Cpp Switch source/header')
       end
 
       if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
@@ -68,8 +69,32 @@ local cfg = function()
     end,
   })
 
-  local capabilities = vim.lsp.protocol.make_client_capabilities()
-  capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
+  vim.diagnostic.config {
+    severity_sort = true,
+    float = { border = 'rounded', source = 'if_many' },
+    underline = { severity = vim.diagnostic.severity.ERROR },
+    signs = vim.g.have_nerd_font and {
+      text = {
+        [vim.diagnostic.severity.ERROR] = '󰅚 ',
+        [vim.diagnostic.severity.WARN] = '󰀪 ',
+        [vim.diagnostic.severity.INFO] = '󰋽 ',
+        [vim.diagnostic.severity.HINT] = '󰌶 ',
+      },
+    } or {},
+    virtual_text = {
+      source = 'if_many',
+      spacing = 2,
+      format = function(diagnostic)
+        local diagnostic_message = {
+          [vim.diagnostic.severity.ERROR] = diagnostic.message,
+          [vim.diagnostic.severity.WARN] = diagnostic.message,
+          [vim.diagnostic.severity.INFO] = diagnostic.message,
+          [vim.diagnostic.severity.HINT] = diagnostic.message,
+        }
+        return diagnostic_message[diagnostic.severity]
+      end,
+    },
+  }
 
   local servers = {
     cmake = {},
@@ -78,7 +103,6 @@ local cfg = function()
 
     clangd = {
       cmd = { 'clangd', '--compile-commands-dir=/rep/ros2/build', '--header-insertion=never' },
-      root_dir = require('lspconfig.util').root_pattern '.git',
     },
 
     lua_ls = {
@@ -107,7 +131,9 @@ local cfg = function()
     },
   }
 
-  require('mason').setup()
+  require('mason-lspconfig').setup {
+    automatic_enable = vim.tbl_keys(servers or {}),
+  }
 
   local ensure_installed = vim.tbl_keys(servers or {})
   vim.list_extend(ensure_installed, {
@@ -120,48 +146,22 @@ local cfg = function()
   })
 
   require('mason-tool-installer').setup { ensure_installed = ensure_installed }
-
-  require('mason-lspconfig').setup {
-    handlers = {
-      function(server_name)
-        local server = servers[server_name] or {}
-        -- This handles overriding only values explicitly passed
-        -- by the server configuration above. Useful when disabling
-        -- certain features of an LSP (for example, turning off formatting for tsserver)
-        server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-        require('lspconfig')[server_name].setup(server)
-      end,
-    },
-  }
+  for server_name, config in pairs(servers) do
+    vim.lsp.config(server_name, config)
+  end
 
   vim.keymap.set('n', '<leader>m', '<cmd>Mason<CR>', { desc = 'Mason' })
-
-  -- Add additional capabilities supported by nvim-cmp
-  vim.diagnostic.config {
-    virtual_text = true,
-    signs = {
-      text = {
-        [vim.diagnostic.severity.ERROR] = ' ',
-        [vim.diagnostic.severity.WARN] = ' ',
-        [vim.diagnostic.severity.HINT] = '󰌶 ',
-        [vim.diagnostic.severity.INFO] = ' ',
-      },
-    },
-    underline = true,
-    update_in_insert = false,
-    severity_sort = false,
-  }
 end
 
 return {
   {
     'neovim/nvim-lspconfig',
     dependencies = {
-      'williamboman/mason.nvim',
+      { 'williamboman/mason.nvim', opts = {} },
       'williamboman/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
       { 'j-hui/fidget.nvim', opts = {} },
-      'hrsh7th/nvim-cmp',
+      'saghen/blink.cmp',
     },
     config = cfg,
   },
