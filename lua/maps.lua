@@ -23,6 +23,8 @@ map('n', '<M-C-h>', ':vertical resize -3<CR>', opts)
 map('n', '<M-C-l>', ':vertical resize +3<CR>', opts)
 
 -- Windows & Tabs
+map('n', '<S-Tab>', '<cmd>bprev<CR>', opts)
+map('n', '<Tab>', '<cmd>bnext<CR>', opts)
 map('n', '<A-e>', '<cmd>bd<CR>', opts)
 
 -- General
