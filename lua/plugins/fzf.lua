@@ -29,7 +29,7 @@ return {
     vim.keymap.set('n', '<leader>fk', fzf.keymaps, { desc = 'Find Keymaps' })
     vim.keymap.set('n', '<leader>ff', fzf.files, { desc = 'Find Files' })
     vim.keymap.set('n', '<leader>fw', fzf.grep_cword, { desc = 'Find current Word' })
-    vim.keymap.set('n', '<leader>fg', fzf.live_grep_glob, { desc = 'Find by Grep' })
+    vim.keymap.set('n', '<leader>fg', fzf.live_grep, { desc = 'Find by Grep' })
     vim.keymap.set('n', '<leader>fd', fzf.diagnostics_workspace, { desc = 'Find Diagnostics' })
     vim.keymap.set('n', '<leader>f,', fzf.resume, { desc = 'Find resume ("," for prev search)' })
     vim.keymap.set('n', '<leader>fr', fzf.oldfiles, { desc = 'Find Recent Files ' })

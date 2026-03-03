@@ -1,5 +1,4 @@
 return {
-  { 'norcalli/nvim-colorizer.lua', opts = {} },
   {
     'nvim-zh/colorful-winsep.nvim',
     config = true,
