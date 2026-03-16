@@ -37,13 +37,7 @@ local cfg = function()
         map('<leader>cs', '<cmd>LspClangdSwitchSourceHeader<CR>', 'Cpp Switch source/header')
       end
 
-      if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
-        map('<leader>ch', function()
-          vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
-        end, 'Toggle Inlay Hints')
-      end
-
-      if client and client.server_capabilities.documentHighlightProvider then
+      if client and client:supports_method('textDocument/documentHighlight', event.buf) then
         local highlight_augroup = vim.api.nvim_create_augroup('lsp-highlight', { clear = false })
 
         vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
@@ -66,34 +60,23 @@ local cfg = function()
           end,
         })
       end
+
+      if client and client:supports_method('textDocument/inlayHint', event.buf) then
+        map('<leader>ch', function()
+          vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+        end, 'Toggle Inlay Hints')
+      end
     end,
   })
 
   vim.diagnostic.config {
+    update_in_insert = false,
     severity_sort = true,
     float = { border = 'rounded', source = 'if_many' },
-    underline = { severity = vim.diagnostic.severity.ERROR },
-    signs = vim.g.have_nerd_font and {
-      text = {
-        [vim.diagnostic.severity.ERROR] = '󰅚 ',
-        [vim.diagnostic.severity.WARN] = '󰀪 ',
-        [vim.diagnostic.severity.INFO] = '󰋽 ',
-        [vim.diagnostic.severity.HINT] = '󰌶 ',
-      },
-    } or {},
-    virtual_text = {
-      source = 'if_many',
-      spacing = 2,
-      format = function(diagnostic)
-        local diagnostic_message = {
-          [vim.diagnostic.severity.ERROR] = diagnostic.message,
-          [vim.diagnostic.severity.WARN] = diagnostic.message,
-          [vim.diagnostic.severity.INFO] = diagnostic.message,
-          [vim.diagnostic.severity.HINT] = diagnostic.message,
-        }
-        return diagnostic_message[diagnostic.severity]
-      end,
-    },
+    underline = { severity = { min = vim.diagnostic.severity.WARN } },
+    virtual_text = true, -- Text shows up at the end of the line
+    virtual_lines = false, -- Text shows up underneath the line, with virtual lines
+    jump = { float = true },
   }
 
   local servers = {
@@ -131,10 +114,6 @@ local cfg = function()
     },
   }
 
-  require('mason-lspconfig').setup {
-    automatic_enable = vim.tbl_keys(servers or {}),
-  }
-
   local ensure_installed = vim.tbl_keys(servers or {})
   vim.list_extend(ensure_installed, {
     'stylua',
@@ -146,8 +125,10 @@ local cfg = function()
   })
 
   require('mason-tool-installer').setup { ensure_installed = ensure_installed }
-  for server_name, config in pairs(servers) do
-    vim.lsp.config(server_name, config)
+
+  for name, config in pairs(servers) do
+    vim.lsp.config(name, config)
+    vim.lsp.enable(name)
   end
 
   vim.keymap.set('n', '<leader>m', '<cmd>Mason<CR>', { desc = 'Mason' })

@@ -1,10 +1,5 @@
 return {
   {
-    'nvim-zh/colorful-winsep.nvim',
-    config = true,
-    event = { 'WinLeave' },
-  },
-  {
     'lukas-reineke/indent-blankline.nvim',
     main = 'ibl',
     config = function()
