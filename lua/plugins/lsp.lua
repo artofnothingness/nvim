@@ -82,7 +82,9 @@ local cfg = function()
   local servers = {
     cmake = {},
     ruff = {},
-    jedi_language_server = {},
+    ty = {
+      root_dir = vim.fs.root(0, { '.git', 'pyproject.toml', 'requirements.txt', '.venv' }),
+    },
 
     clangd = {
       cmd = { 'clangd', '--compile-commands-dir=/rep/ros2/build', '--header-insertion=never' },
