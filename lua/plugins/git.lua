@@ -1,5 +1,27 @@
 return {
   {
+    'NeogitOrg/neogit',
+    lazy = true,
+    dependencies = {
+      'nvim-lua/plenary.nvim', -- required
+      'esmuellert/codediff.nvim', -- optional
+      'ibhagwan/fzf-lua', -- optional
+    },
+    cmd = 'Neogit',
+    keys = {
+      { '<leader>gg', '<cmd>Neogit<cr>', desc = 'Show Neogit UI' },
+    },
+  },
+  {
+    'esmuellert/codediff.nvim',
+    cmd = 'CodeDiff',
+    opts = {
+      diff = {
+        layout = 'inline',
+      },
+    },
+  },
+  {
     'tpope/vim-fugitive',
     keys = {
       { '<leader>gb', ':Git blame<CR>', desc = 'Git Blame' },
@@ -41,10 +63,6 @@ return {
 
           -- Actions
           map('n', '<leader>gp', gs.preview_hunk, { desc = 'Git Preview hunk' })
-          map('n', '<leader>gd', gs.diffthis, { desc = 'Git diff' })
-          map('n', '<leader>gD', function()
-            gs.diffthis '~'
-          end, { desc = 'Git Diff' })
         end,
       }
     end,
