@@ -1,3 +1,1 @@
-utils/cache
-.luarc.json
-lazy-lock.json
+nvim-pack-lock.json
