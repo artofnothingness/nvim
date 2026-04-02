@@ -12,9 +12,7 @@ map('', 'J', '5j', opts)
 map('', 'K', '5k', opts)
 map('', 'U', 'J', opts)
 
-map('', '<C-a>', '<Home>', opts)
 map('i', '<C-a>', '<Home>', opts)
-map('', '<C-e>', '<End>', opts)
 map('i', '<C-e>', '<End>', opts)
 
 map('n', '<M-C-j>', ':resize -3<CR>', opts)
