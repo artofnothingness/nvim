@@ -1,5 +1,4 @@
 vim.pack.add {
-  { src = 'https://github.com/williamboman/mason.nvim' },
   { src = 'https://github.com/mfussenegger/nvim-dap' },
 }
 

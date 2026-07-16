@@ -17,7 +17,11 @@ vim.diagnostic.config {
   underline = { severity = { min = vim.diagnostic.severity.WARN } },
   virtual_text = true, -- Text shows up at the end of the line
   virtual_lines = false, -- Text shows up underneath the line, with virtual lines
-  jump = { float = true },
+  jump = {
+    on_jump = function(_, bufnr)
+      vim.diagnostic.open_float { bufnr = bufnr }
+    end,
+  },
 }
 
 local servers = {

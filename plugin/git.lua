@@ -1,7 +1,6 @@
 vim.pack.add {
   { src = 'https://github.com/nvim-lua/plenary.nvim' },
   { src = 'https://github.com/esmuellert/codediff.nvim' },
-  { src = 'https://github.com/ibhagwan/fzf-lua' },
   { src = 'https://github.com/NeogitOrg/neogit' },
   { src = 'https://github.com/tpope/vim-fugitive' },
   { src = 'https://github.com/lewis6991/gitsigns.nvim' },
@@ -32,7 +31,7 @@ require('gitsigns').setup {
         gs.next_hunk()
       end)
       return '<Ignore>'
-    end, { expr = true })
+    end, { expr = true, desc = 'Next hunk' })
 
     map('n', '[c', function()
       if vim.wo.diff then
@@ -42,7 +41,7 @@ require('gitsigns').setup {
         gs.prev_hunk()
       end)
       return '<Ignore>'
-    end, { expr = true })
+    end, { expr = true, desc = 'Prev hunk' })
 
     -- Actions
     map('n', '<leader>gp', gs.preview_hunk, { desc = 'Git Preview hunk' })

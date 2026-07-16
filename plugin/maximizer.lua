@@ -1,3 +1,8 @@
-vim.pack.add { 'https://github.com/szw/vim-maximizer' }
+vim.pack.add {
+  { src = 'https://github.com/anuvyklack/windows.nvim' },
+  { src = 'https://github.com/anuvyklack/middleclass' },
+}
 
-vim.keymap.set('n', '<leader>z', '<cmd>MaximizerToggle!<CR>', { desc = 'Zoom buffer' })
+require('windows').setup()
+
+vim.keymap.set('n', '<leader>z', '<cmd>WindowsMaximize<CR>', { desc = 'Zoom buffer' })

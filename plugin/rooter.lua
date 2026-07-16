@@ -1,3 +1,3 @@
-vim.pack.add { 'https://github.com/notjedi/nvim-rooter.lua' }
+vim.pack.add { 'https://github.com/wsdjeg/rooter.nvim' }
 
-require('nvim-rooter').setup()
+require('rooter').setup()

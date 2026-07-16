@@ -15,4 +15,4 @@ require('conform').setup {
 
 vim.keymap.set('n', '<M-f>', function()
   require('conform').format { async = true, lsp_fallback = true }
-end, { desc = 'Find Buffers' })
+end, { desc = 'Format file' })

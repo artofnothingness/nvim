@@ -1,8 +1,8 @@
 vim.pack.add {
-  { src = 'https://github.com/nvim-treesitter/nvim-treesitter', version = 'master' },
+  { src = 'https://github.com/romus204/tree-sitter-manager.nvim' },
 }
 
-require('nvim-treesitter.configs').setup {
+require('tree-sitter-manager').setup {
   ensure_installed = {
     'cpp',
     'c',
@@ -17,20 +17,16 @@ require('nvim-treesitter.configs').setup {
     'markdown_inline',
     'regex',
   },
-
   auto_install = true,
-  highlight = {
-    enable = true,
-  },
-  indent = { enable = true },
+  highlight = true,
 }
 
 vim.api.nvim_create_autocmd('PackChanged', {
   callback = function(ev)
     local name, kind = ev.data.spec.name, ev.data.kind
-    if name == 'nvim-treesitter' and kind == 'update' then
+    if name == 'tree-sitter-manager.nvim' and kind == 'update' then
       if not ev.data.active then
-        vim.cmd.packadd 'nvim-treesitter'
+        vim.cmd.packadd 'tree-sitter-manager.nvim'
       end
       vim.cmd 'TSUpdate'
     end
