@@ -16,11 +16,11 @@ require('vim._core.ui2').enable {
       list_cmd = 'pager',
       lua_error = 'pager',
     },
-    cmd = { height = 0.5 },
-    msg = { height = 0.5, timeout = 4000 },
+    msg = { height = 0.5 },
     pager = { height = 0.999 },
     dialog = { height = 0.5 },
   },
 }
 
+vim.o.messagesopt = vim.o.messagesopt .. ',timeout:4000'
 vim.o.cmdheight = 0
