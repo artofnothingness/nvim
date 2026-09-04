@@ -36,6 +36,12 @@ vim.o.cursorline = true --Enable highlighting of the current line
 
 vim.o.showmode = false --We don't need to see things like -- INSERT -- anymore
 vim.o.clipboard = 'unnamedplus' --Copy paste between vim and everything else
+local osc52 = require 'vim.ui.clipboard.osc52'
+vim.g.clipboard = {
+  name = 'OSC52',
+  copy = { ['+'] = osc52.copy '+', ['*'] = osc52.copy '*' },
+  paste = { ['+'] = osc52.paste '+', ['*'] = osc52.paste '*' },
+}
 
 vim.opt.number = true
 vim.opt.relativenumber = true
