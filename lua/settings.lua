@@ -6,6 +6,8 @@ vim.opt.breakindent = true
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
 
+vim.opt.langmap = "ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ;QWERTYUIOP[]ASDFGHJKL\\;'ZXCVBNM\\,.,йцукенгшщзхъфывапролджэячсмитьбю;qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,."
+
 vim.opt.signcolumn = 'yes' --Always show the signcolumn, otherwise it would shift the text each time
 
 vim.opt.updatetime = 250 --Faster completion
